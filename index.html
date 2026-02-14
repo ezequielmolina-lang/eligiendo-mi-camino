@@ -465,22 +465,21 @@ function App(){
     4:(n)=>`Gracias por compartir todo esto, ${n}.\n\nBasandome en lo que me has contado, veo a una persona curiosa, con intereses definidos y ganas de explorar.\n\nEn las proximas sesiones vamos a:\n\u2022 Identificar tus intereses con un test RIASEC\n\u2022 Romper mitos vocacionales con datos reales\n\u2022 Explorar sectores y carreras con salarios verificados\n\u2022 Investigar ocupaciones con IA (NotebookLM)\n\u2022 Preparar una conversacion con tu familia\n\u2022 Construir un plan concreto con pasos inmediatos\n\nEsto recien empieza!`,
   };
   const chatInit=useRef(false);
-  const Chat=()=>{
-    useEffect(()=>{if(!chatInit.current&&msgs.length===0){chatInit.current=true;setTimeout(()=>setMsgs([{r:'ai',t:aiR[0]}]),600);}},[msgs.length]);
-    const send=()=>{
-      if(!input.trim())return;const m=input.trim();setInput('');
-      setMsgs(p=>[...p,{r:'user',t:m}]);
-      setTimeout(()=>{
-        let resp;
-        if(chatPhase===0){setUserName(m.split(' ')[0]);resp=aiR[1](m.split(' ')[0]);}
-        else if(chatPhase===1)resp=aiR[2];
-        else if(chatPhase===2)resp=aiR[3];
-        else resp=aiR[4](userName||m.split(' ')[0]);
-        setMsgs(p=>[...p,{r:'ai',t:resp}]);setChatPhase(p=>p+1);
-      },1000);
-    };
-    const chatDone=chatPhase>=4;
-    return(<div className="flex-1 flex flex-col">
+  useEffect(()=>{if(!chatInit.current&&msgs.length===0){chatInit.current=true;setTimeout(()=>setMsgs([{r:'ai',t:aiR[0]}]),600);}},[msgs.length]);
+  const send=()=>{
+    if(!input.trim())return;const m=input.trim();setInput('');
+    setMsgs(p=>[...p,{r:'user',t:m}]);
+    setTimeout(()=>{
+      let resp;
+      if(chatPhase===0){setUserName(m.split(' ')[0]);resp=aiR[1](m.split(' ')[0]);}
+      else if(chatPhase===1)resp=aiR[2];
+      else if(chatPhase===2)resp=aiR[3];
+      else resp=aiR[4](userName||m.split(' ')[0]);
+      setMsgs(p=>[...p,{r:'ai',t:resp}]);setChatPhase(p=>p+1);
+    },1000);
+  };
+  const chatDone=chatPhase>=4;
+  const Chat=()=>(<div className="flex-1 flex flex-col">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-4">
         <OwlMini size={40}/><div><h2 className="font-black text-navy-700">Paso 1: Autoconocimiento</h2><p className="text-xs text-navy-400">Entrevista guiada con Gallito · Sesiones 1-2</p></div>
       </header>
@@ -506,7 +505,6 @@ function App(){
         </div>
       </div>
     </div>);
-  };
 
   /* ── RIASEC TEST (S3) ── */
   const Test=()=>{
@@ -1081,22 +1079,21 @@ function App(){
     4:(n)=>`Gracias por compartir todo esto, ${n||''}. Con lo que me contaste, aqui va tu resumen para la conversacion familiar:\n\n--- RESUMEN PARA MI FAMILIA ---\n\n\uD83C\uDF93 Mi decision: La carrera que elegi basandome en mis intereses y datos reales que explore\n\n\uD83D\uDCCA Por que: Porque se conecta con mi perfil, tiene buenas oportunidades laborales y me motiva\n\n\uD83D\uDC6A Lo que necesito de ustedes: Su apoyo y comprension. Les comparto mi proceso de exploracion\n\n\uD83D\uDCAA Mi plan: Voy a construir un plan concreto con pasos inmediatos en la siguiente sesion\n\n---\n\nRecuerda: la conversacion con tu familia es para COMPARTIR tu decision, no para pedir permiso. Tu hiciste todo un proceso de exploracion con datos reales. Confia en ti.`,
   };
   useEffect(()=>{famEnd.current?.scrollIntoView({behavior:'smooth'})},[famMsgs]);
-  const Family=()=>{
-    useEffect(()=>{if(!famInit.current&&famMsgs.length===0){famInit.current=true;setTimeout(()=>setFamMsgs([{r:'ai',t:famAiR[0](userName)}]),600);}},[famMsgs.length]);
-    const sendFam=()=>{
-      if(!famInput.trim())return;const m=famInput.trim();setFamInput('');
-      setFamMsgs(p=>[...p,{r:'user',t:m}]);
-      setTimeout(()=>{
-        let resp;
-        if(famPhase===0)resp=famAiR[1];
-        else if(famPhase===1)resp=famAiR[2];
-        else if(famPhase===2)resp=famAiR[3];
-        else resp=famAiR[4](userName);
-        setFamMsgs(p=>[...p,{r:'ai',t:resp}]);setFamPhase(p=>p+1);
-      },1000);
-    };
-    const famChatDone=famPhase>=4;
-    return(<div className="flex-1 flex flex-col">
+  useEffect(()=>{if(!famInit.current&&famMsgs.length===0){famInit.current=true;setTimeout(()=>setFamMsgs([{r:'ai',t:famAiR[0](userName)}]),600);}},[famMsgs.length]);
+  const sendFam=()=>{
+    if(!famInput.trim())return;const m=famInput.trim();setFamInput('');
+    setFamMsgs(p=>[...p,{r:'user',t:m}]);
+    setTimeout(()=>{
+      let resp;
+      if(famPhase===0)resp=famAiR[1];
+      else if(famPhase===1)resp=famAiR[2];
+      else if(famPhase===2)resp=famAiR[3];
+      else resp=famAiR[4](userName);
+      setFamMsgs(p=>[...p,{r:'ai',t:resp}]);setFamPhase(p=>p+1);
+    },1000);
+  };
+  const famChatDone=famPhase>=4;
+  const Family=()=>(<div className="flex-1 flex flex-col">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3 sm:gap-4">
         <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Decision y Conversacion Familiar</h2><p className="text-xs text-navy-400">La IA te prepara para hablar con tu familia · Sesiones 7-8</p></div>
       </header>
@@ -1133,7 +1130,6 @@ function App(){
         </div>
       </div>
     </div>);
-  };
 
   /* ── PLAN (S9-S12) ── */
   const Plan=()=>(<div className="flex-1 overflow-y-auto">
@@ -1202,14 +1198,14 @@ function App(){
     </div>
     <main className="flex-1 flex flex-col overflow-hidden bg-cream-50 pt-[52px] md:pt-0">
       {view==='home'&&<Home/>}
-      {view==='chat'&&<Chat/>}
+      {view==='chat'&&Chat()}
       {view==='test'&&<Test/>}
       {view==='test-results'&&<TestResults/>}
       {view==='myths'&&<Myths/>}
       {view==='routes'&&<Routes/>}
       {view==='explore'&&<Explore/>}
       {view==='notebook'&&<Notebook/>}
-      {view==='family'&&<Family/>}
+      {view==='family'&&Family()}
       {view==='plan'&&<Plan/>}
     </main>
   </div>);
