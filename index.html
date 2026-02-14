@@ -388,13 +388,51 @@ function App(){
           </div>
           <p className="text-white/30 text-[11px] mt-3">Fuente: ENAHO 2024, Lima Metropolitana</p>
         </div>
-        {/* Diverse insight - NOT just mining */}
-        <div className="bg-brand-50 border-2 border-brand-200 rounded-2xl p-5 mb-8 flex gap-4">
-          <OwlMascot size={48} expression="surprised"/>
-          <div>
-            <p className="font-bold text-navy-700">El nivel de estudios importa, pero la carrera que elijas tambien</p>
-            <p className="text-navy-500 text-sm mt-1">Hay buenas opciones en muchos campos. Un economista joven gana <strong className="text-brand-500">S/ 4,526/mes</strong>, un ingeniero de sistemas <strong className="text-brand-500">S/ 4,710</strong>, y un tecnico industrial <strong className="text-brand-500">S/ 3,383</strong> con solo 2-3 anios de estudio. El secreto es informarse bien antes de decidir.</p>
+        {/* Youth pathway visual */}
+        <div className="bg-white rounded-2xl border-2 border-cream-200 p-5 sm:p-6 mb-6">
+          <h3 className="font-black text-navy-700 mb-1">De cada 100 jovenes peruanos (15-29 anios)...</h3>
+          <p className="text-navy-400 text-xs mb-4">Que hacen despues del colegio?</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+            {[
+              {n:48,label:'Solo trabajan',icon:'💼',color:'bg-green-500',bg:'bg-green-50 border-green-200'},
+              {n:19,label:'Solo estudian',icon:'📚',color:'bg-purple-500',bg:'bg-purple-50 border-purple-200'},
+              {n:17,label:'Estudian y trabajan',icon:'⚡',color:'bg-blue-500',bg:'bg-blue-50 border-blue-200'},
+              {n:16,label:'NINIs',icon:'⚠️',color:'bg-red-500',bg:'bg-red-50 border-red-200'},
+            ].map((d,i)=>(<div key={i} className={`${d.bg} border-2 rounded-xl p-3 text-center`}>
+              <span className="text-2xl block">{d.icon}</span>
+              <p className="text-2xl sm:text-3xl font-black text-navy-700 mt-1">{d.n}</p>
+              <p className="text-[10px] sm:text-xs text-navy-500 font-bold mt-0.5">{d.label}</p>
+            </div>))}
           </div>
+          <div className="w-full h-6 rounded-full overflow-hidden flex">
+            <div className="bg-green-500 h-full" style={{width:'48%'}}/>
+            <div className="bg-purple-500 h-full" style={{width:'19%'}}/>
+            <div className="bg-blue-500 h-full" style={{width:'17%'}}/>
+            <div className="bg-red-400 h-full" style={{width:'16%'}}/>
+          </div>
+          <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-[10px] text-navy-400">
+            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-green-500 rounded-full"/>Solo trabajan (48%)</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-purple-500 rounded-full"/>Solo estudian (19%)</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-blue-500 rounded-full"/>Ambos (17%)</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-red-400 rounded-full"/>NINIs (16%)</span>
+          </div>
+          <p className="text-[10px] text-navy-300 mt-2">Fuente: ENAHO 2023-2024, INEI. NINIs = ni estudian ni trabajan (~1.17 millones de jovenes)</p>
+        </div>
+        {/* Education access breakdown */}
+        <div className="bg-brand-50 border-2 border-brand-200 rounded-2xl p-5 mb-8">
+          <div className="flex gap-3 items-start mb-3">
+            <OwlMascot size={48} expression="surprised"/>
+            <div>
+              <p className="font-bold text-navy-700">Solo 30.9% logra transitar a educacion superior</p>
+              <p className="text-navy-500 text-sm mt-1">De ese 30.9%: el <strong className="text-purple-600">12.5% va a universidad</strong> y el <strong className="text-blue-600">16.4% a instituto/tecnico</strong>. El resto entra directo al mercado laboral.</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center">
+            <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">Universidad</p><p className="text-lg font-black text-purple-600">12.5%</p></div>
+            <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">Instituto/Tecnico</p><p className="text-lg font-black text-blue-600">16.4%</p></div>
+            <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">No accede a superior</p><p className="text-lg font-black text-navy-600">69.1%</p></div>
+          </div>
+          <p className="text-[10px] text-navy-300 mt-2">Fuente: SENAJU / ENAHO 2022, INEI. Bajo de 36.6% en 2019. En zonas rurales solo 20.1% accede.</p>
         </div>
         {/* Steps grid */}
         <h2 className="text-lg font-black text-navy-700 mb-2">Tu camino en {steps.length} pasos</h2>
@@ -821,24 +859,63 @@ function App(){
 
         {/* TAB 3: KEY DATA */}
         {routeTab==='data'&&(<div>
-          <p className="text-navy-500 text-sm mb-6">Datos reales sobre el mercado laboral en Peru para que tomes decisiones informadas.</p>
-          <div className="space-y-4 mb-6">
+          <p className="text-navy-500 text-sm mb-6">Datos verificados del INEI, ENAHO y MTPE sobre los jovenes peruanos y el mercado laboral.</p>
+
+          {/* Youth pathway visual */}
+          <div className="bg-white rounded-2xl border-2 border-navy-200 p-5 mb-6">
+            <h3 className="font-black text-navy-700 text-sm mb-1">De cada 100 jovenes peruanos (15-29):</h3>
+            <p className="text-navy-400 text-[10px] mb-4">Que hacen despues del colegio?</p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+              {[
+                {n:48,label:'Solo trabajan',icon:'💼',bg:'bg-green-50 border-green-200'},
+                {n:19,label:'Solo estudian',icon:'📚',bg:'bg-purple-50 border-purple-200'},
+                {n:17,label:'Estudian y trabajan',icon:'⚡',bg:'bg-blue-50 border-blue-200'},
+                {n:16,label:'NINIs',icon:'⚠️',bg:'bg-red-50 border-red-200'},
+              ].map((d,i)=>(<div key={i} className={`${d.bg} border-2 rounded-xl p-3 text-center`}>
+                <span className="text-xl block">{d.icon}</span>
+                <p className="text-2xl font-black text-navy-700 mt-1">{d.n}</p>
+                <p className="text-[10px] text-navy-500 font-bold">{d.label}</p>
+              </div>))}
+            </div>
+            <div className="w-full h-5 rounded-full overflow-hidden flex">
+              <div className="bg-green-500 h-full" style={{width:'48%'}}/>
+              <div className="bg-purple-500 h-full" style={{width:'19%'}}/>
+              <div className="bg-blue-500 h-full" style={{width:'17%'}}/>
+              <div className="bg-red-400 h-full" style={{width:'16%'}}/>
+            </div>
+            <p className="text-[10px] text-navy-300 mt-2">ENAHO 2023-2024, INEI. NINIs (~1.17M jovenes) = ni estudian ni trabajan</p>
+          </div>
+
+          {/* Education access */}
+          <div className="bg-purple-50 border-2 border-purple-200 rounded-2xl p-5 mb-6">
+            <p className="font-bold text-navy-700 text-sm mb-3">Acceso a educacion superior: solo 30.9%</p>
+            <div className="grid grid-cols-3 gap-2 text-center mb-3">
+              <div className="bg-white rounded-lg p-3"><p className="text-2xl font-black text-purple-600">12.5%</p><p className="text-[10px] text-navy-400 font-bold">Universidad</p></div>
+              <div className="bg-white rounded-lg p-3"><p className="text-2xl font-black text-blue-600">16.4%</p><p className="text-[10px] text-navy-400 font-bold">Inst./Tecnico</p></div>
+              <div className="bg-white rounded-lg p-3"><p className="text-2xl font-black text-navy-600">69.1%</p><p className="text-[10px] text-navy-400 font-bold">No accede</p></div>
+            </div>
+            <p className="text-xs text-purple-600">En 2019 era 36.6%. Bajo a 30.9% en 2022. En zonas rurales solo 20.1% accede.</p>
+            <p className="text-[10px] text-navy-300 mt-1">SENAJU / ENAHO 2022, INEI</p>
+          </div>
+
+          {/* Key facts */}
+          <div className="space-y-3 mb-6">
             {[
-              {icon:'📊',title:'Solo 30% de jovenes peruanos accede a educacion superior',detail:'Esto significa que el 70% entra al mercado laboral directamente. Este programa te ayuda sin importar que ruta elijas.',color:'bg-purple-50 border-purple-200'},
+              {icon:'🎓',title:'80 de cada 100 terminan secundaria',detail:'Pero solo 21 de cada 100 completan educacion superior. 46 de 100 que empiezan un instituto lo abandonan.',color:'bg-brand-50 border-brand-200'},
+              {icon:'📉',title:'88% con solo secundaria trabaja informalmente',detail:'Sin contrato, sin seguro, sin vacaciones. Con educacion tecnica baja a 55%. Con universidad a 32%.',color:'bg-red-50 border-red-200'},
               {icon:'💰',title:'La carrera importa tanto como el nivel de estudios',detail:'Un tecnico en computacion gana S/ 3,968/mes, mas que un universitario promedio (S/ 3,057/mes). La clave es elegir bien el sector.',color:'bg-brand-50 border-brand-200'},
-              {icon:'📈',title:'El 88% con solo secundaria trabaja informalmente',detail:'Sin contrato, sin seguro, sin vacaciones. Cualquier nivel de educacion adicional reduce dramaticamente este riesgo.',color:'bg-red-50 border-red-200'},
-              {icon:'🔄',title:'Las rutas no son permanentes',detail:'Puedes empezar trabajando y estudiar despues. Existen programas nocturnos, de fin de semana y a distancia. Muchos profesionales exitosos cambiaron de ruta.',color:'bg-green-50 border-green-200'},
-              {icon:'🏭',title:'Sectores con mayor demanda en Peru',detail:'Mineria (mejores salarios tecnicos), Agronegocios (Peru es lider mundial en arandanos y paltas), Tecnologia (crecimiento rapido), Salud (demanda constante).',color:'bg-blue-50 border-blue-200'},
-              {icon:'🎯',title:'La combinacion trabajo + estudio es comun y valida',detail:'Muchos institutos ofrecen horarios flexibles. En Peru, la modalidad semipresencial y a distancia ha crecido mucho despues de la pandemia.',color:'bg-amber-50 border-amber-200'},
-            ].map((d,i)=>(<div key={i} className={`${d.color} border-2 rounded-2xl p-4 sm:p-5 flex gap-3 sm:gap-4 items-start animate-slide-up`} style={{animationDelay:`${i*.06}s`}}>
-              <span className="text-2xl sm:text-3xl shrink-0">{d.icon}</span>
+              {icon:'⚠️',title:'1.17 millones de jovenes son NINIs',detail:'Ni estudian ni trabajan. El 44% tiene entre 15-19 anios. El 59% son mujeres. Es la situacion que este programa busca prevenir.',color:'bg-amber-50 border-amber-200'},
+              {icon:'🔄',title:'Las rutas no son permanentes',detail:'Programas nocturnos, fines de semana y a distancia permiten combinar trabajo y estudio. Muchos profesionales exitosos cambiaron de ruta.',color:'bg-green-50 border-green-200'},
+              {icon:'🏭',title:'Sectores con mayor demanda en Peru',detail:'Mineria (mejores salarios tecnicos), Agronegocios (Peru lider en arandanos y paltas), Tecnologia (crecimiento rapido), Salud (demanda constante).',color:'bg-blue-50 border-blue-200'},
+            ].map((d,i)=>(<div key={i} className={`${d.color} border-2 rounded-2xl p-4 flex gap-3 items-start animate-slide-up`} style={{animationDelay:`${i*.06}s`}}>
+              <span className="text-2xl shrink-0">{d.icon}</span>
               <div>
                 <p className="font-bold text-navy-700 text-sm">{d.title}</p>
-                <p className="text-navy-500 text-sm mt-1 leading-relaxed">{d.detail}</p>
+                <p className="text-navy-500 text-xs mt-1 leading-relaxed">{d.detail}</p>
               </div>
             </div>))}
           </div>
-          <p className="text-[10px] text-navy-300 text-center mb-4">Fuentes: ENAHO 2024, MTPE Planilla Electronica, MINEDU, OIT</p>
+          <p className="text-[10px] text-navy-300 text-center mb-4">Fuentes: ENAHO 2023-2024, INEI, SENAJU, MTPE Planilla Electronica, CCL</p>
         </div>)}
 
         <div className="bg-brand-50 border-2 border-brand-200 rounded-2xl p-4 sm:p-5 mb-6 flex gap-3 sm:gap-4">
@@ -968,7 +1045,7 @@ function App(){
         {[
           {icon:'\u2B50',title:'Elige tus favoritas del Explorador',desc:'De todas las carreras que viste en el paso anterior, selecciona las que mas te llamaron la atencion. No hay limite, pero intenta enfocarte en las que realmente te emocionan.',step:'1'},
           {icon:'\uD83C\uDFAF',title:'Reduce a 3 opciones para investigar',desc:'De tus favoritas, elige las 3 que quieres investigar a fondo. Estas seran las opciones que vas a comparar para tomar tu decision.',step:'2'},
-          {icon:'\uD83E\uDD16',title:'Investiga con NotebookLM',desc:'Usa NotebookLM de Google para conversar con documentos verificados del MTPE. Preguntale: "Que hace esta persona en su dia a dia?", "Donde puedo estudiar?", "Cuanto cuesta?", "Hay becas?"',step:'3'},
+          {icon:'\uD83E\uDD16',title:'Investiga con NotebookLM',desc:'Conversa con documentos verificados ya cargados (MTPE, universidades, institutos, becas y mas). Preguntale: "Que hace esta persona en su dia a dia?", "Donde puedo estudiar?", "Cuanto cuesta?", "Hay becas?"',step:'3'},
           {icon:'\uD83D\uDCCB',title:'Priorizacion final',desc:'Con toda la informacion, ordena tus 3 ocupaciones de mayor a menor interes. Justifica tu orden: que te entusiasma, que dudas quedan, como se conecta con tu suenho.',step:'4'},
         ].map((item,i)=>(<div key={i} className="bg-white rounded-2xl p-4 sm:p-5 border-2 border-cream-200 flex gap-3 sm:gap-4 items-start animate-slide-up" style={{animationDelay:`${i*.08}s`}}>
           <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center text-brand-500 font-black shrink-0">{item.step}</div>
@@ -980,8 +1057,8 @@ function App(){
       </div>
       {/* PLACEHOLDER: NotebookLM */}
       <div className="bg-white border-2 border-dashed border-blue-200 rounded-2xl p-5 mb-6 text-center">
-        <div className="flex items-center justify-center gap-3 mb-2"><span className="text-2xl">\uD83E\uDD16</span><p className="font-bold text-navy-700 text-sm">NotebookLM: Conversa con datos del MTPE</p></div>
-        <p className="text-navy-400 text-xs mb-3">Sube los documentos del Ministerio de Trabajo y hazle todas las preguntas que quieras sobre las carreras que elegiste</p>
+        <div className="flex items-center justify-center gap-3 mb-2"><span className="text-2xl">\uD83E\uDD16</span><p className="font-bold text-navy-700 text-sm">NotebookLM: Conversa con documentos verificados</p></div>
+        <p className="text-navy-400 text-xs mb-3">Los documentos ya estan cargados (MTPE, universidades, institutos, becas y mas). Hazle todas las preguntas que quieras sobre las carreras que elegiste.</p>
         <div className="bg-blue-50 rounded-xl h-28 flex items-center justify-center"><p className="text-blue-300 text-sm">NotebookLM embed (uDocz integra)</p></div>
       </div>
       <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-4 sm:p-5 mb-6 flex gap-3">
@@ -1077,7 +1154,7 @@ function App(){
           {title:'Planes B y C',desc:'Porque la vida no siempre sale como uno planea. Construye alternativas viables con la IA.',icon:'\uD83D\uDD00',step:'4'},
           {title:'CV 1.0 con IA',desc:'Tu primer curriculum, generado con IA, listo para buscar trabajo o practicas. Escalado por uDocz.',icon:'\uD83D\uDCCB',step:'5'},
           {title:'Carta a mi yo del futuro',desc:'Escribele a tu yo de dentro de 1 anio. Que te dirias? Que esperas haber logrado?',icon:'\u2709\uFE0F',step:'6'},
-          {title:'Repositorio de recursos',desc:'Acceso a enlaces de becas (Beca 18, Beca Permanencia), universidades, institutos y mas.',icon:'\uD83D\uDCC1',step:'7'},
+          {title:'NotebookLM: Investiga a fondo',desc:'Conversa con documentos verificados sobre carreras, becas, universidades e institutos. Los documentos ya estan cargados: hazle todas las preguntas que quieras.',icon:'\uD83E\uDD16',step:'7'},
         ].map((item,i)=>(<div key={i} className="bg-white rounded-2xl p-5 border-2 border-cream-200 flex gap-4 items-start animate-slide-up" style={{animationDelay:`${i*.08}s`}}>
           <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center text-brand-500 font-black shrink-0">{item.step}</div>
           <div className="flex-1">
