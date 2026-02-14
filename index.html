@@ -88,13 +88,13 @@ const sectors=[
      {name:'Estadistica',level:'universitaria',salary:'S/ 4,527',growth:'S/ 8,879',range:'S/ 1,815 - S/ 7,500',skills:['R y Python','Modelamiento','Big Data'],where:['Bancos','INEI','Consultoras']},
      {name:'Tec. Computacion',level:'tecnica',salary:'S/ 3,968',growth:'S/ 5,062',range:'S/ 1,364 - S/ 7,643',skills:['Programacion','Redes','Soporte tecnico'],where:['BCP','IBM','Startups']},
      {name:'Tec. Telecomunicaciones',level:'tecnica',salary:'S/ 2,213',growth:'S/ 4,412',range:'S/ 1,700 - S/ 3,000',skills:['Redes','Fibra optica','Electronica'],where:['Claro','Movistar','Entel']},
-     {name:'Ing. Electronica',level:'universitaria',salary:'S/ 3,710',growth:'S/ 9,082',range:'S/ 1,700 - S/ 6,401',skills:['Electronica','IoT','Automatizacion'],where:['Industrias','Automotriz','Mineras']},
+     {name:'Ing. Electronica',level:'universitaria',salary:'S/ 3,710',growth:'S/ 9,082',range:'S/ 1,700 - S/ 6,401',skills:['Electronica','IoT','Automatizacion'],where:['Industrias','Automotriz','Mineras'],study:'Circuitos, telecomunicaciones, automatizacion, programacion',dayInLife:'Disenha sistemas electronicos, programa microcontroladores, automatiza procesos'},
    ]},
   {id:'salud',name:'Salud',icon:'\uD83C\uDFE5',color:'from-rose-500 to-pink-600',
    desc:'El sector salud siempre tiene demanda laboral. Multiples especialidades.',
    careers:[
-     {name:'Medicina',level:'universitaria',salary:'S/ 3,897',growth:'S/ 7,013',range:'S/ 1,481 - S/ 6,624',skills:['Diagnostico','Tratamiento','Investigacion'],where:['Hospitales','Clinicas','Consultorio privado']},
-     {name:'Psicologia',level:'universitaria',salary:'S/ 2,534',growth:'S/ 5,648',range:'S/ 1,250 - S/ 4,200',skills:['Terapia','Empatia','Evaluacion'],where:['Clinicas','Consulta privada','Empresas']},
+     {name:'Medicina',level:'universitaria',salary:'S/ 3,897',growth:'S/ 7,013',range:'S/ 1,481 - S/ 6,624',skills:['Diagnostico','Tratamiento','Investigacion'],where:['Hospitales','Clinicas','Consultorio privado'],study:'Anatomia, fisiologia, farmacologia, clinica, cirugia, salud publica',dayInLife:'Atiende pacientes, diagnostica enfermedades, prescribe tratamientos'},
+     {name:'Psicologia',level:'universitaria',salary:'S/ 2,534',growth:'S/ 5,648',range:'S/ 1,250 - S/ 4,200',skills:['Terapia','Empatia','Evaluacion'],where:['Clinicas','Consulta privada','Empresas'],study:'Psicologia clinica, organizacional, desarrollo humano, neurociencia',dayInLife:'Realiza terapias, evaluaciones psicologicas, asesora organizaciones'},
      {name:'Farmacia y Bioquimica',level:'universitaria',salary:'S/ 3,021',growth:'S/ 6,334',range:'S/ 1,383 - S/ 5,000',skills:['Farmacologia','Quimica','Investigacion'],where:['Laboratorios','Industria farmaceutica']},
      {name:'Enfermeria (tecnica)',level:'tecnica',salary:'S/ 1,667',growth:'S/ 2,248',range:'S/ 1,130 - S/ 2,427',skills:['Cuidado de pacientes','Empatia','Primeros auxilios'],where:['EsSalud','MINSA','Clinicas']},
      {name:'Odontologia',level:'universitaria',salary:'S/ 2,216',growth:'S/ 4,635',range:'S/ 1,130 - S/ 4,169',skills:['Odontologia','Atencion al paciente'],where:['Consultorios','Clinicas dentales']},
@@ -103,27 +103,27 @@ const sectors=[
   {id:'admin',name:'Administracion y Negocios',icon:'\uD83D\uDCBC',color:'from-violet-500 to-purple-600',
    desc:'Todas las empresas necesitan administradores, contadores y abogados.',
    careers:[
-     {name:'Economia',level:'universitaria',salary:'S/ 4,526',growth:'S/ 11,726',range:'S/ 1,667 - S/ 8,200',skills:['Finanzas','Econometria','Analisis'],where:['BCR','MEF','Bancos','Consultoras']},
-     {name:'Derecho',level:'universitaria',salary:'S/ 3,622',growth:'S/ 10,351',range:'S/ 1,500 - S/ 6,435',skills:['Argumentacion','Negociacion','Derecho'],where:['Estudios de abogados','Empresas','Estado']},
-     {name:'Marketing',level:'universitaria',salary:'S/ 3,704',growth:'S/ 9,923',range:'S/ 1,500 - S/ 6,629',skills:['Marketing digital','Creatividad','Analisis'],where:['Consumo masivo','Agencias','Tech']},
-     {name:'Contabilidad',level:'universitaria',salary:'S/ 2,827',growth:'S/ 6,529',range:'S/ 1,402 - S/ 4,580',skills:['Contabilidad','SUNAT','NIIF'],where:['Big Four','Estudios contables']},
+     {name:'Economia',level:'universitaria',salary:'S/ 4,526',growth:'S/ 11,726',range:'S/ 1,667 - S/ 8,200',skills:['Finanzas','Econometria','Analisis'],where:['BCR','MEF','Bancos','Consultoras'],study:'Matematicas, estadistica, finanzas, teoria economica, econometria',dayInLife:'Analiza indicadores, prepara reportes financieros, asesora empresas o gobierno'},
+     {name:'Derecho',level:'universitaria',salary:'S/ 3,622',growth:'S/ 10,351',range:'S/ 1,500 - S/ 6,435',skills:['Argumentacion','Negociacion','Derecho'],where:['Estudios de abogados','Empresas','Estado'],study:'Derecho civil, penal, constitucional, procesal, argumentacion',dayInLife:'Revisa contratos, asesora clientes, litiga en juzgados, negocia acuerdos'},
+     {name:'Marketing',level:'universitaria',salary:'S/ 3,704',growth:'S/ 9,923',range:'S/ 1,500 - S/ 6,629',skills:['Marketing digital','Creatividad','Analisis'],where:['Consumo masivo','Agencias','Tech'],study:'Marketing digital, investigacion de mercados, publicidad, estrategia',dayInLife:'Planifica campanas, analiza datos de clientes, gestiona redes sociales'},
+     {name:'Contabilidad',level:'universitaria',salary:'S/ 2,827',growth:'S/ 6,529',range:'S/ 1,402 - S/ 4,580',skills:['Contabilidad','SUNAT','NIIF'],where:['Big Four','Estudios contables'],study:'Contabilidad financiera, tributacion, NIIF, auditoria',dayInLife:'Lleva libros contables, prepara declaraciones SUNAT, revisa estados financieros'},
      {name:'Tec. Administracion',level:'tecnica',salary:'S/ 2,370',growth:'S/ 4,652',range:'S/ 1,200 - S/ 3,940',skills:['Administracion','Excel','Gestion'],where:['Cualquier empresa']},
      {name:'Tec. Contabilidad',level:'tecnica',salary:'S/ 2,206',growth:'S/ 3,442',range:'S/ 1,200 - S/ 3,419',skills:['Contabilidad basica','Excel','SUNAT'],where:['Estudios contables','Empresas']},
    ]},
   {id:'infra',name:'Infraestructura e Ingenieria',icon:'\uD83C\uDFD7\uFE0F',color:'from-slate-500 to-gray-600',
    desc:'Peru invierte miles de millones en infraestructura cada anio.',
    careers:[
-     {name:'Ingenieria Civil',level:'universitaria',salary:'S/ 4,152',growth:'S/ 10,621',range:'S/ 1,923 - S/ 7,000',skills:['Estructuras','Gestion de proyectos','BIM'],where:['COSAPI','Grana y Montero','JJC']},
-     {name:'Ingenieria Industrial',level:'universitaria',salary:'S/ 4,248',growth:'S/ 10,257',range:'S/ 1,800 - S/ 7,400',skills:['Gestion','Logistica','Six Sigma'],where:['Cualquier industria','Consultoras']},
+     {name:'Ingenieria Civil',level:'universitaria',salary:'S/ 4,152',growth:'S/ 10,621',range:'S/ 1,923 - S/ 7,000',skills:['Estructuras','Gestion de proyectos','BIM'],where:['COSAPI','Grana y Montero','JJC'],study:'Estructuras, hidraulica, mecanica de suelos, gestion de proyectos, BIM',dayInLife:'Disenha y supervisa construcciones, revisa planos, coordina con obreros'},
+     {name:'Ingenieria Industrial',level:'universitaria',salary:'S/ 4,248',growth:'S/ 10,257',range:'S/ 1,800 - S/ 7,400',skills:['Gestion','Logistica','Six Sigma'],where:['Cualquier industria','Consultoras'],study:'Gestion de operaciones, logistica, control de calidad, Six Sigma',dayInLife:'Optimiza procesos, reduce costos, mejora la productividad de empresas'},
      {name:'Tec. Electricista',level:'tecnica',salary:'S/ 3,128',growth:'S/ 6,278',range:'S/ 1,500 - S/ 5,071',skills:['Instalaciones electricas','Seguridad','Normativa'],where:['ENEL','Luz del Sur','Constructoras']},
      {name:'Tec. Industrial',level:'tecnica',salary:'S/ 3,383',growth:'S/ 8,566',range:'S/ 1,600 - S/ 6,613',skills:['Procesos','Calidad','Lean Manufacturing'],where:['Fabricas','Manufactura','Agroindustria']},
-     {name:'Arquitectura',level:'universitaria',salary:'S/ 3,213',growth:'S/ 7,185',range:'S/ 1,500 - S/ 5,310',skills:['Diseno','AutoCAD','BIM'],where:['Estudios','Inmobiliarias','Municipalidades']},
+     {name:'Arquitectura',level:'universitaria',salary:'S/ 3,213',growth:'S/ 7,185',range:'S/ 1,500 - S/ 5,310',skills:['Diseno','AutoCAD','BIM'],where:['Estudios','Inmobiliarias','Municipalidades'],study:'Diseno arquitectonico, urbanismo, estructuras, AutoCAD, BIM',dayInLife:'Disenha edificios y espacios, elabora planos, supervisa construcciones'},
    ]},
   {id:'agro',name:'Agronegocios y Agroindustria',icon:'\uD83C\uDF3E',color:'from-green-500 to-emerald-600',
    desc:'Peru es lider mundial en exportacion de arandanos, paltas y esparragos.',
    careers:[
-     {name:'Agronegocios',level:'universitaria',salary:'S/ 4,312',growth:'S/ 10,567',range:'S/ 1,800 - S/ 7,500',skills:['Gestion empresarial','Comercio exterior'],where:['Camposol','Danper','Viru']},
-     {name:'Veterinaria',level:'universitaria',salary:'S/ 2,547',growth:'S/ 6,317',range:'S/ 1,215 - S/ 4,175',skills:['Medicina veterinaria','Sanidad animal'],where:['Clinicas','SENASA','Agroindustrias']},
+     {name:'Agronegocios',level:'universitaria',salary:'S/ 4,312',growth:'S/ 10,567',range:'S/ 1,800 - S/ 7,500',skills:['Gestion empresarial','Comercio exterior'],where:['Camposol','Danper','Viru'],study:'Administracion, comercio exterior, produccion agricola, logistica',dayInLife:'Gestiona exportaciones, negocia con compradores internacionales, optimiza cadenas'},
+     {name:'Veterinaria',level:'universitaria',salary:'S/ 2,547',growth:'S/ 6,317',range:'S/ 1,215 - S/ 4,175',skills:['Medicina veterinaria','Sanidad animal'],where:['Clinicas','SENASA','Agroindustrias'],study:'Anatomia animal, cirugia, parasitologia, produccion animal',dayInLife:'Atiende animales, realiza cirugias, controla sanidad en granjas'},
      {name:'Ing. Industrias Alimentarias',level:'universitaria',salary:'S/ 3,456',growth:'S/ 7,234',range:'S/ 1,500 - S/ 5,800',skills:['HACCP','Procesos','Innovacion'],where:['Alicorp','Gloria','Nestle']},
      {name:'Operario agricola',level:'secundaria',salary:'Variable',growth:'-',range:'Depende de temporada',skills:['Trabajo fisico','Madrugador'],where:['Camposol','Danper','Agroexportadoras']},
    ]},
@@ -138,22 +138,22 @@ const sectors=[
   {id:'educacion',name:'Educacion',icon:'\uD83D\uDCDA',color:'from-teal-500 to-cyan-600',
    desc:'Formacion de las nuevas generaciones del pais.',
    careers:[
-     {name:'Educacion Secundaria',level:'universitaria',salary:'S/ 2,456',growth:'S/ 4,123',range:'S/ 1,400 - S/ 3,800',skills:['Especializacion','Pedagogia','Comunicacion'],where:['Colegios','MINEDU','Academias']},
+     {name:'Educacion Secundaria',level:'universitaria',salary:'S/ 2,456',growth:'S/ 4,123',range:'S/ 1,400 - S/ 3,800',skills:['Especializacion','Pedagogia','Comunicacion'],where:['Colegios','MINEDU','Academias'],study:'Pedagogia, didactica, especializacion en materia, psicologia educativa',dayInLife:'Prepara clases, ensenha a adolescentes, evalua aprendizajes, asesora estudiantes'},
      {name:'Educacion Inicial',level:'universitaria',salary:'S/ 2,265',growth:'S/ 3,623',range:'S/ 1,308 - S/ 3,411',skills:['Pedagogia infantil','Creatividad'],where:['Colegios','MINEDU','Nidos privados']},
      {name:'Idiomas',level:'universitaria',salary:'S/ 2,567',growth:'S/ 4,345',range:'S/ 1,400 - S/ 4,000',skills:['Idiomas','Didactica','Comunicacion'],where:['Institutos','Colegios','Centros de idiomas']},
    ]},
   {id:'comunicacion',name:'Comunicacion y Diseno',icon:'\uD83C\uDFA8',color:'from-pink-500 to-fuchsia-600',
    desc:'La era digital requiere comunicadores creativos.',
    careers:[
-     {name:'Ciencias de la Comunicacion',level:'universitaria',salary:'S/ 2,967',growth:'S/ 6,534',range:'S/ 1,365 - S/ 5,000',skills:['Comunicacion estrategica','RRPP','Contenido'],where:['Agencias','Empresas','Medios']},
-     {name:'Diseno',level:'universitaria',salary:'S/ 2,949',growth:'S/ 6,138',range:'S/ 1,400 - S/ 5,200',skills:['Adobe Suite','UX/UI','Branding'],where:['Agencias','Tech','Freelance']},
+     {name:'Ciencias de la Comunicacion',level:'universitaria',salary:'S/ 2,967',growth:'S/ 6,534',range:'S/ 1,365 - S/ 5,000',skills:['Comunicacion estrategica','RRPP','Contenido'],where:['Agencias','Empresas','Medios'],study:'Periodismo, RRPP, produccion audiovisual, comunicacion estrategica',dayInLife:'Crea contenido, maneja imagen corporativa, produce material audiovisual'},
+     {name:'Diseno',level:'universitaria',salary:'S/ 2,949',growth:'S/ 6,138',range:'S/ 1,400 - S/ 5,200',skills:['Adobe Suite','UX/UI','Branding'],where:['Agencias','Tech','Freelance'],study:'Diseno grafico, UX/UI, branding, tipografia, Adobe Suite',dayInLife:'Crea identidades visuales, disenha interfaces, desarrolla material grafico'},
      {name:'Tec. Diseno',level:'tecnica',salary:'S/ 2,808',growth:'S/ 5,737',range:'S/ 1,350 - S/ 5,000',skills:['Adobe Suite','Diseno grafico','Creatividad'],where:['Agencias','Freelance']},
-     {name:'Periodismo',level:'universitaria',salary:'S/ 2,567',growth:'S/ 5,234',range:'S/ 1,300 - S/ 4,200',skills:['Redaccion','Locucion','Investigacion'],where:['Medios','Agencias','Corporaciones']},
+     {name:'Periodismo',level:'universitaria',salary:'S/ 2,567',growth:'S/ 5,234',range:'S/ 1,300 - S/ 4,200',skills:['Redaccion','Locucion','Investigacion'],where:['Medios','Agencias','Corporaciones'],study:'Redaccion periodistica, investigacion, produccion audiovisual',dayInLife:'Investiga noticias, entrevista fuentes, redacta articulos, produce reportajes'},
    ]},
   {id:'ciencias',name:'Ciencias y Medio Ambiente',icon:'\uD83D\uDD2C',color:'from-emerald-500 to-green-600',
    desc:'Innovacion y sostenibilidad para el futuro.',
    careers:[
-     {name:'Quimica',level:'universitaria',salary:'S/ 2,890',growth:'S/ 5,678',range:'S/ 1,350 - S/ 4,800',skills:['Laboratorio','Analisis','Investigacion'],where:['Laboratorios','Industrias','Universidades']},
+     {name:'Quimica',level:'universitaria',salary:'S/ 2,890',growth:'S/ 5,678',range:'S/ 1,350 - S/ 4,800',skills:['Laboratorio','Analisis','Investigacion'],where:['Laboratorios','Industrias','Universidades'],study:'Quimica organica e inorganica, analisis instrumental, bioquimica',dayInLife:'Trabaja en laboratorio, analiza muestras, investiga nuevos compuestos'},
      {name:'Biologia',level:'universitaria',salary:'S/ 2,567',growth:'S/ 5,234',range:'S/ 1,250 - S/ 4,300',skills:['Investigacion','Laboratorio','Analisis'],where:['Universidades','Laboratorios','SERNANP']},
      {name:'Ecologia y Medio Ambiente',level:'universitaria',salary:'S/ 2,456',growth:'S/ 5,012',range:'S/ 1,200 - S/ 4,100',skills:['Gestion ambiental','EIA','Sostenibilidad'],where:['MINAM','Consultoras','Mineras']},
    ]},
@@ -197,24 +197,32 @@ const riasecProfiles={
   C:{name:"Convencional",avatar:"\uD83D\uDCCA",color:"from-cyan-400 to-blue-500",desc:"Prefieres orden, datos y procedimientos claros",families:["Contabilidad","Administracion","Logistica","Finanzas"],sectors:['admin','logistica','servicios']},
 };
 
-/* ── MYTHS QUIZ DATA (from TAREA4) ── */
+/* \u2500\u2500 MYTHS DATA (Swipe Cards format from TAREA4) \u2500\u2500 */
 const mythsData=[
-  {statement:"Solo con titulo universitario puedes ganar bien",isMyth:true,
-   explanation:"Hay tecnicos que ganan muy bien: un tecnico industrial gana S/ 3,383/mes y un tecnico en computacion S/ 3,968/mes, con solo 2-3 anios de estudio. Fuente: MTPE 2024"},
-  {statement:"La mayoria de trabajos en Peru son informales",isMyth:false,
-   explanation:"Verdadero. El 88% de personas con solo secundaria trabaja de manera informal (sin contrato, sin seguro, sin vacaciones). Mas educacion reduce este riesgo. Fuente: ENAHO 2024"},
-  {statement:"Las carreras tecnicas son para los que no pueden entrar a la universidad",isMyth:true,
-   explanation:"Las carreras tecnicas son una eleccion estrategica. Un tecnico en computacion gana S/ 3,968/mes y un tecnico electricista S/ 3,128/mes, ambos con alta demanda laboral."},
-  {statement:"Estudiar una carrera garantiza conseguir trabajo",isMyth:true,
-   explanation:"No automaticamente. Depende del sector, la demanda del mercado, tus habilidades practicas y tus conexiones. El titulo abre puertas, pero no las cruza solo."},
-  {statement:"Estudiar mas anios siempre significa ganar mas",isMyth:true,
-   explanation:"No siempre. Un tecnico industrial (2-3 anios) gana S/ 3,383/mes, mientras que un profesional de educacion inicial (5 anios) gana S/ 2,265/mes. La carrera importa tanto como el nivel."},
-  {statement:"Las mejores carreras son medicina, derecho e ingenieria",isMyth:true,
-   explanation:"Economia (S/ 4,526), estadistica (S/ 4,527) e ingenieria de sistemas (S/ 4,710) tienen mejores salarios iniciales que medicina (S/ 3,897). Hay muchas opciones bien pagadas menos conocidas."},
-  {statement:"Solo sirve estudiar si vas a universidad o instituto",isMyth:true,
-   explanation:"Cursos cortos, certificaciones y emprendimiento son rutas validas. Hay personas exitosas en todos los caminos. Lo clave es desarrollar habilidades que el mercado necesita."},
-  {statement:"Con solo secundaria no se puede progresar",isMyth:true,
-   explanation:"Si es mas dificil, pero hay rutas: capacitaciones cortas, certificados tecnicos, emprendimiento. Ademas, siempre puedes estudiar despues de trabajar un tiempo. Muchas personas combinan ambas cosas."},
+  {statement:"Solo con titulo universitario puedes ganar bien",isMyth:true,cat:"Salarios",
+   keyData:"S/ 3,968",keyLabel:"Tec. Computacion/mes",
+   explanation:"Un tecnico industrial gana S/ 3,383/mes y un tecnico en computacion S/ 3,968/mes, con solo 2-3 anios de estudio. En mineria, un tecnico gana S/ 6,235/mes, mas que muchos universitarios.",source:"MTPE 2024"},
+  {statement:"La mayoria de personas con solo secundaria trabaja informalmente",isMyth:false,cat:"Empleo",
+   keyData:"88%",keyLabel:"Informalidad sin estudios",
+   explanation:"El 88% de personas con solo secundaria trabaja de manera informal, sin contrato ni seguro. Con educacion tecnica baja a 55%, y con universidad a 32%.",source:"ENAHO 2024"},
+  {statement:"Si empiezas a trabajar despues del colegio, ya no puedes estudiar",isMyth:true,cat:"Trayectorias",
+   keyData:"Programas nocturnos, fines de semana, a distancia",keyLabel:"Opciones reales",
+   explanation:"Existen programas nocturnos, de fin de semana y a distancia. Muchas personas combinan trabajo y estudio. La trayectoria no es lineal.",source:"MINEDU"},
+  {statement:"Las carreras tecnicas son para los que no pueden entrar a la universidad",isMyth:true,cat:"Tecnicas",
+   keyData:"S/ 3,128",keyLabel:"Tec. Electricista/mes",
+   explanation:"Las carreras tecnicas son una eleccion estrategica. Son mas cortas (2-3 anios), mas practicas, con alta demanda en mineria, electricidad, computacion y manufactura.",source:"MTPE 2024"},
+  {statement:"En Peru, la mayor demanda laboral esta en mineria, tecnologia y agronegocios",isMyth:false,cat:"Mercado",
+   keyData:"12 sectores con demanda",keyLabel:"En Lima Metropolitana",
+   explanation:"Peru lidera en arandanos, paltas y esparagos. La mineria genera los mejores salarios tecnicos. Tecnologia crece rapido. Pero tambien hay demanda en salud, logistica y servicios.",source:"MTPE 2024"},
+  {statement:"Elegir una carrera a los 16-17 anios es definitivo",isMyth:true,cat:"Decision",
+   keyData:"No es permanente",keyLabel:"Puedes cambiar y crecer",
+   explanation:"Las trayectorias profesionales no son lineales. Puedes cambiar de carrera, combinar estudios, hacer especializaciones diferentes. Lo importante es empezar a explorar.",source:"OIT"},
+  {statement:"Estudiar mas anios siempre significa ganar mas",isMyth:true,cat:"Salarios",
+   keyData:"S/ 2,265 vs S/ 3,383",keyLabel:"Ed. Inicial (5a) vs Tec. Industrial (2a)",
+   explanation:"Un tecnico industrial (2-3 anios) gana S/ 3,383/mes, mientras que un profesional de educacion inicial (5 anios) gana S/ 2,265/mes. La carrera importa tanto como el nivel de estudios.",source:"MTPE 2024"},
+  {statement:"Las mejores carreras son solo medicina, derecho e ingenieria",isMyth:true,cat:"Opciones",
+   keyData:"S/ 4,710",keyLabel:"Ing. Sistemas joven/mes",
+   explanation:"Economia (S/ 4,526), Ing. Sistemas (S/ 4,710), Agronegocios (S/ 4,312) y Estadistica (S/ 4,527) tienen excelentes salarios iniciales. Hay muchas opciones bien pagadas que no son las tradicionales.",source:"MTPE 2024"},
 ];
 
 /* ══════════════════════════════════════════════════════
@@ -235,11 +243,13 @@ function App(){
   const[mythIdx,setMythIdx]=useState(0);
   const[mythAnswers,setMythAnswers]=useState([]);
   const[mythDone,setMythDone]=useState(false);
+  const[famMsgs,setFamMsgs]=useState([]);const[famInput,setFamInput]=useState('');const[famPhase,setFamPhase]=useState(0);const famEnd=useRef(null);const famInit=useRef(false);
   const chatEnd=useRef(null);
+  const[menuOpen,setMenuOpen]=useState(false);
 
   useEffect(()=>{chatEnd.current?.scrollIntoView({behavior:'smooth'})},[msgs]);
   const mark=(i)=>setDone(p=>{const n=new Set(p);n.add(i);return n;});
-  const nav=(v)=>setView(v);
+  const nav=(v)=>{setView(v);setMenuOpen(false);};
 
   const steps=[
     {icon:I.brain,label:"Autoconocimiento",sub:"Quien soy hoy?",s:"S1-S2",view:'chat'},
@@ -249,7 +259,7 @@ function App(){
     {icon:I.search,label:"Explorador de Carreras",sub:"Datos reales por sector",s:"S5-S6",view:'explore'},
     {icon:I.notebook,label:"Investigacion con IA",sub:"NotebookLM y mas",s:"S6",view:'notebook'},
     {icon:I.family,label:"Decision Familiar",sub:"Como lo comunico?",s:"S7-S8",view:'family'},
-    {icon:I.rocket,label:"Plan Accionable",sub:"Mi plan y CV",s:"S9-S10",view:'plan'},
+    {icon:I.rocket,label:"Plan Accionable",sub:"Mi plan y CV",s:"S9-S12",view:'plan'},
   ];
 
   /* ── WELCOME ── */
@@ -261,11 +271,11 @@ function App(){
         <div className="absolute top-1/3 right-1/4 w-20 h-20 bg-brand-400/10 rounded-2xl rotate-45"/>
         <div className="absolute bottom-1/3 left-1/4 w-32 h-32 bg-brand-300/10 rounded-full"/>
       </div>
-      <div className="text-center max-w-xl px-8 animate-fade-in relative z-10">
+      <div className="text-center max-w-xl px-4 sm:px-8 animate-fade-in relative z-10">
         <div className="mb-6 flex justify-center animate-bounce-in">
           <OwlMascot size={120} expression="happy" className="mascot-shadow"/>
         </div>
-        <h1 className="text-5xl font-black text-navy-700 tracking-tight leading-tight">Eligiendo Mi Camino</h1>
+        <h1 className="text-3xl sm:text-5xl font-black text-navy-700 tracking-tight leading-tight">Eligiendo Mi Camino</h1>
         <p className="text-navy-600/80 mt-2 text-lg font-bold">Programa Educativo</p>
         <p className="text-navy-500/60 mt-1 text-sm italic font-semibold">El momento de elegir es el momento de mostrarse</p>
         <p className="text-navy-500/70 mt-4 text-sm max-w-md mx-auto leading-relaxed">
@@ -292,6 +302,9 @@ function App(){
     <aside className="w-72 bg-white border-r border-cream-200 flex flex-col h-full shrink-0">
       <div className="p-5 border-b border-cream-200">
         <div className="flex items-center gap-3 cursor-pointer" onClick={()=>nav('home')}>
+          <button onClick={(e)=>{e.stopPropagation();setMenuOpen(false);}} className="lg:hidden absolute right-3 top-5 w-8 h-8 bg-cream-100 rounded-lg flex items-center justify-center text-navy-400 hover:text-navy-600">
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
           <OwlMini size={36}/>
           <div><h2 className="font-extrabold text-navy-700 text-sm leading-tight">Eligiendo Mi Camino</h2>
           <p className="text-[11px] text-navy-300">Programa Educativo</p></div>
@@ -339,7 +352,7 @@ function App(){
   /* ── HOME / DASHBOARD ── */
   const Home=()=>(
     <div className="flex-1 overflow-y-auto">
-      <div className="max-w-4xl mx-auto px-8 py-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-8 py-6 sm:py-10">
         {/* Warm personal greeting */}
         <div className="bg-gradient-to-br from-brand-50 to-cream-50 rounded-2xl p-6 mb-8 border-2 border-brand-100">
           <div className="flex items-center gap-4 mb-4">
@@ -359,7 +372,7 @@ function App(){
           <div className="absolute right-4 top-4 opacity-10"><OwlMascot size={100}/></div>
           <h3 className="font-bold text-lg mb-1">¿Cuanto gana la gente al mes en Lima?</h3>
           <p className="text-white/50 text-xs mb-4">Promedio incluyendo trabajo formal e informal</p>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[{label:'Secundaria completa',val:'S/ 1,316',pct:43,color:'bg-green-400',info:'88% informal'},
               {label:'Tecnica completa',val:'S/ 1,934',pct:63,color:'bg-brand-400',info:'+47% vs secundaria'},
               {label:'Universidad completa',val:'S/ 3,057',pct:100,color:'bg-purple-400',info:'+132% vs secundaria'}
@@ -385,7 +398,7 @@ function App(){
         {/* Steps grid */}
         <h2 className="text-lg font-black text-navy-700 mb-2">Tu camino en {steps.length} pasos</h2>
         <p className="text-sm text-navy-400 mb-4">Puedes explorar cualquier paso libremente</p>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {steps.map((s,i)=>{
             const d2=done.has(i);
             return(<button key={i} onClick={()=>nav(s.view)}
@@ -436,7 +449,7 @@ function App(){
         <div className="max-w-2xl mx-auto space-y-4">
           {msgs.map((m,i)=>(<div key={i} className={`flex ${m.r==='user'?'justify-end':'justify-start'} animate-slide-up`}>
             {m.r==='ai'&&<div className="mr-3 mt-1 shrink-0"><OwlMini size={32}/></div>}
-            <div className={`max-w-[70%] px-5 py-3 ${m.r==='ai'?'chat-ai bg-white border border-cream-200 text-navy-700':'chat-user bg-brand-400 text-white'} shadow-sm`}>
+            <div className={`max-w-[85%] sm:max-w-[70%] px-4 sm:px-5 py-3 ${m.r==='ai'?'chat-ai bg-white border border-cream-200 text-navy-700':'chat-user bg-brand-400 text-white'} shadow-sm`}>
               <p className="text-sm leading-relaxed whitespace-pre-line">{m.t}</p>
             </div>
           </div>))}
@@ -478,7 +491,7 @@ function App(){
           <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-cream-200 mb-6">
             <p className="text-xl font-bold text-navy-700 text-center leading-relaxed">{q.text}</p>
           </div>
-          <div className="grid grid-cols-5 gap-3">
+          <div className="grid grid-cols-5 gap-1.5 sm:gap-3">
             {labels.map((l,i)=>(<button key={i} onClick={()=>answer(i+1)}
               className="py-4 rounded-xl font-bold text-sm transition-all bg-white border-2 border-cream-200 hover:border-brand-400 hover:bg-brand-50 text-navy-600 hover:text-brand-500 flex flex-col items-center gap-1 shadow-sm hover:shadow-md">
               <span className="text-lg font-black">{i+1}</span><span className="text-xs font-medium">{l}</span>
@@ -501,7 +514,7 @@ function App(){
           <h2 className="text-3xl font-black text-navy-700">Tus resultados!</h2>
           <p className="text-navy-400 mt-1">Tus 3 perfiles de interes dominantes</p>
         </div>
-        <div className="grid grid-cols-3 gap-5 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 mb-8">
           {top3.map((p,i)=>(<div key={i} className="bg-white rounded-2xl p-6 shadow-md border-2 border-cream-200 text-center animate-slide-up" style={{animationDelay:`${i*.1}s`}}>
             <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${p.color} flex items-center justify-center text-3xl mx-auto mb-3 shadow-md`}>{p.avatar}</div>
             <p className="font-black text-navy-700 text-lg">{p.name}</p>
@@ -529,8 +542,9 @@ function App(){
     </div>);
   };
 
-  /* ── MYTHS QUIZ (S4) ── */
+  /* ── MYTHS - SWIPE CARDS (S4) ── */
   const[mythFeedback,setMythFeedback]=useState(null);
+  const[mythSwipe,setMythSwipe]=useState(null);
   const Myths=()=>{
     if(mythDone){
       const correct=mythAnswers.filter((a,i)=>a===mythsData[i].isMyth).length;
@@ -538,21 +552,29 @@ function App(){
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
             <OwlMascot size={80} expression="happy" className="mx-auto mascot-shadow mb-4"/>
-            <h2 className="text-3xl font-black text-navy-700">Resultados del Quiz</h2>
-            <p className="text-navy-400 mt-1">{correct} de {mythsData.length} correctas</p>
-            <p className="text-navy-300 text-sm mt-2">Lo importante no es el puntaje, sino lo que aprendiste</p>
+            <h2 className="text-3xl font-black text-navy-700">Lo que aprendiste</h2>
+            <div className="flex justify-center gap-3 mt-4">
+              <div className="bg-green-100 rounded-xl px-4 py-2"><span className="text-2xl font-black text-green-600">{correct}</span><p className="text-xs text-green-600 font-bold">Correctas</p></div>
+              <div className="bg-red-100 rounded-xl px-4 py-2"><span className="text-2xl font-black text-red-600">{mythsData.length-correct}</span><p className="text-xs text-red-600 font-bold">A revisar</p></div>
+            </div>
+            <p className="text-navy-400 text-sm mt-4">Lo importante no es el puntaje, sino los datos que ahora conoces</p>
           </div>
           <div className="space-y-4 mb-8">
             {mythsData.map((m,i)=>{
               const userSaidMyth=mythAnswers[i];const isCorrect=userSaidMyth===m.isMyth;
-              return(<div key={i} className={`bg-white rounded-2xl p-5 border-2 ${isCorrect?'border-green-300':'border-red-300'} animate-slide-up`} style={{animationDelay:`${i*.06}s`}}>
-                <div className="flex items-start gap-3">
-                  <span className="text-2xl">{isCorrect?'✅':'❌'}</span>
-                  <div>
-                    <p className="font-bold text-navy-700 text-sm">"{m.statement}"</p>
-                    <span className={`inline-block mt-1 text-xs px-2 py-0.5 rounded-full font-bold ${m.isMyth?'bg-red-100 text-red-600':'bg-green-100 text-green-600'}`}>{m.isMyth?'ES MITO':'ES REALIDAD'}</span>
-                    <p className="text-sm text-navy-500 mt-2">{m.explanation}</p>
+              return(<div key={i} className={`bg-white rounded-2xl overflow-hidden border-2 ${isCorrect?'border-green-200':'border-amber-200'} animate-slide-up`} style={{animationDelay:`${i*.06}s`}}>
+                <div className={`px-5 py-2 flex items-center justify-between ${isCorrect?'bg-green-50':'bg-amber-50'}`}>
+                  <span className="text-xs font-bold text-navy-400">{m.cat}</span>
+                  <span className={`text-xs font-bold ${isCorrect?'text-green-600':'text-amber-600'}`}>{isCorrect?'Acertaste':'Aprendizaje nuevo'}</span>
+                </div>
+                <div className="p-5">
+                  <p className="font-bold text-navy-700 text-sm">\"{m.statement}\"</p>
+                  <div className="flex items-center gap-2 mt-2">
+                    <span className={`text-xs px-2.5 py-1 rounded-full font-bold ${m.isMyth?'bg-red-100 text-red-600':'bg-green-100 text-green-600'}`}>{m.isMyth?'MITO':'REALIDAD'}</span>
+                    {m.keyData&&<span className="text-xs bg-brand-50 text-brand-600 px-2 py-1 rounded-full font-bold">{m.keyData}</span>}
                   </div>
+                  <p className="text-sm text-navy-500 mt-3 leading-relaxed">{m.explanation}</p>
+                  {m.source&&<p className="text-[10px] text-navy-300 mt-2">Fuente: {m.source}</p>}
                 </div>
               </div>);
             })}
@@ -564,7 +586,8 @@ function App(){
     const m=mythsData[mythIdx];const pct=Math.round(((mythIdx+(mythFeedback?1:0))/mythsData.length)*100);
     const handleAnswer=(userSaysMyth)=>{
       const isCorrect=userSaysMyth===m.isMyth;
-      setMythFeedback({isCorrect,userSaysMyth});
+      setMythSwipe(userSaysMyth?'left':'right');
+      setTimeout(()=>{setMythSwipe(null);setMythFeedback({isCorrect,userSaysMyth});},300);
     };
     const nextQuestion=()=>{
       const na=[...mythAnswers,mythFeedback.userSaysMyth];setMythAnswers(na);setMythFeedback(null);
@@ -573,7 +596,7 @@ function App(){
     };
     return(<div className="flex-1 flex flex-col">
       <header className="px-8 py-4 border-b border-cream-200 bg-white">
-        <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700">Quiz: Mitos Vocacionales</h2><p className="text-xs text-navy-400">Verdad o mito? Descubrelo con datos reales · Sesion 4</p></div></div>
+        <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700">Mitos y Realidades Vocacionales</h2><p className="text-xs text-navy-400">Desliza para descubrir la verdad con datos reales · Sesion 4</p></div></div>
         <div className="flex items-center gap-4 mt-3">
           <div className="flex-1 h-2.5 bg-cream-200 rounded-full overflow-hidden"><div className="h-full bg-gradient-to-r from-brand-400 to-brand-300 rounded-full transition-all duration-500" style={{width:`${pct}%`}}/></div>
           <span className="text-sm font-bold text-navy-400">{mythIdx+1}/{mythsData.length}</span>
@@ -583,37 +606,54 @@ function App(){
         <div className="w-full max-w-xl">
           {!mythFeedback?(
             <div key={mythIdx} className="animate-fade-in">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-cream-200 mb-6">
-                <p className="text-center text-navy-300 text-sm mb-4">¿Es esto verdad o mito?</p>
-                <p className="text-xl font-bold text-navy-700 text-center leading-relaxed">"{m.statement}"</p>
+              <div className={`bg-white rounded-3xl p-8 shadow-xl border-2 border-cream-200 mb-6 transition-all duration-300 ${mythSwipe==='left'?'translate-x-[-100px] rotate-[-5deg] opacity-0':mythSwipe==='right'?'translate-x-[100px] rotate-[5deg] opacity-0':''}`}>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs bg-navy-100 text-navy-500 px-3 py-1 rounded-full font-bold">{m.cat}</span>
+                  <span className="text-xs text-navy-300">{mythIdx+1} de {mythsData.length}</span>
+                </div>
+                <p className="text-xl font-bold text-navy-700 text-center leading-relaxed mb-6">\"{m.statement}\"</p>
+                {m.keyData&&<div className="bg-brand-50 rounded-xl p-3 text-center mb-2">
+                  <p className="text-lg font-black text-brand-500">{m.keyData}</p>
+                  <p className="text-[11px] text-brand-400 font-medium">{m.keyLabel}</p>
+                </div>}
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="flex gap-3 items-center justify-center">
                 <button onClick={()=>handleAnswer(true)}
-                  className="py-5 rounded-xl font-bold text-lg transition-all bg-red-50 border-2 border-red-200 hover:border-red-400 hover:bg-red-100 text-red-600 hover:shadow-md">
-                  🚫 MITO
+                  className="flex-1 py-5 rounded-2xl font-bold text-lg transition-all bg-white border-2 border-red-200 hover:border-red-400 hover:bg-red-50 text-red-500 hover:shadow-lg flex flex-col items-center gap-1 group">
+                  <span className="text-2xl group-hover:scale-110 transition-transform">\u{1F44E}</span> MITO
                 </button>
                 <button onClick={()=>handleAnswer(false)}
-                  className="py-5 rounded-xl font-bold text-lg transition-all bg-green-50 border-2 border-green-200 hover:border-green-400 hover:bg-green-100 text-green-600 hover:shadow-md">
-                  ✅ REALIDAD
+                  className="flex-1 py-5 rounded-2xl font-bold text-lg transition-all bg-white border-2 border-green-200 hover:border-green-400 hover:bg-green-50 text-green-500 hover:shadow-lg flex flex-col items-center gap-1 group">
+                  <span className="text-2xl group-hover:scale-110 transition-transform">\u{1F44D}</span> REALIDAD
                 </button>
               </div>
+              <p className="text-center text-navy-300 text-xs mt-4">Elige lo que crees: es mito o realidad?</p>
             </div>
           ):(
-            <div className="animate-fade-in">
-              <div className={`rounded-2xl p-6 shadow-lg border-2 mb-6 ${mythFeedback.isCorrect?'bg-green-50 border-green-300':'bg-red-50 border-red-300'}`}>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-3xl">{mythFeedback.isCorrect?'🎉':'💡'}</span>
-                  <p className={`text-lg font-black ${mythFeedback.isCorrect?'text-green-700':'text-red-700'}`}>
-                    {mythFeedback.isCorrect?'Correcto!':'No exactamente...'}
-                  </p>
+            <div className="animate-scale-in">
+              <div className={`rounded-3xl p-6 shadow-xl border-2 mb-6 ${mythFeedback.isCorrect?'bg-green-50 border-green-300':'bg-amber-50 border-amber-300'}`}>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl ${mythFeedback.isCorrect?'bg-green-200':'bg-amber-200'}`}>
+                    {mythFeedback.isCorrect?'\u{1F389}':'\u{1F4A1}'}
+                  </div>
+                  <div>
+                    <p className={`text-lg font-black ${mythFeedback.isCorrect?'text-green-700':'text-amber-700'}`}>
+                      {mythFeedback.isCorrect?'Correcto!':'Dato interesante!'}
+                    </p>
+                    <span className={`inline-block text-xs px-2.5 py-0.5 rounded-full font-bold ${m.isMyth?'bg-red-100 text-red-600':'bg-green-100 text-green-600'}`}>{m.isMyth?'ES MITO':'ES REALIDAD'}</span>
+                  </div>
                 </div>
-                <p className="font-bold text-navy-700 text-sm mb-2">"{m.statement}"</p>
-                <span className={`inline-block mb-3 text-xs px-2.5 py-1 rounded-full font-bold ${m.isMyth?'bg-red-100 text-red-600':'bg-green-100 text-green-600'}`}>{m.isMyth?'ES MITO':'ES REALIDAD'}</span>
+                <p className="font-bold text-navy-700 text-sm mb-3">\"{m.statement}\"</p>
+                {m.keyData&&<div className={`${mythFeedback.isCorrect?'bg-green-100':'bg-amber-100'} rounded-xl p-3 mb-3 text-center`}>
+                  <p className="text-xl font-black text-navy-700">{m.keyData}</p>
+                  <p className="text-xs text-navy-500 font-medium">{m.keyLabel}</p>
+                </div>}
                 <p className="text-sm text-navy-600 leading-relaxed">{m.explanation}</p>
+                {m.source&&<p className="text-[10px] text-navy-300 mt-2">Fuente: {m.source}</p>}
               </div>
               <button onClick={nextQuestion}
-                className="w-full py-4 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold hover:opacity-90 transition shadow-lg">
-                {mythIdx<mythsData.length-1?'Siguiente pregunta →':'Ver resultados'}
+                className="w-full py-4 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-2xl font-bold hover:opacity-90 transition shadow-lg text-lg">
+                {mythIdx<mythsData.length-1?'Siguiente \u2192':'Ver lo que aprendiste'}
               </button>
             </div>
           )}
@@ -637,7 +677,7 @@ function App(){
         <OwlMini size={36}/><div><h2 className="font-black text-navy-700">Rutas Post-Secundarias</h2><p className="text-sm text-navy-400">Compara las 3 opciones reales · Sesiones 4-5</p></div>
       </header>
       <div className="max-w-4xl mx-auto px-8 py-8">
-        <div className="grid grid-cols-3 gap-5 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 mb-8">
           {rts.map((r,i)=>(<div key={i} className="bg-white rounded-2xl shadow-md border-2 border-cream-200 overflow-hidden animate-slide-up" style={{animationDelay:`${i*.08}s`}}>
             <div className={`bg-gradient-to-r ${r.color} p-5 text-white`}>
               <r.icon className="w-8 h-8 mb-3"/><h3 className="text-xl font-black">{r.name}</h3>
@@ -682,14 +722,9 @@ function App(){
       </header>
       <div className="max-w-5xl mx-auto px-8 py-8">
         {!selSector?(<div>
-          {/* PLACEHOLDER: Genially Infographic */}
-          <div className="bg-white border-2 border-dashed border-brand-200 rounded-2xl p-5 mb-6 text-center">
-            <div className="flex items-center justify-center gap-3 mb-2"><span className="text-2xl">📊</span><p className="font-bold text-navy-700 text-sm">Infografia interactiva: Tipo de trabajo e ingresos por sector</p></div>
-            <p className="text-navy-400 text-xs mb-3">Placeholder para infografia Genially con datos por sector y nivel educativo</p>
-            <div className="bg-brand-50 rounded-xl h-32 flex items-center justify-center"><p className="text-brand-300 text-sm">Genially embed (AIDEA disena, uDocz integra)</p></div>
-          </div>
+          {
           <h3 className="font-bold text-navy-700 mb-4">Explora por sector</h3>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {sectors.map((s,i)=>(<button key={s.id} onClick={()=>setSelSector(s)}
             className={`bg-white rounded-2xl p-5 shadow-sm border-2 border-cream-200 text-left hover:shadow-lg hover:-translate-y-0.5 transition-all animate-slide-up ${s.tag?'ring-2 ring-brand-300':''}`} style={{animationDelay:`${i*.04}s`}}>
             <div className="flex items-center gap-3 mb-3">
@@ -709,8 +744,8 @@ function App(){
             <span className="text-5xl">{selSector.icon}</span>
             <div><h3 className="text-2xl font-black">{selSector.name}</h3><p className="text-white/70 text-sm mt-1">{selSector.desc}</p></div>
           </div>
-          <div className="bg-white rounded-2xl border-2 border-cream-200 overflow-hidden">
-            <table className="w-full"><thead><tr className="bg-cream-50 border-b border-cream-200 text-left">
+          <div className="bg-white rounded-2xl border-2 border-cream-200 overflow-x-auto">
+            <table className="w-full min-w-[600px]"><thead><tr className="bg-cream-50 border-b border-cream-200 text-left">
               <th className="px-5 py-3 text-xs font-bold text-navy-400">Carrera / Ocupacion</th>
               <th className="px-5 py-3 text-xs font-bold text-navy-400">Nivel</th>
               <th className="px-5 py-3 text-xs font-bold text-navy-400">Salario Joven</th>
@@ -761,6 +796,14 @@ function App(){
             <p className="text-xs text-indigo-500 mt-1">Trabajo formal en Lima</p>
           </div>
         </div>)}
+        {c.study&&(<div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-5 mb-5">
+          <h3 className="font-bold text-blue-700 text-sm mb-3">Que se estudia?</h3>
+          <p className="text-sm text-navy-600 leading-relaxed">{c.study}</p>
+        </div>)}
+        {c.dayInLife&&(<div className="bg-purple-50 border-2 border-purple-200 rounded-2xl p-5 mb-5">
+          <h3 className="font-bold text-purple-700 text-sm mb-3">Un dia tipico de trabajo</h3>
+          <p className="text-sm text-navy-600 leading-relaxed">{c.dayInLife}</p>
+        </div>)}
         {c.skills&&(<div className="bg-white border-2 border-cream-200 rounded-2xl p-5 mb-5">
           <h3 className="font-bold text-navy-700 text-sm mb-3">Habilidades clave</h3>
           <div className="flex flex-wrap gap-2">{c.skills.map((s,i)=><span key={i} className="px-3 py-1.5 bg-brand-50 text-brand-600 text-sm rounded-lg font-bold">{s}</span>)}</div>
@@ -776,22 +819,22 @@ function App(){
 
   /* ── NOTEBOOK LM (S6) ── */
   const Notebook=()=>(<div className="flex-1 overflow-y-auto">
-    <header className="px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3">
-      <OwlMini size={36}/><div><h2 className="font-black text-navy-700">Investigacion con IA</h2><p className="text-sm text-navy-400">Explora ocupaciones a fondo con NotebookLM · Sesion 6</p></div>
+    <header className="px-6 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3">
+      <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Investigacion con IA</h2><p className="text-sm text-navy-400">Profundiza en las carreras que te interesan · Sesion 6</p></div>
     </header>
-    <div className="max-w-3xl mx-auto px-8 py-8">
+    <div className="max-w-3xl mx-auto px-4 sm:px-8 py-6 sm:py-8">
       <div className="text-center mb-8">
         <OwlMascot size={80} expression="surprised" className="mx-auto mascot-shadow mb-4"/>
-        <h3 className="text-xl font-black text-navy-700">Investiga como un profesional</h3>
-        <p className="text-navy-400 mt-2 text-sm max-w-lg mx-auto">En esta sesion usaras NotebookLM de Google para conversar con documentos reales sobre las ocupaciones que te interesan.</p>
+        <h3 className="text-xl font-black text-navy-700">De explorar a decidir</h3>
+        <p className="text-navy-400 mt-2 text-sm max-w-lg mx-auto">En el Explorador de Carreras viste datos de muchos sectores. Ahora vas a elegir las que mas te interesaron y profundizar para tomar una mejor decision.</p>
       </div>
       <div className="space-y-4 mb-8">
         {[
-          {icon:'\uD83D\uDCCB',title:'Revisa tus 3 ocupaciones elegidas',desc:'Repasa las ocupaciones que seleccionaste en el paso anterior. Mira salarios, habilidades y donde trabajar.',step:'1'},
-          {icon:'\uD83D\uDCC4',title:'Tarjetas comparativas en plataforma',desc:'La plataforma te muestra tarjetas lado a lado de tus 3 ocupaciones con datos clave para comparar.',step:'2'},
-          {icon:'\uD83E\uDD16',title:'Conversacion con NotebookLM',desc:'Sube los documentos del MTPE a NotebookLM y hazle preguntas sobre las ocupaciones que te interesan: "Que hace esta persona en su dia a dia?", "Que habilidades necesito?", "Como es el mercado laboral?"',step:'3'},
-          {icon:'\uD83C\uDFAF',title:'Priorizacion final de ocupaciones',desc:'Con toda la informacion, ordena tus ocupaciones de mayor a menor interes. Esta sera tu base para el plan.',step:'4'},
-        ].map((item,i)=>(<div key={i} className="bg-white rounded-2xl p-5 border-2 border-cream-200 flex gap-4 items-start animate-slide-up" style={{animationDelay:`${i*.08}s`}}>
+          {icon:'\u2B50',title:'Elige tus favoritas del Explorador',desc:'De todas las carreras que viste en el paso anterior, selecciona las que mas te llamaron la atencion. No hay limite, pero intenta enfocarte en las que realmente te emocionan.',step:'1'},
+          {icon:'\uD83C\uDFAF',title:'Reduce a 3 opciones para investigar',desc:'De tus favoritas, elige las 3 que quieres investigar a fondo. Estas seran las opciones que vas a comparar para tomar tu decision.',step:'2'},
+          {icon:'\uD83E\uDD16',title:'Investiga con NotebookLM',desc:'Usa NotebookLM de Google para conversar con documentos verificados del MTPE. Preguntale: "Que hace esta persona en su dia a dia?", "Donde puedo estudiar?", "Cuanto cuesta?", "Hay becas?"',step:'3'},
+          {icon:'\uD83D\uDCCB',title:'Priorizacion final',desc:'Con toda la informacion, ordena tus 3 ocupaciones de mayor a menor interes. Justifica tu orden: que te entusiasma, que dudas quedan, como se conecta con tu suenho.',step:'4'},
+        ].map((item,i)=>(<div key={i} className="bg-white rounded-2xl p-4 sm:p-5 border-2 border-cream-200 flex gap-3 sm:gap-4 items-start animate-slide-up" style={{animationDelay:`${i*.08}s`}}>
           <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center text-brand-500 font-black shrink-0">{item.step}</div>
           <div className="flex-1">
             <div className="flex items-center gap-2"><span className="text-xl">{item.icon}</span><h4 className="font-bold text-navy-700 text-sm">{item.title}</h4></div>
@@ -799,11 +842,17 @@ function App(){
           </div>
         </div>))}
       </div>
-      <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-5 mb-6 flex gap-3">
+      {/* PLACEHOLDER: NotebookLM */}
+      <div className="bg-white border-2 border-dashed border-blue-200 rounded-2xl p-5 mb-6 text-center">
+        <div className="flex items-center justify-center gap-3 mb-2"><span className="text-2xl">\uD83E\uDD16</span><p className="font-bold text-navy-700 text-sm">NotebookLM: Conversa con datos del MTPE</p></div>
+        <p className="text-navy-400 text-xs mb-3">Sube los documentos del Ministerio de Trabajo y hazle todas las preguntas que quieras sobre las carreras que elegiste</p>
+        <div className="bg-blue-50 rounded-xl h-28 flex items-center justify-center"><p className="text-blue-300 text-sm">NotebookLM embed (uDocz integra)</p></div>
+      </div>
+      <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-4 sm:p-5 mb-6 flex gap-3">
         <OwlMini size={32}/>
         <div>
-          <p className="font-bold text-blue-700 text-sm">Por que NotebookLM?</p>
-          <p className="text-blue-600 text-sm mt-1">En lugar de entrevistar a un profesional (dificil de coordinar), usamos IA para que "converses" con documentos verificados del Ministerio de Trabajo. Puedes hacer todas las preguntas que quieras!</p>
+          <p className="font-bold text-green-700 text-sm">Opcional: Habla con un profesional</p>
+          <p className="text-green-600 text-sm mt-1">Si tienes la oportunidad de conversar con alguien que trabaje en la carrera que te interesa, aprovechala. Preguntale como es un dia normal, que le gusta y que no, y que consejo le daria a alguien que esta empezando.</p>
         </div>
       </div>
       <button onClick={()=>{mark(5);nav('home');}} className="w-full py-3.5 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold shadow-lg hover:opacity-90 transition">Completar paso</button>
@@ -811,54 +860,72 @@ function App(){
   </div>);
 
   /* ── FAMILY (S7-S8) ── */
-  const Family=()=>(<div className="flex-1 overflow-y-auto">
-    <header className="px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3">
-      <OwlMini size={36}/><div><h2 className="font-black text-navy-700">Decision y Alineacion Familiar</h2><p className="text-sm text-navy-400">Preparate para comunicar tu decision · Sesiones 7-8</p></div>
-    </header>
-    <div className="max-w-3xl mx-auto px-8 py-8">
-      <div className="text-center mb-8">
-        <OwlMascot size={80} expression="normal" className="mx-auto mascot-shadow mb-4"/>
-        <h3 className="text-xl font-black text-navy-700">Este paso es clave</h3>
-        <p className="text-navy-400 mt-2 text-sm max-w-lg mx-auto">Los padres son quienes mas influyen en la decision de carrera. La IA te ayudara a preparar una conversacion efectiva con tu familia.</p>
-      </div>
-      <div className="space-y-4 mb-8">
-        {[
-          {icon:'\uD83D\uDCC4',title:'Reporte: Quien soy y a donde quiero ir?',desc:'La IA genera un resumen de todo tu proceso: tus intereses, perfil RIASEC, ocupaciones preferidas y ruta elegida.',status:'MUST'},
-          {icon:'\uD83D\uDCAC',title:'Perfil parental + guion de conversacion',desc:'La IA analiza tu contexto familiar y genera un guion adaptado para comunicar tu decision a tus padres de forma respetuosa y convincente.',status:'MUST'},
-          {icon:'\u2709\uFE0F',title:'Mensaje clave generado',desc:'Un mensaje claro y respetuoso que puedes compartir con tu familia, preparado por la IA.',status:'SHOULD'},
-          {icon:'\uD83D\uDD04',title:'Reformulacion de 3 opciones viables',desc:'Despues de hablar con tu familia, ajusta tus opciones de manera realista incorporando su perspectiva.',status:'MUST'},
-        ].map((item,i)=>(<div key={i} className="bg-white rounded-2xl p-5 border-2 border-cream-200 flex gap-4 items-start animate-slide-up" style={{animationDelay:`${i*.08}s`}}>
-          <span className="text-3xl">{item.icon}</span>
-          <div className="flex-1">
-            <div className="flex items-center gap-2">
-              <h4 className="font-bold text-navy-700 text-sm">{item.title}</h4>
-              <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${item.status==='MUST'?'bg-brand-100 text-brand-500':'bg-cream-200 text-navy-400'}`}>{item.status}</span>
+  const famAiR={
+    0:(n)=>`Hola${n?` ${n}`:' '}! Llegamos a un paso muy importante. Voy a hacerte algunas preguntas sobre la carrera que elegiste y tu familia. Con tus respuestas, voy a preparar un resumen que te ayude a comunicar tu decision.\n\nCuentame: cual es la carrera o ruta que mas te convencio despues de todo lo que exploraste?`,
+    1:'Buena eleccion! Ahora dime: por que elegiste esta opcion? Que fue lo que mas te convencio? (pueden ser los datos de salario, lo que se estudia, las oportunidades, o simplemente que te emociona)',
+    2:'Excelente. Ahora hablemos de tu familia. Cuando piensas en contarle a tus padres o tutores sobre tu decision, como crees que van a reaccionar? Que esperan ellos para tu futuro?',
+    3:'Entiendo. Ultima pregunta: hay algo que te preocupe sobre esta decision? Por ejemplo: el costo, la distancia, el tiempo de estudio, o lo que piense tu familia?',
+    4:(n)=>`Gracias por compartir todo esto, ${n||''}. Con lo que me contaste, aqui va tu resumen para la conversacion familiar:\n\n--- RESUMEN PARA MI FAMILIA ---\n\n\uD83C\uDF93 Mi decision: La carrera que elegi basandome en mis intereses y datos reales que explore\n\n\uD83D\uDCCA Por que: Porque se conecta con mi perfil, tiene buenas oportunidades laborales y me motiva\n\n\uD83D\uDC6A Lo que necesito de ustedes: Su apoyo y comprension. Les comparto mi proceso de exploracion\n\n\uD83D\uDCAA Mi plan: Voy a construir un plan concreto con pasos inmediatos en la siguiente sesion\n\n---\n\nRecuerda: la conversacion con tu familia es para COMPARTIR tu decision, no para pedir permiso. Tu hiciste todo un proceso de exploracion con datos reales. Confia en ti.`,
+  };
+  useEffect(()=>{famEnd.current?.scrollIntoView({behavior:'smooth'})},[famMsgs]);
+  const Family=()=>{
+    useEffect(()=>{if(!famInit.current&&famMsgs.length===0){famInit.current=true;setTimeout(()=>setFamMsgs([{r:'ai',t:famAiR[0](userName)}]),600);}},[famMsgs.length]);
+    const sendFam=()=>{
+      if(!famInput.trim())return;const m=famInput.trim();setFamInput('');
+      setFamMsgs(p=>[...p,{r:'user',t:m}]);
+      setTimeout(()=>{
+        let resp;
+        if(famPhase===0)resp=famAiR[1];
+        else if(famPhase===1)resp=famAiR[2];
+        else if(famPhase===2)resp=famAiR[3];
+        else resp=famAiR[4](userName);
+        setFamMsgs(p=>[...p,{r:'ai',t:resp}]);setFamPhase(p=>p+1);
+      },1000);
+    };
+    const famChatDone=famPhase>=4;
+    return(<div className="flex-1 flex flex-col">
+      <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3 sm:gap-4">
+        <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Decision y Conversacion Familiar</h2><p className="text-xs text-navy-400">La IA te prepara para hablar con tu familia · Sesiones 7-8</p></div>
+      </header>
+      <div className="flex-1 overflow-y-auto px-4 sm:px-8 py-4 sm:py-6 bg-cream-50">
+        <div className="max-w-2xl mx-auto">
+          {famMsgs.length===0&&(
+            <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-4 sm:p-5 mb-6 flex gap-3 items-start animate-fade-in">
+              <span className="text-2xl shrink-0">\uD83D\uDC6A</span>
+              <div>
+                <p className="font-bold text-red-700 text-sm">Por que es tan importante este paso?</p>
+                <p className="text-red-600 text-sm mt-1">En el piloto encontramos que los padres son quienes mas influyen en la decision de carrera. Este paso te prepara con datos y argumentos para esa conversacion.</p>
+              </div>
             </div>
-            <p className="text-sm text-navy-400 mt-1">{item.desc}</p>
+          )}
+          <div className="space-y-4">
+            {famMsgs.map((m,i)=>(<div key={i} className={`flex ${m.r==='user'?'justify-end':'justify-start'} animate-slide-up`}>
+              {m.r==='ai'&&<div className="mr-2 sm:mr-3 mt-1 shrink-0"><OwlMini size={28}/></div>}
+              <div className={`max-w-[80%] sm:max-w-[70%] px-4 sm:px-5 py-3 ${m.r==='ai'?'chat-ai bg-white border border-cream-200 text-navy-700':'chat-user bg-brand-400 text-white'} shadow-sm`}>
+                <p className="text-sm leading-relaxed whitespace-pre-line">{m.t}</p>
+              </div>
+            </div>))}
+            <div ref={famEnd}/>
           </div>
-        </div>))}
-      </div>
-      {/* PLACEHOLDER: AI Conversation */}
-      <div className="bg-white border-2 border-dashed border-purple-200 rounded-2xl p-5 mb-6 text-center">
-        <div className="flex items-center justify-center gap-3 mb-2"><span className="text-2xl">🤖</span><p className="font-bold text-navy-700 text-sm">Conversacion con IA: Perfil parental y guion adaptado</p></div>
-        <p className="text-navy-400 text-xs mb-3">La IA analiza el contexto del estudiante y genera un perfil de los padres con un guion de conversacion personalizado</p>
-        <div className="bg-purple-50 rounded-xl h-28 flex items-center justify-center"><p className="text-purple-300 text-sm">Chatbot embed (Gemini for Education / Cognitia)</p></div>
-      </div>
-      <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-5 mb-6 flex gap-3 items-start">
-        <OwlMascot size={48} expression="normal"/>
-        <div>
-          <p className="font-bold text-red-700 text-sm">Por que es tan importante?</p>
-          <p className="text-red-600 text-sm mt-1">En el piloto encontramos que los padres son quienes mas influyen. Estudiantes que querian estudiar Derecho o Periodismo Deportivo fueron vetados por sus padres. Este paso te prepara para esa conversacion.</p>
         </div>
       </div>
-      <button onClick={()=>{mark(6);nav('home');}} className="w-full py-3.5 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold shadow-lg hover:opacity-90 transition">Completar paso</button>
-    </div>
-  </div>);
+      <div className="px-4 sm:px-8 py-3 sm:py-4 border-t border-cream-200 bg-white">
+        <div className="max-w-2xl mx-auto">
+          {famChatDone?(<button onClick={()=>{mark(6);nav('home');}} className="w-full py-3 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold hover:opacity-90 transition shadow-lg">Completar paso</button>
+          ):(<div className="flex gap-2 sm:gap-3">
+            <input value={famInput} onChange={e=>setFamInput(e.target.value)} onKeyDown={e=>e.key==='Enter'&&sendFam()}
+              placeholder="Escribe tu respuesta..." className="flex-1 bg-cream-50 rounded-xl px-4 sm:px-5 py-3 text-sm text-navy-700 placeholder-navy-300 border-2 border-cream-200 focus:border-brand-300 transition"/>
+            <button onClick={sendFam} className="w-11 h-11 sm:w-12 sm:h-12 bg-brand-400 rounded-xl flex items-center justify-center text-white hover:bg-brand-500 transition shrink-0 shadow-md"><I.send className="w-4 h-4"/></button>
+          </div>)}
+        </div>
+      </div>
+    </div>);
+  };
 
-  /* ── PLAN (S9-S10) ── */
+  /* ── PLAN (S9-S12) ── */
   const Plan=()=>(<div className="flex-1 overflow-y-auto">
     <header className="px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3">
-      <OwlMini size={36}/><div><h2 className="font-black text-navy-700">Plan Accionable + Cierre</h2><p className="text-sm text-navy-400">Construye tu plan concreto · Sesiones 9-10</p></div>
+      <OwlMini size={36}/><div><h2 className="font-black text-navy-700">Plan Accionable + Cierre</h2><p className="text-sm text-navy-400">Construye tu plan concreto · Sesiones 9-12</p></div>
     </header>
     <div className="max-w-3xl mx-auto px-8 py-8">
       <div className="text-center mb-8">
@@ -887,7 +954,7 @@ function App(){
       <div className="bg-white border-2 border-dashed border-emerald-200 rounded-2xl p-5 mb-6 text-center">
         <div className="flex items-center justify-center gap-3 mb-2"><span className="text-2xl">🤖</span><p className="font-bold text-navy-700 text-sm">IA: Constructor de Plan A, feedback y refinamiento</p></div>
         <p className="text-navy-400 text-xs mb-3">La IA guia al estudiante con preguntas estructuradas para armar su Plan A, le da feedback, y lo ayuda a mejorarlo a Plan A 2.0</p>
-        <div className="bg-emerald-50 rounded-xl h-28 flex items-center justify-center"><p className="text-emerald-300 text-sm">Chatbot embed (Gemini for Education / Cognitia)</p></div>
+        <div className="bg-emerald-50 rounded-xl h-28 flex items-center justify-center"><p className="text-emerald-300 text-sm">Chatbot embed (IA de plataforma uDocz)</p></div>
       </div>
       {/* PLACEHOLDER: CV Generator */}
       <div className="bg-white border-2 border-dashed border-blue-200 rounded-2xl p-5 mb-6 text-center">
@@ -905,9 +972,22 @@ function App(){
 
   /* ── LAYOUT ── */
   if(view==='welcome')return <div className="h-full"><Welcome/></div>;
-  return(<div className="h-full flex">
-    <Sidebar/>
-    <main className="flex-1 flex flex-col overflow-hidden bg-cream-50">
+  return(<div className="h-full flex relative">
+    {/* Mobile menu overlay */}
+    {menuOpen&&<div className="fixed inset-0 bg-black/30 z-40 lg:hidden" onClick={()=>setMenuOpen(false)}/>}
+    {/* Sidebar - hidden on mobile unless menuOpen */}
+    <div className={`fixed lg:relative z-50 h-full transition-transform duration-300 ${menuOpen?'translate-x-0':'-translate-x-full lg:translate-x-0'}`}>
+      <Sidebar/>
+    </div>
+    {/* Mobile top bar */}
+    <div className="lg:hidden fixed top-0 left-0 right-0 z-30 bg-white border-b border-cream-200 px-4 py-3 flex items-center gap-3">
+      <button onClick={()=>setMenuOpen(true)} className="w-10 h-10 bg-cream-100 rounded-xl flex items-center justify-center">
+        <svg className="w-5 h-5 text-navy-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <OwlMini size={28}/>
+      <h2 className="font-bold text-navy-700 text-sm truncate flex-1">Eligiendo Mi Camino</h2>
+    </div>
+    <main className="flex-1 flex flex-col overflow-hidden bg-cream-50 pt-[52px] lg:pt-0">
       {view==='home'&&<Home/>}
       {view==='chat'&&<Chat/>}
       {view==='test'&&<Test/>}
