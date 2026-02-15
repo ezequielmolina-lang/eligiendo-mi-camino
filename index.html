@@ -769,9 +769,10 @@ function App(){
   const lastAnswerTime=useRef(Date.now());
   const rushCount=useRef(0);
   const[rushWarn,setRushWarn]=useState(false);
+  const testInitRef=useRef(false);
   const Test=()=>{
-    /* Show Part 1 intro on first render */
-    React.useEffect(()=>{if(qIdx===0&&Object.keys(answers).length===0&&showPartIntro===null)setShowPartIntro(0);},[]);
+    /* Show Part 1 intro on first render only */
+    React.useEffect(()=>{if(!testInitRef.current&&qIdx===0&&Object.keys(answers).length===0&&showPartIntro===null){testInitRef.current=true;setShowPartIntro(0);}},[]);
     const q=riasecQuestions[qIdx];
     const part=riasecParts[q.part];
     const answer=(v)=>{
