@@ -519,36 +519,39 @@ function App(){
 
   /* ── WELCOME ── */
   const Welcome=()=>(
-    <div className="h-full flex items-center justify-center bg-gradient-to-br from-cream-100 via-brand-50 to-cream-100 relative overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden">
+    <div className="h-full overflow-y-auto bg-gradient-to-br from-cream-100 via-brand-50 to-cream-100 relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 left-10 w-40 h-40 bg-brand-400/10 rounded-full"/>
         <div className="absolute bottom-20 right-20 w-60 h-60 bg-navy-700/10 rounded-full"/>
         <div className="absolute top-1/3 right-1/4 w-20 h-20 bg-brand-400/10 rounded-2xl rotate-45"/>
         <div className="absolute bottom-1/3 left-1/4 w-32 h-32 bg-brand-300/10 rounded-full"/>
       </div>
-      <div className="text-center max-w-xl px-4 sm:px-8 animate-fade-in relative z-10">
-        <div className="mb-6 flex justify-center animate-bounce-in">
-          <OwlMascot size={120} expression="happy" className="mascot-shadow"/>
+      <div className="min-h-full flex items-center justify-center py-8 sm:py-12">
+      <div className="text-center max-w-xl px-5 sm:px-8 animate-fade-in relative z-10">
+        <div className="mb-4 sm:mb-6 flex justify-center animate-bounce-in">
+          <OwlMascot size={80} expression="happy" className="mascot-shadow sm:hidden"/>
+          <OwlMascot size={120} expression="happy" className="mascot-shadow hidden sm:block"/>
         </div>
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-navy-700 tracking-tight leading-tight">Eligiendo Mi Camino</h1>
+        <h1 className="text-3xl sm:text-3xl md:text-5xl font-black text-navy-700 tracking-tight leading-tight">Eligiendo Mi Camino</h1>
         
-        <p className="text-navy-500/60 mt-6 pt-6 border-t border-navy-200/30 text-sm italic font-semibold">"El momento de elegir es el momento de mostrarse"</p>
+        <p className="text-navy-500/60 mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-navy-200/30 text-sm italic font-semibold">"El momento de elegir es el momento de mostrarse"</p>
         <p className="text-navy-400/70 mt-2 text-xs max-w-sm mx-auto leading-relaxed">El Gallito de las Rocas, ave nacional del Perú, vive en nuestros bosques de selva alta. El Gallito realiza una danza especial para mostrarse tal como es. Así como él, este es tu momento de descubrir quién eres y elegir tu camino.</p>
-        <p className="text-navy-500/70 mt-4 text-sm max-w-md mx-auto leading-relaxed">
+        <p className="text-navy-500/70 mt-3 sm:mt-4 text-sm max-w-md mx-auto leading-relaxed">
           Terminar el colegio es un momento importante. Hay muchas opciones y poca información clara.
           Este programa te ayuda a <strong>conocerte mejor</strong>, <strong>explorar opciones reales con datos</strong>,
           y <strong>construir un plan</strong> que funcione para ti y tu familia.
         </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-3 text-xs">
+        <div className="mt-4 sm:mt-6 flex flex-wrap justify-center gap-2 sm:gap-3 text-xs">
           <span className="bg-white/30 backdrop-blur px-3 py-1.5 rounded-full font-bold text-navy-700">12 sesiones x 90 min</span>
           <span className="bg-white/30 backdrop-blur px-3 py-1.5 rounded-full font-bold text-navy-700">Datos reales del MTPE</span>
           <span className="bg-white/30 backdrop-blur px-3 py-1.5 rounded-full font-bold text-navy-700">IA personalizada</span>
         </div>
-        <button onClick={()=>nav('home')} className="mt-8 px-10 py-4 bg-navy-700 text-white rounded-2xl font-bold text-lg hover:bg-navy-800 transition-all shadow-xl shadow-navy-700/30">
+        <button onClick={()=>nav('home')} className="mt-6 sm:mt-8 px-8 sm:px-10 py-3 sm:py-4 bg-navy-700 text-white rounded-2xl font-bold text-base sm:text-lg hover:bg-navy-800 transition-all shadow-xl shadow-navy-700/30">
           Comenzar mi camino
         </button>
         <div className="mt-6 flex items-center justify-center gap-3 flex-wrap"><img src={WBG_LOGO} alt="Grupo Banco Mundial" style={{height:24}} className="opacity-50"/><span className="text-navy-300 text-xs">×</span><span className="text-navy-500/60 text-sm font-bold">uDocz</span><span className="text-navy-300 text-xs">×</span><span className="text-sm font-bold" style={{background:"linear-gradient(90deg,#2dd4bf,#f59e0b)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>&lt;AIdea&gt;</span></div><p className="text-navy-500/40 mt-2 text-xs">Para estudiantes de 5to de secundaria en Lima</p>
         <p className="text-navy-500/30 mt-2 text-[10px]">Powered by Anthropic</p>
+      </div>
       </div>
     </div>
   );
@@ -1392,34 +1395,34 @@ function App(){
     const c=selCareer;
     const lc={secundaria:'bg-green-500',tecnica:'bg-blue-500',universitaria:'bg-purple-500'};
     const ll={secundaria:'Secundaria completa',tecnica:'Carrera técnica (2-3 años)',universitaria:'Universidad (5 años)'};
-    return(<div className="flex-1 overflow-y-auto px-8 py-8 bg-cream-50">
+    return(<div className="flex-1 overflow-y-auto px-4 sm:px-8 py-6 sm:py-8 bg-cream-50">
       <div className="max-w-3xl mx-auto">
         <button onClick={()=>setSelCareer(null)} className="text-sm text-brand-500 hover:text-brand-600 font-bold mb-4 flex items-center gap-1">{'\u2190'} Volver al sector</button>
         <div className="flex items-center gap-4 mb-6">
           <div className={`w-12 h-12 ${lc[c.level]} rounded-xl flex items-center justify-center`}><I.grad className="w-6 h-6 text-white"/></div>
-          <div><h2 className="text-2xl font-black text-navy-700">{c.name}</h2><p className="text-sm text-navy-400">{ll[c.level]}</p></div>
+          <div><h2 className="text-xl sm:text-2xl font-black text-navy-700">{c.name}</h2><p className="text-sm text-navy-400">{ll[c.level]}</p></div>
         </div>
-        {c.desc&&(<div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 mb-5">
+        {c.desc&&(<div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-4 sm:p-5 mb-4 sm:mb-5">
           <h3 className="font-bold text-amber-700 text-sm mb-2">¿Qué hace esta persona?</h3>
           <p className="text-sm text-navy-600 leading-relaxed">{c.desc}</p>
         </div>)}
-        {c.study&&(<div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-5 mb-5">
+        {c.study&&(<div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-4 sm:p-5 mb-4 sm:mb-5">
           <h3 className="font-bold text-blue-700 text-sm mb-2">📘 ¿Qué se estudia?</h3>
           <p className="text-sm text-navy-600 leading-relaxed">{c.study}</p>
         </div>)}
-        {c.dayInLife&&(<div className="bg-purple-50 border-2 border-purple-200 rounded-2xl p-5 mb-5">
+        {c.dayInLife&&(<div className="bg-purple-50 border-2 border-purple-200 rounded-2xl p-4 sm:p-5 mb-4 sm:mb-5">
           <h3 className="font-bold text-purple-700 text-sm mb-2">☀️ Un día típico de trabajo</h3>
           <p className="text-sm text-navy-600 leading-relaxed">{c.dayInLife}</p>
         </div>)}
-        {c.salary!=='Variable'?(<div className="grid grid-cols-2 gap-5 mb-6">
+        {c.salary!=='Variable'?(<div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 mb-6">
           <div className="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-5">
             <p className="text-xs text-emerald-600 font-bold mb-1">Joven (18-29 años)</p>
-            <p className="text-3xl font-black text-emerald-700">{c.salary}</p>
+            <p className="text-2xl sm:text-3xl font-black text-emerald-700">{c.salary}</p>
             <p className="text-xs text-emerald-500 mt-1">Rango: {c.range}</p>
           </div>
           <div className="bg-indigo-50 border-2 border-indigo-200 rounded-2xl p-5">
             <p className="text-xs text-indigo-600 font-bold mb-1">Con experiencia (30+)</p>
-            <p className="text-3xl font-black text-indigo-700">{c.growth}</p>
+            <p className="text-2xl sm:text-3xl font-black text-indigo-700">{c.growth}</p>
             {c.rangeAdult&&<p className="text-xs text-indigo-500 mt-1">Rango: {c.rangeAdult}</p>}
           </div>
         </div>):(<div className="bg-gray-50 border-2 border-gray-200 rounded-2xl p-5 mb-5 text-center">
