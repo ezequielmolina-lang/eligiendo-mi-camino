@@ -774,6 +774,7 @@ function App(){
   const testInitRef=useRef(false);
   const answerPending=useRef(false);
   const[selectedBtn,setSelectedBtn]=useState(null);
+  const maxQReached=useRef(0);
   /* Init test: show Part 1 intro when navigating to test for first time; reset answerPending on re-entry */
   useEffect(()=>{if(view==='test'){answerPending.current=false;rushCount.current=0;if(!testInitRef.current&&qIdx===0&&Object.keys(answers).length===0&&showPartIntro===null){testInitRef.current=true;setShowPartIntro(0);}}},[view]);
   const Test=()=>{
@@ -794,12 +795,14 @@ function App(){
       const na={...answers,[qIdx]:{p:q.p,v}};
       if(qIdx<riasecQuestions.length-1){
         const nextQ=riasecQuestions[qIdx+1];
-        if(nextQ.part!==q.part){setTimeout(()=>{setAnswers(na);setQIdx(i=>i+1);setSelectedBtn(null);setShowPartIntro(nextQ.part);answerPending.current=false;window.scrollTo(0,0);},200);}
-        else{setTimeout(()=>{setAnswers(na);setQIdx(i=>i+1);setSelectedBtn(null);answerPending.current=false;},200);}
+        if(nextQ.part!==q.part){setTimeout(()=>{const nxt=qIdx+1;if(nxt>maxQReached.current)maxQReached.current=nxt;setAnswers(na);setQIdx(nxt);setSelectedBtn(null);setShowPartIntro(nextQ.part);answerPending.current=false;window.scrollTo(0,0);},200);}
+        else{setTimeout(()=>{const nxt=qIdx+1;if(nxt>maxQReached.current)maxQReached.current=nxt;setAnswers(na);setQIdx(nxt);setSelectedBtn(null);answerPending.current=false;},200);}
       }
       else{setTimeout(()=>{const sc={};Object.values(na).forEach(a=>{sc[a.p]=(sc[a.p]||0)+a.v;});const sorted=Object.entries(sc).sort((a,b)=>b[1]-a[1]).slice(0,3);setAnswers(na);setResults(sorted.map(([k])=>k));setSelectedBtn(null);nav('test-results');answerPending.current=false;},200);}
     };
     const goBack=()=>{if(qIdx>0){setSelectedBtn(null);setQIdx(i=>i-1);}};
+    const canGoFwd=qIdx<maxQReached.current;
+    const goFwd=()=>{if(canGoFwd){setSelectedBtn(null);setQIdx(i=>i+1);}};
     const dismissRush=()=>{setRushWarn(false);rushCount.current=0;};
     const pct=Math.round((qIdx/riasecQuestions.length)*100);
     const partStartIdx=[0,30,60];const currentPartNum=q.part;
@@ -896,10 +899,16 @@ function App(){
               <span className="text-base sm:text-xl">{part.emoji[i]}</span><span className="text-[8px] sm:text-xs font-medium leading-tight text-center px-0.5">{l}</span>
             </button>);})}
           </div>
-          {qIdx>0&&<button onClick={goBack} className="mt-4 flex items-center gap-1.5 mx-auto text-sm text-navy-400 hover:text-brand-400 font-medium transition">
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            Volver a la anterior
-          </button>}
+          {(qIdx>0||canGoFwd)&&<div className="mt-4 flex items-center justify-center gap-6">
+            {qIdx>0?<button onClick={goBack} className="flex items-center gap-1.5 text-sm text-navy-400 hover:text-brand-400 font-medium transition">
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Anterior
+            </button>:<span/>}
+            {canGoFwd&&<button onClick={goFwd} className="flex items-center gap-1.5 text-sm text-navy-400 hover:text-brand-400 font-medium transition">
+              Siguiente
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>}
+          </div>}
         </div>
       </div>
     </div>);
