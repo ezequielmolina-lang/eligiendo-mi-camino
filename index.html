@@ -1631,16 +1631,16 @@ function App(){
       <h2 className="font-bold text-navy-700 text-sm truncate flex-1">Eligiendo Mi Camino</h2>
     </div>
     <main className="flex-1 flex flex-col overflow-hidden bg-cream-50 pt-[52px] md:pt-0">
-      {view==='home'&&<Home/>}
+      {view==='home'&&Home()}
       {view==='chat'&&Chat()}
-      {view==='test'&&<Test/>}
-      {view==='test-results'&&<TestResults/>}
-      {view==='myths'&&<Myths/>}
-      {view==='routes'&&<Routes/>}
-      {view==='explore'&&<Explore/>}
-      {view==='notebook'&&<Notebook/>}
+      {view==='test'&&Test()}
+      {view==='test-results'&&TestResults()}
+      {view==='myths'&&Myths()}
+      {view==='routes'&&Routes()}
+      {view==='explore'&&Explore()}
+      {view==='notebook'&&Notebook()}
       {view==='family'&&Family()}
-      {view==='plan'&&<Plan/>}
+      {view==='plan'&&Plan()}
     </main>
   </div>);
 }
