@@ -174,29 +174,170 @@ const sectors=[
    ]},
 ];
 
-/* ── RIASEC TEST DATA ── */
-const riasecQuestions=[
-  {text:"Me gusta armar, reparar o construir cosas con las manos",p:"R"},
-  {text:"Disfruto investigar y entender como funcionan las cosas",p:"I"},
-  {text:"Me gusta dibujar, pintar, escribir o hacer musica",p:"A"},
-  {text:"Me siento bien ayudando, ensenando o aconsejando a otros",p:"S"},
-  {text:"Me gustaria liderar un equipo o iniciar un negocio propio",p:"E"},
-  {text:"Prefiero seguir instrucciones claras y organizar informacion",p:"C"},
-  {text:"Me interesa trabajar al aire libre o con maquinas",p:"R"},
-  {text:"Me atrae resolver problemas usando datos o experimentos",p:"I"},
-  {text:"Prefiero expresarme libremente sin muchas reglas",p:"A"},
-  {text:"Me importa hacer el bien y contribuir a la sociedad",p:"S"},
-  {text:"Me emociona competir, vender o convencer a otros",p:"E"},
-  {text:"Soy detallista y me gusta tener todo ordenado",p:"C"},
+/* ── RIASEC TEST DATA (Instrumento FINAL v2.0 - Hausler adaptado) ── */
+const riasecParts=[
+  {id:'act',title:'Parte 1: Actividades',instruction:'Que tanto te gusta...?',
+   emoji:['\uD83D\uDE1F','\uD83D\uDE41','\uD83D\uDE10','\uD83D\uDE42','\uD83D\uDE04'],
+   labels:['No me gusta nada','Me gusta poco','Me da igual','Me gusta','Me gusta mucho'],
+   values:[0,1,2,3,4]},
+  {id:'hab',title:'Parte 2: Habilidades',instruction:'Que tan bien puedes...?',
+   emoji:['\uD83D\uDE1F','\uD83D\uDE15','\uD83D\uDE10','\uD83D\uDE42','\uD83D\uDE04'],
+   labels:['Me cuesta mucho','Me cuesta un poco','Me sale mas o menos','Me sale bien','Me sale muy bien'],
+   values:[0,1,2,3,4]},
+  {id:'auto',title:'Parte 3: Autoevaluacion',instruction:'En que nivel esta tu habilidad para...?',
+   emoji:['1\uFE0F\u20E3','2\uFE0F\u20E3','3\uFE0F\u20E3','4\uFE0F\u20E3','5\uFE0F\u20E3'],
+   labels:['Por desarrollar','','En desarrollo','','Fortaleza'],
+   values:[1,2,3,4,5]},
 ];
+const riasecQuestions=[
+  /* ── PARTE 1: ACTIVIDADES (30 items, escala 0-4) ── */
+  {text:"Ayudar a otras personas con sus problemas",p:"S",part:0},
+  {text:"Arreglar o reparar cosas (ej: una bicicleta, celular, electrodomesticos)",p:"R",part:0},
+  {text:"Disenar imagenes, afiches o contenido visual",p:"A",part:0},
+  {text:"Resolver problemas dificiles usando logica o datos",p:"I",part:0},
+  {text:"Presentar y defender una idea o proyecto",p:"E",part:0},
+  {text:"Organizar informacion o archivos",p:"C",part:0},
+  {text:"Llevar registros o listas (gastos, asistencia, datos)",p:"C",part:0},
+  {text:"Crear videos, editar o hacer contenido digital",p:"A",part:0},
+  {text:"Liderar un grupo o equipo",p:"E",part:0},
+  {text:"Usar herramientas para construir o armar algo",p:"R",part:0},
+  {text:"Explicar cosas a alguien que no entiende",p:"S",part:0},
+  {text:"Investigar como funcionan las cosas",p:"I",part:0},
+  {text:"Analizar informacion para sacar conclusiones",p:"I",part:0},
+  {text:"Trabajar con ninos, jovenes o adultos",p:"S",part:0},
+  {text:"Trabajar con maquinas o equipos (aunque sea en cosas del dia a dia)",p:"R",part:0},
+  {text:"Revisar que la informacion este correcta",p:"I",part:0},
+  {text:"Escribir historias, guiones o textos creativos",p:"A",part:0},
+  {text:"Organizar actividades o eventos",p:"C",part:0},
+  {text:"Dibujar, pintar o hacer ilustraciones",p:"A",part:0},
+  {text:"Vender un producto o promocionar algo",p:"E",part:0},
+  {text:"Hacer experimentos o probar ideas",p:"I",part:0},
+  {text:"Escuchar a alguien y darle apoyo",p:"S",part:0},
+  {text:"Seguir instrucciones paso a paso",p:"C",part:0},
+  {text:"Instalar o conectar equipos (internet, cables, parlantes, impresora, etc.)",p:"R",part:0},
+  {text:"Hacer trabajos manuales (armar, reparar o mejorar cosas en casa, aunque sea basico)",p:"R",part:0},
+  {text:"Trabajar con hojas de calculo o apps para organizar informacion (Excel/Sheets u otras)",p:"C",part:0},
+  {text:"Participar en actividades para ayudar a la comunidad",p:"S",part:0},
+  {text:"Crear musica, ritmos o tocar un instrumento (con instrumento o con apps/voz)",p:"A",part:0},
+  {text:"Tomar decisiones importantes en un grupo",p:"E",part:0},
+  {text:"Buscar explicaciones a problemas de ciencia o tecnologia (el \"por que\" de las cosas)",p:"I",part:0},
+  /* ── PARTE 2: HABILIDADES (30 items, escala 0-4) ── */
+  {text:"Aprender a usar nuevas herramientas o equipos",p:"C",part:1},
+  {text:"Buscar informacion confiable en internet",p:"I",part:1},
+  {text:"Crear contenido para redes sociales (videos, disenos, publicaciones)",p:"A",part:1},
+  {text:"Explicar algo que sabes a otra persona",p:"S",part:1},
+  {text:"Proponer ideas para mejorar algo",p:"E",part:1},
+  {text:"Revisar que numeros o datos esten correctos",p:"I",part:1},
+  {text:"Resolver problemas practicos con las manos",p:"R",part:1},
+  {text:"Usar datos para tomar decisiones",p:"I",part:1},
+  {text:"Disenar logos, afiches o presentaciones",p:"A",part:1},
+  {text:"Comunicarte con personas diferentes a ti",p:"S",part:1},
+  {text:"Negociar o llegar a acuerdos",p:"E",part:1},
+  {text:"Seguir procesos claros y organizados",p:"C",part:1},
+  {text:"Armar algo siguiendo un manual",p:"R",part:1},
+  {text:"Entender temas de ciencia, tecnologia o matematicas",p:"I",part:1},
+  {text:"Escribir textos creativos o para comunicar ideas",p:"A",part:1},
+  {text:"Escuchar y apoyar a alguien que esta pasando por un momento dificil",p:"S",part:1},
+  {text:"Tomar la iniciativa en un proyecto",p:"E",part:1},
+  {text:"Ordenar informacion digital o fisica",p:"C",part:1},
+  {text:"Mantener equipos o espacios funcionando bien (computadora, celular, salon, materiales)",p:"R",part:1},
+  {text:"Analizar resultados de pruebas o encuestas (interpretar resultados y sacar conclusiones)",p:"I",part:1},
+  {text:"Probar nuevas formas de crear",p:"A",part:1},
+  {text:"Trabajar en equipo para ayudar a otros",p:"S",part:1},
+  {text:"Motivar a un grupo para lograr una meta",p:"E",part:1},
+  {text:"Usar apps o paginas web para resolver problemas (buscar info, hacer tarea, organizar proyecto)",p:"C",part:1},
+  {text:"Trabajar al aire libre",p:"R",part:1},
+  {text:"Usar aplicaciones, paginas web o herramientas digitales para organizar informacion",p:"C",part:1},
+  {text:"Expresarte a traves del arte o la musica",p:"A",part:1},
+  {text:"Participar en actividades solidarias o voluntariado",p:"S",part:1},
+  {text:"Organizar recursos para lograr un objetivo",p:"E",part:1},
+  {text:"Mantener registros actualizados",p:"C",part:1},
+  /* ── PARTE 3: AUTOEVALUACION (7 items, escala 1-5) ── */
+  {text:"Armar, arreglar o mejorar cosas con tus manos (aunque sea algo simple)",p:"R",part:2},
+  {text:"Resolver problemas matematicos o numericos (calculos, presupuestos, medidas, datos)",p:"I",part:2},
+  {text:"Trabajar o hacer actividades fuera de un salon u oficina (en movimiento, al aire libre)",p:"R",part:2},
+  {text:"Crear musica o expresarte con musica (cantar, tocar, o usar apps/voz)",p:"A",part:2},
+  {text:"Relacionarte con personas y comunicarte bien",p:"S",part:2},
+  {text:"Liderar, organizar o tomar decisiones en un grupo",p:"E",part:2},
+  {text:"Organizar informacion, tareas o documentos (listas, horarios, archivos o apuntes)",p:"C",part:2},
+];
+/* Anti-rushing: minimum ms per question */
+const RUSH_THRESHOLD_MS=1000;
+
 const riasecProfiles={
-  R:{name:"Realista",avatar:"\uD83D\uDD27",color:"from-amber-400 to-orange-500",desc:"Te gustan las actividades practicas y concretas",families:["Mineria","Construccion","Mecanica","Agricultura"],sectors:['mineria','infra','agro']},
-  I:{name:"Investigador",avatar:"\uD83D\uDD2C",color:"from-blue-400 to-indigo-500",desc:"Disfrutas analizar, investigar y resolver problemas",families:["Ciencias","Tecnologia","Medicina","Ingenieria"],sectors:['tech','ciencias','salud']},
-  A:{name:"Artistico",avatar:"\uD83C\uDFA8",color:"from-pink-400 to-purple-500",desc:"Te expresas a traves del arte y la creatividad",families:["Diseno","Comunicacion","Artes","Marketing"],sectors:['comunicacion','turismo']},
-  S:{name:"Social",avatar:"\uD83E\uDD1D",color:"from-emerald-400 to-teal-500",desc:"Te motiva ayudar, ensenar y trabajar con personas",families:["Educacion","Salud","Trabajo Social","Psicologia"],sectors:['salud','educacion']},
-  E:{name:"Emprendedor",avatar:"\uD83D\uDE80",color:"from-red-400 to-rose-500",desc:"Te gusta liderar, persuadir y tomar decisiones",families:["Negocios","Derecho","Marketing","Ventas"],sectors:['admin','logistica']},
-  C:{name:"Convencional",avatar:"\uD83D\uDCCA",color:"from-cyan-400 to-blue-500",desc:"Prefieres orden, datos y procedimientos claros",families:["Contabilidad","Administracion","Logistica","Finanzas"],sectors:['admin','logistica','servicios']},
+  R:{name:"Realista",charF:"Romina la Realista",charM:"Renato el Realista",avatar:"\uD83D\uDD27",color:"from-amber-400 to-orange-500",
+    desc:"Te gusta hacer, construir y arreglar cosas. Disfrutas actividades donde puedes ver resultados concretos, usar tus manos y resolver problemas practicos.",
+    likes:["Armas, reparas o mejoras cosas","Trabajas con equipos, maquinas o tecnologia fisica","Ves que tu trabajo tiene un resultado claro"],
+    family:"Produccion, mantenimiento e ingenieria aplicada",
+    subfamilies:[
+      {name:"Construccion e infraestructura",cetpro:["Electricidad","Refrigeracion"],instituto:["Edificaciones"],universidad:["Ingenieria civil","Ingenieria electrica"]},
+      {name:"Mecanica, maquinaria y sistemas tecnicos",cetpro:["Mecanica automotriz","Soldadura","Mantenimiento industrial"],instituto:["Mecanica industrial","Electronica industrial","Automatizacion industrial"],universidad:["Ingenieria mecanica","Ingenieria mecatronica"]},
+      {name:"Energia convencional y renovable",cetpro:["Instalador de paneles solares"],instituto:["Tecnico en energia renovable"],universidad:["Ingenieria electrica"]},
+      {name:"Mineria y recursos naturales",cetpro:["Operador de maquinaria minera"],instituto:["Tecnico minero / Perforista"],universidad:["Ingeniero de minas"]},
+      {name:"Agroindustria y procesos productivos",cetpro:["Operario de planta procesadora","Cocinero / Chef"],instituto:["Tecnico agroindustrial","Tecnico en refrigeracion industrial"],universidad:["Ingeniero agroindustrial","Ingenieria industrial"]},
+      {name:"Formacion especializada",cetpro:["Fuerzas armadas y policiales","Centros sectoriales (SENCICO)"]},
+    ],sectors:['mineria','infra','agro']},
+  I:{name:"Investigador",charF:"Ines la Investigadora",charM:"Ivan el Investigador",avatar:"\uD83D\uDD2C",color:"from-blue-400 to-indigo-500",
+    desc:"Te gusta pensar, analizar y entender como funcionan las cosas. Te motivan actividades donde puedes resolver problemas, investigar y encontrar explicaciones.",
+    likes:["Analizas datos o informacion","Buscas patrones o explicaciones","Resuelves problemas paso a paso"],
+    family:"Analisis, ciencia aplicada y tecnologia",
+    subfamilies:[
+      {name:"Tecnologias de la informacion y sistemas",cetpro:["Soporte tecnico en computacion"],instituto:["Programacion y desarrollo de software","Redes y telecomunicaciones","Sistemas de informacion","Tecnico en ciberseguridad"],universidad:["Ingenieria de sistemas","Ingenieria de datos","Cientifico de datos"]},
+      {name:"Datos, procesos y analisis aplicado",cetpro:["Control de calidad basico","Asistente tecnico de procesos"],instituto:["Analisis de datos","Analista de creditos"],universidad:["Estadistica","Economia"]},
+      {name:"Ciencias naturales, laboratorio y salud",cetpro:["Tecnico de laboratorio basico"],instituto:["Tecnico de laboratorio clinico"],universidad:["Ciencias (biologia, quimica, fisica)","Nutricion"]},
+      {name:"Ciencias aplicadas a recursos naturales",universidad:["Geologia","Ingenieria ambiental","Ingenieria agronoma"]},
+      {name:"Investigacion aplicada",instituto:["Institutos de investigacion aplicada"],cetpro:["Certificaciones tecnicas especializadas"]},
+    ],sectors:['tech','ciencias','salud']},
+  A:{name:"Artistico",charF:"Ana la Artista",charM:"Andres el Artista",avatar:"\uD83C\uDFA8",color:"from-pink-400 to-purple-500",
+    desc:"Te gusta crear, expresarte y hacer cosas originales. Disfrutas actividades donde puedes imaginar, disenar o expresarte con tu propio estilo.",
+    likes:["Disenas, dibujas o creas contenido","Escribes, haces videos o musica","Pruebas formas nuevas de expresarte"],
+    family:"Diseno, creacion y comunicacion visual",
+    subfamilies:[
+      {name:"Diseno grafico, visual y digital",cetpro:["Diseno grafico basico","Ilustracion digital"],instituto:["Diseno digital","UX / UI","Diseno de modas"],universidad:["Diseno profesional"]},
+      {name:"Produccion audiovisual y multimedia",cetpro:["Fotografia","Edicion de video","Produccion audiovisual basica"],instituto:["Produccion audiovisual","Animacion y multimedia"],universidad:["Comunicacion audiovisual"]},
+      {name:"Comunicacion creativa y contenidos",cetpro:["Community manager / creador de contenido"],instituto:["Marketing de contenidos","Comunicacion"],universidad:["Publicidad"]},
+      {name:"Diseno de espacios y experiencias",instituto:["Diseno de interiores"],universidad:["Arquitectura"]},
+      {name:"Artes y formacion artistica",cetpro:["Artes visuales","Escuelas superiores de arte","Conservatorios y escuelas de musica"]},
+    ],sectors:['comunicacion','turismo']},
+  S:{name:"Social",charF:"Sofia la Social",charM:"Samuel el Social",avatar:"\uD83E\uDD1D",color:"from-emerald-400 to-teal-500",
+    desc:"Te gusta ayudar, acompanar y trabajar con personas. Te motiva sentir que lo que haces tiene un impacto positivo en alguien o en un grupo.",
+    likes:["Ayudas a alguien a resolver un problema o entender algo","Escuchas y acompanas a otras personas","Trabajas en equipo con un objetivo comun","Participas en actividades con sentido social"],
+    family:"Educacion, salud y servicios a personas",
+    subfamilies:[
+      {name:"Salud y cuidado de personas",cetpro:["Auxiliar de enfermeria","Atencion al adulto mayor"],instituto:["Enfermeria tecnica","Tecnico en farmacia"],universidad:["Enfermeria","Nutricion","Terapia de lenguaje","Terapia ocupacional"]},
+      {name:"Educacion y acompanamiento educativo",cetpro:["Auxiliar de educacion inicial"],instituto:["Orientacion educativa"],universidad:["Educacion inicial","Educacion primaria","Educacion secundaria"]},
+      {name:"Intervencion social y comunitaria",cetpro:["Promotor de salud","Asistente comunitario"],instituto:["Salud comunitaria","Gestion social"],universidad:["Trabajo social","Psicologia"]},
+      {name:"Servicios turisticos y hospitalidad",cetpro:["Recepcionista de hotel","Mozo / mesero profesional"],instituto:["Guia de turismo","Tecnico en hoteleria","Auxiliar de vuelo / Tripulante de cabina"]},
+      {name:"Gestion de personas",instituto:["Asistente de recursos humanos"]},
+    ],sectors:['salud','educacion','turismo']},
+  E:{name:"Emprendedor",charF:"Emily la Emprendedora",charM:"Emilio el Emprendedor",avatar:"\uD83D\uDE80",color:"from-red-400 to-rose-500",
+    desc:"Te gusta liderar, proponer ideas y mover proyectos. Disfrutas actividades donde puedes tomar la iniciativa, organizar personas y tomar decisiones.",
+    likes:["Propones ideas y buscas que se hagan realidad","Convences o comunicas una idea a otros","Tomas decisiones en grupo","Lideras o coordinas un proyecto"],
+    family:"Gestion, negocios y liderazgo comercial",
+    subfamilies:[
+      {name:"Ventas y gestion comercial",cetpro:["Ventas","Atencion al cliente","Comercio minorista"],instituto:["Gerente de tienda / Retail","Supervisor de ventas","Agente inmobiliario"]},
+      {name:"Negocios y gestion organizacional",instituto:["Gestion de negocios","Gestion de proyectos"],universidad:["Administracion","Gestion empresarial"]},
+      {name:"Marketing, mercados y expansion comercial",instituto:["Marketing","Marketing digital","Comercio exterior"],universidad:["Negocios internacionales"]},
+      {name:"Liderazgo sectorial",instituto:["Supervisor agricola / Jefe de campo"],universidad:["Administrador hotelero","Ejecutivo de banca / Asesor financiero"]},
+      {name:"Emprendimiento independiente",cetpro:["Emprendimiento productivo","Programas de emprendimiento","Escuelas de negocios y liderazgo"]},
+    ],sectors:['admin','servicios']},
+  C:{name:"Convencional",charF:"Clara la Organizada",charM:"Omar el Organizado",avatar:"\uD83D\uDCCB",color:"from-cyan-400 to-blue-500",
+    desc:"Te gusta organizar, ordenar y que las cosas funcionen bien. Te resulta natural seguir procesos, organizar informacion y revisar detalles.",
+    likes:["Organizas informacion, tareas o documentos","Sigues pasos claros para lograr un objetivo","Revisas detalles y verificas que todo este correcto","Mantienes registros u ordenas procesos"],
+    family:"Administracion, logistica y control organizacional",
+    subfamilies:[
+      {name:"Gestion administrativa y documental",cetpro:["Asistencia administrativa","Archivo y documentacion","Digitador / Data entry"],instituto:["Administracion"],universidad:["Gestion publica"]},
+      {name:"Contabilidad, finanzas y control",cetpro:["Contabilidad basica"],instituto:["Finanzas operativas","Auditoria (auxiliar)"],universidad:["Contabilidad","Finanzas"]},
+      {name:"Banca y servicios financieros",cetpro:["Cajero bancario"],instituto:["Analista de creditos","Operaciones bancarias"]},
+      {name:"Logistica, inventarios y procesos",cetpro:["Logistica basica","Auxiliar de almacen / Inventarios"],instituto:["Coordinador de despachos","Control de calidad (agroindustria)"],universidad:["Ingenieria industrial (perfil organizacional)"]},
+    ],sectors:['logistica','servicios']},
 };
+const riasecCombos=[
+  {keys:['R','I'],title:'Practico + Analisis',desc:'Te gusta arreglar cosas usando tecnologia o datos.',examples:['Tecnico en mecatronica automotriz','Programador de software','Instalador de redes','Soporte tecnico especializado']},
+  {keys:['A','R'],title:'Creativo + Practico',desc:'Te gusta crear cosas nuevas que se pueden tocar o usar.',examples:['Diseno de muebles','Confeccion de modas','Arquitectura','Cocina profesional (chef)','Edicion de video y efectos especiales']},
+  {keys:['S','E'],title:'Ayudar + Liderar',desc:'Te gusta trabajar con personas tomando la iniciativa y organizando proyectos.',examples:['Gestion de recursos humanos','Direccion de ONG o proyectos sociales','Administracion de servicios de salud','Profesor/a con centro de estudios propio']},
+  {keys:['C','I'],title:'Orden + Analisis',desc:'Te gusta que todo funcione perfecto usando datos y logica.',examples:['Especialista en ciberseguridad','Contabilidad y auditoria','Administracion de bases de datos','Logistica y control de calidad']},
+];
 
 /* \u2500\u2500 MYTHS DATA (Swipe Cards format from TAREA4) \u2500\u2500 */
 const mythsData=[
@@ -507,31 +648,63 @@ function App(){
     </div>);
 
   /* ── RIASEC TEST (S3) ── */
+  const lastAnswerTime=useRef(Date.now());
+  const rushCount=useRef(0);
+  const[rushWarn,setRushWarn]=useState(false);
   const Test=()=>{
-    const q=riasecQuestions[qIdx];const labels=['Nada','Poco','Algo','Bastante','Mucho'];
+    const q=riasecQuestions[qIdx];
+    const part=riasecParts[q.part];
     const answer=(v)=>{
+      /* Anti-rushing detection */
+      const now=Date.now();
+      if(now-lastAnswerTime.current<RUSH_THRESHOLD_MS){rushCount.current++;if(rushCount.current>=3){setRushWarn(true);lastAnswerTime.current=now;return;}}
+      else rushCount.current=0;
+      lastAnswerTime.current=now;
       const na={...answers,[qIdx]:{p:q.p,v}};setAnswers(na);
       if(qIdx<riasecQuestions.length-1)setTimeout(()=>setQIdx(i=>i+1),250);
       else{const sc={};Object.values(na).forEach(a=>{sc[a.p]=(sc[a.p]||0)+a.v;});const sorted=Object.entries(sc).sort((a,b)=>b[1]-a[1]).slice(0,3);setResults(sorted.map(([k])=>k));setTimeout(()=>nav('test-results'),400);}
     };
+    const dismissRush=()=>{setRushWarn(false);rushCount.current=0;};
     const pct=Math.round((qIdx/riasecQuestions.length)*100);
+    const partStartIdx=[0,30,60];const currentPartNum=q.part;
+    const qInPart=qIdx-partStartIdx[currentPartNum]+1;
+    const partTotal=currentPartNum===2?7:30;
+    /* Detect part transition */
+    const isPartStart=partStartIdx.includes(qIdx)&&qIdx>0;
     return(<div className="flex-1 flex flex-col">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white">
-        <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700">Paso 2: Test de Intereses RIASEC</h2><p className="text-xs text-navy-400">Descubre tu perfil vocacional · Sesion 3</p></div></div>
+        <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Test de Intereses RIASEC</h2><p className="text-xs text-navy-400">{part.title} · Pregunta {qInPart}/{partTotal}</p></div></div>
         <div className="flex items-center gap-4 mt-3">
           <div className="flex-1 h-2.5 bg-cream-200 rounded-full overflow-hidden"><div className="h-full bg-gradient-to-r from-brand-400 to-brand-300 rounded-full transition-all duration-500" style={{width:`${pct}%`}}/></div>
-          <span className="text-sm font-bold text-navy-400">{qIdx+1}/{riasecQuestions.length}</span>
+          <span className="text-xs font-bold text-navy-400">{qIdx+1}/{riasecQuestions.length}</span>
+        </div>
+        {/* Part indicator pills */}
+        <div className="flex gap-2 mt-2">
+          {riasecParts.map((pp,pi)=>(<span key={pi} className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${pi===currentPartNum?'bg-brand-400 text-white':'bg-cream-100 text-navy-400'}`}>{pi+1}. {pi===0?'Actividades':pi===1?'Habilidades':'Autoevaluacion'}</span>))}
         </div>
       </header>
-      <div className="flex-1 flex items-center justify-center px-8 bg-cream-50">
-        <div key={qIdx} className="animate-scale-in w-full max-w-xl">
-          <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-cream-200 mb-6">
-            <p className="text-xl font-bold text-navy-700 text-center leading-relaxed">{q.text}</p>
+      {/* Rush warning overlay */}
+      {rushWarn&&(<div className="absolute inset-0 z-50 bg-black/40 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl p-6 max-w-md text-center shadow-2xl animate-scale-in">
+          <OwlMascot size={64} expression="surprised" className="mx-auto mb-3"/>
+          <p className="font-bold text-navy-700 mb-2">Estas respondiendo muy rapido!</p>
+          <p className="text-sm text-navy-500 mb-4">Para que el resultado realmente te ayude, tomate un momento para pensar cada respuesta. Recuerda que no hay respuestas buenas o malas.</p>
+          <div className="flex gap-3 justify-center">
+            <button onClick={dismissRush} className="px-5 py-2.5 bg-brand-400 text-white rounded-xl font-bold hover:bg-brand-500 transition">Continuar</button>
+            {qIdx>0&&<button onClick={()=>{dismissRush();setQIdx(i=>Math.max(0,i-1));}} className="px-5 py-2.5 bg-cream-100 text-navy-600 rounded-xl font-bold hover:bg-cream-200 transition">Revisar anterior</button>}
           </div>
-          <div className="grid grid-cols-5 gap-1.5 sm:gap-3">
-            {labels.map((l,i)=>(<button key={i} onClick={()=>answer(i+1)}
-              className="py-4 rounded-xl font-bold text-sm transition-all bg-white border-2 border-cream-200 hover:border-brand-400 hover:bg-brand-50 text-navy-600 hover:text-brand-500 flex flex-col items-center gap-1 shadow-sm hover:shadow-md">
-              <span className="text-lg font-black">{i+1}</span><span className="text-xs font-medium">{l}</span>
+        </div>
+      </div>)}
+      <div className="flex-1 flex items-center justify-center px-4 sm:px-8 bg-cream-50">
+        <div key={qIdx} className="animate-scale-in w-full max-w-xl">
+          <p className="text-center text-sm font-bold text-brand-400 mb-3">{part.instruction}</p>
+          <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border-2 border-cream-200 mb-6">
+            <p className="text-lg sm:text-xl font-bold text-navy-700 text-center leading-relaxed">{q.text}</p>
+          </div>
+          <div className="grid grid-cols-5 gap-1 sm:gap-3">
+            {part.labels.map((l,i)=>(<button key={i} onClick={()=>answer(part.values[i])}
+              className="py-3 sm:py-4 rounded-xl font-bold text-sm transition-all bg-white border-2 border-cream-200 hover:border-brand-400 hover:bg-brand-50 text-navy-600 hover:text-brand-500 flex flex-col items-center gap-1 shadow-sm hover:shadow-md">
+              <span className="text-lg sm:text-xl">{part.emoji[i]}</span><span className="text-[9px] sm:text-xs font-medium leading-tight text-center px-0.5">{l}</span>
             </button>))}
           </div>
         </div>
@@ -540,28 +713,75 @@ function App(){
   };
 
   /* ── TEST RESULTS ── */
+  const[resultDetail,setResultDetail]=useState(null);
   const TestResults=()=>{
     if(!results)return null;
     const top3=results.map(k=>({key:k,...riasecProfiles[k]}));
     const suggestedSectors=[...new Set(top3.flatMap(p=>p.sectors))];
+    /* Find matching combos */
+    const matchedCombos=riasecCombos.filter(c=>results.includes(c.keys[0])&&results.includes(c.keys[1]));
+    /* Detail view for a profile */
+    if(resultDetail){
+      const p=riasecProfiles[resultDetail];
+      return(<div className="flex-1 overflow-y-auto px-4 sm:px-8 py-6 bg-cream-50">
+        <div className="max-w-3xl mx-auto">
+          <button onClick={()=>setResultDetail(null)} className="flex items-center gap-2 text-brand-400 font-bold text-sm mb-4 hover:underline">&larr; Volver a resultados</button>
+          <div className="text-center mb-6">
+            <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${p.color} flex items-center justify-center text-4xl mx-auto mb-3 shadow-lg`}>{p.avatar}</div>
+            <h2 className="text-2xl font-black text-navy-700">{p.charF} / {p.charM}</h2>
+            <p className="text-navy-400 mt-1 text-sm max-w-md mx-auto">{p.desc}</p>
+          </div>
+          <div className="bg-white rounded-2xl border-2 border-cream-200 p-5 mb-6">
+            <p className="font-bold text-navy-700 text-sm mb-2">Te suele gustar cuando:</p>
+            <ul className="space-y-1">{p.likes.map((l,i)=>(<li key={i} className="text-sm text-navy-600 flex gap-2"><span className="text-brand-400">•</span>{l}</li>))}</ul>
+          </div>
+          <div className="mb-6">
+            <h3 className="font-black text-navy-700 mb-1">Familia ocupacional</h3>
+            <p className="text-brand-500 font-bold text-sm mb-4">{p.family}</p>
+            <div className="space-y-4">
+              {p.subfamilies.map((sf,i)=>(<div key={i} className="bg-white rounded-2xl border-2 border-cream-200 p-4 animate-slide-up" style={{animationDelay:`${i*.05}s`}}>
+                <p className="font-bold text-navy-700 text-sm mb-3">{i+1}) {sf.name}</p>
+                <div className="space-y-2">
+                  {sf.cetpro&&sf.cetpro.length>0&&(<div><p className="text-[10px] font-bold text-amber-600 uppercase tracking-wider mb-1">CETPRO</p><div className="flex flex-wrap gap-1.5">{sf.cetpro.map((c,j)=>(<span key={j} className="text-xs bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full border border-amber-200">{c}</span>))}</div></div>)}
+                  {sf.instituto&&sf.instituto.length>0&&(<div><p className="text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-1">Instituto / Tecnico</p><div className="flex flex-wrap gap-1.5">{sf.instituto.map((c,j)=>(<span key={j} className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full border border-blue-200">{c}</span>))}</div></div>)}
+                  {sf.universidad&&sf.universidad.length>0&&(<div><p className="text-[10px] font-bold text-purple-600 uppercase tracking-wider mb-1">Universidad</p><div className="flex flex-wrap gap-1.5">{sf.universidad.map((c,j)=>(<span key={j} className="text-xs bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full border border-purple-200">{c}</span>))}</div></div>)}
+                </div>
+              </div>))}
+            </div>
+          </div>
+          <button onClick={()=>setResultDetail(null)} className="w-full py-3 bg-cream-100 text-navy-600 rounded-xl font-bold hover:bg-cream-200 transition">&larr; Volver a resultados</button>
+        </div>
+      </div>);
+    }
     return(<div className="flex-1 overflow-y-auto px-4 sm:px-8 py-6 sm:py-10 bg-cream-50">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-8">
+        <div className="text-center mb-6">
           <OwlMascot size={80} expression="happy" className="mx-auto mascot-shadow mb-4"/>
-          <h2 className="text-3xl font-black text-navy-700">Tus resultados!</h2>
-          <p className="text-navy-400 mt-1">Tus 3 perfiles de interes dominantes</p>
+          <h2 className="text-2xl sm:text-3xl font-black text-navy-700">Tu perfil de intereses</h2>
+          <p className="text-navy-400 mt-2 text-sm max-w-lg mx-auto">Gracias por completar el test! Estos 3 perfiles destacan mas en ti. No significa que tengas que elegir uno, sino que nos da pistas sobre que ambientes y tareas podrian motivarte mas.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 mb-8">
-          {top3.map((p,i)=>(<div key={i} className="bg-white rounded-2xl p-6 shadow-md border-2 border-cream-200 text-center animate-slide-up" style={{animationDelay:`${i*.1}s`}}>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 mb-6">
+          {top3.map((p,i)=>(<div key={i} onClick={()=>setResultDetail(results[i])} className="bg-white rounded-2xl p-5 shadow-md border-2 border-cream-200 text-center animate-slide-up cursor-pointer hover:border-brand-300 hover:shadow-lg transition-all" style={{animationDelay:`${i*.1}s`}}>
             <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${p.color} flex items-center justify-center text-3xl mx-auto mb-3 shadow-md`}>{p.avatar}</div>
             <p className="font-black text-navy-700 text-lg">{p.name}</p>
             {i===0&&<span className="inline-block mt-1 text-[10px] bg-brand-100 text-brand-500 px-2 py-0.5 rounded-full font-bold">DOMINANTE</span>}
             <p className="text-sm text-navy-400 mt-2">{p.desc}</p>
-            <div className="flex flex-wrap justify-center gap-1.5 mt-3">
-              {p.families.map((f,j)=><span key={j} className="text-[11px] bg-cream-100 text-navy-500 px-2 py-0.5 rounded-full font-medium">{f}</span>)}
-            </div>
+            <p className="text-xs font-bold text-navy-700 mt-3">{p.family}</p>
+            <p className="text-[10px] text-brand-400 font-bold mt-2">Ver carreras &rarr;</p>
           </div>))}
         </div>
+        {/* Profile combos */}
+        {matchedCombos.length>0&&(<div className="bg-white rounded-2xl border-2 border-cream-200 p-5 mb-6">
+          <h3 className="font-bold text-navy-700 text-sm mb-1">Que puedes hacer ahora?</h3>
+          <p className="text-navy-400 text-xs mb-4">Tu perfil no te encierra en una sola opcion. Podrias disfrutar mezclar cosas:</p>
+          <div className="space-y-3">
+            {matchedCombos.map((c,i)=>(<div key={i} className="bg-cream-50 rounded-xl p-4">
+              <p className="font-bold text-navy-700 text-sm">{riasecProfiles[c.keys[0]].avatar} + {riasecProfiles[c.keys[1]].avatar} {c.title}</p>
+              <p className="text-navy-500 text-xs mt-1">{c.desc}</p>
+              <div className="flex flex-wrap gap-1.5 mt-2">{c.examples.map((e,j)=>(<span key={j} className="text-[11px] bg-white text-navy-600 px-2 py-0.5 rounded-full border border-cream-200">{e}</span>))}</div>
+            </div>))}
+          </div>
+        </div>)}
         {suggestedSectors.length>0&&(
           <div className="bg-brand-50 border-2 border-brand-200 rounded-2xl p-5 mb-6">
             <p className="font-bold text-navy-700 text-sm mb-2">Sectores sugeridos para ti:</p>
@@ -572,7 +792,7 @@ function App(){
         )}
         <div className="bg-cream-50 border-2 border-cream-200 rounded-2xl p-5 mb-6 flex gap-3">
           <OwlMini size={32}/>
-          <p className="text-sm text-navy-600"><strong>Recuerda:</strong> estos perfiles muestran tus tendencias, no tu destino. Puedes combinar perfiles y explorar caminos inesperados.</p>
+          <p className="text-sm text-navy-600"><strong>Recuerda:</strong> estos perfiles muestran tus tendencias, no tu destino. Puedes combinar perfiles y explorar caminos inesperados. Toca cada perfil para ver las carreras concretas.</p>
         </div>
         <button onClick={()=>{mark(1);nav('home');}} className="w-full py-3.5 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold shadow-lg hover:opacity-90 transition">Completar paso</button>
       </div>
