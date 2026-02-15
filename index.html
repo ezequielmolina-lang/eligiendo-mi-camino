@@ -72,214 +72,214 @@ const I={
 
 /* -- SECTOR DATA (career_explorer_v5 - 12 sectors, 142 ocupaciones) -- */
 const sectors=[
-  {id:'mineria',name:'Mineria y Recursos Naturales',icon:'⛏️',color:'from-yellow-600 to-amber-700',tag:'Top $',desc:'Es el sector MEJOR PAGADO de Peru. Los tecnicos mineros ganan mas que muchos universitarios.',ocupaciones:{
+  {id:'mineria',name:'Minería y Recursos Naturales',icon:'⛏️',color:'from-yellow-600 to-amber-700',tag:'Top $',desc:'Es el sector MEJOR PAGADO de Perú. Los técnicos mineros ganan más que muchos universitarios.',ocupaciones:{
     secundaria:[
-      {name:'Peon de mina',salary:'Variable',growth:'-',desc:'Apoyo en operaciones mineras: carga, descarga, limpieza de areas.',skills:['Trabajo fisico','Seguridad','Trabajo en equipo'],where:['Antamina','Southern','Cerro Verde','Las Bambas']},
-      {name:'Ayudante de perforacion',salary:'Variable',growth:'-',desc:'Apoyo en trabajos de perforacion y voladura.',skills:['Resistencia fisica','Seguir instrucciones','Seguridad'],where:['Empresas de perforacion','Contratistas mineros']},
+      {name:'Peon de mina',salary:'Variable',growth:'-',desc:'Apoyo en operaciones mineras: carga, descarga, limpieza de areas.',skills:['Trabajo fisico','Seguridad','Trabajo en equipo'],where:['Antamina','Southern','Cerro Verde','Las Bambas'],dayInLife:'Llegas temprano al campamento minero. Cargas materiales, limpias áreas de trabajo, apoyas en la descarga de minerales y sigues instrucciones del supervisor en todo momento.'},
+      {name:'Ayudante de perforacion',salary:'Variable',growth:'-',desc:'Apoyo en trabajos de perforacion y voladura.',skills:['Resistencia física','Seguir instrucciones','Seguridad'],where:['Empresas de perforacion','Contratistas mineros'],dayInLife:'Preparas las herramientas de perforación, alcanzas materiales al operador, ayudas en la colocación de explosivos bajo supervisión y mantienes el área limpia y segura.'},
     ],
     tecnica:[
-      {name:'Tecnico en Mineria, Metalurgia y Petroleo',salary:'S/ 6,235',growth:'S/ 8,480',range:'S/ 1,793 - S/ 11,537',rangeAdult:'S/ 3,093 - S/ 17,759',desc:'Operas equipos pesados, procesas minerales, controlas calidad y seguridad.',skills:['Operacion de maquinaria','Seguridad minera','Control de calidad'],where:['Antamina','Southern Copper','Cerro Verde','Las Bambas']},
+      {name:'Técnico en Minería, Metalurgia y Petróleo',salary:'S/ 6,235',growth:'S/ 8,480',range:'S/ 1,793 - S/ 11,537',rangeAdult:'S/ 3,093 - S/ 17,759',desc:'Operas equipos pesados, procesas minerales, controlas calidad y seguridad.',skills:['Operación de maquinaria','Seguridad minera','Control de calidad'],where:['Antamina','Southern Copper','Cerro Verde','Las Bambas'],study:'Estudias operación de maquinaria pesada, procesamiento de minerales, seguridad minera, geología básica y control de calidad en institutos como TECSUP o Senati (3 años).',dayInLife:'Operas equipos de procesamiento de minerales, tomas muestras para control de calidad, supervisas protocolos de seguridad y reportas la producción del turno.'},
     ],
     universitaria:[
-      {name:'Ingenieria Minera, Metalurgia y Petroleo',salary:'S/ 4,270',growth:'S/ 11,309',range:'S/ 1,864 - S/ 7,303',rangeAdult:'S/ 3,500 - S/ 20,203',desc:'Disenhas y diriges operaciones mineras, gestionas proyectos de extraccion.',skills:['Gestion de proyectos','Geologia aplicada','Seguridad'],where:['Antamina','Southern Copper','Buenaventura']},
-      {name:'Geologia',salary:'S/ 4,043',growth:'S/ 12,049',range:'S/ 2,000 - S/ 6,603',rangeAdult:'S/ 4,103 - S/ 22,103',desc:'Identificas yacimientos minerales y evaluas recursos naturales.',skills:['Analisis geologico','Trabajo de campo','Mapeo'],where:['Empresas mineras','INGEMMET','Consultoras']},
+      {name:'Ingeniería Minera, Metalurgia y Petróleo',salary:'S/ 4,270',growth:'S/ 11,309',range:'S/ 1,864 - S/ 7,303',rangeAdult:'S/ 3,500 - S/ 20,203',desc:'Diseñas y diriges operaciones mineras, gestionas proyectos de extracción.',skills:['Gestion de proyectos','Geología aplicada','Seguridad'],where:['Antamina','Southern Copper','Buenaventura'],study:'Estudias geología, química, mecánica de rocas, procesamiento de minerales, gestión de proyectos mineros y medio ambiente (5 años en universidades como UNI, UNSA, PUCP).',dayInLife:'Planificas la extracción de minerales, analizas datos geológicos, supervisas operaciones en campo, gestionas presupuestos del proyecto y coordinas equipos de trabajo.'},
+      {name:'Geología',salary:'S/ 4,043',growth:'S/ 12,049',range:'S/ 2,000 - S/ 6,603',rangeAdult:'S/ 4,103 - S/ 22,103',desc:'Identificas yacimientos minerales y evaluas recursos naturales.',skills:['Análisis geologico','Trabajo de campo','Mapeo'],where:['Empresas mineras','INGEMMET','Consultoras'],study:'Estudias mineralogía, petrología, geoquímica, geofísica, mapeo geológico y evaluación de recursos naturales (5 años en UNI, UNMSM, UNSA).',dayInLife:'Sales a campo a recolectar muestras de roca, analizas resultados en laboratorio, elaboras mapas geológicos y presentas informes sobre potencial de yacimientos.'},
     ],
   }},
-  {id:'tecnologia',name:'Tecnologia y Computacion',icon:'💻',color:'from-blue-500 to-cyan-600',tag:'Top $',desc:'Sector con mayor crecimiento global. Alta demanda de programadores.',ocupaciones:{
+  {id:'tecnologia',name:'Tecnología y Computación',icon:'💻',color:'from-blue-500 to-cyan-600',tag:'Top $',desc:'Sector con mayor crecimiento global. Alta demanda de programadores.',ocupaciones:{
     tecnica:[
-      {name:'Tecnico en Ciencias de la Computacion',salary:'S/ 3,968',growth:'S/ 5,062',range:'S/ 1,364 - S/ 7,643',rangeAdult:'S/ 1,853 - S/ 9,272',desc:'Desarrollas software, das soporte tecnico, administras redes.',skills:['Programacion','Redes','Soporte tecnico'],where:['BCP','IBM','Startups','Bancos']},
-      {name:'Tecnico de Telecomunicaciones',salary:'S/ 2,213',growth:'S/ 4,412',range:'S/ 1,700 - S/ 3,000',rangeAdult:'S/ 2,200 - S/ 7,678',desc:'Instalas y mantienes redes de comunicacion y fibra optica.',skills:['Redes','Fibra optica','Electronica'],where:['Claro','Movistar','Entel']},
-      {name:'Tecnico Electronica',salary:'S/ 2,671',growth:'S/ 4,709',range:'S/ 1,500 - S/ 4,000',rangeAdult:'S/ 2,000 - S/ 8,728',desc:'Reparas y mantienes equipos electronicos e industriales.',skills:['Electronica','Circuitos','Automatizacion'],where:['Fabricas','Telecomunicaciones','Mineras']},
+      {name:'Técnico en Ciencias de la Computación',salary:'S/ 3,968',growth:'S/ 5,062',range:'S/ 1,364 - S/ 7,643',rangeAdult:'S/ 1,853 - S/ 9,272',desc:'Desarrollas software, das soporte técnico, administras redes.',skills:['Programación','Redes','Soporte técnico'],where:['BCP','IBM','Startups','Bancos'],study:'Estudias programación, bases de datos, redes, soporte técnico y desarrollo web en institutos como IDAT, Cibertec o Senati (2-3 años).',dayInLife:'Desarrollas aplicaciones web, das soporte técnico a usuarios, configuras redes y servidores, y resuelves problemas de software en la empresa.'},
+      {name:'Técnico de Telecomunicaciones',salary:'S/ 2,213',growth:'S/ 4,412',range:'S/ 1,700 - S/ 3,000',rangeAdult:'S/ 2,200 - S/ 7,678',desc:'Instalas y mantienes redes de comunicación y fibra óptica.',skills:['Redes','Fibra óptica','Electrónica'],where:['Claro','Movistar','Entel'],study:'Estudias redes de comunicación, fibra óptica, electrónica básica e instalación de equipos en institutos técnicos (2-3 años).',dayInLife:'Instalas y reparas líneas de fibra óptica, configuras equipos de red en casas y empresas, y atiendes reportes de fallas de conexión.'},
+      {name:'Técnico Electrónica',salary:'S/ 2,671',growth:'S/ 4,709',range:'S/ 1,500 - S/ 4,000',rangeAdult:'S/ 2,000 - S/ 8,728',desc:'Reparas y mantienes equipos electrónicos e industriales.',skills:['Electrónica','Circuitos','Automatización'],where:['Fábricas','Telecomunicaciones','Mineras'],study:'Estudias circuitos electrónicos, sistemas digitales, automatización industrial y mantenimiento de equipos en TECSUP o Senati (2-3 años).',dayInLife:'Reparas equipos electrónicos industriales, realizas mantenimiento preventivo de maquinaria, calibras sensores y programas controladores.'},
     ],
     universitaria:[
-      {name:'Ingenieria de Sistemas y Computo',salary:'S/ 4,710',growth:'S/ 8,934',range:'S/ 1,900 - S/ 8,000',rangeAdult:'S/ 3,353 - S/ 15,113',desc:'Disenhas arquitectura de software y sistemas empresariales.',skills:['Programacion','Arquitectura de software','Cloud'],where:['Google','Microsoft','BCP','Interbank']},
-      {name:'Ciencias de la Computacion',salary:'S/ 4,651',growth:'S/ 8,792',range:'S/ 2,000 - S/ 8,240',rangeAdult:'S/ 3,250 - S/ 15,537',desc:'Te especializas en inteligencia artificial, datos y algoritmos.',skills:['Algoritmos','Machine Learning','Python'],where:['Fintech','Tech global','Startups']},
-      {name:'Ingenieria de Telecomunicaciones',salary:'S/ 4,326',growth:'S/ 8,157',range:'S/ 1,870 - S/ 7,145',rangeAdult:'S/ 3,020 - S/ 14,347',desc:'Disenhas redes de comunicacion y sistemas 5G.',skills:['Redes avanzadas','5G','IoT'],where:['Telefonica','Claro','America Movil']},
-      {name:'Ingenieria Electronica',salary:'S/ 3,710',growth:'S/ 9,082',range:'S/ 1,700 - S/ 6,401',rangeAdult:'S/ 2,884 - S/ 16,810',desc:'Disenhas circuitos, sistemas de automatizacion e IoT.',skills:['Electronica','IoT','Automatizacion'],where:['Industrias','Automotriz','Mineras']},
-      {name:'Estadistica',salary:'S/ 4,527',growth:'S/ 8,879',range:'S/ 1,815 - S/ 7,500',rangeAdult:'S/ 3,097 - S/ 16,100',desc:'Analizas datos, creas modelos predictivos.',skills:['R y Python','Modelamiento','Big Data'],where:['Bancos','INEI','Consultoras']},
-      {name:'Matematica',salary:'S/ 3,445',growth:'S/ 7,234',range:'S/ 1,500 - S/ 6,000',rangeAdult:'S/ 2,500 - S/ 13,000',desc:'Aplicas modelos matematicos a problemas reales.',skills:['Analisis','Modelamiento','Programacion'],where:['Bancos','Consultoras','Universidades']},
-      {name:'Fisica',salary:'S/ 3,312',growth:'S/ 6,890',range:'S/ 1,400 - S/ 5,800',rangeAdult:'S/ 2,300 - S/ 12,500',desc:'Investigas fenomenos fisicos, aplicas a tecnologia.',skills:['Investigacion','Matematicas','Programacion'],where:['Universidades','Centros de investigacion']},
+      {name:'Ingeniería de Sistemas y Cómputo',salary:'S/ 4,710',growth:'S/ 8,934',range:'S/ 1,900 - S/ 8,000',rangeAdult:'S/ 3,353 - S/ 15,113',desc:'Diseñas arquitectura de software y sistemas empresariales.',skills:['Programación','Arquitectura de software','Cloud'],where:['Google','Microsoft','BCP','Interbank'],study:'Estudias arquitectura de software, bases de datos, inteligencia artificial, redes y gestión de proyectos tecnológicos (5 años en UNI, PUCP, UPC, UNMSM).',dayInLife:'Diseñas sistemas de software, programas aplicaciones, lideras equipos de desarrollo, te reúnes con clientes para entender sus necesidades y despliegas soluciones en la nube.'},
+      {name:'Ciencias de la Computación',salary:'S/ 4,651',growth:'S/ 8,792',range:'S/ 2,000 - S/ 8,240',rangeAdult:'S/ 3,250 - S/ 15,537',desc:'Te especializas en inteligencia artificial, datos y algoritmos.',skills:['Algoritmos','Machine Learning','Python'],where:['Fintech','Tech global','Startups'],study:'Estudias algoritmos avanzados, inteligencia artificial, machine learning, matemáticas discretas y ciencia de datos (5 años en UTEC, PUCP, UNI).',dayInLife:'Desarrollas modelos de inteligencia artificial, analizas grandes volúmenes de datos, optimizas algoritmos y colaboras con equipos de producto para implementar soluciones.'},
+      {name:'Ingeniería de Telecomunicaciones',salary:'S/ 4,326',growth:'S/ 8,157',range:'S/ 1,870 - S/ 7,145',rangeAdult:'S/ 3,020 - S/ 14,347',desc:'Diseñas redes de comunicación y sistemas 5G.',skills:['Redes avanzadas','5G','IoT'],where:['Telefonica','Claro','America Movil'],study:'Estudias señales, redes de comunicación, sistemas inalámbricos, fibra óptica y tecnologías 5G (5 años en UNI, PUCP, UNMSM).',dayInLife:'Diseñas redes de telecomunicaciones, planificas cobertura de señal, supervisas instalación de antenas y optimizas la calidad del servicio.'},
+      {name:'Ingeniería Electrónica',salary:'S/ 3,710',growth:'S/ 9,082',range:'S/ 1,700 - S/ 6,401',rangeAdult:'S/ 2,884 - S/ 16,810',desc:'Diseñas circuitos, sistemas de automatización e IoT.',skills:['Electrónica','IoT','Automatización'],where:['Industrias','Automotriz','Mineras'],study:'Estudias circuitos, sistemas digitales, automatización, IoT y procesamiento de señales (5 años en UNI, PUCP, UPC).',dayInLife:'Diseñas circuitos electrónicos, programas microcontroladores, desarrollas sistemas de automatización y pruebas prototipos de dispositivos.'},
+      {name:'Estadística',salary:'S/ 4,527',growth:'S/ 8,879',range:'S/ 1,815 - S/ 7,500',rangeAdult:'S/ 3,097 - S/ 16,100',desc:'Analizas datos, creas modelos predictivos.',skills:['R y Python','Modelamiento','Big Data'],where:['Bancos','INEI','Consultoras'],study:'Estudias probabilidad, inferencia estadística, modelos predictivos, análisis de datos y programación en R y Python (5 años en UNMSM, UNI, PUCP).',dayInLife:'Analizas bases de datos, creas modelos predictivos, generas reportes con visualizaciones y presentas hallazgos a gerencia para la toma de decisiones.'},
+      {name:'Matemática',salary:'S/ 3,445',growth:'S/ 7,234',range:'S/ 1,500 - S/ 6,000',rangeAdult:'S/ 2,500 - S/ 13,000',desc:'Aplicas modelos matematicos a problemas reales.',skills:['Análisis','Modelamiento','Programación'],where:['Bancos','Consultoras','Universidades'],study:'Estudias cálculo avanzado, álgebra, análisis numérico, optimización y modelamiento matemático (5 años en UNMSM, UNI, PUCP).',dayInLife:'Desarrollas modelos matemáticos para resolver problemas empresariales, programas algoritmos de optimización y colaboras con equipos de ingeniería.'},
+      {name:'Física',salary:'S/ 3,312',growth:'S/ 6,890',range:'S/ 1,400 - S/ 5,800',rangeAdult:'S/ 2,300 - S/ 12,500',desc:'Investigas fenomenos fisicos, aplicas a tecnología.',skills:['Investigación','Matemáticas','Programación'],where:['Universidades','Centros de investigación'],study:'Estudias mecánica, electromagnetismo, termodinámica, física cuántica y métodos computacionales (5 años en UNMSM, UNI, PUCP).',dayInLife:'Realizas experimentos en laboratorio, analizas datos experimentales, desarrollas simulaciones computacionales y publicas resultados de investigación.'},
     ],
   }},
-  {id:'infraestructura',name:'Infraestructura e Ingenieria',icon:'🏗️',color:'from-slate-600 to-gray-700',desc:'Peru invierte miles de millones en infraestructura cada anho.',ocupaciones:{
+  {id:'infraestructura',name:'Infraestructura e Ingeniería',icon:'🏗️',color:'from-slate-600 to-gray-700',desc:'Perú invierte miles de millones en infraestructura cada año.',ocupaciones:{
     secundaria:[
-      {name:'Peon de obra / Ayudante de albanhil',salary:'Variable',growth:'-',desc:'Mezcla de cemento, carga de materiales, limpieza en construccion.',skills:['Trabajo fisico','Seguir instrucciones'],where:['Constructoras','Obras','Contratistas']},
-      {name:'Pintor de obra',salary:'Variable',growth:'-',desc:'Pintura de paredes, techos, fachadas.',skills:['Detalle','Limpieza','Trabajo en altura'],where:['Constructoras','Independiente']},
-      {name:'Gasfitero / Ayudante',salary:'Variable',growth:'-',desc:'Instalacion y reparacion de tuberias de agua y desagüe.',skills:['Trabajo manual','Solucion de problemas'],where:['Constructoras','Independiente','Ferreterias']},
-      {name:'Soldador',salary:'Variable',growth:'-',desc:'Une piezas de metal con soldadura.',skills:['Precision','Seguridad','Trabajo manual'],where:['Talleres','Fabricas','Constructoras']},
-      {name:'Ayudante de electricista',salary:'Variable',growth:'-',desc:'Apoyo en instalaciones electricas residenciales e industriales.',skills:['Cuidado','Seguir instrucciones'],where:['Constructoras','Empresas de mantenimiento']},
-      {name:'Operario de fabrica',salary:'Variable',growth:'-',desc:'Trabajo en lineas de produccion, ensamblaje, empaque.',skills:['Atencion al detalle','Puntualidad'],where:['Fabricas','Plantas industriales']},
+      {name:'Peon de obra / Ayudante de albañil',salary:'Variable',growth:'-',desc:'Mezcla de cemento, carga de materiales, limpieza en construcción.',skills:['Trabajo fisico','Seguir instrucciones'],where:['Constructoras','Obras','Contratistas'],dayInLife:'Llegas a la obra temprano, preparas la mezcla de cemento, cargas ladrillos y materiales, ayudas al maestro de obra y limpias el área al final del día.'},
+      {name:'Pintor de obra',salary:'Variable',growth:'-',desc:'Pintura de paredes, techos, fachadas.',skills:['Detalle','Limpieza','Trabajo en altura'],where:['Constructoras','Independiente'],dayInLife:'Preparas las superficies lijando y empastando, mezclas pinturas según el color pedido, pintas paredes y techos con rodillo o brocha, y limpias tus herramientas.'},
+      {name:'Gasfitero / Ayudante',salary:'Variable',growth:'-',desc:'Instalación y reparación de tuberias de agua y desagüe.',skills:['Trabajo manual','Solución de problemas'],where:['Constructoras','Independiente','Ferreterias'],dayInLife:'Instalas tuberías de agua y desagüe, reparas caños y sanitarios, destapas cañerías obstruidas y haces pruebas de presión para verificar que no haya fugas.'},
+      {name:'Soldador',salary:'Variable',growth:'-',desc:'Une piezas de metal con soldadura.',skills:['Precisión','Seguridad','Trabajo manual'],where:['Talleres','Fábricas','Constructoras'],dayInLife:'Te pones el equipo de protección, unes piezas de metal con soldadura eléctrica o autógena, revisas que las uniones queden firmes y limpias las piezas terminadas.'},
+      {name:'Ayudante de electricista',salary:'Variable',growth:'-',desc:'Apoyo en instalaciones eléctricas residenciales e industriales.',skills:['Cuidado','Seguir instrucciones'],where:['Constructoras','Empresas de mantenimiento'],dayInLife:'Pasas cables por tubos, alcanzas herramientas al electricista, ayudas a instalar tomacorrientes e interruptores y mantienes el área de trabajo ordenada.'},
+      {name:'Operario de fabrica',salary:'Variable',growth:'-',desc:'Trabajo en lineas de producción, ensamblaje, empaque.',skills:['Atención al detalle','Puntualidad'],where:['Fábricas','Plantas industriales'],dayInLife:'Operas una máquina en la línea de producción, ensamblas piezas según instrucciones, empacas productos terminados y reportas cualquier falla al supervisor.'},
     ],
     tecnica:[
-      {name:'Tecnico Civil',salary:'S/ 3,135',growth:'S/ 4,924',range:'S/ 1,500 - S/ 4,635',rangeAdult:'S/ 2,333 - S/ 8,169',desc:'Apoyas en obras, lees planos, supervisas construccion.',skills:['Lectura de planos','AutoCAD','Topografia'],where:['COSAPI','Granha y Montero','JJC']},
-      {name:'Tecnico Electricista',salary:'S/ 3,128',growth:'S/ 6,278',range:'S/ 1,500 - S/ 5,071',rangeAdult:'S/ 2,413 - S/ 11,385',desc:'Instalas y mantienes sistemas electricos.',skills:['Instalaciones electricas','Seguridad','Normativa'],where:['ENEL','Luz del Sur','Constructoras']},
-      {name:'Tecnico Mecanica',salary:'S/ 2,783',growth:'S/ 5,471',range:'S/ 1,500 - S/ 4,075',rangeAdult:'S/ 2,340 - S/ 9,663',desc:'Mantienes maquinaria industrial y vehiculos pesados.',skills:['Mecanica','Soldadura','Hidraulica'],where:['Fabricas','Mineras','Transportes']},
-      {name:'Tecnico Industrial',salary:'S/ 3,383',growth:'S/ 8,566',range:'S/ 1,600 - S/ 6,613',rangeAdult:'S/ 3,180 - S/ 13,399',desc:'Optimizas procesos de produccion y calidad.',skills:['Procesos','Calidad','Lean Manufacturing'],where:['Fabricas','Manufactura','Agroindustria']},
-      {name:'Arquitectura y Urbanismo',salary:'S/ 2,456',growth:'S/ 4,123',range:'S/ 1,300 - S/ 4,000',rangeAdult:'S/ 1,800 - S/ 7,500',desc:'Apoyas en disenho y supervision de obras.',skills:['AutoCAD','SketchUp','Disenho tecnico'],where:['Estudios de arquitectura','Constructoras']},
-      {name:'Textil y Confecciones',salary:'S/ 1,890',growth:'S/ 2,876',range:'S/ 1,100 - S/ 3,000',rangeAdult:'S/ 1,400 - S/ 5,000',desc:'Produces y controlas calidad de textiles.',skills:['Textiles','Control de calidad','Produccion'],where:['Fabricas textiles','Gamarra']},
+      {name:'Técnico Civil',salary:'S/ 3,135',growth:'S/ 4,924',range:'S/ 1,500 - S/ 4,635',rangeAdult:'S/ 2,333 - S/ 8,169',desc:'Apoyas en obras, lees planos, supervisas construcción.',skills:['Lectura de planos','AutoCAD','Topografía'],where:['COSAPI','Graña y Montero','JJC'],study:'Estudias lectura de planos, topografía, AutoCAD, materiales de construcción y supervisión de obras en institutos como TECSUP o Sencico (3 años).',dayInLife:'Revisas planos en obra, tomas medidas con topografía, supervisas que los obreros sigan las especificaciones y reportas el avance diario al ingeniero.'},
+      {name:'Técnico Electricista',salary:'S/ 3,128',growth:'S/ 6,278',range:'S/ 1,500 - S/ 5,071',rangeAdult:'S/ 2,413 - S/ 11,385',desc:'Instalas y mantienes sistemas eléctricos.',skills:['Instalaciones eléctricas','Seguridad','Normativa'],where:['ENEL','Luz del Sur','Constructoras'],study:'Estudias instalaciones eléctricas, circuitos, normativa eléctrica, seguridad y automatización en Senati o TECSUP (2-3 años).',dayInLife:'Instalas sistemas eléctricos en edificios, realizas mantenimiento preventivo, detectas fallas en circuitos y reparas tableros eléctricos.'},
+      {name:'Técnico Mecánica',salary:'S/ 2,783',growth:'S/ 5,471',range:'S/ 1,500 - S/ 4,075',rangeAdult:'S/ 2,340 - S/ 9,663',desc:'Mantienes maquinaria industrial y vehiculos pesados.',skills:['Mecánica','Soldadura','Hidráulica'],where:['Fábricas','Mineras','Transportes'],study:'Estudias mecánica industrial, soldadura, hidráulica, neumática y mantenimiento de maquinaria pesada en Senati o TECSUP (2-3 años).',dayInLife:'Revisas maquinaria industrial, cambias piezas desgastadas, lubricas equipos, realizas soldaduras y pruebas que todo funcione correctamente.'},
+      {name:'Técnico Industrial',salary:'S/ 3,383',growth:'S/ 8,566',range:'S/ 1,600 - S/ 6,613',rangeAdult:'S/ 3,180 - S/ 13,399',desc:'Optimizas procesos de producción y calidad.',skills:['Procesos','Calidad','Lean Manufacturing'],where:['Fábricas','Manufactura','Agroindustria'],study:'Estudias procesos productivos, control de calidad, lean manufacturing, seguridad industrial y gestión de producción (2-3 años en TECSUP, Senati).',dayInLife:'Supervisas la línea de producción, mides tiempos y eficiencia, identificas cuellos de botella, propones mejoras y verificas estándares de calidad.'},
+      {name:'Arquitectura y Urbanismo',salary:'S/ 2,456',growth:'S/ 4,123',range:'S/ 1,300 - S/ 4,000',rangeAdult:'S/ 1,800 - S/ 7,500',desc:'Apoyas en diseño y supervision de obras.',skills:['AutoCAD','SketchUp','Diseño técnico'],where:['Estudios de arquitectura','Constructoras'],study:'Estudias diseño arquitectónico, AutoCAD, SketchUp, dibujo técnico, urbanismo y construcción (técnica: 3 años / universitaria: 5 años).',dayInLife:'Dibujas planos en AutoCAD, creas maquetas 3D, visitas obras para supervisar avance, te reúnes con clientes para presentar propuestas de diseño.'},
+      {name:'Textil y Confecciones',salary:'S/ 1,890',growth:'S/ 2,876',range:'S/ 1,100 - S/ 3,000',rangeAdult:'S/ 1,400 - S/ 5,000',desc:'Produces y controlas calidad de textiles.',skills:['Textiles','Control de calidad','Producción'],where:['Fábricas textiles','Gamarra'],study:'Estudias producción textil, control de calidad de telas, patronaje, confección industrial y gestión de producción en Senati o institutos técnicos (2-3 años).',dayInLife:'Supervisas la producción de telas, controlas la calidad del tejido, coordinas con cortadores y costureras, y verificas que los pedidos cumplan especificaciones.'},
     ],
     universitaria:[
-      {name:'Ingenieria Civil',salary:'S/ 4,152',growth:'S/ 10,621',range:'S/ 1,923 - S/ 7,000',rangeAdult:'S/ 3,520 - S/ 19,000',desc:'Disenhas y diriges construccion de edificios y obras.',skills:['Estructuras','Gestion de proyectos','BIM'],where:['COSAPI','Granha y Montero','GyM']},
-      {name:'Ingenieria Electrica',salary:'S/ 4,223',growth:'S/ 9,376',range:'S/ 1,867 - S/ 6,850',rangeAdult:'S/ 3,093 - S/ 17,056',desc:'Disenhas sistemas de potencia y energia.',skills:['Sistemas electricos','Energia renovable','Automatizacion'],where:['ENEL','Electroperu','Osinergmin']},
-      {name:'Ingenieria Mecanica',salary:'S/ 4,177',growth:'S/ 10,364',range:'S/ 1,850 - S/ 6,969',rangeAdult:'S/ 3,192 - S/ 19,440',desc:'Disenhas maquinas y sistemas mecanicos.',skills:['Disenho mecanico','CAD/CAM','Termodinamica'],where:['Industrias','Mineras','Automotriz']},
-      {name:'Ingenieria Industrial',salary:'S/ 4,248',growth:'S/ 10,257',range:'S/ 1,800 - S/ 7,400',rangeAdult:'S/ 2,926 - S/ 20,070',desc:'Optimizas procesos y operaciones empresariales.',skills:['Gestion','Logistica','Six Sigma'],where:['Cualquier industria','Consultoras']},
-      {name:'Arquitectura y Urbanismo',salary:'S/ 3,213',growth:'S/ 7,185',range:'S/ 1,500 - S/ 5,310',rangeAdult:'S/ 2,500 - S/ 13,113',desc:'Disenhas edificios y planificas espacios urbanos.',skills:['Disenho','AutoCAD','BIM'],where:['Estudios','Inmobiliarias','Municipalidades']},
-      {name:'Ingenieria Sanitaria',salary:'S/ 3,567',growth:'S/ 8,234',range:'S/ 1,600 - S/ 5,800',rangeAdult:'S/ 2,800 - S/ 14,500',desc:'Disenhas sistemas de agua y saneamiento.',skills:['Hidraulica','Saneamiento','Gestion ambiental'],where:['SEDAPAL','Municipios','Consultoras']},
-      {name:'Ingenieria Naval y Aeronautica',salary:'S/ 3,890',growth:'S/ 9,456',range:'S/ 1,700 - S/ 6,500',rangeAdult:'S/ 3,200 - S/ 17,000',desc:'Disenhas embarcaciones y aeronaves.',skills:['Disenho naval/aereo','Mecanica de fluidos'],where:['Astilleros','SIMA','Aerolineas']},
-      {name:'Ingenieria Textil y Confecciones',salary:'S/ 2,987',growth:'S/ 5,678',range:'S/ 1,400 - S/ 4,800',rangeAdult:'S/ 2,100 - S/ 10,000',desc:'Optimizas produccion textil y confecciones.',skills:['Textiles','Produccion','Calidad'],where:['Fabricas textiles','Exportadoras']},
-      {name:'Otras Ingenierias',salary:'S/ 3,456',growth:'S/ 7,890',range:'S/ 1,500 - S/ 5,500',rangeAdult:'S/ 2,600 - S/ 14,000',desc:'Otras especialidades de ingenieria.',skills:['Ingenieria aplicada'],where:['Diversas industrias']},
+      {name:'Ingeniería Civil',salary:'S/ 4,152',growth:'S/ 10,621',range:'S/ 1,923 - S/ 7,000',rangeAdult:'S/ 3,520 - S/ 19,000',desc:'Diseñas y diriges construcción de edificios y obras.',skills:['Estructuras','Gestion de proyectos','BIM'],where:['COSAPI','Graña y Montero','GyM'],study:'Estudias estructuras, mecánica de suelos, hidráulica, gestión de proyectos, concreto armado y diseño vial (5 años en UNI, PUCP, UPC).',dayInLife:'Visitas obras en construcción, revisas planos estructurales, calculas resistencia de materiales, coordinas con contratistas y gestionas presupuestos.'},
+      {name:'Ingeniería Eléctrica',salary:'S/ 4,223',growth:'S/ 9,376',range:'S/ 1,867 - S/ 6,850',rangeAdult:'S/ 3,093 - S/ 17,056',desc:'Diseñas sistemas de potencia y energía.',skills:['Sistemas eléctricos','Energía renovable','Automatización'],where:['ENEL','Electroperu','Osinergmin'],study:'Estudias sistemas de potencia, máquinas eléctricas, energía renovable, automatización y distribución eléctrica (5 años en UNI, PUCP, UNSA).',dayInLife:'Diseñas sistemas de distribución eléctrica, calculas cargas de potencia, supervisas subestaciones y analizas eficiencia energética de plantas.'},
+      {name:'Ingeniería Mecánica',salary:'S/ 4,177',growth:'S/ 10,364',range:'S/ 1,850 - S/ 6,969',rangeAdult:'S/ 3,192 - S/ 19,440',desc:'Diseñas maquinas y sistemas mecánicos.',skills:['Diseño mecánico','CAD/CAM','Termodinámica'],where:['Industrias','Mineras','Automotriz'],study:'Estudias termodinámica, diseño de máquinas, materiales, CAD/CAM, procesos de manufactura y mecánica de fluidos (5 años en UNI, PUCP, UNMSM).',dayInLife:'Diseñas piezas mecánicas en software CAD, supervisas la fabricación de componentes, realizas pruebas de resistencia y optimizas procesos de producción.'},
+      {name:'Ingeniería Industrial',salary:'S/ 4,248',growth:'S/ 10,257',range:'S/ 1,800 - S/ 7,400',rangeAdult:'S/ 2,926 - S/ 20,070',desc:'Optimizas procesos y operaciones empresariales.',skills:['Gestion','Logística','Six Sigma'],where:['Cualquier industria','Consultoras'],study:'Estudias gestión de operaciones, logística, estadística, Six Sigma, ergonomía y gestión de calidad (5 años en UNI, PUCP, UPC, ULIMA).',dayInLife:'Analizas procesos productivos, identificas ineficiencias, implementas mejoras de calidad, gestionas cadena de suministro y presentas indicadores a gerencia.'},
+      {name:'Arquitectura y Urbanismo',salary:'S/ 3,213',growth:'S/ 7,185',range:'S/ 1,500 - S/ 5,310',rangeAdult:'S/ 2,500 - S/ 13,113',desc:'Diseñas edificios y planificas espacios urbanos.',skills:['Diseño','AutoCAD','BIM'],where:['Estudios','Inmobiliarias','Municipalidades'],study:'Estudias diseño arquitectónico, AutoCAD, SketchUp, dibujo técnico, urbanismo y construcción (técnica: 3 años / universitaria: 5 años).',dayInLife:'Dibujas planos en AutoCAD, creas maquetas 3D, visitas obras para supervisar avance, te reúnes con clientes para presentar propuestas de diseño.'},
+      {name:'Ingeniería Sanitaria',salary:'S/ 3,567',growth:'S/ 8,234',range:'S/ 1,600 - S/ 5,800',rangeAdult:'S/ 2,800 - S/ 14,500',desc:'Diseñas sistemas de agua y saneamiento.',skills:['Hidráulica','Saneamiento','Gestion ambiental'],where:['SEDAPAL','Municipios','Consultoras'],study:'Estudias hidráulica, tratamiento de aguas, saneamiento, gestión ambiental y diseño de redes de agua y desagüe (5 años en UNI).',dayInLife:'Diseñas sistemas de agua potable, supervisas plantas de tratamiento, analizas calidad del agua y gestionas proyectos de saneamiento para comunidades.'},
+      {name:'Ingeniería Naval y Aeronáutica',salary:'S/ 3,890',growth:'S/ 9,456',range:'S/ 1,700 - S/ 6,500',rangeAdult:'S/ 3,200 - S/ 17,000',desc:'Diseñas embarcaciones y aeronaves.',skills:['Diseño naval/aereo','Mecánica de fluidos'],where:['Astilleros','SIMA','Aerolineas'],study:'Estudias diseño naval, aerodinámica, mecánica de fluidos, estructuras y propulsión (5 años en UNI).',dayInLife:'Diseñas embarcaciones o componentes aeronáuticos, realizas cálculos de estabilidad, supervisas construcción en astilleros y pruebas de navegación.'},
+      {name:'Ingeniería Textil y Confecciones',salary:'S/ 2,987',growth:'S/ 5,678',range:'S/ 1,400 - S/ 4,800',rangeAdult:'S/ 2,100 - S/ 10,000',desc:'Optimizas producción textil y confecciones.',skills:['Textiles','Producción','Calidad'],where:['Fábricas textiles','Exportadoras'],study:'Estudias ingeniería de fibras, procesos textiles, diseño de producción, control de calidad y comercio exterior textil (5 años en UNI).',dayInLife:'Optimizas procesos de producción textil, desarrollas nuevos productos, controlas calidad de exportación y coordinas con proveedores de materias primas.'},
+      {name:'Otras Ingenierías',salary:'S/ 3,456',growth:'S/ 7,890',range:'S/ 1,500 - S/ 5,500',rangeAdult:'S/ 2,600 - S/ 14,000',desc:'Otras especialidades de ingeniería.',skills:['Ingeniería aplicada'],where:['Diversas industrias'],study:'Dependiendo de la especialidad, estudias fundamentos de ingeniería y te especializas en áreas como ambiental, agrícola, biomédica u otras (5 años).',dayInLife:'Aplicas principios de ingeniería a problemas específicos de tu especialidad, realizas estudios técnicos, supervisas proyectos y gestionas equipos.'},
     ],
   }},
-  {id:'agronegocios',name:'Agronegocios y Agroindustria',icon:'🌾',color:'from-green-600 to-emerald-700',desc:'Peru es lider mundial en exportacion de arandanos, paltas y esparragos.',ocupaciones:{
+  {id:'agronegocios',name:'Agronegocios y Agroindustria',icon:'🌾',color:'from-green-600 to-emerald-700',desc:'Perú es líder mundial en exportación de arandanos, paltas y esparragos.',ocupaciones:{
     secundaria:[
-      {name:'Operario agricola',salary:'Variable',growth:'-',desc:'Siembra, cosecha, riego, fumigacion de cultivos.',skills:['Trabajo fisico','Madrugador'],where:['Camposol','Danper','Viru','Agroexportadoras']},
-      {name:'Trabajador de planta de empaque',salary:'Variable',growth:'-',desc:'Seleccion, clasificacion y empaque de frutas y verduras.',skills:['Atencion al detalle','Rapidez','Higiene'],where:['Agroexportadoras','Procesadoras']},
-      {name:'Operario de planta de alimentos',salary:'Variable',growth:'-',desc:'Produccion, control y empaque de alimentos procesados.',skills:['Higiene','Seguir procesos'],where:['Alicorp','Gloria','Laive','Molitalia']},
+      {name:'Operario agrícola',salary:'Variable',growth:'-',desc:'Siembra, cosecha, riego, fumigación de cultivos.',skills:['Trabajo fisico','Madrugador'],where:['Camposol','Danper','Viru','Agroexportadoras'],dayInLife:'Empiezas al amanecer. Siembras, riegas cultivos, aplicas fertilizantes, cosechas frutas o verduras y las llevas a la zona de acopio.'},
+      {name:'Trabajador de planta de empaque',salary:'Variable',growth:'-',desc:'Selección, clasificación y empaque de frutas y verduras.',skills:['Atención al detalle','Rapidez','Higiene'],where:['Agroexportadoras','Procesadoras'],dayInLife:'Seleccionas frutas por tamaño y calidad, las clasificas en cajas, etiquetas los empaques y preparas los pedidos para exportación.'},
+      {name:'Operario de planta de alimentos',salary:'Variable',growth:'-',desc:'Producción, control y empaque de alimentos procesados.',skills:['Higiene','Seguir procesos'],where:['Alicorp','Gloria','Laive','Molitalia'],dayInLife:'Operas máquinas de procesamiento de alimentos, verificas temperaturas y pesos, empacas productos y sigues protocolos de higiene estrictos.'},
     ],
     tecnica:[
-      {name:'Agropecuaria',salary:'S/ 2,345',growth:'S/ 4,123',range:'S/ 1,200 - S/ 3,800',rangeAdult:'S/ 1,800 - S/ 7,200',desc:'Supervisas cultivos, riego y produccion agricola.',skills:['Cultivos','Riego tecnificado','Fitosanidad'],where:['Camposol','Danper','Viru']},
-      {name:'Tecnico en Industrias Alimentarias',salary:'S/ 2,456',growth:'S/ 4,567',range:'S/ 1,300 - S/ 4,000',rangeAdult:'S/ 2,000 - S/ 8,000',desc:'Procesas alimentos y controlas calidad.',skills:['HACCP','Control de calidad','BPM'],where:['Plantas procesadoras','Agroexportadoras']},
+      {name:'Agropecuaria',salary:'S/ 2,345',growth:'S/ 4,123',range:'S/ 1,200 - S/ 3,800',rangeAdult:'S/ 1,800 - S/ 7,200',desc:'Supervisas cultivos, riego y producción agrícola.',skills:['Cultivos','Riego tecnificado','Fitosanidad'],where:['Camposol','Danper','Viru'],study:'Estudias cultivos, riego tecnificado, sanidad vegetal, producción animal y gestión agrícola (técnica: 2-3 años / universitaria: 5 años en UNALM).',dayInLife:'Supervisas campos de cultivo, programas el riego tecnificado, aplicas tratamientos fitosanitarios, controlas plagas y reportas la producción.'},
+      {name:'Técnico en Industrias Alimentarias',salary:'S/ 2,456',growth:'S/ 4,567',range:'S/ 1,300 - S/ 4,000',rangeAdult:'S/ 2,000 - S/ 8,000',desc:'Procesas alimentos y controlas calidad.',skills:['HACCP','Control de calidad','BPM'],where:['Plantas procesadoras','Agroexportadoras'],study:'Estudias procesamiento de alimentos, control de calidad, HACCP, buenas prácticas de manufactura y conservación de alimentos (2-3 años).',dayInLife:'Controlas la calidad de materias primas, supervisas el procesamiento, tomas muestras para análisis en laboratorio y verificas el cumplimiento de normas sanitarias.'},
     ],
     universitaria:[
-      {name:'Agronegocios',salary:'S/ 4,312',growth:'S/ 10,567',range:'S/ 1,800 - S/ 7,500',rangeAdult:'S/ 3,200 - S/ 19,500',desc:'Gestionas empresas agricolas y exportacion.',skills:['Gestion empresarial','Comercio exterior','Agronomia'],where:['Agroexportadoras','Camposol','Danper']},
-      {name:'Agropecuaria',salary:'S/ 3,234',growth:'S/ 6,789',range:'S/ 1,500 - S/ 5,500',rangeAdult:'S/ 2,400 - S/ 12,000',desc:'Diriges produccion agricola y pecuaria.',skills:['Ciencias agricolas','Produccion','Gestion'],where:['Agroexportadoras','INIA','Minagri']},
-      {name:'Zootecnia',salary:'S/ 2,890',growth:'S/ 5,678',range:'S/ 1,300 - S/ 4,800',rangeAdult:'S/ 2,000 - S/ 10,000',desc:'Produccion animal, genetica y nutricion.',skills:['Produccion animal','Genetica','Nutricion'],where:['Granjas','Empresas pecuarias','SENASA']},
-      {name:'Veterinaria',salary:'S/ 2,547',growth:'S/ 6,317',range:'S/ 1,215 - S/ 4,175',rangeAdult:'S/ 1,635 - S/ 13,657',desc:'Cuidas la salud animal y certificas productos.',skills:['Medicina veterinaria','Sanidad animal'],where:['Clinicas','SENASA','Agroindustrias']},
-      {name:'Ingenieria en Agroindustria',salary:'S/ 3,123',growth:'S/ 6,456',range:'S/ 1,400 - S/ 5,200',rangeAdult:'S/ 2,300 - S/ 11,500',desc:'Procesas productos agricolas y pecuarios.',skills:['Procesos','Calidad','Inocuidad'],where:['Agroexportadoras','Plantas procesadoras']},
-      {name:'Ingenieria en Industrias Alimentarias',salary:'S/ 3,456',growth:'S/ 7,234',range:'S/ 1,500 - S/ 5,800',rangeAdult:'S/ 2,500 - S/ 13,000',desc:'Disenhas procesos de produccion de alimentos.',skills:['HACCP','Procesos','Innovacion'],where:['Alicorp','Gloria','Nestle']},
-      {name:'Ciencias Forestales',salary:'S/ 2,678',growth:'S/ 5,234',range:'S/ 1,200 - S/ 4,500',rangeAdult:'S/ 1,900 - S/ 9,500',desc:'Gestionas bosques y recursos forestales.',skills:['Silvicultura','Gestion ambiental'],where:['SERFOR','Empresas forestales','ONGs']},
-      {name:'Ingenieria Pesquera',salary:'S/ 3,012',growth:'S/ 6,123',range:'S/ 1,400 - S/ 5,000',rangeAdult:'S/ 2,200 - S/ 11,000',desc:'Gestionas recursos marinos y acuicultura.',skills:['Acuicultura','Pesca','Procesamiento'],where:['Empresas pesqueras','IMARPE','Exportadoras']},
+      {name:'Agronegocios',salary:'S/ 4,312',growth:'S/ 10,567',range:'S/ 1,800 - S/ 7,500',rangeAdult:'S/ 3,200 - S/ 19,500',desc:'Gestionas empresas agrícolas y exportación.',skills:['Gestion empresarial','Comercio exterior','Agronomía'],where:['Agroexportadoras','Camposol','Danper'],study:'Estudias administración de empresas agrícolas, comercio exterior, agronomía, logística de exportación y finanzas agropecuarias (5 años en UNALM, UPC).',dayInLife:'Gestionas la operación de una empresa agroexportadora, negocias con compradores internacionales, analizas costos de producción y coordinas la cadena de exportación.'},
+      {name:'Agropecuaria',salary:'S/ 3,234',growth:'S/ 6,789',range:'S/ 1,500 - S/ 5,500',rangeAdult:'S/ 2,400 - S/ 12,000',desc:'Diriges producción agrícola y pecuaria.',skills:['Ciencias agrícolas','Producción','Gestion'],where:['Agroexportadoras','INIA','Minagri'],study:'Estudias cultivos, riego tecnificado, sanidad vegetal, producción animal y gestión agrícola (técnica: 2-3 años / universitaria: 5 años en UNALM).',dayInLife:'Supervisas campos de cultivo, programas el riego tecnificado, aplicas tratamientos fitosanitarios, controlas plagas y reportas la producción.'},
+      {name:'Zootecnia',salary:'S/ 2,890',growth:'S/ 5,678',range:'S/ 1,300 - S/ 4,800',rangeAdult:'S/ 2,000 - S/ 10,000',desc:'Producción animal, genética y nutrición.',skills:['Producción animal','Genética','Nutrición'],where:['Granjas','Empresas pecuarias','SENASA'],study:'Estudias producción animal, genética, nutrición animal, reproducción y manejo de ganado (5 años en UNALM, UNMSM).',dayInLife:'Supervisas granjas, diseñas dietas para animales, realizas programas de mejora genética, controlas la salud del ganado y gestionas la producción.'},
+      {name:'Veterinaria',salary:'S/ 2,547',growth:'S/ 6,317',range:'S/ 1,215 - S/ 4,175',rangeAdult:'S/ 1,635 - S/ 13,657',desc:'Cuidas la salud animal y certificas productos.',skills:['Medicina veterinaria','Sanidad animal'],where:['Clínicas','SENASA','Agroindustrias'],study:'Estudias anatomía animal, patología, farmacología veterinaria, cirugía, sanidad y producción animal (6 años en UNMSM, UNALM).',dayInLife:'Atiendes consultas de mascotas, realizas cirugías, vacunas animales, certificas productos de origen animal y asesoras a ganaderos sobre sanidad.'},
+      {name:'Ingeniería en Agroindustria',salary:'S/ 3,123',growth:'S/ 6,456',range:'S/ 1,400 - S/ 5,200',rangeAdult:'S/ 2,300 - S/ 11,500',desc:'Procesas productos agrícolas y pecuarios.',skills:['Procesos','Calidad','Inocuidad'],where:['Agroexportadoras','Plantas procesadoras'],study:'Estudias procesamiento de productos agrícolas, control de calidad, tecnología de alimentos, logística y gestión agroindustrial (5 años en UNALM).',dayInLife:'Supervisas plantas de procesamiento, diseñas nuevos productos alimentarios, controlas calidad de exportación y optimizas procesos productivos.'},
+      {name:'Ingeniería en Industrias Alimentarias',salary:'S/ 3,456',growth:'S/ 7,234',range:'S/ 1,500 - S/ 5,800',rangeAdult:'S/ 2,500 - S/ 13,000',desc:'Diseñas procesos de producción de alimentos.',skills:['HACCP','Procesos','Innovación'],where:['Alicorp','Gloria','Nestle'],study:'Estudias tecnología de alimentos, microbiología, HACCP, innovación alimentaria, procesos y conservación (5 años en UNALM, UNMSM).',dayInLife:'Diseñas procesos de producción de alimentos, desarrollas nuevos productos, controlas calidad microbiológica y supervisas líneas de producción.'},
+      {name:'Ciencias Forestales',salary:'S/ 2,678',growth:'S/ 5,234',range:'S/ 1,200 - S/ 4,500',rangeAdult:'S/ 1,900 - S/ 9,500',desc:'Gestionas bosques y recursos forestales.',skills:['Silvicultura','Gestion ambiental'],where:['SERFOR','Empresas forestales','ONGs'],study:'Estudias silvicultura, ecología forestal, manejo de bosques, legislación ambiental y aprovechamiento sostenible (5 años en UNALM).',dayInLife:'Realizas inventarios forestales, planificas la reforestación, supervisas el aprovechamiento sostenible de madera y elaboras planes de manejo.'},
+      {name:'Ingeniería Pesquera',salary:'S/ 3,012',growth:'S/ 6,123',range:'S/ 1,400 - S/ 5,000',rangeAdult:'S/ 2,200 - S/ 11,000',desc:'Gestionas recursos marinos y acuicultura.',skills:['Acuicultura','Pesca','Procesamiento'],where:['Empresas pesqueras','IMARPE','Exportadoras'],study:'Estudias biología marina, acuicultura, procesamiento de recursos marinos, oceanografía y gestión pesquera (5 años en UNFV, UNALM).',dayInLife:'Supervisas operaciones pesqueras, gestionas granjas acuícolas, controlas calidad del procesamiento de productos marinos y asesoras sobre sostenibilidad.'},
     ],
   }},
-  {id:'turismo',name:'Turismo, Hoteleria y Gastronomia',icon:'🍽️',color:'from-orange-500 to-red-600',desc:'Peru es potencia gastronomica y turistica mundial.',ocupaciones:{
+  {id:'turismo',name:'Turismo, Hotelería y Gastronomía',icon:'🍽️',color:'from-orange-500 to-red-600',desc:'Perú es potencia gastronómica y turística mundial.',ocupaciones:{
     secundaria:[
-      {name:'Mozo / Mesero',salary:'Variable',growth:'-',desc:'Atencion de mesas, toma de pedidos, servicio.',skills:['Atencion al cliente','Rapidez','Buena memoria'],where:['Restaurantes','Hoteles','Eventos']},
-      {name:'Cocinero',salary:'Variable',growth:'-',desc:'Preparacion de platos en restaurantes.',skills:['Cocina','Organizacion','Trabajo bajo presion'],where:['Restaurantes','Pollerias','Chifas','Hoteles']},
-      {name:'Auxiliar de cocina',salary:'Variable',growth:'-',desc:'Preparacion de ingredientes, limpieza, apoyo al chef.',skills:['Higiene','Rapidez','Seguir instrucciones'],where:['Restaurantes','Hoteles','Catering']},
-      {name:'Recepcionista de hotel',salary:'Variable',growth:'-',desc:'Check-in, check-out, atencion al huesped, reservas.',skills:['Atencion al cliente','Computacion basica'],where:['Hoteles','Hostales']},
-      {name:'Housekeeping / Limpieza de cuartos',salary:'Variable',growth:'-',desc:'Limpieza y arreglo de habitaciones de hotel.',skills:['Limpieza','Organizacion','Discrecion'],where:['Hoteles','Hostales','Airbnb']},
-      {name:'Barista',salary:'Variable',growth:'-',desc:'Preparacion de cafe y bebidas.',skills:['Atencion al cliente','Rapidez'],where:['Starbucks','Cafeterias','Restaurantes']},
+      {name:'Mozo / Mesero',salary:'Variable',growth:'-',desc:'Atención de mesas, toma de pedidos, servicio.',skills:['Atención al cliente','Rapidez','Buena memoria'],where:['Restaurantes','Hoteles','Eventos'],dayInLife:'Preparas las mesas antes de abrir, recibes a los clientes, tomas pedidos, llevas los platos y bebidas, cobras la cuenta y limpias las mesas.'},
+      {name:'Cocinero',salary:'Variable',growth:'-',desc:'Preparación de platos en restaurantes.',skills:['Cocina','Organización','Trabajo bajo presion'],where:['Restaurantes','Pollerias','Chifas','Hoteles'],dayInLife:'Llegas temprano a preparar ingredientes, cocinas platos según la carta del restaurante, controlas tiempos de cocción y presentas cada plato con cuidado.'},
+      {name:'Auxiliar de cocina',salary:'Variable',growth:'-',desc:'Preparación de ingredientes, limpieza, apoyo al chef.',skills:['Higiene','Rapidez','Seguir instrucciones'],where:['Restaurantes','Hoteles','Catering'],dayInLife:'Lavas, pelas y picas verduras, preparas salsas base, mantienes la cocina limpia, organizas el almacén y apoyas al chef en lo que necesite.'},
+      {name:'Recepcionista de hotel',salary:'Variable',growth:'-',desc:'Check-in, check-out, atención al huesped, reservas.',skills:['Atención al cliente','Computación básica'],where:['Hoteles','Hostales'],dayInLife:'Recibes huéspedes, haces check-in y check-out, respondes llamadas, gestionas reservas en el sistema y das información sobre servicios del hotel.'},
+      {name:'Housekeeping / Limpieza de cuartos',salary:'Variable',growth:'-',desc:'Limpieza y arreglo de habitaciones de hotel.',skills:['Limpieza','Organización','Discreción'],where:['Hoteles','Hostales','Airbnb'],dayInLife:'Limpias y arreglas habitaciones, cambias sábanas y toallas, repones amenities, verificas que todo esté impecable y reportas desperfectos.'},
+      {name:'Barista',salary:'Variable',growth:'-',desc:'Preparación de cafe y bebidas.',skills:['Atención al cliente','Rapidez'],where:['Starbucks','Cafeterias','Restaurantes'],dayInLife:'Preparas cafés espresso, lattes y bebidas especiales, atiendes clientes en barra, mantienes la máquina limpia y repones insumos.'},
     ],
     tecnica:[
-      {name:'Administracion de Servicios Turisticos, Hoteleria y Gastronomia',salary:'S/ 2,606',growth:'S/ 4,940',range:'S/ 1,303 - S/ 4,060',rangeAdult:'S/ 1,853 - S/ 9,228',desc:'Trabajas en gestion de hoteles o restaurantes.',skills:['Servicio al cliente','Idiomas','Gestion'],where:['Hoteles','Restaurantes','Cruceros']},
-      {name:'Turismo',salary:'S/ 1,944',growth:'S/ 4,268',range:'S/ 1,130 - S/ 3,334',rangeAdult:'S/ 1,602 - S/ 8,200',desc:'Organizas tours y guias turisticos.',skills:['Guiado turistico','Idiomas','Historia'],where:['Agencias de viaje','Operadores turisticos']},
+      {name:'Administración de Servicios Turisticos, Hotelería y Gastronomía',salary:'S/ 2,606',growth:'S/ 4,940',range:'S/ 1,303 - S/ 4,060',rangeAdult:'S/ 1,853 - S/ 9,228',desc:'Trabajas en gestion de hoteles o restaurantes.',skills:['Servicio al cliente','Idiomas','Gestion'],where:['Hoteles','Restaurantes','Cruceros'],study:'Estudias gestión hotelera, servicio al cliente, gastronomía, idiomas, marketing turístico y operaciones (técnica: 2-3 años / universitaria: 5 años).',dayInLife:'Coordinas la operación del hotel o restaurante, supervisas al personal de servicio, atiendes quejas de clientes y gestionas reservas y eventos.'},
+      {name:'Turismo',salary:'S/ 1,944',growth:'S/ 4,268',range:'S/ 1,130 - S/ 3,334',rangeAdult:'S/ 1,602 - S/ 8,200',desc:'Organizas tours y guias turisticos.',skills:['Guiado turistico','Idiomas','Historia'],where:['Agencias de viaje','Operadores turisticos'],study:'Estudias guiado turístico, historia del Perú, idiomas, marketing turístico y operación de agencias de viaje (2-3 años en CENFOTUR).',dayInLife:'Guías grupos de turistas por sitios históricos, organizas itinerarios, coordinas transporte y alojamiento, y respondes preguntas sobre la cultura local.'},
     ],
     universitaria:[
-      {name:'Administracion de Servicios Turisticos, Hoteleria y Gastronomia',salary:'S/ 2,721',growth:'S/ 5,087',range:'S/ 1,342 - S/ 4,268',rangeAdult:'S/ 1,940 - S/ 9,562',desc:'Gestionas hoteles, restaurantes o empresas turisticas.',skills:['Gestion hotelera','Marketing turistico','Idiomas'],where:['Cadenas hoteleras','Restaurantes','Operadores']},
+      {name:'Administración de Servicios Turisticos, Hotelería y Gastronomía',salary:'S/ 2,721',growth:'S/ 5,087',range:'S/ 1,342 - S/ 4,268',rangeAdult:'S/ 1,940 - S/ 9,562',desc:'Gestionas hoteles, restaurantes o empresas turísticas.',skills:['Gestion hotelera','Marketing turistico','Idiomas'],where:['Cadenas hoteleras','Restaurantes','Operadores'],study:'Estudias gestión hotelera, servicio al cliente, gastronomía, idiomas, marketing turístico y operaciones (técnica: 2-3 años / universitaria: 5 años).',dayInLife:'Coordinas la operación del hotel o restaurante, supervisas al personal de servicio, atiendes quejas de clientes y gestionas reservas y eventos.'},
     ],
   }},
-  {id:'administracion',name:'Administracion y Negocios',icon:'💼',color:'from-violet-500 to-purple-600',desc:'Todas las empresas necesitan administradores y contadores.',ocupaciones:{
+  {id:'administracion',name:'Administración y Negocios',icon:'💼',color:'from-violet-500 to-purple-600',desc:'Todas las empresas necesitan administradores y contadores.',ocupaciones:{
     secundaria:[
-      {name:'Vendedor de tienda',salary:'Variable',growth:'-',desc:'Atencion y venta en tiendas de retail.',skills:['Ventas','Atencion al cliente','Paciencia'],where:['Saga','Ripley','Oechsle','Tiendas de mall']},
-      {name:'Cajero',salary:'Variable',growth:'-',desc:'Cobro en caja, manejo de dinero y tarjetas.',skills:['Manejo de dinero','Matematica basica','Honestidad'],where:['Supermercados','Tiendas','Farmacias','Bancos']},
-      {name:'Promotor / Impulsador',salary:'Variable',growth:'-',desc:'Promocion de productos, degustaciones en tiendas.',skills:['Comunicacion','Persuasion','Buena presencia'],where:['Supermercados','Malls','Eventos']},
-      {name:'Recepcionista',salary:'Variable',growth:'-',desc:'Atencion en oficinas, llamadas, recepcion de visitantes.',skills:['Atencion al cliente','Computacion','Organizacion'],where:['Oficinas','Clinicas','Empresas']},
-      {name:'Call center / Teleoperador',salary:'Variable',growth:'-',desc:'Atencion telefonica, ventas por telefono, soporte.',skills:['Comunicacion','Paciencia','Computacion'],where:['Atento','Konecta','Teleperformance']},
+      {name:'Vendedor de tienda',salary:'Variable',growth:'-',desc:'Atención y venta en tiendas de retail.',skills:['Ventas','Atención al cliente','Paciencia'],where:['Saga','Ripley','Oechsle','Tiendas de mall'],dayInLife:'Atiendes clientes que llegan a la tienda, muestras productos, asesoras sobre opciones, cierras ventas y mantienes la exhibición ordenada.'},
+      {name:'Cajero',salary:'Variable',growth:'-',desc:'Cobro en caja, manejo de dinero y tarjetas.',skills:['Manejo de dinero','Matemática básica','Honestidad'],where:['Supermercados','Tiendas','Farmacias','Bancos'],dayInLife:'Cobras productos en caja, recibes pagos en efectivo y tarjeta, das vuelto, imprimes boletas y cuadras tu caja al final del turno.'},
+      {name:'Promotor / Impulsador',salary:'Variable',growth:'-',desc:'Promocion de productos, degustaciones en tiendas.',skills:['Comunicación','Persuasión','Buena presencia'],where:['Supermercados','Malls','Eventos'],dayInLife:'Te ubicas en un punto del supermercado o mall, ofreces degustaciones o muestras del producto, explicas sus beneficios y registras las ventas del día.'},
+      {name:'Recepcionista',salary:'Variable',growth:'-',desc:'Atención en oficinas, llamadas, recepción de visitantes.',skills:['Atención al cliente','Computación','Organización'],where:['Oficinas','Clínicas','Empresas'],dayInLife:'Recibes visitantes en la oficina, contestas llamadas, transfieres mensajes, coordinas salas de reunión y apoyas con tareas administrativas.'},
+      {name:'Call center / Teleoperador',salary:'Variable',growth:'-',desc:'Atención telefonica, ventas por telefono, soporte.',skills:['Comunicación','Paciencia','Computación'],where:['Atento','Konecta','Teleperformance'],dayInLife:'Atiendes llamadas de clientes, resuelves consultas o reclamos, registras cada caso en el sistema y cumples con tu meta de atención diaria.'},
     ],
     tecnica:[
-      {name:'Administracion de Empresas',salary:'S/ 2,370',growth:'S/ 4,652',range:'S/ 1,200 - S/ 3,940',rangeAdult:'S/ 1,724 - S/ 8,250',desc:'Apoyas en gestion administrativa y operaciones.',skills:['Administracion','Excel','Gestion'],where:['Cualquier empresa']},
-      {name:'Negocios Internacionales',salary:'S/ 2,309',growth:'S/ 5,815',range:'S/ 1,294 - S/ 3,948',rangeAdult:'S/ 1,895 - S/ 11,757',desc:'Gestionas comercio exterior y aduanas.',skills:['Aduanas','Idiomas','Comercio exterior'],where:['Exportadoras','Importadoras','Agencias de aduanas']},
-      {name:'Secretariado',salary:'S/ 2,048',growth:'S/ 4,018',range:'S/ 1,221 - S/ 3,210',rangeAdult:'S/ 1,555 - S/ 7,263',desc:'Apoyas a ejecutivos en gestion administrativa.',skills:['Organizacion','Ofimatica','Comunicacion'],where:['Corporaciones','Bancos','Estudios']},
-      {name:'Tecnico en Marketing',salary:'S/ 2,525',growth:'S/ 6,221',range:'S/ 1,200 - S/ 4,293',rangeAdult:'S/ 1,950 - S/ 12,790',desc:'Apoyas en campanhas de marketing y redes sociales.',skills:['Redes sociales','Publicidad','Disenho basico'],where:['Agencias','Empresas','Startups']},
-      {name:'Tecnico en Contabilidad y Finanzas',salary:'S/ 2,206',growth:'S/ 3,442',range:'S/ 1,200 - S/ 3,419',rangeAdult:'S/ 1,561 - S/ 5,833',desc:'Apoyas en contabilidad y registros financieros.',skills:['Contabilidad basica','Excel','SUNAT'],where:['Estudios contables','Empresas','Bancos']},
+      {name:'Administración de Empresas',salary:'S/ 2,370',growth:'S/ 4,652',range:'S/ 1,200 - S/ 3,940',rangeAdult:'S/ 1,724 - S/ 8,250',desc:'Apoyas en gestion administrativa y operaciones.',skills:['Administración','Excel','Gestion'],where:['Cualquier empresa'],study:'Estudias gestión empresarial, contabilidad, marketing, recursos humanos, finanzas y liderazgo (técnica: 2-3 años / universitaria: 5 años en PUCP, UP, ULIMA).',dayInLife:'Gestionas operaciones del negocio, coordinas equipos, analizas presupuestos, tomas decisiones estratégicas y presentas reportes a directivos.'},
+      {name:'Negocios Internacionales',salary:'S/ 2,309',growth:'S/ 5,815',range:'S/ 1,294 - S/ 3,948',rangeAdult:'S/ 1,895 - S/ 11,757',desc:'Gestionas comercio exterior y aduanas.',skills:['Aduanas','Idiomas','Comercio exterior'],where:['Exportadoras','Importadoras','Agencias de aduanas'],study:'Estudias comercio exterior, aduanas, logística internacional, idiomas y documentación de exportación (técnica: 2-3 años / universitaria: 5 años).',dayInLife:'Coordinas importaciones y exportaciones, gestionas documentos aduaneros, negocias con proveedores internacionales y monitoreas envíos.'},
+      {name:'Secretariado',salary:'S/ 2,048',growth:'S/ 4,018',range:'S/ 1,221 - S/ 3,210',rangeAdult:'S/ 1,555 - S/ 7,263',desc:'Apoyas a ejecutivos en gestion administrativa.',skills:['Organización','Ofimática','Comunicación'],where:['Corporaciones','Bancos','Estudios'],study:'Estudias gestión administrativa, ofimática avanzada, redacción comercial, archivo y organización de eventos (2-3 años).',dayInLife:'Organizas la agenda del ejecutivo, redactas cartas y correos, coordinas reuniones, manejas archivos y atiendes llamadas importantes.'},
+      {name:'Técnico en Marketing',salary:'S/ 2,525',growth:'S/ 6,221',range:'S/ 1,200 - S/ 4,293',rangeAdult:'S/ 1,950 - S/ 12,790',desc:'Apoyas en campañas de marketing y redes sociales.',skills:['Redes sociales','Publicidad','Diseño básico'],where:['Agencias','Empresas','Startups'],study:'Estudias marketing digital, redes sociales, publicidad, diseño básico y análisis de mercado en institutos como Cibertec, IDAT (2-3 años).',dayInLife:'Creas contenido para redes sociales, programas publicaciones, analizas métricas de campañas digitales y apoyas en diseño de material publicitario.'},
+      {name:'Técnico en Contabilidad y Finanzas',salary:'S/ 2,206',growth:'S/ 3,442',range:'S/ 1,200 - S/ 3,419',rangeAdult:'S/ 1,561 - S/ 5,833',desc:'Apoyas en contabilidad y registros financieros.',skills:['Contabilidad básica','Excel','SUNAT'],where:['Estudios contables','Empresas','Bancos'],study:'Estudias contabilidad general, tributación, SUNAT, planillas, Excel contable y normas financieras (2-3 años).',dayInLife:'Registras facturas y boletas, preparas declaraciones de impuestos, llevas el libro de compras y ventas, y apoyas en la elaboración de estados financieros.'},
     ],
     universitaria:[
-      {name:'Economia',salary:'S/ 4,526',growth:'S/ 11,726',range:'S/ 1,667 - S/ 8,200',rangeAdult:'S/ 2,613 - S/ 23,343',desc:'Analizas mercados, inversiones y politicas economicas.',skills:['Analisis economico','Finanzas','Econometria'],where:['BCR','MEF','Bancos','Consultoras']},
-      {name:'Administracion de Empresas',salary:'S/ 3,794',growth:'S/ 9,387',range:'S/ 1,500 - S/ 7,000',rangeAdult:'S/ 2,303 - S/ 19,000',desc:'Diriges y gestionas empresas.',skills:['Gestion','Liderazgo','Estrategia'],where:['Cualquier empresa','Consultoras']},
-      {name:'Marketing',salary:'S/ 3,704',growth:'S/ 9,923',range:'S/ 1,500 - S/ 6,629',rangeAdult:'S/ 2,456 - S/ 20,010',desc:'Desarrollas estrategias de marketing y ventas.',skills:['Marketing digital','Creatividad','Analisis'],where:['Consumo masivo','Agencias','Tech']},
-      {name:'Contabilidad y Finanzas',salary:'S/ 2,827',growth:'S/ 6,529',range:'S/ 1,402 - S/ 4,580',rangeAdult:'S/ 2,113 - S/ 12,683',desc:'Llevas contabilidad y gestionas finanzas.',skills:['Contabilidad','SUNAT','NIIF'],where:['Estudios contables','Big Four','Empresas']},
-      {name:'Derecho',salary:'S/ 3,622',growth:'S/ 10,351',range:'S/ 1,500 - S/ 6,435',rangeAdult:'S/ 2,332 - S/ 20,830',desc:'Asesoras legalmente y resuelves casos.',skills:['Derecho','Argumentacion','Negociacion'],where:['Estudios de abogados','Empresas','Estado']},
-      {name:'Negocios Internacionales',salary:'S/ 3,456',growth:'S/ 7,890',range:'S/ 1,500 - S/ 5,800',rangeAdult:'S/ 2,500 - S/ 14,000',desc:'Gestionas comercio internacional.',skills:['Comercio exterior','Aduanas','Idiomas'],where:['Exportadoras','Importadoras','Trading']},
-      {name:'Otras Carreras de Administracion',salary:'S/ 3,234',growth:'S/ 7,123',range:'S/ 1,400 - S/ 5,500',rangeAdult:'S/ 2,300 - S/ 13,000',desc:'RRHH, Gestion, Relaciones Industriales.',skills:['Gestion','RRHH','Liderazgo'],where:['Empresas','Consultoras']},
-      {name:'Administracion Publica',salary:'S/ 2,890',growth:'S/ 5,678',range:'S/ 1,300 - S/ 4,800',rangeAdult:'S/ 2,000 - S/ 10,000',desc:'Gestionas entidades del Estado.',skills:['Gestion publica','Normativa','Politicas'],where:['Ministerios','Municipalidades','Gobiernos regionales']},
-      {name:'Investigacion Operativa',salary:'S/ 3,567',growth:'S/ 7,456',range:'S/ 1,500 - S/ 6,000',rangeAdult:'S/ 2,600 - S/ 13,500',desc:'Optimizas procesos con modelos matematicos.',skills:['Optimizacion','Modelos','Programacion'],where:['Consultoras','Industrias','Bancos']},
-      {name:'Ciencias Politicas',salary:'S/ 3,123',growth:'S/ 6,456',range:'S/ 1,400 - S/ 5,200',rangeAdult:'S/ 2,200 - S/ 11,500',desc:'Analizas sistemas politicos y politicas publicas.',skills:['Analisis politico','Comunicacion','Investigacion'],where:['Estado','ONGs','Consultoras']},
+      {name:'Economía',salary:'S/ 4,526',growth:'S/ 11,726',range:'S/ 1,667 - S/ 8,200',rangeAdult:'S/ 2,613 - S/ 23,343',desc:'Analizas mercados, inversiones y políticas economicas.',skills:['Análisis economico','Finanzas','Econometría'],where:['BCR','MEF','Bancos','Consultoras'],study:'Estudias microeconomía, macroeconomía, econometría, finanzas, políticas públicas y análisis de datos (5 años en PUCP, UP, UNMSM, UPC).',dayInLife:'Analizas indicadores económicos, elaboras proyecciones financieras, evalúas políticas públicas, preparas informes para directivos y asesoras en inversiones.'},
+      {name:'Administración de Empresas',salary:'S/ 3,794',growth:'S/ 9,387',range:'S/ 1,500 - S/ 7,000',rangeAdult:'S/ 2,303 - S/ 19,000',desc:'Diriges y gestionas empresas.',skills:['Gestion','Liderazgo','Estrategia'],where:['Cualquier empresa','Consultoras'],study:'Estudias gestión empresarial, contabilidad, marketing, recursos humanos, finanzas y liderazgo (técnica: 2-3 años / universitaria: 5 años en PUCP, UP, ULIMA).',dayInLife:'Gestionas operaciones del negocio, coordinas equipos, analizas presupuestos, tomas decisiones estratégicas y presentas reportes a directivos.'},
+      {name:'Marketing',salary:'S/ 3,704',growth:'S/ 9,923',range:'S/ 1,500 - S/ 6,629',rangeAdult:'S/ 2,456 - S/ 20,010',desc:'Desarrollas estrategias de marketing y ventas.',skills:['Marketing digital','Creatividad','Análisis'],where:['Consumo masivo','Agencias','Tech'],study:'Estudias marketing estratégico, comportamiento del consumidor, publicidad, branding, marketing digital y análisis de mercado (5 años en UPC, ULIMA, UP).',dayInLife:'Diseñas estrategias de marketing, analizas el comportamiento del consumidor, gestionas campañas publicitarias, mides resultados y optimizas el presupuesto.'},
+      {name:'Contabilidad y Finanzas',salary:'S/ 2,827',growth:'S/ 6,529',range:'S/ 1,402 - S/ 4,580',rangeAdult:'S/ 2,113 - S/ 12,683',desc:'Llevas contabilidad y gestionas finanzas.',skills:['Contabilidad','SUNAT','NIIF'],where:['Estudios contables','Big Four','Empresas'],study:'Estudias contabilidad, auditoría, tributación, NIIF, finanzas corporativas y análisis financiero (5 años en PUCP, UNMSM, UPC).',dayInLife:'Preparas estados financieros, realizas auditorías, calculas impuestos, asesoras a empresas en temas tributarios y analizas la rentabilidad del negocio.'},
+      {name:'Derecho',salary:'S/ 3,622',growth:'S/ 10,351',range:'S/ 1,500 - S/ 6,435',rangeAdult:'S/ 2,332 - S/ 20,830',desc:'Asesoras legalmente y resuelves casos.',skills:['Derecho','Argumentación','Negociación'],where:['Estudios de abogados','Empresas','Estado'],study:'Estudias derecho civil, penal, constitucional, laboral, comercial, procesal y ética jurídica (5-6 años en PUCP, UNMSM, UPC, ULIMA).',dayInLife:'Asesoras clientes en temas legales, redactas contratos, preparas demandas, asistes a audiencias judiciales y negocias acuerdos.'},
+      {name:'Negocios Internacionales',salary:'S/ 3,456',growth:'S/ 7,890',range:'S/ 1,500 - S/ 5,800',rangeAdult:'S/ 2,500 - S/ 14,000',desc:'Gestionas comercio internacional.',skills:['Comercio exterior','Aduanas','Idiomas'],where:['Exportadoras','Importadoras','Trading'],study:'Estudias comercio exterior, aduanas, logística internacional, idiomas y documentación de exportación (técnica: 2-3 años / universitaria: 5 años).',dayInLife:'Coordinas importaciones y exportaciones, gestionas documentos aduaneros, negocias con proveedores internacionales y monitoreas envíos.'},
+      {name:'Otras Carreras de Administración',salary:'S/ 3,234',growth:'S/ 7,123',range:'S/ 1,400 - S/ 5,500',rangeAdult:'S/ 2,300 - S/ 13,000',desc:'RRHH, Gestion, Relaciones Industriales.',skills:['Gestion','RRHH','Liderazgo'],where:['Empresas','Consultoras'],study:'Estudias gestión de recursos humanos, relaciones industriales, gestión pública o administración especializada (5 años).',dayInLife:'Gestionas procesos administrativos según tu especialidad, coordinas equipos, elaboras reportes y participas en la planificación estratégica.'},
+      {name:'Administración Pública',salary:'S/ 2,890',growth:'S/ 5,678',range:'S/ 1,300 - S/ 4,800',rangeAdult:'S/ 2,000 - S/ 10,000',desc:'Gestionas entidades del Estado.',skills:['Gestion pública','Normativa','Políticas'],where:['Ministerios','Municipalidades','Gobiernos regionales'],study:'Estudias gestión pública, políticas públicas, derecho administrativo, presupuesto público y gobernanza (5 años).',dayInLife:'Gestionas programas del Estado, elaboras presupuestos públicos, coordinas con ciudadanos y otras entidades, y supervisas el cumplimiento de normativa.'},
+      {name:'Investigación Operativa',salary:'S/ 3,567',growth:'S/ 7,456',range:'S/ 1,500 - S/ 6,000',rangeAdult:'S/ 2,600 - S/ 13,500',desc:'Optimizas procesos con modelos matematicos.',skills:['Optimización','Modelos','Programación'],where:['Consultoras','Industrias','Bancos'],study:'Estudias optimización, modelos matemáticos, simulación, programación lineal y toma de decisiones cuantitativa (5 años en UNI, UNMSM).',dayInLife:'Desarrollas modelos de optimización para empresas, analizas datos operativos, diseñas simulaciones y presentas recomendaciones basadas en datos.'},
+      {name:'Ciencias Políticas',salary:'S/ 3,123',growth:'S/ 6,456',range:'S/ 1,400 - S/ 5,200',rangeAdult:'S/ 2,200 - S/ 11,500',desc:'Analizas sistemas politicos y políticas públicas.',skills:['Análisis politico','Comunicación','Investigación'],where:['Estado','ONGs','Consultoras'],study:'Estudias sistemas políticos, relaciones internacionales, políticas públicas, filosofía política y análisis político (5 años en PUCP, UNMSM).',dayInLife:'Analizas el contexto político, asesoras a instituciones o partidos, diseñas políticas públicas, investigas y publicas artículos de opinión.'},
     ],
   }},
   {id:'salud',name:'Salud',icon:'🏥',color:'from-rose-500 to-pink-600',desc:'El sector salud siempre tiene demanda laboral.',ocupaciones:{
     secundaria:[
-      {name:'Auxiliar de farmacia',salary:'Variable',growth:'-',desc:'Atencion en mostrador, inventario, despacho de medicamentos.',skills:['Atencion al cliente','Orden','Responsabilidad'],where:['Inkafarma','Mifarma','Boticas']},
+      {name:'Auxiliar de farmacia',salary:'Variable',growth:'-',desc:'Atención en mostrador, inventario, despacho de medicamentos.',skills:['Atención al cliente','Orden','Responsabilidad'],where:['Inkafarma','Mifarma','Boticas'],dayInLife:'Atiendes clientes en el mostrador, buscas medicamentos en los estantes, verificas stock, ordenas productos y cobras en caja.'},
     ],
     tecnica:[
-      {name:'Enfermeria',salary:'S/ 1,667',growth:'S/ 2,248',range:'S/ 1,130 - S/ 2,427',rangeAdult:'S/ 1,253 - S/ 3,407',desc:'Brindas cuidados basicos de enfermeria.',skills:['Cuidado de pacientes','Empatia','Primeros auxilios'],where:['EsSalud','MINSA','Clinicas']},
-      {name:'Tecnico en Farmacia y Bioquimica',salary:'S/ 1,826',growth:'S/ 2,410',range:'S/ 1,250 - S/ 2,500',rangeAdult:'S/ 1,413 - S/ 3,816',desc:'Dispensas medicamentos y atiendes en farmacia.',skills:['Farmacia','Atencion al cliente','Inventarios'],where:['Farmacias','Boticas','Clinicas']},
-      {name:'Tecnico en Tecnologia Medica',salary:'S/ 1,880',growth:'S/ 2,609',range:'S/ 1,200 - S/ 3,059',rangeAdult:'S/ 1,365 - S/ 4,251',desc:'Apoyas en analisis clinicos y laboratorio.',skills:['Laboratorio','Equipos medicos','Analisis'],where:['Laboratorios clinicos','Hospitales']},
+      {name:'Enfermeria',salary:'S/ 1,667',growth:'S/ 2,248',range:'S/ 1,130 - S/ 2,427',rangeAdult:'S/ 1,253 - S/ 3,407',desc:'Brindas cuidados básicos de enfermeria.',skills:['Cuidado de pacientes','Empatia','Primeros auxilios'],where:['EsSalud','MINSA','Clínicas'],study:'Estudias cuidados de enfermería, primeros auxilios, farmacología básica, anatomía y atención al paciente (técnica: 3 años / universitaria: 5 años).',dayInLife:'Tomas signos vitales a pacientes, administras medicamentos, curas heridas, preparas al paciente para procedimientos y registras su evolución.'},
+      {name:'Técnico en Farmacia y Bioquímica',salary:'S/ 1,826',growth:'S/ 2,410',range:'S/ 1,250 - S/ 2,500',rangeAdult:'S/ 1,413 - S/ 3,816',desc:'Dispensas medicamentos y atiendes en farmacia.',skills:['Farmacia','Atención al cliente','Inventarios'],where:['Farmacias','Boticas','Clínicas'],study:'Estudias farmacología, química, dispensación de medicamentos, atención farmacéutica e inventarios (2-3 años).',dayInLife:'Dispensas medicamentos según receta, asesoras al cliente sobre su uso, verificas fechas de vencimiento y organizas el inventario de la farmacia.'},
+      {name:'Técnico en Tecnología Médica',salary:'S/ 1,880',growth:'S/ 2,609',range:'S/ 1,200 - S/ 3,059',rangeAdult:'S/ 1,365 - S/ 4,251',desc:'Apoyas en análisis clínicos y laboratorio.',skills:['Laboratorio','Equipos médicos','Análisis'],where:['Laboratorios clínicos','Hospitales'],study:'Estudias análisis clínicos, toma de muestras, uso de equipos de laboratorio, microbiología y hematología (2-3 años).',dayInLife:'Tomas muestras de sangre y orina, procesas análisis en laboratorio, operas equipos de diagnóstico y entregas resultados al médico.'},
     ],
     universitaria:[
-      {name:'Medicina',salary:'S/ 3,897',growth:'S/ 7,013',range:'S/ 1,481 - S/ 6,624',rangeAdult:'S/ 1,920 - S/ 13,159',desc:'Diagnosticas y tratas enfermedades.',skills:['Diagnostico','Tratamiento','Investigacion'],where:['Hospitales','Clinicas','Consultorio privado']},
-      {name:'Enfermeria',salary:'S/ 2,473',growth:'S/ 3,882',range:'S/ 1,386 - S/ 3,887',rangeAdult:'S/ 1,818 - S/ 6,113',desc:'Brindas cuidados integrales de enfermeria.',skills:['Cuidados','Liderazgo','Gestion'],where:['EsSalud','MINSA','Clinicas privadas']},
-      {name:'Psicologia',salary:'S/ 2,534',growth:'S/ 5,648',range:'S/ 1,250 - S/ 4,200',rangeAdult:'S/ 1,800 - S/ 10,688',desc:'Brindas terapia y orientacion psicologica.',skills:['Terapia','Empatia','Evaluacion'],where:['Clinicas','Consulta privada','Empresas']},
-      {name:'Odontologia',salary:'S/ 2,216',growth:'S/ 4,635',range:'S/ 1,130 - S/ 4,169',rangeAdult:'S/ 1,350 - S/ 8,892',desc:'Cuidas la salud bucal de los pacientes.',skills:['Odontologia','Atencion al paciente'],where:['Consultorios','Clinicas dentales']},
-      {name:'Obstetricia',salary:'S/ 2,345',growth:'S/ 4,123',range:'S/ 1,200 - S/ 3,800',rangeAdult:'S/ 1,700 - S/ 7,500',desc:'Atiendes embarazos y partos.',skills:['Obstetricia','Atencion al paciente'],where:['Hospitales','Centros de salud','Clinicas']},
-      {name:'Farmacia y Bioquimica',salary:'S/ 3,021',growth:'S/ 6,334',range:'S/ 1,383 - S/ 5,000',rangeAdult:'S/ 2,200 - S/ 11,500',desc:'Desarrollas y dispensas medicamentos.',skills:['Farmacologia','Quimica','Investigacion'],where:['Laboratorios','Farmacias','Industria farmaceutica']},
-      {name:'Tecnologia Medica',salary:'S/ 2,687',growth:'S/ 4,168',range:'S/ 1,300 - S/ 4,500',rangeAdult:'S/ 1,800 - S/ 7,500',desc:'Operas equipos de diagnostico medico.',skills:['Equipos medicos','Analisis','Radiologia'],where:['Hospitales','Clinicas','Laboratorios']},
-      {name:'Nutricion',salary:'S/ 2,234',growth:'S/ 4,567',range:'S/ 1,150 - S/ 3,700',rangeAdult:'S/ 1,800 - S/ 8,200',desc:'Disenhas planes alimenticios y nutricionales.',skills:['Nutricion clinica','Dietetica'],where:['Hospitales','Consultorios','Gimnasios']},
-      {name:'Trabajo Social',salary:'S/ 2,123',growth:'S/ 4,234',range:'S/ 1,100 - S/ 3,500',rangeAdult:'S/ 1,700 - S/ 7,800',desc:'Apoyas a personas y comunidades vulnerables.',skills:['Intervencion social','Empatia','Gestion'],where:['ONGs','Estado','Hospitales']},
-      {name:'Servicios Sociales y Asistenciales',salary:'S/ 2,012',growth:'S/ 3,890',range:'S/ 1,050 - S/ 3,300',rangeAdult:'S/ 1,600 - S/ 7,000',desc:'Brindas asistencia social a poblaciones.',skills:['Intervencion','Gestion social'],where:['ONGs','Estado','Municipalidades']},
+      {name:'Medicina',salary:'S/ 3,897',growth:'S/ 7,013',range:'S/ 1,481 - S/ 6,624',rangeAdult:'S/ 1,920 - S/ 13,159',desc:'Diagnosticas y tratas enfermedades.',skills:['Diagnóstico','Tratamiento','Investigación'],where:['Hospitales','Clínicas','Consultorio privado'],study:'Estudias anatomía, fisiología, farmacología, patología, cirugía y las diversas especialidades médicas (7 años + internado en UNMSM, PUCP, UPCH).',dayInLife:'Pasas visita a pacientes, diagnosticas enfermedades, ordenas exámenes, recetas tratamientos, atiendes emergencias y actualizas historias clínicas.'},
+      {name:'Enfermeria',salary:'S/ 2,473',growth:'S/ 3,882',range:'S/ 1,386 - S/ 3,887',rangeAdult:'S/ 1,818 - S/ 6,113',desc:'Brindas cuidados integrales de enfermeria.',skills:['Cuidados','Liderazgo','Gestion'],where:['EsSalud','MINSA','Clínicas privadas'],study:'Estudias cuidados de enfermería, primeros auxilios, farmacología básica, anatomía y atención al paciente (técnica: 3 años / universitaria: 5 años).',dayInLife:'Tomas signos vitales a pacientes, administras medicamentos, curas heridas, preparas al paciente para procedimientos y registras su evolución.'},
+      {name:'Psicología',salary:'S/ 2,534',growth:'S/ 5,648',range:'S/ 1,250 - S/ 4,200',rangeAdult:'S/ 1,800 - S/ 10,688',desc:'Brindas terapia y orientación psicológica.',skills:['Terapia','Empatia','Evaluación'],where:['Clínicas','Consulta privada','Empresas'],study:'Estudias psicología clínica, educativa, organizacional, terapia, evaluación psicológica y neurociencias (5-6 años en PUCP, UNMSM, UPC).',dayInLife:'Atiendes pacientes en consulta, aplicas tests psicológicos, brindas terapia individual o grupal, y elaboras informes de evaluación.'},
+      {name:'Odontología',salary:'S/ 2,216',growth:'S/ 4,635',range:'S/ 1,130 - S/ 4,169',rangeAdult:'S/ 1,350 - S/ 8,892',desc:'Cuidas la salud bucal de los pacientes.',skills:['Odontología','Atención al paciente'],where:['Consultorios','Clínicas dentales'],study:'Estudias anatomía dental, ortodoncia, cirugía bucal, endodoncia, periodoncia y odontopediatría (5-6 años en UNMSM, UPCH, UPC).',dayInLife:'Atiendes pacientes en consultorio, realizas limpiezas dentales, empastas caries, haces extracciones y asesoras sobre higiene bucal.'},
+      {name:'Obstetricia',salary:'S/ 2,345',growth:'S/ 4,123',range:'S/ 1,200 - S/ 3,800',rangeAdult:'S/ 1,700 - S/ 7,500',desc:'Atiendes embarazos y partos.',skills:['Obstetricia','Atención al paciente'],where:['Hospitales','Centros de salud','Clínicas'],study:'Estudias embarazo, parto, salud reproductiva, neonatología, planificación familiar y salud materno-infantil (5 años en UNMSM).',dayInLife:'Controlas embarazos, atiendes partos, realizas ecografías, asesoras en planificación familiar y das charlas de salud reproductiva.'},
+      {name:'Farmacia y Bioquímica',salary:'S/ 3,021',growth:'S/ 6,334',range:'S/ 1,383 - S/ 5,000',rangeAdult:'S/ 2,200 - S/ 11,500',desc:'Desarrollas y dispensas medicamentos.',skills:['Farmacología','Química','Investigación'],where:['Laboratorios','Farmacias','Industria farmaceutica'],study:'Estudias farmacología, química orgánica, bioquímica, desarrollo de medicamentos, control de calidad y regulación sanitaria (5-6 años en UNMSM).',dayInLife:'Supervisas la producción de medicamentos, realizas control de calidad en laboratorio, dispensas en farmacia y asesoras sobre interacciones medicamentosas.'},
+      {name:'Tecnología Médica',salary:'S/ 2,687',growth:'S/ 4,168',range:'S/ 1,300 - S/ 4,500',rangeAdult:'S/ 1,800 - S/ 7,500',desc:'Operas equipos de diagnóstico médico.',skills:['Equipos médicos','Análisis','Radiología'],where:['Hospitales','Clínicas','Laboratorios'],study:'Estudias radiología, laboratorio clínico, terapia física o terapia ocupacional según tu especialidad (5 años en UNMSM, UPCH).',dayInLife:'Operas equipos de rayos X, tomografía o resonancia, procesas análisis en laboratorio, realizas terapia de rehabilitación según tu especialidad.'},
+      {name:'Nutrición',salary:'S/ 2,234',growth:'S/ 4,567',range:'S/ 1,150 - S/ 3,700',rangeAdult:'S/ 1,800 - S/ 8,200',desc:'Diseñas planes alimenticios y nutricionales.',skills:['Nutrición clínica','Dietética'],where:['Hospitales','Consultorios','Gimnasios'],study:'Estudias nutrición clínica, dietética, bioquímica de alimentos, nutrición comunitaria y gestión alimentaria (5 años en UNMSM).',dayInLife:'Evalúas el estado nutricional de pacientes, diseñas planes de alimentación personalizados, das charlas de nutrición y supervisas servicios de alimentación.'},
+      {name:'Trabajo Social',salary:'S/ 2,123',growth:'S/ 4,234',range:'S/ 1,100 - S/ 3,500',rangeAdult:'S/ 1,700 - S/ 7,800',desc:'Apoyas a personas y comunidades vulnerables.',skills:['Intervención social','Empatia','Gestion'],where:['ONGs','Estado','Hospitales'],study:'Estudias intervención social, políticas sociales, gestión de proyectos, derechos humanos y trabajo con comunidades (5 años en UNMSM).',dayInLife:'Visitas familias vulnerables, gestionas casos sociales, coordinas con instituciones de apoyo, diseñas programas de intervención y elaboras informes.'},
+      {name:'Servicios Sociales y Asistenciales',salary:'S/ 2,012',growth:'S/ 3,890',range:'S/ 1,050 - S/ 3,300',rangeAdult:'S/ 1,600 - S/ 7,000',desc:'Brindas asistencia social a poblaciones.',skills:['Intervención','Gestion social'],where:['ONGs','Estado','Municipalidades'],study:'Estudias asistencia social, gestión de programas sociales, trabajo comunitario y administración de servicios (5 años).',dayInLife:'Atiendes a poblaciones vulnerables, gestionas beneficios sociales, coordinas con municipalidades y ONGs, y monitoreas el impacto de los programas.'},
     ],
   }},
-  {id:'educacion',name:'Educacion',icon:'📚',color:'from-teal-500 to-cyan-600',desc:'Formacion de las nuevas generaciones del pais.',ocupaciones:{
+  {id:'educacion',name:'Educación',icon:'📚',color:'from-teal-500 to-cyan-600',desc:'Formación de las nuevas generaciones del país.',ocupaciones:{
     tecnica:[
-      {name:'Educacion Inicial',salary:'S/ 1,567',growth:'S/ 2,234',range:'S/ 1,050 - S/ 2,400',rangeAdult:'S/ 1,200 - S/ 3,800',desc:'Apoyas en educacion de ninhos de 0-5 anhos.',skills:['Pedagogia infantil','Paciencia','Creatividad'],where:['Nidos','Colegios','Cunas']},
-      {name:'Educacion Primaria',salary:'S/ 1,678',growth:'S/ 2,456',range:'S/ 1,100 - S/ 2,600',rangeAdult:'S/ 1,300 - S/ 4,200',desc:'Apoyas en educacion de ninhos de 6-11 anhos.',skills:['Pedagogia','Paciencia','Didactica'],where:['Colegios']},
-      {name:'Educacion Secundaria',salary:'S/ 1,789',growth:'S/ 2,678',range:'S/ 1,150 - S/ 2,800',rangeAdult:'S/ 1,400 - S/ 4,500',desc:'Apoyas en educacion de adolescentes.',skills:['Pedagogia','Especializacion','Comunicacion'],where:['Colegios']},
+      {name:'Educación Inicial',salary:'S/ 1,567',growth:'S/ 2,234',range:'S/ 1,050 - S/ 2,400',rangeAdult:'S/ 1,200 - S/ 3,800',desc:'Apoyas en educación de niños de 0-5 años.',skills:['Pedagogía infantil','Paciencia','Creatividad'],where:['Nidos','Colegios','Cunas'],study:'Estudias pedagogía infantil, psicología del desarrollo, didáctica para primera infancia y estimulación temprana (técnica: 3 años / universitaria: 5 años).',dayInLife:'Preparas actividades lúdicas para niños, enseñas con juegos y canciones, supervisas el recreo, hablas con los padres sobre el progreso de sus hijos.'},
+      {name:'Educación Primaria',salary:'S/ 1,678',growth:'S/ 2,456',range:'S/ 1,100 - S/ 2,600',rangeAdult:'S/ 1,300 - S/ 4,200',desc:'Apoyas en educación de niños de 6-11 años.',skills:['Pedagogía','Paciencia','Didáctica'],where:['Colegios'],study:'Estudias pedagogía, didáctica de matemáticas y comunicación, psicología educativa y evaluación del aprendizaje (técnica: 3 años / universitaria: 5 años).',dayInLife:'Preparas clases, enseñas lectura, matemáticas y ciencias a niños, corriges tareas, evalúas su progreso y te reúnes con padres de familia.'},
+      {name:'Educación Secundaria',salary:'S/ 1,789',growth:'S/ 2,678',range:'S/ 1,150 - S/ 2,800',rangeAdult:'S/ 1,400 - S/ 4,500',desc:'Apoyas en educación de adolescentes.',skills:['Pedagogía','Especialización','Comunicación'],where:['Colegios'],study:'Estudias pedagogía, didáctica de tu especialidad y psicología adolescente (técnica: 3 años / universitaria: 5 años).',dayInLife:'Preparas y dictas clases de tu especialidad, corriges exámenes, asesoras a estudiantes, participas en reuniones de profesores y actividades escolares.'},
     ],
     universitaria:[
-      {name:'Educacion Inicial',salary:'S/ 2,265',growth:'S/ 3,623',range:'S/ 1,308 - S/ 3,411',rangeAdult:'S/ 1,767 - S/ 5,753',desc:'Ensenhas a ninhos de 0-5 anhos.',skills:['Pedagogia infantil','Desarrollo infantil','Creatividad'],where:['Colegios','MINEDU','Nidos privados']},
-      {name:'Educacion Primaria',salary:'S/ 2,345',growth:'S/ 3,890',range:'S/ 1,350 - S/ 3,600',rangeAdult:'S/ 1,850 - S/ 6,200',desc:'Ensenhas a ninhos de 6-11 anhos.',skills:['Pedagogia','Didactica','Paciencia'],where:['Colegios','MINEDU']},
-      {name:'Educacion Secundaria',salary:'S/ 2,456',growth:'S/ 4,123',range:'S/ 1,400 - S/ 3,800',rangeAdult:'S/ 1,950 - S/ 6,800',desc:'Ensenhas a adolescentes en tu especialidad.',skills:['Especializacion','Pedagogia','Comunicacion'],where:['Colegios','MINEDU','Academias']},
-      {name:'Educacion Fisica',salary:'S/ 2,234',growth:'S/ 3,678',range:'S/ 1,250 - S/ 3,500',rangeAdult:'S/ 1,700 - S/ 6,000',desc:'Ensenhas deportes y actividad fisica.',skills:['Deportes','Pedagogia','Salud'],where:['Colegios','Clubes','Gimnasios']},
-      {name:'Educacion Especial',salary:'S/ 2,345',growth:'S/ 3,890',range:'S/ 1,300 - S/ 3,700',rangeAdult:'S/ 1,800 - S/ 6,500',desc:'Ensenhas a estudiantes con necesidades especiales.',skills:['Inclusion','Pedagogia especial','Paciencia'],where:['Colegios','Centros especiales','MINEDU']},
-      {name:'Educacion Tecnologica',salary:'S/ 2,456',growth:'S/ 4,012',range:'S/ 1,350 - S/ 3,900',rangeAdult:'S/ 1,900 - S/ 6,800',desc:'Ensenhas tecnologia y computacion.',skills:['Tecnologia','Pedagogia','Innovacion'],where:['Institutos','Colegios','Universidades']},
-      {name:'Idiomas',salary:'S/ 2,567',growth:'S/ 4,345',range:'S/ 1,400 - S/ 4,000',rangeAdult:'S/ 2,000 - S/ 7,200',desc:'Ensenhas idiomas extranjeros.',skills:['Idiomas','Didactica','Comunicacion'],where:['Institutos','Colegios','Centros de idiomas']},
-      {name:'Otras Carreras de Educacion',salary:'S/ 2,234',growth:'S/ 3,678',range:'S/ 1,250 - S/ 3,500',rangeAdult:'S/ 1,700 - S/ 6,000',desc:'Otras especialidades educativas.',skills:['Pedagogia'],where:['Instituciones educativas']},
+      {name:'Educación Inicial',salary:'S/ 2,265',growth:'S/ 3,623',range:'S/ 1,308 - S/ 3,411',rangeAdult:'S/ 1,767 - S/ 5,753',desc:'Enseñas a niños de 0-5 años.',skills:['Pedagogía infantil','Desarrollo infantil','Creatividad'],where:['Colegios','MINEDU','Nidos privados'],study:'Estudias pedagogía infantil, psicología del desarrollo, didáctica para primera infancia y estimulación temprana (técnica: 3 años / universitaria: 5 años).',dayInLife:'Preparas actividades lúdicas para niños, enseñas con juegos y canciones, supervisas el recreo, hablas con los padres sobre el progreso de sus hijos.'},
+      {name:'Educación Primaria',salary:'S/ 2,345',growth:'S/ 3,890',range:'S/ 1,350 - S/ 3,600',rangeAdult:'S/ 1,850 - S/ 6,200',desc:'Enseñas a niños de 6-11 años.',skills:['Pedagogía','Didáctica','Paciencia'],where:['Colegios','MINEDU'],study:'Estudias pedagogía, didáctica de matemáticas y comunicación, psicología educativa y evaluación del aprendizaje (técnica: 3 años / universitaria: 5 años).',dayInLife:'Preparas clases, enseñas lectura, matemáticas y ciencias a niños, corriges tareas, evalúas su progreso y te reúnes con padres de familia.'},
+      {name:'Educación Secundaria',salary:'S/ 2,456',growth:'S/ 4,123',range:'S/ 1,400 - S/ 3,800',rangeAdult:'S/ 1,950 - S/ 6,800',desc:'Enseñas a adolescentes en tu especialidad.',skills:['Especialización','Pedagogía','Comunicación'],where:['Colegios','MINEDU','Academias'],study:'Estudias pedagogía, didáctica de tu especialidad y psicología adolescente (técnica: 3 años / universitaria: 5 años).',dayInLife:'Preparas y dictas clases de tu especialidad, corriges exámenes, asesoras a estudiantes, participas en reuniones de profesores y actividades escolares.'},
+      {name:'Educación Física',salary:'S/ 2,234',growth:'S/ 3,678',range:'S/ 1,250 - S/ 3,500',rangeAdult:'S/ 1,700 - S/ 6,000',desc:'Enseñas deportes y actividad física.',skills:['Deportes','Pedagogía','Salud'],where:['Colegios','Clubes','Gimnasios'],study:'Estudias ciencias del deporte, pedagogía, anatomía, fisiología del ejercicio y recreación (5 años en UNMSM, PUCP).',dayInLife:'Diriges clases de educación física, organizas torneos deportivos, enseñas técnicas deportivas y evalúas la condición física de los estudiantes.'},
+      {name:'Educación Especial',salary:'S/ 2,345',growth:'S/ 3,890',range:'S/ 1,300 - S/ 3,700',rangeAdult:'S/ 1,800 - S/ 6,500',desc:'Enseñas a estudiantes con necesidades especiales.',skills:['Inclusión','Pedagogía especial','Paciencia'],where:['Colegios','Centros especiales','MINEDU'],study:'Estudias pedagogía especial, inclusión educativa, lenguaje de señas, braille, terapia del lenguaje y psicología (5 años en PUCP, UNMSM).',dayInLife:'Diseñas actividades adaptadas para cada estudiante, trabajas con niños con discapacidades, coordinas con terapeutas y orientas a las familias.'},
+      {name:'Educación Tecnológica',salary:'S/ 2,456',growth:'S/ 4,012',range:'S/ 1,350 - S/ 3,900',rangeAdult:'S/ 1,900 - S/ 6,800',desc:'Enseñas tecnología y computación.',skills:['Tecnología','Pedagogía','Innovación'],where:['Institutos','Colegios','Universidades'],study:'Estudias pedagogía, tecnología educativa, programación básica, herramientas digitales para educación e innovación pedagógica (5 años).',dayInLife:'Enseñas computación y tecnología a estudiantes, diseñas proyectos con herramientas digitales, capacitas a otros profesores en uso de tecnología.'},
+      {name:'Idiomas',salary:'S/ 2,567',growth:'S/ 4,345',range:'S/ 1,400 - S/ 4,000',rangeAdult:'S/ 2,000 - S/ 7,200',desc:'Enseñas idiomas extranjeros.',skills:['Idiomas','Didáctica','Comunicación'],where:['Institutos','Colegios','Centros de idiomas'],study:'Estudias lingüística, didáctica de idiomas, traducción, literatura y cultura de los idiomas que enseñas (5 años en PUCP, UNMSM).',dayInLife:'Dictas clases de inglés u otro idioma, preparas material didáctico, evalúas pronunciación y escritura, y motivas a los estudiantes a practicar.'},
+      {name:'Otras Carreras de Educación',salary:'S/ 2,234',growth:'S/ 3,678',range:'S/ 1,250 - S/ 3,500',rangeAdult:'S/ 1,700 - S/ 6,000',desc:'Otras especialidades educativas.',skills:['Pedagogía'],where:['Instituciones educativas'],study:'Estudias pedagogía y te especializas en un área educativa específica como arte, música, orientación o gestión educativa (5 años).',dayInLife:'Enseñas y desarrollas proyectos educativos en tu especialidad, coordinas con otros profesores y participas en la planificación escolar.'},
     ],
   }},
-  {id:'comunicacion',name:'Comunicacion y Disenho',icon:'🎨',color:'from-pink-500 to-fuchsia-600',desc:'La era digital requiere comunicadores creativos.',ocupaciones:{
+  {id:'comunicacion',name:'Comunicación y Diseño',icon:'🎨',color:'from-pink-500 to-fuchsia-600',desc:'La era digital requiere comunicadores creativos.',ocupaciones:{
     tecnica:[
-      {name:'Ciencias de la Comunicacion',salary:'S/ 2,123',growth:'S/ 3,890',range:'S/ 1,150 - S/ 3,500',rangeAdult:'S/ 1,600 - S/ 7,000',desc:'Produces contenido y manejas redes sociales.',skills:['Redes sociales','Edicion','Fotografia'],where:['Agencias','Medios','Empresas']},
-      {name:'Tecnico en Disenho',salary:'S/ 2,808',growth:'S/ 5,737',range:'S/ 1,350 - S/ 5,000',rangeAdult:'S/ 2,000 - S/ 11,000',desc:'Creas disenhos graficos y visuales.',skills:['Adobe Suite','Disenho grafico','Creatividad'],where:['Agencias','Freelance','Empresas']},
+      {name:'Ciencias de la Comunicación',salary:'S/ 2,123',growth:'S/ 3,890',range:'S/ 1,150 - S/ 3,500',rangeAdult:'S/ 1,600 - S/ 7,000',desc:'Produces contenido y manejas redes sociales.',skills:['Redes sociales','Edicion','Fotografia'],where:['Agencias','Medios','Empresas'],study:'Estudias producción audiovisual, periodismo, redes sociales, fotografía y comunicación corporativa (técnica: 2-3 años / universitaria: 5 años).',dayInLife:'Creas contenido para redes sociales, editas videos, redactas notas de prensa, atiendes la comunicación de la empresa y mides el impacto de las publicaciones.'},
+      {name:'Técnico en Diseño',salary:'S/ 2,808',growth:'S/ 5,737',range:'S/ 1,350 - S/ 5,000',rangeAdult:'S/ 2,000 - S/ 11,000',desc:'Creas diseños gráficos y visuales.',skills:['Adobe Suite','Diseño gráfico','Creatividad'],where:['Agencias','Freelance','Empresas'],study:'Estudias diseño gráfico, Adobe Illustrator, Photoshop, InDesign, branding básico y diseño web (2-3 años en Toulouse Lautrec, IPAD).',dayInLife:'Diseñas logos, flyers, banners y piezas gráficas para clientes, retocas fotos, preparas archivos para impresión y presentas propuestas creativas.'},
     ],
     universitaria:[
-      {name:'Ciencias de la Comunicacion',salary:'S/ 2,967',growth:'S/ 6,534',range:'S/ 1,365 - S/ 5,000',rangeAdult:'S/ 2,100 - S/ 12,500',desc:'Gestionas comunicacion corporativa y medios.',skills:['Comunicacion estrategica','Relaciones publicas','Contenido'],where:['Agencias','Empresas','Medios']},
-      {name:'Disenho',salary:'S/ 2,949',growth:'S/ 6,138',range:'S/ 1,400 - S/ 5,200',rangeAdult:'S/ 2,100 - S/ 11,800',desc:'Creas disenhos graficos, UX/UI y branding.',skills:['Adobe Suite','UX/UI','Branding'],where:['Agencias','Tech','Freelance']},
-      {name:'Periodismo y Locucion',salary:'S/ 2,567',growth:'S/ 5,234',range:'S/ 1,300 - S/ 4,200',rangeAdult:'S/ 1,900 - S/ 9,500',desc:'Informas y comunicas noticias.',skills:['Redaccion','Locucion','Investigacion'],where:['Medios','Agencias','Corporaciones']},
-      {name:'Artes',salary:'S/ 2,234',growth:'S/ 4,567',range:'S/ 1,150 - S/ 3,700',rangeAdult:'S/ 1,700 - S/ 8,500',desc:'Creas obras artisticas y visuales.',skills:['Creatividad','Tecnicas artisticas','Expresion'],where:['Galerias','Freelance','Produccion']},
-      {name:'Bibliotecologia y Archivo',salary:'S/ 2,123',growth:'S/ 4,234',range:'S/ 1,100 - S/ 3,500',rangeAdult:'S/ 1,700 - S/ 7,800',desc:'Gestionas informacion y documentos.',skills:['Gestion documental','Catalogacion','Tecnologia'],where:['Bibliotecas','Archivos','Empresas']},
-      {name:'Lingüistica y Literatura',salary:'S/ 2,012',growth:'S/ 3,890',range:'S/ 1,050 - S/ 3,300',rangeAdult:'S/ 1,600 - S/ 7,000',desc:'Estudias lenguaje y literatura.',skills:['Analisis','Redaccion','Investigacion'],where:['Universidades','Editoriales','Medios']},
-      {name:'Historia',salary:'S/ 2,034',growth:'S/ 3,967',range:'S/ 1,080 - S/ 3,400',rangeAdult:'S/ 1,650 - S/ 7,200',desc:'Investigas y ensenhas historia.',skills:['Investigacion','Analisis','Docencia'],where:['Universidades','Museos','Centros culturales']},
-      {name:'Teologia y Filosofia',salary:'S/ 1,890',growth:'S/ 3,567',range:'S/ 1,000 - S/ 3,100',rangeAdult:'S/ 1,500 - S/ 6,500',desc:'Estudias pensamiento y religion.',skills:['Analisis','Reflexion','Etica'],where:['Universidades','Instituciones religiosas']},
-      {name:'Antropologia y Arqueologia',salary:'S/ 2,145',growth:'S/ 4,345',range:'S/ 1,120 - S/ 3,600',rangeAdult:'S/ 1,750 - S/ 8,000',desc:'Estudias culturas y sociedades.',skills:['Investigacion','Trabajo de campo','Analisis'],where:['Universidades','Museos','ONGs']},
-      {name:'Geografia',salary:'S/ 2,234',growth:'S/ 4,567',range:'S/ 1,150 - S/ 3,700',rangeAdult:'S/ 1,800 - S/ 8,200',desc:'Estudias territorios y espacios.',skills:['SIG','Analisis espacial','Cartografia'],where:['IGN','Consultoras','Municipalidades']},
+      {name:'Ciencias de la Comunicación',salary:'S/ 2,967',growth:'S/ 6,534',range:'S/ 1,365 - S/ 5,000',rangeAdult:'S/ 2,100 - S/ 12,500',desc:'Gestionas comunicación corporativa y medios.',skills:['Comunicación estrategica','Relaciones públicas','Contenido'],where:['Agencias','Empresas','Medios'],study:'Estudias producción audiovisual, periodismo, redes sociales, fotografía y comunicación corporativa (técnica: 2-3 años / universitaria: 5 años).',dayInLife:'Creas contenido para redes sociales, editas videos, redactas notas de prensa, atiendes la comunicación de la empresa y mides el impacto de las publicaciones.'},
+      {name:'Diseño',salary:'S/ 2,949',growth:'S/ 6,138',range:'S/ 1,400 - S/ 5,200',rangeAdult:'S/ 2,100 - S/ 11,800',desc:'Creas diseños gráficos, UX/UI y branding.',skills:['Adobe Suite','UX/UI','Branding'],where:['Agencias','Tech','Freelance'],study:'Estudias diseño gráfico, UX/UI, branding, tipografía, ilustración y diseño web o de productos (5 años en PUCP, Toulouse Lautrec, UPC).',dayInLife:'Diseñas interfaces de apps o web, creas identidad visual para marcas, presentas propuestas a clientes, investigas tendencias y pruebas con usuarios.'},
+      {name:'Periodismo y Locución',salary:'S/ 2,567',growth:'S/ 5,234',range:'S/ 1,300 - S/ 4,200',rangeAdult:'S/ 1,900 - S/ 9,500',desc:'Informas y comunicas noticias.',skills:['Redacción','Locución','Investigación'],where:['Medios','Agencias','Corporaciones'],study:'Estudias periodismo, redacción, producción de radio y TV, ética periodística e investigación (5 años en PUCP, UNMSM, UPC).',dayInLife:'Cubres noticias en campo, entrevistas fuentes, redactas artículos, presentas informes en radio o TV y editas contenido para publicación.'},
+      {name:'Artes',salary:'S/ 2,234',growth:'S/ 4,567',range:'S/ 1,150 - S/ 3,700',rangeAdult:'S/ 1,700 - S/ 8,500',desc:'Creas obras artisticas y visuales.',skills:['Creatividad','Técnicas artisticas','Expresión'],where:['Galerias','Freelance','Producción'],study:'Estudias técnicas artísticas, historia del arte, pintura, escultura, arte digital o escénico según tu especialidad (5 años en PUCP, Bellas Artes).',dayInLife:'Creas obras artísticas en tu taller, expones en galerías, postulas a concursos, das talleres y buscas oportunidades de producción o encargos.'},
+      {name:'Bibliotecología y Archivo',salary:'S/ 2,123',growth:'S/ 4,234',range:'S/ 1,100 - S/ 3,500',rangeAdult:'S/ 1,700 - S/ 7,800',desc:'Gestionas información y documentos.',skills:['Gestion documental','Catalogación','Tecnología'],where:['Bibliotecas','Archivos','Empresas'],study:'Estudias gestión de información, catalogación, archivística, tecnologías documentales y gestión del conocimiento (5 años en UNMSM).',dayInLife:'Organizas y catalogas colecciones, atiendes consultas de usuarios, digitalizas documentos, gestionas bases de datos y preservas archivos históricos.'},
+      {name:'Lingüistica y Literatura',salary:'S/ 2,012',growth:'S/ 3,890',range:'S/ 1,050 - S/ 3,300',rangeAdult:'S/ 1,600 - S/ 7,000',desc:'Estudias lenguaje y literatura.',skills:['Análisis','Redacción','Investigación'],where:['Universidades','Editoriales','Medios'],study:'Estudias lingüística, análisis literario, semántica, fonética, escritura creativa y lenguas originarias (5 años en PUCP, UNMSM).',dayInLife:'Investigas fenómenos del lenguaje, analizas textos literarios, enseñas en universidades, publicas artículos académicos y participas en proyectos editoriales.'},
+      {name:'Historia',salary:'S/ 2,034',growth:'S/ 3,967',range:'S/ 1,080 - S/ 3,400',rangeAdult:'S/ 1,650 - S/ 7,200',desc:'Investigas y enseñas historia.',skills:['Investigación','Análisis','Docencia'],where:['Universidades','Museos','Centros culturales'],study:'Estudias historia del Perú y del mundo, metodología de investigación, archivística, geografía histórica y análisis de fuentes (5 años en PUCP, UNMSM).',dayInLife:'Investigas en archivos históricos, redactas artículos y libros, enseñas en universidades, organizas exposiciones y asesoras en proyectos culturales.'},
+      {name:'Teología y Filosofía',salary:'S/ 1,890',growth:'S/ 3,567',range:'S/ 1,000 - S/ 3,100',rangeAdult:'S/ 1,500 - S/ 6,500',desc:'Estudias pensamiento y religion.',skills:['Análisis','Reflexion','Etica'],where:['Universidades','Instituciones religiosas'],study:'Estudias filosofía, ética, lógica, teología, historia del pensamiento y antropología filosófica (5 años en PUCP, UNMSM).',dayInLife:'Enseñas en universidades, investigas temas filosóficos o teológicos, publicas ensayos, participas en debates y asesoras a instituciones.'},
+      {name:'Antropología y Arqueología',salary:'S/ 2,145',growth:'S/ 4,345',range:'S/ 1,120 - S/ 3,600',rangeAdult:'S/ 1,750 - S/ 8,000',desc:'Estudias culturas y sociedades.',skills:['Investigación','Trabajo de campo','Análisis'],where:['Universidades','Museos','ONGs'],study:'Estudias antropología cultural, métodos etnográficos, arqueología, análisis de restos materiales y culturas andinas (5 años en PUCP, UNMSM).',dayInLife:'Realizas trabajo de campo en comunidades o sitios arqueológicos, analizas hallazgos en laboratorio, redactas informes y enseñas en universidades.'},
+      {name:'Geografía',salary:'S/ 2,234',growth:'S/ 4,567',range:'S/ 1,150 - S/ 3,700',rangeAdult:'S/ 1,800 - S/ 8,200',desc:'Estudias territorios y espacios.',skills:['SIG','Análisis espacial','Cartografía'],where:['IGN','Consultoras','Municipalidades'],study:'Estudias sistemas de información geográfica (SIG), cartografía, geomorfología, planificación territorial y análisis espacial (5 años en UNMSM).',dayInLife:'Creas mapas con software SIG, analizas datos geoespaciales, elaboras estudios de planificación territorial y asesoras a municipalidades.'},
     ],
   }},
-  {id:'ciencias',name:'Ciencias y Medio Ambiente',icon:'🔬',color:'from-emerald-500 to-green-600',desc:'Innovacion y sostenibilidad para el futuro.',ocupaciones:{
+  {id:'ciencias',name:'Ciencias y Medio Ambiente',icon:'🔬',color:'from-emerald-500 to-green-600',desc:'Innovación y sostenibilidad para el futuro.',ocupaciones:{
     tecnica:[
-      {name:'Quimica',salary:'S/ 2,234',growth:'S/ 3,890',range:'S/ 1,200 - S/ 3,600',rangeAdult:'S/ 1,700 - S/ 6,800',desc:'Realizas analisis quimicos en laboratorio.',skills:['Laboratorio','Analisis quimico','Control de calidad'],where:['Laboratorios','Industrias','Mineras']},
+      {name:'Química',salary:'S/ 2,234',growth:'S/ 3,890',range:'S/ 1,200 - S/ 3,600',rangeAdult:'S/ 1,700 - S/ 6,800',desc:'Realizas análisis quimicos en laboratorio.',skills:['Laboratorio','Análisis quimico','Control de calidad'],where:['Laboratorios','Industrias','Mineras'],study:'Estudias análisis químico, laboratorio, control de calidad, seguridad y procesos industriales (técnica: 2-3 años / universitaria: 5 años).',dayInLife:'Realizas análisis en laboratorio, preparas soluciones, controlas calidad de productos, registras resultados y mantienes equipos de laboratorio.'},
     ],
     universitaria:[
-      {name:'Quimica',salary:'S/ 2,890',growth:'S/ 5,678',range:'S/ 1,350 - S/ 4,800',rangeAdult:'S/ 2,100 - S/ 10,500',desc:'Investigas y analizas sustancias quimicas.',skills:['Laboratorio','Analisis','Investigacion'],where:['Laboratorios','Industrias','Universidades']},
-      {name:'Biologia',salary:'S/ 2,567',growth:'S/ 5,234',range:'S/ 1,250 - S/ 4,300',rangeAdult:'S/ 1,950 - S/ 9,500',desc:'Estudias organismos vivos y ecosistemas.',skills:['Investigacion','Laboratorio','Analisis'],where:['Universidades','Laboratorios','SERNANP']},
-      {name:'Ecologia y Medio Ambiente',salary:'S/ 2,456',growth:'S/ 5,012',range:'S/ 1,200 - S/ 4,100',rangeAdult:'S/ 1,900 - S/ 9,000',desc:'Gestionas recursos naturales y ambiente.',skills:['Gestion ambiental','EIA','Sostenibilidad'],where:['MINAM','Consultoras','Mineras']},
+      {name:'Química',salary:'S/ 2,890',growth:'S/ 5,678',range:'S/ 1,350 - S/ 4,800',rangeAdult:'S/ 2,100 - S/ 10,500',desc:'Investigas y analizas sustancias químicas.',skills:['Laboratorio','Análisis','Investigación'],where:['Laboratorios','Industrias','Universidades'],study:'Estudias análisis químico, laboratorio, control de calidad, seguridad y procesos industriales (técnica: 2-3 años / universitaria: 5 años).',dayInLife:'Realizas análisis en laboratorio, preparas soluciones, controlas calidad de productos, registras resultados y mantienes equipos de laboratorio.'},
+      {name:'Biología',salary:'S/ 2,567',growth:'S/ 5,234',range:'S/ 1,250 - S/ 4,300',rangeAdult:'S/ 1,950 - S/ 9,500',desc:'Estudias organismos vivos y ecosistemas.',skills:['Investigación','Laboratorio','Análisis'],where:['Universidades','Laboratorios','SERNANP'],study:'Estudias botánica, zoología, ecología, genética, microbiología y biotecnología (5 años en UNMSM, PUCP, Cayetano).',dayInLife:'Realizas trabajo de campo recolectando muestras, analizas en laboratorio, identificas especies, publicas investigaciones y enseñas en universidades.'},
+      {name:'Ecología y Medio Ambiente',salary:'S/ 2,456',growth:'S/ 5,012',range:'S/ 1,200 - S/ 4,100',rangeAdult:'S/ 1,900 - S/ 9,000',desc:'Gestionas recursos naturales y ambiente.',skills:['Gestion ambiental','EIA','Sostenibilidad'],where:['MINAM','Consultoras','Mineras'],study:'Estudias ecología, gestión ambiental, evaluación de impacto ambiental, recursos naturales y sostenibilidad (5 años en UNALM, UNMSM).',dayInLife:'Realizas estudios de impacto ambiental, monitoreas ecosistemas, elaboras planes de manejo ambiental y asesoras a empresas en cumplimiento de normas.'},
     ],
   }},
   {id:'servicios',name:'Servicios y Seguridad',icon:'🛡️',color:'from-gray-500 to-slate-600',desc:'Sector con alta demanda, especialmente en Lima.',ocupaciones:{
     secundaria:[
-      {name:'Vigilante / Agente de seguridad',salary:'Variable',growth:'-',desc:'Seguridad y control de acceso en edificios y empresas.',skills:['Responsabilidad','Alerta','Buena condicion fisica'],where:['Prosegur','Securitas','G4S','Edificios']},
-      {name:'Personal de limpieza',salary:'Variable',growth:'-',desc:'Limpieza de oficinas, edificios, locales comerciales.',skills:['Limpieza','Puntualidad','Responsabilidad'],where:['Oficinas','Malls','Hospitales','Colegios']},
-      {name:'Cuidador de adultos mayores',salary:'Variable',growth:'-',desc:'Acompanhamiento, aseo y cuidado de personas de la tercera edad.',skills:['Paciencia','Empatia','Responsabilidad'],where:['Casas particulares','Asilos','Clinicas geriatricas']},
-      {name:'Trabajador del hogar',salary:'Variable',growth:'-',desc:'Limpieza, cocina, cuidado del hogar.',skills:['Cocina','Limpieza','Organizacion'],where:['Casas particulares']},
-      {name:'Peluquero / Barbero',salary:'Variable',growth:'-',desc:'Corte de cabello, peinados, afeitado.',skills:['Habilidad manual','Trato al cliente','Creatividad'],where:['Peluquerias','Barberias','Independiente']},
-      {name:'Costurera / Sastre',salary:'Variable',growth:'-',desc:'Confeccion y arreglo de prendas de vestir.',skills:['Costura','Atencion al detalle','Creatividad'],where:['Talleres','Galerias','Independiente']},
+      {name:'Vigilante / Agente de seguridad',salary:'Variable',growth:'-',desc:'Seguridad y control de acceso en edificios y empresas.',skills:['Responsabilidad','Alerta','Buena condicion física'],where:['Prosegur','Securitas','G4S','Edificios'],dayInLife:'Controlas el ingreso de personas al edificio, haces rondas de vigilancia, revisas cámaras de seguridad, registras incidentes y reportas novedades.'},
+      {name:'Personal de limpieza',salary:'Variable',growth:'-',desc:'Limpieza de oficinas, edificios, locales comerciales.',skills:['Limpieza','Puntualidad','Responsabilidad'],where:['Oficinas','Malls','Hospitales','Colegios'],dayInLife:'Barres y trapeas pisos, limpias baños y oficinas, vacías basureros, repones papel y jabón, y mantienes todo el espacio limpio y ordenado.'},
+      {name:'Cuidador de adultos mayores',salary:'Variable',growth:'-',desc:'Acompañamiento, aseo y cuidado de personas de la tercera edad.',skills:['Paciencia','Empatia','Responsabilidad'],where:['Casas particulares','Asilos','Clínicas geriátricas'],dayInLife:'Acompañas al adulto mayor, le ayudas con su higiene personal, le preparas comida, le das sus medicinas a la hora y sales a caminar con él o ella.'},
+      {name:'Trabajador del hogar',salary:'Variable',growth:'-',desc:'Limpieza, cocina, cuidado del hogar.',skills:['Cocina','Limpieza','Organización'],where:['Casas particulares'],dayInLife:'Limpias la casa, cocinas, lavas ropa, planchas, haces las compras del mercado y cuidas que todo en el hogar esté en orden.'},
+      {name:'Peluquero / Barbero',salary:'Variable',growth:'-',desc:'Corte de cabello, peinados, afeitado.',skills:['Habilidad manual','Trato al cliente','Creatividad'],where:['Peluquerías','Barberías','Independiente'],dayInLife:'Recibes clientes, consultas qué corte quieren, cortas el cabello, haces peinados o afeitados, limpias tu estación y cobras el servicio.'},
+      {name:'Costurera / Sastre',salary:'Variable',growth:'-',desc:'Confeccion y arreglo de prendas de vestir.',skills:['Costura','Atención al detalle','Creatividad'],where:['Talleres','Galerias','Independiente'],dayInLife:'Tomas medidas al cliente, cortas tela según el patrón, coses prendas en la máquina, haces ajustes y entregas el trabajo terminado.'},
     ],
   }},
-  {id:'logistica',name:'Logistica y Transporte',icon:'🚚',color:'from-indigo-500 to-blue-600',desc:'El boom del e-commerce impulsa la logistica.',ocupaciones:{
+  {id:'logistica',name:'Logística y Transporte',icon:'🚚',color:'from-indigo-500 to-blue-600',desc:'El boom del e-commerce impulsa la logística.',ocupaciones:{
     secundaria:[
-      {name:'Auxiliar de almacen',salary:'Variable',growth:'-',desc:'Recepcion, despacho, inventario, picking de productos.',skills:['Organizacion','Trabajo fisico','Computacion basica'],where:['Almacenes','E-commerce','Distribuidoras']},
-      {name:'Repartidor / Delivery',salary:'Variable',growth:'-',desc:'Entrega de productos a domicilio en moto o bicicleta.',skills:['Orientacion','Puntualidad','Licencia de moto'],where:['Rappi','PedidosYa','Glovo','Restaurantes']},
-      {name:'Chofer / Conductor',salary:'Variable',growth:'-',desc:'Transporte de carga o pasajeros.',skills:['Licencia A2/A3','Conocimiento de rutas','Responsabilidad'],where:['Transportes','Distribuidoras','Empresas']},
-      {name:'Estibador / Cargador',salary:'Variable',growth:'-',desc:'Carga y descarga de mercaderia en almacenes y mercados.',skills:['Fuerza fisica','Trabajo en equipo','Rapidez'],where:['Mercados','Almacenes','Puertos']},
-      {name:'Operador de montacargas',salary:'Variable',growth:'-',desc:'Manejo de montacargas para mover mercaderia pesada.',skills:['Certificacion montacargas','Precision','Seguridad'],where:['Almacenes','Fabricas','Puertos']},
+      {name:'Auxiliar de almacen',salary:'Variable',growth:'-',desc:'Recepción, despacho, inventario, picking de productos.',skills:['Organización','Trabajo fisico','Computación básica'],where:['Almacenes','E-commerce','Distribuidoras'],dayInLife:'Recibes mercadería, verificas cantidades contra la guía, ubicas productos en los estantes, preparas pedidos para despacho y actualizas el inventario.'},
+      {name:'Repartidor / Delivery',salary:'Variable',growth:'-',desc:'Entrega de productos a domicilio en moto o bicicleta.',skills:['Orientación','Puntualidad','Licencia de moto'],where:['Rappi','PedidosYa','Glovo','Restaurantes'],dayInLife:'Recibes pedidos en tu app, recoges productos en el restaurante o tienda, los entregas en moto o bicicleta en la dirección del cliente.'},
+      {name:'Chofer / Conductor',salary:'Variable',growth:'-',desc:'Transporte de carga o pasajeros.',skills:['Licencia A2/A3','Conocimiento de rutas','Responsabilidad'],where:['Transportes','Distribuidoras','Empresas'],dayInLife:'Revisas tu vehículo antes de salir, cargas mercadería o recoges pasajeros, sigues tu ruta asignada, entregas a tiempo y registras cada entrega.'},
+      {name:'Estibador / Cargador',salary:'Variable',growth:'-',desc:'Carga y descarga de mercaderia en almacenes y mercados.',skills:['Fuerza física','Trabajo en equipo','Rapidez'],where:['Mercados','Almacenes','Puertos'],dayInLife:'Cargas y descargas camiones con mercadería, acomodas productos en el almacén, usas carretillas para mover carga pesada y trabajas en equipo.'},
+      {name:'Operador de montacargas',salary:'Variable',growth:'-',desc:'Manejo de montacargas para mover mercaderia pesada.',skills:['Certificacion montacargas','Precisión','Seguridad'],where:['Almacenes','Fábricas','Puertos'],dayInLife:'Operas el montacargas para mover pallets de mercadería, ubicas productos en racks altos, cargas camiones y sigues protocolos de seguridad.'},
     ],
   }},
 ];
@@ -293,9 +293,9 @@ const riasecParts=[
    values:[0,1,2,3,4]},
   {id:'hab',title:'Parte 2: Habilidades',instruction:'Que tan bien puedes...?',
    emoji:['\uD83D\uDE1F','\uD83D\uDE15','\uD83D\uDE10','\uD83D\uDE42','\uD83D\uDE04'],
-   labels:['Me cuesta mucho','Me cuesta un poco','Me sale mas o menos','Me sale bien','Me sale muy bien'],
+   labels:['Me cuesta mucho','Me cuesta un poco','Me sale más o menos','Me sale bien','Me sale muy bien'],
    values:[0,1,2,3,4]},
-  {id:'auto',title:'Parte 3: Autoevaluacion',instruction:'En que nivel esta tu habilidad para...?',
+  {id:'auto',title:'Parte 3: Autoevaluación',instruction:'En que nivel esta tu habilidad para...?',
    emoji:['1\uFE0F\u20E3','2\uFE0F\u20E3','3\uFE0F\u20E3','4\uFE0F\u20E3','5\uFE0F\u20E3'],
    labels:['Por desarrollar','','En desarrollo','','Fortaleza'],
    values:[1,2,3,4,5]},
@@ -305,19 +305,19 @@ const riasecQuestions=[
   {text:"Ayudar a otras personas con sus problemas",p:"S",part:0},
   {text:"Arreglar o reparar cosas (ej: una bicicleta, celular, electrodomesticos)",p:"R",part:0},
   {text:"Disenar imagenes, afiches o contenido visual",p:"A",part:0},
-  {text:"Resolver problemas dificiles usando logica o datos",p:"I",part:0},
+  {text:"Resolver problemas dificiles usando lógica o datos",p:"I",part:0},
   {text:"Presentar y defender una idea o proyecto",p:"E",part:0},
-  {text:"Organizar informacion o archivos",p:"C",part:0},
+  {text:"Organizar información o archivos",p:"C",part:0},
   {text:"Llevar registros o listas (gastos, asistencia, datos)",p:"C",part:0},
   {text:"Crear videos, editar o hacer contenido digital",p:"A",part:0},
   {text:"Liderar un grupo o equipo",p:"E",part:0},
   {text:"Usar herramientas para construir o armar algo",p:"R",part:0},
   {text:"Explicar cosas a alguien que no entiende",p:"S",part:0},
   {text:"Investigar como funcionan las cosas",p:"I",part:0},
-  {text:"Analizar informacion para sacar conclusiones",p:"I",part:0},
-  {text:"Trabajar con ninos, jovenes o adultos",p:"S",part:0},
+  {text:"Analizar información para sacar conclusiones",p:"I",part:0},
+  {text:"Trabajar con niños, jóvenes o adultos",p:"S",part:0},
   {text:"Trabajar con maquinas o equipos (aunque sea en cosas del dia a dia)",p:"R",part:0},
-  {text:"Revisar que la informacion este correcta",p:"I",part:0},
+  {text:"Revisar que la información este correcta",p:"I",part:0},
   {text:"Escribir historias, guiones o textos creativos",p:"A",part:0},
   {text:"Organizar actividades o eventos",p:"C",part:0},
   {text:"Dibujar, pintar o hacer ilustraciones",p:"A",part:0},
@@ -326,31 +326,31 @@ const riasecQuestions=[
   {text:"Escuchar a alguien y darle apoyo",p:"S",part:0},
   {text:"Seguir instrucciones paso a paso",p:"C",part:0},
   {text:"Instalar o conectar equipos (internet, cables, parlantes, impresora, etc.)",p:"R",part:0},
-  {text:"Hacer trabajos manuales (armar, reparar o mejorar cosas en casa, aunque sea basico)",p:"R",part:0},
-  {text:"Trabajar con hojas de calculo o apps para organizar informacion (Excel/Sheets u otras)",p:"C",part:0},
+  {text:"Hacer trabajos manuales (armar, reparar o mejorar cosas en casa, aunque sea básico)",p:"R",part:0},
+  {text:"Trabajar con hojas de calculo o apps para organizar información (Excel/Sheets u otras)",p:"C",part:0},
   {text:"Participar en actividades para ayudar a la comunidad",p:"S",part:0},
   {text:"Crear musica, ritmos o tocar un instrumento (con instrumento o con apps/voz)",p:"A",part:0},
-  {text:"Tomar decisiones importantes en un grupo",p:"E",part:0},
-  {text:"Buscar explicaciones a problemas de ciencia o tecnologia (el \"por que\" de las cosas)",p:"I",part:0},
+  {text:"Tomar decisiónes importantes en un grupo",p:"E",part:0},
+  {text:"Buscar explicaciones a problemas de ciencia o tecnología (el \"por que\" de las cosas)",p:"I",part:0},
   /* ── PARTE 2: HABILIDADES (30 items, escala 0-4) ── */
   {text:"Aprender a usar nuevas herramientas o equipos",p:"C",part:1},
-  {text:"Buscar informacion confiable en internet",p:"I",part:1},
-  {text:"Crear contenido para redes sociales (videos, disenos, publicaciones)",p:"A",part:1},
+  {text:"Buscar información confiable en internet",p:"I",part:1},
+  {text:"Crear contenido para redes sociales (videos, diseños, públicaciones)",p:"A",part:1},
   {text:"Explicar algo que sabes a otra persona",p:"S",part:1},
   {text:"Proponer ideas para mejorar algo",p:"E",part:1},
-  {text:"Revisar que numeros o datos esten correctos",p:"I",part:1},
-  {text:"Resolver problemas practicos con las manos",p:"R",part:1},
-  {text:"Usar datos para tomar decisiones",p:"I",part:1},
+  {text:"Revisar que números o datos esten correctos",p:"I",part:1},
+  {text:"Resolver problemas prácticos con las manos",p:"R",part:1},
+  {text:"Usar datos para tomar decisiónes",p:"I",part:1},
   {text:"Disenar logos, afiches o presentaciones",p:"A",part:1},
   {text:"Comunicarte con personas diferentes a ti",p:"S",part:1},
   {text:"Negociar o llegar a acuerdos",p:"E",part:1},
   {text:"Seguir procesos claros y organizados",p:"C",part:1},
   {text:"Armar algo siguiendo un manual",p:"R",part:1},
-  {text:"Entender temas de ciencia, tecnologia o matematicas",p:"I",part:1},
+  {text:"Entender temas de ciencia, tecnología o matemáticas",p:"I",part:1},
   {text:"Escribir textos creativos o para comunicar ideas",p:"A",part:1},
   {text:"Escuchar y apoyar a alguien que esta pasando por un momento dificil",p:"S",part:1},
   {text:"Tomar la iniciativa en un proyecto",p:"E",part:1},
-  {text:"Ordenar informacion digital o fisica",p:"C",part:1},
+  {text:"Ordenar información digital o física",p:"C",part:1},
   {text:"Mantener equipos o espacios funcionando bien (computadora, celular, salon, materiales)",p:"R",part:1},
   {text:"Analizar resultados de pruebas o encuestas (interpretar resultados y sacar conclusiones)",p:"I",part:1},
   {text:"Probar nuevas formas de crear",p:"A",part:1},
@@ -358,7 +358,7 @@ const riasecQuestions=[
   {text:"Motivar a un grupo para lograr una meta",p:"E",part:1},
   {text:"Usar apps o paginas web para resolver problemas (buscar info, hacer tarea, organizar proyecto)",p:"C",part:1},
   {text:"Trabajar al aire libre",p:"R",part:1},
-  {text:"Usar aplicaciones, paginas web o herramientas digitales para organizar informacion",p:"C",part:1},
+  {text:"Usar aplicaciones, paginas web o herramientas digitales para organizar información",p:"C",part:1},
   {text:"Expresarte a traves del arte o la musica",p:"A",part:1},
   {text:"Participar en actividades solidarias o voluntariado",p:"S",part:1},
   {text:"Organizar recursos para lograr un objetivo",p:"E",part:1},
@@ -369,113 +369,113 @@ const riasecQuestions=[
   {text:"Trabajar o hacer actividades fuera de un salon u oficina (en movimiento, al aire libre)",p:"R",part:2},
   {text:"Crear musica o expresarte con musica (cantar, tocar, o usar apps/voz)",p:"A",part:2},
   {text:"Relacionarte con personas y comunicarte bien",p:"S",part:2},
-  {text:"Liderar, organizar o tomar decisiones en un grupo",p:"E",part:2},
-  {text:"Organizar informacion, tareas o documentos (listas, horarios, archivos o apuntes)",p:"C",part:2},
+  {text:"Liderar, organizar o tomar decisiónes en un grupo",p:"E",part:2},
+  {text:"Organizar información, tareas o documentos (listas, horarios, archivos o apuntes)",p:"C",part:2},
 ];
 /* Anti-rushing: minimum ms per question */
 const RUSH_THRESHOLD_MS=1000;
 
 const riasecProfiles={
   R:{name:"Realista",charF:"Romina la Realista",charM:"Renato el Realista",avatar:"\uD83D\uDD27",color:"from-amber-400 to-orange-500",
-    desc:"Te gusta hacer, construir y arreglar cosas. Disfrutas actividades donde puedes ver resultados concretos, usar tus manos y resolver problemas practicos.",
-    likes:["Armas, reparas o mejoras cosas","Trabajas con equipos, maquinas o tecnologia fisica","Ves que tu trabajo tiene un resultado claro"],
-    family:"Produccion, mantenimiento e ingenieria aplicada",
+    desc:"Te gusta hacer, construir y arreglar cosas. Disfrutas actividades donde puedes ver resultados concretos, usar tus manos y resolver problemas prácticos.",
+    likes:["Armas, reparas o mejoras cosas","Trabajas con equipos, maquinas o tecnología física","Ves que tu trabajo tiene un resultado claro"],
+    family:"Producción, mantenimiento e ingeniería aplicada",
     subfamilies:[
-      {name:"Construccion e infraestructura",cetpro:["Electricidad","Refrigeracion"],instituto:["Edificaciones"],universidad:["Ingenieria civil","Ingenieria electrica"]},
-      {name:"Mecanica, maquinaria y sistemas tecnicos",cetpro:["Mecanica automotriz","Soldadura","Mantenimiento industrial"],instituto:["Mecanica industrial","Electronica industrial","Automatizacion industrial"],universidad:["Ingenieria mecanica","Ingenieria mecatronica"]},
-      {name:"Energia convencional y renovable",cetpro:["Instalador de paneles solares"],instituto:["Tecnico en energia renovable"],universidad:["Ingenieria electrica"]},
-      {name:"Mineria y recursos naturales",cetpro:["Operador de maquinaria minera"],instituto:["Tecnico minero / Perforista"],universidad:["Ingeniero de minas"]},
-      {name:"Agroindustria y procesos productivos",cetpro:["Operario de planta procesadora","Cocinero / Chef"],instituto:["Tecnico agroindustrial","Tecnico en refrigeracion industrial"],universidad:["Ingeniero agroindustrial","Ingenieria industrial"]},
-      {name:"Formacion especializada",cetpro:["Fuerzas armadas y policiales","Centros sectoriales (SENCICO)"]},
+      {name:"Construcción e infraestructura",cetpro:["Electricidad","Refrigeracion"],instituto:["Edificaciones"],universidad:["Ingeniería civil","Ingeniería eléctrica"]},
+      {name:"Mecánica, maquinaria y sistemas técnicos",cetpro:["Mecánica automotriz","Soldadura","Mantenimiento industrial"],instituto:["Mecánica industrial","Electrónica industrial","Automatización industrial"],universidad:["Ingeniería mecánica","Ingeniería mecatronica"]},
+      {name:"Energía convencional y renovable",cetpro:["Instalador de paneles solares"],instituto:["Técnico en energía renovable"],universidad:["Ingeniería eléctrica"]},
+      {name:"Minería y recursos naturales",cetpro:["Operador de maquinaria minera"],instituto:["Técnico minero / Perforista"],universidad:["Ingeniero de minas"]},
+      {name:"Agroindustria y procesos productivos",cetpro:["Operario de planta procesadora","Cocinero / Chef"],instituto:["Técnico agroindustrial","Técnico en refrigeracion industrial"],universidad:["Ingeniero agroindustrial","Ingeniería industrial"]},
+      {name:"Formación especializada",cetpro:["Fuerzas armadas y policiales","Centros sectoriales (SENCICO)"]},
     ],sectors:['mineria','infraestructura','agronegocios']},
   I:{name:"Investigador",charF:"Ines la Investigadora",charM:"Ivan el Investigador",avatar:"\uD83D\uDD2C",color:"from-blue-400 to-indigo-500",
     desc:"Te gusta pensar, analizar y entender como funcionan las cosas. Te motivan actividades donde puedes resolver problemas, investigar y encontrar explicaciones.",
-    likes:["Analizas datos o informacion","Buscas patrones o explicaciones","Resuelves problemas paso a paso"],
-    family:"Analisis, ciencia aplicada y tecnologia",
+    likes:["Analizas datos o información","Buscas patrones o explicaciones","Resuelves problemas paso a paso"],
+    family:"Análisis, ciencia aplicada y tecnología",
     subfamilies:[
-      {name:"Tecnologias de la informacion y sistemas",cetpro:["Soporte tecnico en computacion"],instituto:["Programacion y desarrollo de software","Redes y telecomunicaciones","Sistemas de informacion","Tecnico en ciberseguridad"],universidad:["Ingenieria de sistemas","Ingenieria de datos","Cientifico de datos"]},
-      {name:"Datos, procesos y analisis aplicado",cetpro:["Control de calidad basico","Asistente tecnico de procesos"],instituto:["Analisis de datos","Analista de creditos"],universidad:["Estadistica","Economia"]},
-      {name:"Ciencias naturales, laboratorio y salud",cetpro:["Tecnico de laboratorio basico"],instituto:["Tecnico de laboratorio clinico"],universidad:["Ciencias (biologia, quimica, fisica)","Nutricion"]},
-      {name:"Ciencias aplicadas a recursos naturales",universidad:["Geologia","Ingenieria ambiental","Ingenieria agronoma"]},
-      {name:"Investigacion aplicada",instituto:["Institutos de investigacion aplicada"],cetpro:["Certificaciones tecnicas especializadas"]},
+      {name:"Tecnologías de la información y sistemas",cetpro:["Soporte técnico en computación"],instituto:["Programación y desarrollo de software","Redes y telecomunicaciones","Sistemas de información","Técnico en ciberseguridad"],universidad:["Ingeniería de sistemas","Ingeniería de datos","Cientifico de datos"]},
+      {name:"Datos, procesos y análisis aplicado",cetpro:["Control de calidad básico","Asistente técnico de procesos"],instituto:["Análisis de datos","Analista de créditos"],universidad:["Estadística","Economía"]},
+      {name:"Ciencias naturales, laboratorio y salud",cetpro:["Técnico de laboratorio básico"],instituto:["Técnico de laboratorio clinico"],universidad:["Ciencias (biología, química, física)","Nutrición"]},
+      {name:"Ciencias aplicadas a recursos naturales",universidad:["Geología","Ingeniería ambiental","Ingeniería agronoma"]},
+      {name:"Investigación aplicada",instituto:["Institutos de investigación aplicada"],cetpro:["Certificaciones técnicas especializadas"]},
     ],sectors:['tecnologia','ciencias','salud']},
   A:{name:"Artistico",charF:"Ana la Artista",charM:"Andres el Artista",avatar:"\uD83C\uDFA8",color:"from-pink-400 to-purple-500",
     desc:"Te gusta crear, expresarte y hacer cosas originales. Disfrutas actividades donde puedes imaginar, disenar o expresarte con tu propio estilo.",
-    likes:["Disenas, dibujas o creas contenido","Escribes, haces videos o musica","Pruebas formas nuevas de expresarte"],
-    family:"Diseno, creacion y comunicacion visual",
+    likes:["Diseñas, dibujas o creas contenido","Escribes, haces videos o musica","Pruebas formas nuevas de expresarte"],
+    family:"Diseño, creacion y comunicación visual",
     subfamilies:[
-      {name:"Diseno grafico, visual y digital",cetpro:["Diseno grafico basico","Ilustracion digital"],instituto:["Diseno digital","UX / UI","Diseno de modas"],universidad:["Diseno profesional"]},
-      {name:"Produccion audiovisual y multimedia",cetpro:["Fotografia","Edicion de video","Produccion audiovisual basica"],instituto:["Produccion audiovisual","Animacion y multimedia"],universidad:["Comunicacion audiovisual"]},
-      {name:"Comunicacion creativa y contenidos",cetpro:["Community manager / creador de contenido"],instituto:["Marketing de contenidos","Comunicacion"],universidad:["Publicidad"]},
-      {name:"Diseno de espacios y experiencias",instituto:["Diseno de interiores"],universidad:["Arquitectura"]},
-      {name:"Artes y formacion artistica",cetpro:["Artes visuales","Escuelas superiores de arte","Conservatorios y escuelas de musica"]},
+      {name:"Diseño gráfico, visual y digital",cetpro:["Diseño gráfico básico","Ilustracion digital"],instituto:["Diseño digital","UX / UI","Diseño de modas"],universidad:["Diseño profesional"]},
+      {name:"Producción audiovisual y multimedia",cetpro:["Fotografia","Edicion de video","Producción audiovisual básica"],instituto:["Producción audiovisual","Animacion y multimedia"],universidad:["Comunicación audiovisual"]},
+      {name:"Comunicación creativa y contenidos",cetpro:["Community manager / creador de contenido"],instituto:["Marketing de contenidos","Comunicación"],universidad:["Publicidad"]},
+      {name:"Diseño de espacios y experiencias",instituto:["Diseño de interiores"],universidad:["Arquitectura"]},
+      {name:"Artes y formación artistica",cetpro:["Artes visuales","Escuelas superiores de arte","Conservatorios y escuelas de musica"]},
     ],sectors:['comunicacion','turismo']},
   S:{name:"Social",charF:"Sofia la Social",charM:"Samuel el Social",avatar:"\uD83E\uDD1D",color:"from-emerald-400 to-teal-500",
     desc:"Te gusta ayudar, acompanar y trabajar con personas. Te motiva sentir que lo que haces tiene un impacto positivo en alguien o en un grupo.",
     likes:["Ayudas a alguien a resolver un problema o entender algo","Escuchas y acompanas a otras personas","Trabajas en equipo con un objetivo comun","Participas en actividades con sentido social"],
-    family:"Educacion, salud y servicios a personas",
+    family:"Educación, salud y servicios a personas",
     subfamilies:[
-      {name:"Salud y cuidado de personas",cetpro:["Auxiliar de enfermeria","Atencion al adulto mayor"],instituto:["Enfermeria tecnica","Tecnico en farmacia"],universidad:["Enfermeria","Nutricion","Terapia de lenguaje","Terapia ocupacional"]},
-      {name:"Educacion y acompanamiento educativo",cetpro:["Auxiliar de educacion inicial"],instituto:["Orientacion educativa"],universidad:["Educacion inicial","Educacion primaria","Educacion secundaria"]},
-      {name:"Intervencion social y comunitaria",cetpro:["Promotor de salud","Asistente comunitario"],instituto:["Salud comunitaria","Gestion social"],universidad:["Trabajo social","Psicologia"]},
-      {name:"Servicios turisticos y hospitalidad",cetpro:["Recepcionista de hotel","Mozo / mesero profesional"],instituto:["Guia de turismo","Tecnico en hoteleria","Auxiliar de vuelo / Tripulante de cabina"]},
+      {name:"Salud y cuidado de personas",cetpro:["Auxiliar de enfermeria","Atención al adulto mayor"],instituto:["Enfermeria técnica","Técnico en farmacia"],universidad:["Enfermeria","Nutrición","Terapia de lenguaje","Terapia ocupaciónal"]},
+      {name:"Educación y acompanamiento educativo",cetpro:["Auxiliar de educación inicial"],instituto:["Orientación educativa"],universidad:["Educación inicial","Educación primaria","Educación secundaria"]},
+      {name:"Intervención social y comunitaria",cetpro:["Promotor de salud","Asistente comunitario"],instituto:["Salud comunitaria","Gestion social"],universidad:["Trabajo social","Psicología"]},
+      {name:"Servicios turisticos y hospitalidad",cetpro:["Recepcionista de hotel","Mozo / mesero profesional"],instituto:["Guia de turismo","Técnico en hotelería","Auxiliar de vuelo / Tripulante de cabina"]},
       {name:"Gestion de personas",instituto:["Asistente de recursos humanos"]},
     ],sectors:['salud','educacion','turismo']},
   E:{name:"Emprendedor",charF:"Emily la Emprendedora",charM:"Emilio el Emprendedor",avatar:"\uD83D\uDE80",color:"from-red-400 to-rose-500",
-    desc:"Te gusta liderar, proponer ideas y mover proyectos. Disfrutas actividades donde puedes tomar la iniciativa, organizar personas y tomar decisiones.",
-    likes:["Propones ideas y buscas que se hagan realidad","Convences o comunicas una idea a otros","Tomas decisiones en grupo","Lideras o coordinas un proyecto"],
-    family:"Gestion, negocios y liderazgo comercial",
+    desc:"Te gusta líderar, proponer ideas y mover proyectos. Disfrutas actividades donde puedes tomar la iniciativa, organizar personas y tomar decisiónes.",
+    likes:["Propones ideas y buscas que se hagan realidad","Convences o comunicas una idea a otros","Tomas decisiónes en grupo","Lideras o coordinas un proyecto"],
+    family:"Gestion, negocios y líderazgo comercial",
     subfamilies:[
-      {name:"Ventas y gestion comercial",cetpro:["Ventas","Atencion al cliente","Comercio minorista"],instituto:["Gerente de tienda / Retail","Supervisor de ventas","Agente inmobiliario"]},
-      {name:"Negocios y gestion organizacional",instituto:["Gestion de negocios","Gestion de proyectos"],universidad:["Administracion","Gestion empresarial"]},
+      {name:"Ventas y gestion comercial",cetpro:["Ventas","Atención al cliente","Comercio minorista"],instituto:["Gerente de tienda / Retail","Supervisor de ventas","Agente inmobiliario"]},
+      {name:"Negocios y gestion organizaciónal",instituto:["Gestion de negocios","Gestion de proyectos"],universidad:["Administración","Gestion empresarial"]},
       {name:"Marketing, mercados y expansion comercial",instituto:["Marketing","Marketing digital","Comercio exterior"],universidad:["Negocios internacionales"]},
-      {name:"Liderazgo sectorial",instituto:["Supervisor agricola / Jefe de campo"],universidad:["Administrador hotelero","Ejecutivo de banca / Asesor financiero"]},
-      {name:"Emprendimiento independiente",cetpro:["Emprendimiento productivo","Programas de emprendimiento","Escuelas de negocios y liderazgo"]},
+      {name:"Liderazgo sectorial",instituto:["Supervisor agrícola / Jefe de campo"],universidad:["Administrador hotelero","Ejecutivo de banca / Asesor financiero"]},
+      {name:"Emprendimiento independiente",cetpro:["Emprendimiento productivo","Programas de emprendimiento","Escuelas de negocios y líderazgo"]},
     ],sectors:['administracion','servicios']},
   C:{name:"Convencional",charF:"Clara la Organizada",charM:"Omar el Organizado",avatar:"\uD83D\uDCCB",color:"from-cyan-400 to-blue-500",
-    desc:"Te gusta organizar, ordenar y que las cosas funcionen bien. Te resulta natural seguir procesos, organizar informacion y revisar detalles.",
-    likes:["Organizas informacion, tareas o documentos","Sigues pasos claros para lograr un objetivo","Revisas detalles y verificas que todo este correcto","Mantienes registros u ordenas procesos"],
-    family:"Administracion, logistica y control organizacional",
+    desc:"Te gusta organizar, ordenar y que las cosas funcionen bien. Te resulta natural seguir procesos, organizar información y revisar detalles.",
+    likes:["Organizas información, tareas o documentos","Sigues pasos claros para lograr un objetivo","Revisas detalles y verificas que todo este correcto","Mantienes registros u ordenas procesos"],
+    family:"Administración, logística y control organizaciónal",
     subfamilies:[
-      {name:"Gestion administrativa y documental",cetpro:["Asistencia administrativa","Archivo y documentacion","Digitador / Data entry"],instituto:["Administracion"],universidad:["Gestion publica"]},
-      {name:"Contabilidad, finanzas y control",cetpro:["Contabilidad basica"],instituto:["Finanzas operativas","Auditoria (auxiliar)"],universidad:["Contabilidad","Finanzas"]},
-      {name:"Banca y servicios financieros",cetpro:["Cajero bancario"],instituto:["Analista de creditos","Operaciones bancarias"]},
-      {name:"Logistica, inventarios y procesos",cetpro:["Logistica basica","Auxiliar de almacen / Inventarios"],instituto:["Coordinador de despachos","Control de calidad (agroindustria)"],universidad:["Ingenieria industrial (perfil organizacional)"]},
+      {name:"Gestion administrativa y documental",cetpro:["Asistencia administrativa","Archivo y documentacion","Digitador / Data entry"],instituto:["Administración"],universidad:["Gestion pública"]},
+      {name:"Contabilidad, finanzas y control",cetpro:["Contabilidad básica"],instituto:["Finanzas operativas","Auditoria (auxiliar)"],universidad:["Contabilidad","Finanzas"]},
+      {name:"Banca y servicios financieros",cetpro:["Cajero bancario"],instituto:["Analista de créditos","Operaciones bancarias"]},
+      {name:"Logística, inventarios y procesos",cetpro:["Logística básica","Auxiliar de almacen / Inventarios"],instituto:["Coordinador de despachos","Control de calidad (agroindustria)"],universidad:["Ingeniería industrial (perfil organizaciónal)"]},
     ],sectors:['logistica','servicios']},
 };
 const riasecCombos=[
-  {keys:['R','I'],title:'Practico + Analisis',desc:'Te gusta arreglar cosas usando tecnologia o datos.',examples:['Tecnico en mecatronica automotriz','Programador de software','Instalador de redes','Soporte tecnico especializado']},
-  {keys:['A','R'],title:'Creativo + Practico',desc:'Te gusta crear cosas nuevas que se pueden tocar o usar.',examples:['Diseno de muebles','Confeccion de modas','Arquitectura','Cocina profesional (chef)','Edicion de video y efectos especiales']},
-  {keys:['S','E'],title:'Ayudar + Liderar',desc:'Te gusta trabajar con personas tomando la iniciativa y organizando proyectos.',examples:['Gestion de recursos humanos','Direccion de ONG o proyectos sociales','Administracion de servicios de salud','Profesor/a con centro de estudios propio']},
-  {keys:['C','I'],title:'Orden + Analisis',desc:'Te gusta que todo funcione perfecto usando datos y logica.',examples:['Especialista en ciberseguridad','Contabilidad y auditoria','Administracion de bases de datos','Logistica y control de calidad']},
+  {keys:['R','I'],title:'Práctico + Análisis',desc:'Te gusta arreglar cosas usando tecnología o datos.',examples:['Técnico en mecatronica automotriz','Programador de software','Instalador de redes','Soporte técnico especializado']},
+  {keys:['A','R'],title:'Creativo + Práctico',desc:'Te gusta crear cosas nuevas que se pueden tocar o usar.',examples:['Diseño de muebles','Confeccion de modas','Arquitectura','Cocina profesional (chef)','Edicion de video y efectos especiales']},
+  {keys:['S','E'],title:'Ayudar + Liderar',desc:'Te gusta trabajar con personas tomando la iniciativa y organizando proyectos.',examples:['Gestion de recursos humanos','Direccion de ONG o proyectos sociales','Administración de servicios de salud','Profesor/a con centro de estudios propio']},
+  {keys:['C','I'],title:'Orden + Análisis',desc:'Te gusta que todo funcione perfecto usando datos y lógica.',examples:['Especialista en ciberseguridad','Contabilidad y auditoria','Administración de bases de datos','Logística y control de calidad']},
 ];
 
 /* \u2500\u2500 MYTHS DATA (Swipe Cards format from TAREA4) \u2500\u2500 */
 const mythsData=[
   {statement:"Solo con titulo universitario puedes ganar bien",isMyth:true,cat:"Salarios",
-   keyData:"S/ 3,968",keyLabel:"Tec. Computacion/mes",
-   explanation:"Un tecnico industrial gana S/ 3,383/mes y un tecnico en computacion S/ 3,968/mes, con solo 2-3 anios de estudio. En mineria, un tecnico gana S/ 6,235/mes, mas que muchos universitarios.",source:"MTPE 2024"},
+   keyData:"S/ 3,968",keyLabel:"Tec. Computación/mes",
+   explanation:"Un técnico industrial gana S/ 3,383/mes y un técnico en computación S/ 3,968/mes, con solo 2-3 años de estudio. En minería, un técnico gana S/ 6,235/mes, más que muchos universitarios.",source:"MTPE 2024"},
   {statement:"La mayoria de personas con solo secundaria trabaja informalmente",isMyth:false,cat:"Empleo",
    keyData:"88%",keyLabel:"Informalidad sin estudios",
-   explanation:"El 88% de personas con solo secundaria trabaja de manera informal, sin contrato ni seguro. Con educacion tecnica baja a 55%, y con universidad a 32%.",source:"ENAHO 2024"},
+   explanation:"El 88% de personas con solo secundaria trabaja de manera informal, sin contrato ni seguro. Con educación técnica baja a 55%, y con universidad a 32%.",source:"ENAHO 2024"},
   {statement:"Si empiezas a trabajar despues del colegio, ya no puedes estudiar",isMyth:true,cat:"Trayectorias",
    keyData:"Programas nocturnos, fines de semana, a distancia",keyLabel:"Opciones reales",
    explanation:"Existen programas nocturnos, de fin de semana y a distancia. Muchas personas combinan trabajo y estudio. La trayectoria no es lineal.",source:"MINEDU"},
-  {statement:"Las carreras tecnicas son para los que no pueden entrar a la universidad",isMyth:true,cat:"Tecnicas",
+  {statement:"Las carreras técnicas son para los que no pueden entrar a la universidad",isMyth:true,cat:"Técnicas",
    keyData:"S/ 3,128",keyLabel:"Tec. Electricista/mes",
-   explanation:"Las carreras tecnicas son una eleccion estrategica. Son mas cortas (2-3 anios), mas practicas, con alta demanda en mineria, electricidad, computacion y manufactura.",source:"MTPE 2024"},
-  {statement:"En Peru, la mayor demanda laboral esta en mineria, tecnologia y agronegocios",isMyth:false,cat:"Mercado",
+   explanation:"Las carreras técnicas son una elección estrategica. Son mas cortas (2-3 años), mas prácticas, con alta demanda en minería, electricidad, computación y manufactura.",source:"MTPE 2024"},
+  {statement:"En Perú, la mayor demanda laboral esta en minería, tecnología y agronegocios",isMyth:false,cat:"Mercado",
    keyData:"12 sectores con demanda",keyLabel:"En Lima Metropolitana",
-   explanation:"Peru lidera en arandanos, paltas y esparagos. La mineria genera los mejores salarios tecnicos. Tecnologia crece rapido. Pero tambien hay demanda en salud, logistica y servicios.",source:"MTPE 2024"},
-  {statement:"Elegir una carrera a los 16-17 anios es definitivo",isMyth:true,cat:"Decision",
+   explanation:"Perú lídera en arandanos, paltas y esparagos. La minería genera los mejores salarios técnicos. Tecnología crece rápido. Pero también hay demanda en salud, logística y servicios.",source:"MTPE 2024"},
+  {statement:"Elegir una carrera a los 16-17 años es definitivo",isMyth:true,cat:"Decisión",
    keyData:"No es permanente",keyLabel:"Puedes cambiar y crecer",
    explanation:"Las trayectorias profesionales no son lineales. Puedes cambiar de carrera, combinar estudios, hacer especializaciones diferentes. Lo importante es empezar a explorar.",source:"OIT"},
-  {statement:"Estudiar mas anios siempre significa ganar mas",isMyth:true,cat:"Salarios",
+  {statement:"Estudiar mas años siempre significa ganar mas",isMyth:true,cat:"Salarios",
    keyData:"S/ 2,265 vs S/ 3,383",keyLabel:"Ed. Inicial (5a) vs Tec. Industrial (2a)",
-   explanation:"Un tecnico industrial (2-3 anios) gana S/ 3,383/mes, mientras que un profesional de educacion inicial (5 anios) gana S/ 2,265/mes. La carrera importa tanto como el nivel de estudios.",source:"MTPE 2024"},
-  {statement:"Las mejores carreras son solo medicina, derecho e ingenieria",isMyth:true,cat:"Opciones",
+   explanation:"Un técnico industrial (2-3 años) gana S/ 3,383/mes, mientras que un profesional de educación inicial (5 años) gana S/ 2,265/mes. La carrera importa tanto como el nivel de estudios.",source:"MTPE 2024"},
+  {statement:"Las mejores carreras son solo medicina, derecho e ingeniería",isMyth:true,cat:"Opciones",
    keyData:"S/ 4,710",keyLabel:"Ing. Sistemas joven/mes",
-   explanation:"Economia (S/ 4,526), Ing. Sistemas (S/ 4,710), Agronegocios (S/ 4,312) y Estadistica (S/ 4,527) tienen excelentes salarios iniciales. Hay muchas opciones bien pagadas que no son las tradicionales.",source:"MTPE 2024"},
+   explanation:"Economía (S/ 4,526), Ing. Sistemas (S/ 4,710), Agronegocios (S/ 4,312) y Estadística (S/ 4,527) tienen excelentes salarios iniciales. Hay muchas opciones bien pagadas que no son las tradicionales.",source:"MTPE 2024"},
 ];
 
 /* ══════════════════════════════════════════════════════
@@ -508,12 +508,12 @@ function App(){
   const steps=[
     {icon:I.brain,label:"Autoconocimiento",sub:"Quien soy hoy?",s:"S1-S2",view:'chat'},
     {icon:I.target,label:"Test de Intereses",sub:"Que me interesa?",s:"S3",view:'test'},
-    {icon:I.myth,label:"Mitos Vocacionales",sub:"Verdad o mito?",s:"S4",view:'myths'},
+    {icon:I.myth,label:"Mitos Vocaciónales",sub:"Verdad o mito?",s:"S4",view:'myths'},
     {icon:I.route,label:"Rutas Post-Secundarias",sub:"Que caminos hay?",s:"S4-S5",view:'routes'},
     {icon:I.search,label:"Explorador de Ocupaciones",sub:"130 ocupaciones por sector",s:"S5-S6",view:'explore'},
-    {icon:I.notebook,label:"Investigacion con IA",sub:"NotebookLM y mas",s:"S6",view:'notebook'},
-    {icon:I.family,label:"Decision Familiar",sub:"Como lo comunico?",s:"S7-S8",view:'family'},
-    {icon:I.rocket,label:"Plan Accionable",sub:"Mi plan y CV",s:"S9-S12",view:'plan'},
+    {icon:I.notebook,label:"Investigación con IA",sub:"NotebookLM y mas",s:"S6",view:'notebook'},
+    {icon:I.family,label:"Decisión Familiar",sub:"Como lo comunico?",s:"S7-S8",view:'family'},
+    {icon:I.rocket,label:"Plan Acciónable",sub:"Mi plan y CV",s:"S9-S12",view:'plan'},
   ];
 
   /* ── WELCOME ── */
@@ -533,7 +533,7 @@ function App(){
         <p className="text-navy-600/80 mt-2 text-lg font-bold">Programa Educativo</p>
         <p className="text-navy-500/60 mt-1 text-sm italic font-semibold">El momento de elegir es el momento de mostrarse</p>
         <p className="text-navy-500/70 mt-4 text-sm max-w-md mx-auto leading-relaxed">
-          Terminar el colegio es un momento importante. Hay muchas opciones y poca informacion clara.
+          Terminar el colegio es un momento importante. Hay muchas opciones y poca información clara.
           Este programa te ayuda a <strong>conocerte mejor</strong>, <strong>explorar opciones reales con datos</strong>,
           y <strong>construir un plan</strong> que funcione para ti y tu familia.
         </p>
@@ -628,7 +628,7 @@ function App(){
           <p className="text-white/50 text-xs mb-4">Promedio incluyendo trabajo formal e informal</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[{label:'Secundaria completa',val:'S/ 1,316',pct:43,color:'bg-green-400',info:'88% informal'},
-              {label:'Tecnica completa',val:'S/ 1,934',pct:63,color:'bg-brand-400',info:'+47% vs secundaria'},
+              {label:'Técnica completa',val:'S/ 1,934',pct:63,color:'bg-brand-400',info:'+47% vs secundaria'},
               {label:'Universidad completa',val:'S/ 3,057',pct:100,color:'bg-purple-400',info:'+132% vs secundaria'}
             ].map((d,i)=>(
               <div key={i} className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
@@ -643,7 +643,7 @@ function App(){
         </div>
         {/* Youth pathway visual */}
         <div className="bg-white rounded-2xl border-2 border-cream-200 p-5 sm:p-6 mb-6">
-          <h3 className="font-black text-navy-700 mb-1">De cada 100 jovenes peruanos (15-29 anios)...</h3>
+          <h3 className="font-black text-navy-700 mb-1">De cada 100 jóvenes peruanos (15-29 años)...</h3>
           <p className="text-navy-400 text-xs mb-4">Que hacen despues del colegio?</p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
             {[
@@ -669,20 +669,20 @@ function App(){
             <span className="flex items-center gap-1"><span className="w-2 h-2 bg-blue-500 rounded-full"/>Ambos (17%)</span>
             <span className="flex items-center gap-1"><span className="w-2 h-2 bg-red-400 rounded-full"/>NINIs (16%)</span>
           </div>
-          <p className="text-[10px] text-navy-300 mt-2">Fuente: ENAHO 2023-2024, INEI. NINIs = ni estudian ni trabajan (~1.17 millones de jovenes)</p>
+          <p className="text-[10px] text-navy-300 mt-2">Fuente: ENAHO 2023-2024, INEI. NINIs = ni estudian ni trabajan (~1.17 millones de jóvenes)</p>
         </div>
         {/* Education access breakdown */}
         <div className="bg-brand-50 border-2 border-brand-200 rounded-2xl p-5 mb-8">
           <div className="flex gap-3 items-start mb-3">
             <OwlMascot size={48} expression="surprised"/>
             <div>
-              <p className="font-bold text-navy-700">Solo 30.9% logra transitar a educacion superior</p>
-              <p className="text-navy-500 text-sm mt-1">De ese 30.9%: el <strong className="text-purple-600">12.5% va a universidad</strong> y el <strong className="text-blue-600">16.4% a instituto/tecnico</strong>. El resto entra directo al mercado laboral.</p>
+              <p className="font-bold text-navy-700">Solo 30.9% logra transitar a educación superior</p>
+              <p className="text-navy-500 text-sm mt-1">De ese 30.9%: el <strong className="text-purple-600">12.5% va a universidad</strong> y el <strong className="text-blue-600">16.4% a instituto/técnico</strong>. El resto entra directo al mercado laboral.</p>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center">
             <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">Universidad</p><p className="text-lg font-black text-purple-600">12.5%</p></div>
-            <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">Instituto/Tecnico</p><p className="text-lg font-black text-blue-600">16.4%</p></div>
+            <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">Instituto/Técnico</p><p className="text-lg font-black text-blue-600">16.4%</p></div>
             <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">No accede a superior</p><p className="text-lg font-black text-navy-600">69.1%</p></div>
           </div>
           <p className="text-[10px] text-navy-300 mt-2">Fuente: SENAJU / ENAHO 2022, INEI. Bajo de 36.6% en 2019. En zonas rurales solo 20.1% accede.</p>
@@ -715,7 +715,7 @@ function App(){
     1:(n)=>`Mucho gusto, ${n}!\n\nCuentame, que es lo que mas te gusta hacer cuando NO estas en el colegio? Puede ser cualquier cosa: un hobby, algo que haces con amigos, algo que ves en internet...`,
     2:"Que interesante! Eso me dice mucho sobre ti.\n\nAhora dime: hay algo en lo que sientas que eres bueno/a, aunque nadie te lo haya ensenado formalmente?",
     3:"Me encanta lo que me cuentas.\n\nUna ultima pregunta por ahora: cuando piensas en tu futuro despues del colegio, que es lo primero que se te viene a la mente? No hay respuestas correctas.",
-    4:(n)=>`Gracias por compartir todo esto, ${n}.\n\nBasandome en lo que me has contado, veo a una persona curiosa, con intereses definidos y ganas de explorar.\n\nEn las proximas sesiones vamos a:\n\u2022 Identificar tus intereses con un test RIASEC\n\u2022 Romper mitos vocacionales con datos reales\n\u2022 Explorar sectores y carreras con salarios verificados\n\u2022 Investigar ocupaciones con IA (NotebookLM)\n\u2022 Preparar una conversacion con tu familia\n\u2022 Construir un plan concreto con pasos inmediatos\n\nEsto recien empieza!`,
+    4:(n)=>`Gracias por compartir todo esto, ${n}.\n\nBasandome en lo que me has contado, veo a una persona curiosa, con intereses definidos y ganas de explorar.\n\nEn las proximas sesiones vamos a:\n\u2022 Identificar tus intereses con un test RIASEC\n\u2022 Romper mitos vocaciónales con datos reales\n\u2022 Explorar sectores y carreras con salarios verificados\n\u2022 Investigar ocupaciones con IA (NotebookLM)\n\u2022 Preparar una conversacion con tu familia\n\u2022 Construir un plan concreto con pasos inmediatos\n\nEsto recien empieza!`,
   };
   const chatInit=useRef(false);
   useEffect(()=>{if(!chatInit.current&&msgs.length===0){chatInit.current=true;setTimeout(()=>setMsgs([{r:'ai',t:aiR[0]}]),600);}},[msgs.length]);
@@ -797,9 +797,9 @@ function App(){
       {title:'Parte 2: Habilidades',icon:'💪',color:'from-blue-500 to-indigo-600',
        heading:'Que sabes hacer?',
        desc:'Ahora cambiamos de enfoque. Ya no preguntamos que te GUSTA, sino que tan bien PUEDES hacerlo. Esto mide tus APTITUDES.',
-       tip:'Ojo: que algo te guste no significa que se te de bien, y viceversa. Puede que te encante dibujar pero no se te de tan bien, o que seas muy bueno en matematicas aunque no te emocione. Las dos cosas importan!',
-       labels:['😟 Me cuesta mucho','😕 Me cuesta un poco','😐 Me sale mas o menos','🙂 Me sale bien','😄 Me sale muy bien']},
-      {title:'Parte 3: Autoevaluacion',icon:'🎯',color:'from-amber-500 to-orange-600',
+       tip:'Ojo: que algo te guste no significa que se te de bien, y viceversa. Puede que te encante dibujar pero no se te de tan bien, o que seas muy bueno en matemáticas aunque no te emocione. Las dos cosas importan!',
+       labels:['😟 Me cuesta mucho','😕 Me cuesta un poco','😐 Me sale más o menos','🙂 Me sale bien','😄 Me sale muy bien']},
+      {title:'Parte 3: Autoevaluación',icon:'🎯',color:'from-amber-500 to-orange-600',
        heading:'Como evaluas tus habilidades?',
        desc:'Ultima parte! Aqui vas a autoevaluar tu nivel en 7 areas generales. Se honesto contigo mismo — no hay respuestas correctas.',
        tip:'Piensa en situaciones reales donde hayas usado estas habilidades, en el colegio, en casa o con amigos.',
@@ -813,7 +813,7 @@ function App(){
         <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white">
           <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Test de Intereses RIASEC</h2><p className="text-xs text-navy-400">Cambio de seccion</p></div></div>
           <div className="flex gap-2 mt-3">
-            {riasecParts.map((pp,i)=>(<span key={i} className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${i<completedParts?'bg-green-100 text-green-700':i===showPartIntro?'bg-brand-400 text-white':'bg-cream-100 text-navy-400'}`}>{i<completedParts?'✓ ':''}{i+1}. {i===0?'Actividades':i===1?'Habilidades':'Autoevaluacion'}</span>))}
+            {riasecParts.map((pp,i)=>(<span key={i} className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${i<completedParts?'bg-green-100 text-green-700':i===showPartIntro?'bg-brand-400 text-white':'bg-cream-100 text-navy-400'}`}>{i<completedParts?'✓ ':''}{i+1}. {i===0?'Actividades':i===1?'Habilidades':'Autoevaluación'}</span>))}
           </div>
         </header>
         <div className="flex-1 flex items-center justify-center px-4 sm:px-8">
@@ -851,14 +851,14 @@ function App(){
         </div>
         {/* Part indicator pills */}
         <div className="flex gap-2 mt-2">
-          {riasecParts.map((pp,pi)=>(<span key={pi} className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${pi<currentPartNum?'bg-green-100 text-green-700':pi===currentPartNum?'bg-brand-400 text-white':'bg-cream-100 text-navy-400'}`}>{pi<currentPartNum?'✓ ':''}{pi+1}. {pi===0?'Actividades':pi===1?'Habilidades':'Autoevaluacion'}</span>))}
+          {riasecParts.map((pp,pi)=>(<span key={pi} className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${pi<currentPartNum?'bg-green-100 text-green-700':pi===currentPartNum?'bg-brand-400 text-white':'bg-cream-100 text-navy-400'}`}>{pi<currentPartNum?'✓ ':''}{pi+1}. {pi===0?'Actividades':pi===1?'Habilidades':'Autoevaluación'}</span>))}
         </div>
       </header>
       {/* Rush warning overlay */}
       {rushWarn&&(<div className="absolute inset-0 z-50 bg-black/40 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl p-6 max-w-md text-center shadow-2xl animate-scale-in">
           <OwlMascot size={64} expression="surprised" className="mx-auto mb-3"/>
-          <p className="font-bold text-navy-700 mb-2">Estas respondiendo muy rapido!</p>
+          <p className="font-bold text-navy-700 mb-2">Estas respondiendo muy rápido!</p>
           <p className="text-sm text-navy-500 mb-4">Para que el resultado realmente te ayude, tomate un momento para pensar cada respuesta. Recuerda que no hay respuestas buenas o malas.</p>
           <div className="flex gap-3 justify-center">
             <button onClick={dismissRush} className="px-5 py-2.5 bg-brand-400 text-white rounded-xl font-bold hover:bg-brand-500 transition">Continuar</button>
@@ -907,14 +907,14 @@ function App(){
             <ul className="space-y-1">{p.likes.map((l,i)=>(<li key={i} className="text-sm text-navy-600 flex gap-2"><span className="text-brand-400">•</span>{l}</li>))}</ul>
           </div>
           <div className="mb-6">
-            <h3 className="font-black text-navy-700 mb-1">Familia ocupacional</h3>
+            <h3 className="font-black text-navy-700 mb-1">Familia ocupaciónal</h3>
             <p className="text-brand-500 font-bold text-sm mb-4">{p.family}</p>
             <div className="space-y-4">
               {p.subfamilies.map((sf,i)=>(<div key={i} className="bg-white rounded-2xl border-2 border-cream-200 p-4 animate-slide-up" style={{animationDelay:`${i*.05}s`}}>
                 <p className="font-bold text-navy-700 text-sm mb-3">{i+1}) {sf.name}</p>
                 <div className="space-y-2">
                   {sf.cetpro&&sf.cetpro.length>0&&(<div><p className="text-[10px] font-bold text-amber-600 uppercase tracking-wider mb-1">CETPRO</p><div className="flex flex-wrap gap-1.5">{sf.cetpro.map((c,j)=>(<span key={j} className="text-xs bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full border border-amber-200">{c}</span>))}</div></div>)}
-                  {sf.instituto&&sf.instituto.length>0&&(<div><p className="text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-1">Instituto / Tecnico</p><div className="flex flex-wrap gap-1.5">{sf.instituto.map((c,j)=>(<span key={j} className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full border border-blue-200">{c}</span>))}</div></div>)}
+                  {sf.instituto&&sf.instituto.length>0&&(<div><p className="text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-1">Instituto / Técnico</p><div className="flex flex-wrap gap-1.5">{sf.instituto.map((c,j)=>(<span key={j} className="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full border border-blue-200">{c}</span>))}</div></div>)}
                   {sf.universidad&&sf.universidad.length>0&&(<div><p className="text-[10px] font-bold text-purple-600 uppercase tracking-wider mb-1">Universidad</p><div className="flex flex-wrap gap-1.5">{sf.universidad.map((c,j)=>(<span key={j} className="text-xs bg-purple-50 text-purple-700 px-2 py-0.5 rounded-full border border-purple-200">{c}</span>))}</div></div>)}
                 </div>
               </div>))}
@@ -1024,7 +1024,7 @@ function App(){
     };
     return(<div className="flex-1 flex flex-col">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white">
-        <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700">Mitos y Realidades Vocacionales</h2><p className="text-xs text-navy-400">Desliza para descubrir la verdad con datos reales · Sesion 4</p></div></div>
+        <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700">Mitos y Realidades Vocaciónales</h2><p className="text-xs text-navy-400">Desliza para descubrir la verdad con datos reales · Sesion 4</p></div></div>
         <div className="flex items-center gap-4 mt-3">
           <div className="flex-1 h-2.5 bg-cream-200 rounded-full overflow-hidden"><div className="h-full bg-gradient-to-r from-brand-400 to-brand-300 rounded-full transition-all duration-500" style={{width:`${pct}%`}}/></div>
           <span className="text-sm font-bold text-navy-400">{mythIdx+1}/{mythsData.length}</span>
@@ -1098,36 +1098,36 @@ function App(){
     {q:"Que es mas importante para ti ahora?",opts:[
       {t:"Ganar un buen salario a largo plazo",w:[2,1,0]},
       {t:"Empezar a ganar dinero lo antes posible",w:[0,1,2]},
-      {t:"Aprender algo practico y con demanda",w:[0,2,1]}]},
+      {t:"Aprender algo práctico y con demanda",w:[0,2,1]}]},
     {q:"Cuanto tiempo podrias dedicar a estudiar?",opts:[
-      {t:"5 anios sin problema",w:[2,0,0]},
-      {t:"2-3 anios maximo",w:[0,2,0]},
+      {t:"5 años sin problema",w:[2,0,0]},
+      {t:"2-3 años maximo",w:[0,2,0]},
       {t:"Necesito trabajar ya, pero puedo estudiar de noche",w:[0,1,2]}]},
-    {q:"Como es tu situacion economica familiar?",opts:[
+    {q:"Como es tu situación economica familiar?",opts:[
       {t:"Mis padres pueden apoyarme con los estudios",w:[2,1,0]},
       {t:"Necesito algo accesible o una beca",w:[1,2,0]},
       {t:"Necesito aportar a la casa",w:[0,0,2]}]},
     {q:"Que te describe mejor?",opts:[
       {t:"Me gusta la teoria, investigar y leer",w:[2,0,0]},
-      {t:"Prefiero lo practico, hacer cosas con las manos",w:[0,2,1]},
+      {t:"Prefiero lo práctico, hacer cosas con las manos",w:[0,2,1]},
       {t:"Quiero experiencia real, aprender trabajando",w:[0,1,2]}]},
   ];
-  const routeNames=["Universidad","Tecnico / Instituto","Trabajo + Estudio"];
+  const routeNames=["Universidad","Técnico / Instituto","Trabajo + Estudio"];
   const routeColors=["from-purple-500 to-indigo-600","from-brand-400 to-brand-300","from-green-500 to-emerald-600"];
   const routeIcons=["🎓","⚡","🏠"];
   const rts=[
-    {icon:I.grad,name:"Universidad",time:"5 anios",salary:"S/ 3,057",color:"from-purple-500 to-indigo-600",inf:"32%",
+    {icon:I.grad,name:"Universidad",time:"5 años",salary:"S/ 3,057",color:"from-purple-500 to-indigo-600",inf:"32%",
       example:"Un economista joven gana S/ 4,526/mes. Con experiencia, un ingeniero de sistemas llega a S/ 8,934/mes.",
-      study:"Puedes retomar estudios si empiezas otra ruta",canWork:"Practicas desde 3er anio",
+      study:"Puedes retomar estudios si empiezas otra ruta",canWork:"Prácticas desde 3er año",
       pros:["Mayor salario promedio (+132% vs secundaria)","Red profesional amplia","Acceso a maestrias y especializaciones"],
-      cons:["Costo alto: S/ 1,000-5,000/mes en privada","5 anios sin ingreso fijo","No garantiza empleo automatico"],
-      real:"Solo el 30% de jovenes peruanos accede a educacion superior. De los que terminan, el 68% trabaja en algo relacionado."},
-    {icon:I.bolt,name:"Tecnico / Instituto",time:"2-3 anios",salary:"S/ 1,934",color:"from-brand-400 to-brand-300",inf:"55%",
-      example:"Un tecnico en computacion gana S/ 3,968/mes. Un tecnico electricista S/ 3,128/mes. Ambos con alta demanda.",
-      study:"Puedes continuar a universidad despues (convalidaciones)",canWork:"Desde el 2do anio en muchos institutos",
-      pros:["Mas rapido y practico (2-3 anios)","Menor costo que universidad","Alta demanda en mineria, tecnologia, electricidad","Algunos ganan MAS que universitarios"],
+      cons:["Costo alto: S/ 1,000-5,000/mes en privada","5 años sin ingreso fijo","No garantiza empleo automático"],
+      real:"Solo el 30% de jóvenes peruanos accede a educación superior. De los que terminan, el 68% trabaja en algo relacionado."},
+    {icon:I.bolt,name:"Técnico / Instituto",time:"2-3 años",salary:"S/ 1,934",color:"from-brand-400 to-brand-300",inf:"55%",
+      example:"Un técnico en computación gana S/ 3,968/mes. Un técnico electricista S/ 3,128/mes. Ambos con alta demanda.",
+      study:"Puedes continuar a universidad despues (convalidaciones)",canWork:"Desde el 2do año en muchos institutos",
+      pros:["Más rápido y práctico (2-3 años)","Menor costo que universidad","Alta demanda en minería, tecnología, electricidad","Algunos ganan MAS que universitarios"],
       cons:["Techo salarial mas bajo en promedio","Menos red de contactos que universidad"],
-      real:"Los tecnicos en mineria ganan S/ 6,235/mes promedio, mas del doble que el promedio universitario."},
+      real:"Los técnicos en minería ganan S/ 6,235/mes promedio, mas del doble que el promedio universitario."},
     {icon:I.home,name:"Trabajo Directo",time:"Inmediato",salary:"S/ 1,316",color:"from-green-500 to-emerald-600",inf:"88%",
       example:"Puedes empezar como auxiliar de almacen (S/ 1,025-1,600) y capacitarte para crecer. Muchos combinan trabajo + estudio nocturno.",
       study:"Programas nocturnos, fines de semana, a distancia",canWork:"Desde ya",
@@ -1152,7 +1152,7 @@ function App(){
 
         {/* TAB 1: COMPARE ROUTES */}
         {routeTab==='compare'&&(<div>
-          <p className="text-navy-500 text-sm mb-6">Despues del colegio hay 3 caminos principales. Ninguno es mejor que otro — depende de tu situacion, tus metas y tus posibilidades.</p>
+          <p className="text-navy-500 text-sm mb-6">Despues del colegio hay 3 caminos principales. Ninguno es mejor que otro — depende de tu situación, tus metas y tus posibilidades.</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 mb-6">
             {rts.map((r,i)=>(<div key={i} className="bg-white rounded-2xl shadow-md border-2 border-cream-200 overflow-hidden animate-slide-up" style={{animationDelay:`${i*.08}s`}}>
               <div className={`bg-gradient-to-r ${r.color} p-5 text-white`}>
@@ -1239,7 +1239,7 @@ function App(){
               </div>
               <div className="bg-brand-50 border-2 border-brand-200 rounded-2xl p-4 mb-6 flex gap-3">
                 <OwlMini size={32}/>
-                <p className="text-sm text-navy-600"><strong>Recuerda:</strong> esto es solo una orientacion. Puedes combinar rutas (trabajar y estudiar) o cambiar de camino despues. No hay decision permanente a los 16-17 anios.</p>
+                <p className="text-sm text-navy-600"><strong>Recuerda:</strong> esto es solo una orientación. Puedes combinar rutas (trabajar y estudiar) o cambiar de camino despues. No hay decisión permanente a los 16-17 años.</p>
               </div>
               <button onClick={()=>{setRouteQ(0);setRouteAs([]);}} className="w-full mb-3 py-3 bg-white border-2 border-cream-200 text-navy-500 rounded-xl font-bold hover:bg-cream-50 transition">Volver a hacer el quiz</button>
             </div>
@@ -1248,11 +1248,11 @@ function App(){
 
         {/* TAB 3: KEY DATA */}
         {routeTab==='data'&&(<div>
-          <p className="text-navy-500 text-sm mb-6">Datos verificados del INEI, ENAHO y MTPE sobre los jovenes peruanos y el mercado laboral.</p>
+          <p className="text-navy-500 text-sm mb-6">Datos verificados del INEI, ENAHO y MTPE sobre los jóvenes peruanos y el mercado laboral.</p>
 
           {/* Youth pathway visual */}
           <div className="bg-white rounded-2xl border-2 border-navy-200 p-5 mb-6">
-            <h3 className="font-black text-navy-700 text-sm mb-1">De cada 100 jovenes peruanos (15-29):</h3>
+            <h3 className="font-black text-navy-700 text-sm mb-1">De cada 100 jóvenes peruanos (15-29):</h3>
             <p className="text-navy-400 text-[10px] mb-4">Que hacen despues del colegio?</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {[
@@ -1272,15 +1272,15 @@ function App(){
               <div className="bg-blue-500 h-full" style={{width:'17%'}}/>
               <div className="bg-red-400 h-full" style={{width:'16%'}}/>
             </div>
-            <p className="text-[10px] text-navy-300 mt-2">ENAHO 2023-2024, INEI. NINIs (~1.17M jovenes) = ni estudian ni trabajan</p>
+            <p className="text-[10px] text-navy-300 mt-2">ENAHO 2023-2024, INEI. NINIs (~1.17M jóvenes) = ni estudian ni trabajan</p>
           </div>
 
           {/* Education access */}
           <div className="bg-purple-50 border-2 border-purple-200 rounded-2xl p-5 mb-6">
-            <p className="font-bold text-navy-700 text-sm mb-3">Acceso a educacion superior: solo 30.9%</p>
+            <p className="font-bold text-navy-700 text-sm mb-3">Acceso a educación superior: solo 30.9%</p>
             <div className="grid grid-cols-3 gap-2 text-center mb-3">
               <div className="bg-white rounded-lg p-3"><p className="text-2xl font-black text-purple-600">12.5%</p><p className="text-[10px] text-navy-400 font-bold">Universidad</p></div>
-              <div className="bg-white rounded-lg p-3"><p className="text-2xl font-black text-blue-600">16.4%</p><p className="text-[10px] text-navy-400 font-bold">Inst./Tecnico</p></div>
+              <div className="bg-white rounded-lg p-3"><p className="text-2xl font-black text-blue-600">16.4%</p><p className="text-[10px] text-navy-400 font-bold">Inst./Técnico</p></div>
               <div className="bg-white rounded-lg p-3"><p className="text-2xl font-black text-navy-600">69.1%</p><p className="text-[10px] text-navy-400 font-bold">No accede</p></div>
             </div>
             <p className="text-xs text-purple-600">En 2019 era 36.6%. Bajo a 30.9% en 2022. En zonas rurales solo 20.1% accede.</p>
@@ -1290,12 +1290,12 @@ function App(){
           {/* Key facts */}
           <div className="space-y-3 mb-6">
             {[
-              {icon:'🎓',title:'80 de cada 100 terminan secundaria',detail:'Pero solo 21 de cada 100 completan educacion superior. 46 de 100 que empiezan un instituto lo abandonan.',color:'bg-brand-50 border-brand-200'},
-              {icon:'📉',title:'88% con solo secundaria trabaja informalmente',detail:'Sin contrato, sin seguro, sin vacaciones. Con educacion tecnica baja a 55%. Con universidad a 32%.',color:'bg-red-50 border-red-200'},
-              {icon:'💰',title:'La carrera importa tanto como el nivel de estudios',detail:'Un tecnico en computacion gana S/ 3,968/mes, mas que un universitario promedio (S/ 3,057/mes). La clave es elegir bien el sector.',color:'bg-brand-50 border-brand-200'},
-              {icon:'⚠️',title:'1.17 millones de jovenes son NINIs',detail:'Ni estudian ni trabajan. El 44% tiene entre 15-19 anios. El 59% son mujeres. Es la situacion que este programa busca prevenir.',color:'bg-amber-50 border-amber-200'},
+              {icon:'🎓',title:'80 de cada 100 terminan secundaria',detail:'Pero solo 21 de cada 100 completan educación superior. 46 de 100 que empiezan un instituto lo abandonan.',color:'bg-brand-50 border-brand-200'},
+              {icon:'📉',title:'88% con solo secundaria trabaja informalmente',detail:'Sin contrato, sin seguro, sin vacaciones. Con educación técnica baja a 55%. Con universidad a 32%.',color:'bg-red-50 border-red-200'},
+              {icon:'💰',title:'La carrera importa tanto como el nivel de estudios',detail:'Un técnico en computación gana S/ 3,968/mes, más que un universitario promedio (S/ 3,057/mes). La clave es elegir bien el sector.',color:'bg-brand-50 border-brand-200'},
+              {icon:'⚠️',title:'1.17 millones de jóvenes son NINIs',detail:'Ni estudian ni trabajan. El 44% tiene entre 15-19 años. El 59% son mujeres. Es la situación que este programa busca prevenir.',color:'bg-amber-50 border-amber-200'},
               {icon:'🔄',title:'Las rutas no son permanentes',detail:'Programas nocturnos, fines de semana y a distancia permiten combinar trabajo y estudio. Muchos profesionales exitosos cambiaron de ruta.',color:'bg-green-50 border-green-200'},
-              {icon:'🏭',title:'Sectores con mayor demanda en Peru',detail:'Mineria (mejores salarios tecnicos), Agronegocios (Peru lider en arandanos y paltas), Tecnologia (crecimiento rapido), Salud (demanda constante).',color:'bg-blue-50 border-blue-200'},
+              {icon:'🏭',title:'Sectores con mayor demanda en Peru',detail:'Minería (mejores salarios técnicos), Agronegocios (Perú líder en arandanos y paltas), Tecnología (crecimiento rápido), Salud (demanda constante).',color:'bg-blue-50 border-blue-200'},
             ].map((d,i)=>(<div key={i} className={`${d.color} border-2 rounded-2xl p-4 flex gap-3 items-start animate-slide-up`} style={{animationDelay:`${i*.06}s`}}>
               <span className="text-2xl shrink-0">{d.icon}</span>
               <div>
@@ -1304,12 +1304,12 @@ function App(){
               </div>
             </div>))}
           </div>
-          <p className="text-[10px] text-navy-300 text-center mb-4">Fuentes: ENAHO 2023-2024, INEI, SENAJU, MTPE Planilla Electronica, CCL</p>
+          <p className="text-[10px] text-navy-300 text-center mb-4">Fuentes: ENAHO 2023-2024, INEI, SENAJU, MTPE Planilla Electrónica, CCL</p>
         </div>)}
 
         <div className="bg-brand-50 border-2 border-brand-200 rounded-2xl p-4 sm:p-5 mb-6 flex gap-3 sm:gap-4">
           <OwlMascot size={48} expression="surprised"/>
-          <div><p className="font-bold text-navy-700 text-sm">Mensaje clave</p><p className="text-navy-500 text-sm mt-1">No hay una ruta mejor que otra. Hay una ruta que se adapta mejor a TU situacion. La carrera que elijas importa tanto como el nivel de estudios.</p></div>
+          <div><p className="font-bold text-navy-700 text-sm">Mensaje clave</p><p className="text-navy-500 text-sm mt-1">No hay una ruta mejor que otra. Hay una ruta que se adapta mejor a TU situación. La carrera que elijas importa tanto como el nivel de estudios.</p></div>
         </div>
         <button onClick={()=>{mark(3);nav('home');}} className="w-full py-3.5 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold shadow-lg hover:opacity-90 transition">Completar paso</button>
       </div>
@@ -1322,8 +1322,8 @@ function App(){
     if(selCareer)return <CareerDetail/>;
     const levelSections=[
       {key:'secundaria',label:'Secundaria completa',icon:'🔧',color:'bg-green-100 text-green-700',border:'border-green-200'},
-      {key:'tecnica',label:'Tecnico / Instituto (2-3 anios)',icon:'⚡',color:'bg-blue-100 text-blue-700',border:'border-blue-200'},
-      {key:'universitaria',label:'Universidad (5 anios)',icon:'🎓',color:'bg-purple-100 text-purple-700',border:'border-purple-200'},
+      {key:'tecnica',label:'Técnico / Instituto (2-3 años)',icon:'⚡',color:'bg-blue-100 text-blue-700',border:'border-blue-200'},
+      {key:'universitaria',label:'Universidad (5 años)',icon:'🎓',color:'bg-purple-100 text-purple-700',border:'border-purple-200'},
     ];
     return(<div className="flex-1 overflow-y-auto">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3">
@@ -1363,7 +1363,7 @@ function App(){
               </div>
               <div className="bg-white rounded-2xl border-2 border-cream-200 overflow-x-auto">
                 <table className="w-full min-w-[500px]"><thead><tr className="bg-cream-50 border-b border-cream-200 text-left">
-                  <th className="px-5 py-3 text-xs font-bold text-navy-400">Ocupacion</th>
+                  <th className="px-5 py-3 text-xs font-bold text-navy-400">Ocupación</th>
                   <th className="px-5 py-3 text-xs font-bold text-navy-400">Salario Joven</th>
                   <th className="px-5 py-3 text-xs font-bold text-navy-400">Con Experiencia</th>
                   <th className="px-5 py-3 text-xs font-bold text-navy-400"></th>
@@ -1389,7 +1389,7 @@ function App(){
   const CareerDetail=()=>{
     const c=selCareer;
     const lc={secundaria:'bg-green-500',tecnica:'bg-blue-500',universitaria:'bg-purple-500'};
-    const ll={secundaria:'Secundaria completa',tecnica:'Carrera tecnica (2-3 anios)',universitaria:'Universidad (5 anios)'};
+    const ll={secundaria:'Secundaria completa',tecnica:'Carrera técnica (2-3 años)',universitaria:'Universidad (5 años)'};
     return(<div className="flex-1 overflow-y-auto px-8 py-8 bg-cream-50">
       <div className="max-w-3xl mx-auto">
         <button onClick={()=>setSelCareer(null)} className="text-sm text-brand-500 hover:text-brand-600 font-bold mb-4 flex items-center gap-1">{'\u2190'} Volver al sector</button>
@@ -1398,12 +1398,20 @@ function App(){
           <div><h2 className="text-2xl font-black text-navy-700">{c.name}</h2><p className="text-sm text-navy-400">{ll[c.level]}</p></div>
         </div>
         {c.desc&&(<div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 mb-5">
-          <h3 className="font-bold text-amber-700 text-sm mb-2">Que hace esta persona?</h3>
+          <h3 className="font-bold text-amber-700 text-sm mb-2">¿Qué hace esta persona?</h3>
           <p className="text-sm text-navy-600 leading-relaxed">{c.desc}</p>
+        </div>)}
+        {c.study&&(<div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-5 mb-5">
+          <h3 className="font-bold text-blue-700 text-sm mb-2">📘 ¿Qué se estudia?</h3>
+          <p className="text-sm text-navy-600 leading-relaxed">{c.study}</p>
+        </div>)}
+        {c.dayInLife&&(<div className="bg-purple-50 border-2 border-purple-200 rounded-2xl p-5 mb-5">
+          <h3 className="font-bold text-purple-700 text-sm mb-2">☀️ Un día típico de trabajo</h3>
+          <p className="text-sm text-navy-600 leading-relaxed">{c.dayInLife}</p>
         </div>)}
         {c.salary!=='Variable'?(<div className="grid grid-cols-2 gap-5 mb-6">
           <div className="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-5">
-            <p className="text-xs text-emerald-600 font-bold mb-1">Joven (18-29 anios)</p>
+            <p className="text-xs text-emerald-600 font-bold mb-1">Joven (18-29 años)</p>
             <p className="text-3xl font-black text-emerald-700">{c.salary}</p>
             <p className="text-xs text-emerald-500 mt-1">Rango: {c.range}</p>
           </div>
@@ -1413,7 +1421,7 @@ function App(){
             {c.rangeAdult&&<p className="text-xs text-indigo-500 mt-1">Rango: {c.rangeAdult}</p>}
           </div>
         </div>):(<div className="bg-gray-50 border-2 border-gray-200 rounded-2xl p-5 mb-5 text-center">
-          <p className="text-sm text-navy-400">El Ministerio de Trabajo no cuenta con datos salariales formales para esta ocupacion. Los ingresos varian segun empleador, ubicacion y experiencia.</p>
+          <p className="text-sm text-navy-400">El Ministerio de Trabajo no cuenta con datos salariales formales para esta ocupación. Los ingresos varian segun empleador, ubicacion y experiencia.</p>
         </div>)}
         {c.skills&&(<div className="bg-white border-2 border-cream-200 rounded-2xl p-5 mb-5">
           <h3 className="font-bold text-navy-700 text-sm mb-3">Habilidades clave</h3>
@@ -1431,20 +1439,20 @@ function App(){
   /* ── NOTEBOOK LM (S6) ── */
   const Notebook=()=>(<div className="flex-1 overflow-y-auto">
     <header className="px-6 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3">
-      <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Investigacion con IA</h2><p className="text-sm text-navy-400">Profundiza en las carreras que te interesan · Sesion 6</p></div>
+      <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Investigación con IA</h2><p className="text-sm text-navy-400">Profundiza en las carreras que te interesan · Sesion 6</p></div>
     </header>
     <div className="max-w-3xl mx-auto px-4 sm:px-8 py-6 sm:py-8">
       <div className="text-center mb-8">
         <OwlMascot size={80} expression="surprised" className="mx-auto mascot-shadow mb-4"/>
         <h3 className="text-xl font-black text-navy-700">De explorar a decidir</h3>
-        <p className="text-navy-400 mt-2 text-sm max-w-lg mx-auto">En el Explorador de Ocupaciones viste datos de muchos sectores. Ahora vas a elegir las que mas te interesaron y profundizar para tomar una mejor decision.</p>
+        <p className="text-navy-400 mt-2 text-sm max-w-lg mx-auto">En el Explorador de Ocupaciones viste datos de muchos sectores. Ahora vas a elegir las que mas te interesaron y profundizar para tomar una mejor decisión.</p>
       </div>
       <div className="space-y-4 mb-8">
         {[
-          {icon:'\u2B50',title:'Elige tus favoritas del Explorador',desc:'De todas las carreras que viste en el paso anterior, selecciona las que mas te llamaron la atencion. No hay limite, pero intenta enfocarte en las que realmente te emocionan.',step:'1'},
-          {icon:'\uD83C\uDFAF',title:'Reduce a 3 opciones para investigar',desc:'De tus favoritas, elige las 3 que quieres investigar a fondo. Estas seran las opciones que vas a comparar para tomar tu decision.',step:'2'},
+          {icon:'\u2B50',title:'Elige tus favoritas del Explorador',desc:'De todas las carreras que viste en el paso anterior, seleccióna las que mas te llamaron la atención. No hay limite, pero intenta enfocarte en las que realmente te emocionan.',step:'1'},
+          {icon:'\uD83C\uDFAF',title:'Reduce a 3 opciones para investigar',desc:'De tus favoritas, elige las 3 que quieres investigar a fondo. Estas seran las opciones que vas a comparar para tomar tu decisión.',step:'2'},
           {icon:'\uD83E\uDD16',title:'Investiga con NotebookLM',desc:'Conversa con documentos verificados ya cargados (MTPE, universidades, institutos, becas y mas). Preguntale: "Que hace esta persona en su dia a dia?", "Donde puedo estudiar?", "Cuanto cuesta?", "Hay becas?"',step:'3'},
-          {icon:'\uD83D\uDCCB',title:'Priorizacion final',desc:'Con toda la informacion, ordena tus 3 ocupaciones de mayor a menor interes. Justifica tu orden: que te entusiasma, que dudas quedan, como se conecta con tu suenho.',step:'4'},
+          {icon:'\uD83D\uDCCB',title:'Priorizacion final',desc:'Con toda la información, ordena tus 3 ocupaciones de mayor a menor interes. Justifica tu orden: que te entusiasma, que dudas quedan, como se conecta con tu sueno.',step:'4'},
         ].map((item,i)=>(<div key={i} className="bg-white rounded-2xl p-4 sm:p-5 border-2 border-cream-200 flex gap-3 sm:gap-4 items-start animate-slide-up" style={{animationDelay:`${i*.08}s`}}>
           <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center text-brand-500 font-black shrink-0">{item.step}</div>
           <div className="flex-1">
@@ -1472,11 +1480,11 @@ function App(){
 
   /* ── FAMILY (S7-S8) ── */
   const famAiR={
-    0:(n)=>`Hola${n?` ${n}`:' '}! Llegamos a un paso muy importante. Voy a hacerte algunas preguntas sobre la carrera que elegiste y tu familia. Con tus respuestas, voy a preparar un resumen que te ayude a comunicar tu decision.\n\nCuentame: cual es la carrera o ruta que mas te convencio despues de todo lo que exploraste?`,
-    1:'Buena eleccion! Ahora dime: por que elegiste esta opcion? Que fue lo que mas te convencio? (pueden ser los datos de salario, lo que se estudia, las oportunidades, o simplemente que te emociona)',
-    2:'Excelente. Ahora hablemos de tu familia. Cuando piensas en contarle a tus padres o tutores sobre tu decision, como crees que van a reaccionar? Que esperan ellos para tu futuro?',
-    3:'Entiendo. Ultima pregunta: hay algo que te preocupe sobre esta decision? Por ejemplo: el costo, la distancia, el tiempo de estudio, o lo que piense tu familia?',
-    4:(n)=>`Gracias por compartir todo esto, ${n||''}. Con lo que me contaste, aqui va tu resumen para la conversacion familiar:\n\n--- RESUMEN PARA MI FAMILIA ---\n\n\uD83C\uDF93 Mi decision: La carrera que elegi basandome en mis intereses y datos reales que explore\n\n\uD83D\uDCCA Por que: Porque se conecta con mi perfil, tiene buenas oportunidades laborales y me motiva\n\n\uD83D\uDC6A Lo que necesito de ustedes: Su apoyo y comprension. Les comparto mi proceso de exploracion\n\n\uD83D\uDCAA Mi plan: Voy a construir un plan concreto con pasos inmediatos en la siguiente sesion\n\n---\n\nRecuerda: la conversacion con tu familia es para COMPARTIR tu decision, no para pedir permiso. Tu hiciste todo un proceso de exploracion con datos reales. Confia en ti.`,
+    0:(n)=>`Hola${n?` ${n}`:' '}! Llegamos a un paso muy importante. Voy a hacerte algunas preguntas sobre la carrera que elegiste y tu familia. Con tus respuestas, voy a preparar un resumen que te ayude a comunicar tu decisión.\n\nCuentame: cual es la carrera o ruta que mas te convencio despues de todo lo que exploraste?`,
+    1:'Buena elección! Ahora dime: por que elegiste esta opcion? Que fue lo que mas te convencio? (pueden ser los datos de salario, lo que se estudia, las oportunidades, o simplemente que te emociona)',
+    2:'Excelente. Ahora hablemos de tu familia. Cuando piensas en contarle a tus padres o tutores sobre tu decisión, como crees que van a reacciónar? Que esperan ellos para tu futuro?',
+    3:'Entiendo. Ultima pregunta: hay algo que te preocupe sobre esta decisión? Por ejemplo: el costo, la distancia, el tiempo de estudio, o lo que piense tu familia?',
+    4:(n)=>`Gracias por compartir todo esto, ${n||''}. Con lo que me contaste, aqui va tu resumen para la conversacion familiar:\n\n--- RESUMEN PARA MI FAMILIA ---\n\n\uD83C\uDF93 Mi decisión: La carrera que elegi basandome en mis intereses y datos reales que explore\n\n\uD83D\uDCCA Por que: Porque se conecta con mi perfil, tiene buenas oportunidades laborales y me motiva\n\n\uD83D\uDC6A Lo que necesito de ustedes: Su apoyo y comprension. Les comparto mi proceso de exploración\n\n\uD83D\uDCAA Mi plan: Voy a construir un plan concreto con pasos inmediatos en la siguiente sesion\n\n---\n\nRecuerda: la conversacion con tu familia es para COMPARTIR tu decisión, no para pedir permiso. Tu hiciste todo un proceso de exploración con datos reales. Confia en ti.`,
   };
   useEffect(()=>{famEnd.current?.scrollIntoView({behavior:'smooth'})},[famMsgs]);
   useEffect(()=>{if(!famInit.current&&famMsgs.length===0){famInit.current=true;setTimeout(()=>setFamMsgs([{r:'ai',t:famAiR[0](userName)}]),600);}},[famMsgs.length]);
@@ -1495,7 +1503,7 @@ function App(){
   const famChatDone=famPhase>=4;
   const Family=()=>(<div className="flex-1 flex flex-col">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3 sm:gap-4">
-        <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Decision y Conversacion Familiar</h2><p className="text-xs text-navy-400">La IA te prepara para hablar con tu familia · Sesiones 7-8</p></div>
+        <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Decisión y Conversacion Familiar</h2><p className="text-xs text-navy-400">La IA te prepara para hablar con tu familia · Sesiones 7-8</p></div>
       </header>
       <div className="flex-1 overflow-y-auto px-4 sm:px-8 py-4 sm:py-6 bg-cream-50">
         <div className="max-w-2xl mx-auto">
@@ -1504,7 +1512,7 @@ function App(){
               <span className="text-2xl shrink-0">\uD83D\uDC6A</span>
               <div>
                 <p className="font-bold text-red-700 text-sm">Por que es tan importante este paso?</p>
-                <p className="text-red-600 text-sm mt-1">En el piloto encontramos que los padres son quienes mas influyen en la decision de carrera. Este paso te prepara con datos y argumentos para esa conversacion.</p>
+                <p className="text-red-600 text-sm mt-1">En el piloto encontramos que los padres son quienes mas influyen en la decisión de carrera. Este paso te prepara con datos y argumentos para esa conversacion.</p>
               </div>
             </div>
           )}
@@ -1534,13 +1542,13 @@ function App(){
   /* ── PLAN (S9-S12) ── */
   const Plan=()=>(<div className="flex-1 overflow-y-auto">
     <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3">
-      <OwlMini size={36}/><div><h2 className="font-black text-navy-700">Plan Accionable + Cierre</h2><p className="text-sm text-navy-400">Construye tu plan concreto · Sesiones 9-12</p></div>
+      <OwlMini size={36}/><div><h2 className="font-black text-navy-700">Plan Acciónable + Cierre</h2><p className="text-sm text-navy-400">Construye tu plan concreto · Sesiones 9-12</p></div>
     </header>
     <div className="max-w-3xl mx-auto px-4 sm:px-8 py-6 sm:py-8">
       <div className="text-center mb-8">
         <OwlMascot size={80} expression="happy" className="mx-auto mascot-shadow mb-4"/>
         <h3 className="text-xl font-black text-navy-700">El momento de actuar!</h3>
-        <p className="text-navy-400 mt-2 text-sm">Transforma tu exploracion en un plan real con pasos concretos.</p>
+        <p className="text-navy-400 mt-2 text-sm">Transforma tu exploración en un plan real con pasos concretos.</p>
       </div>
       <div className="space-y-4 mb-8">
         {[
@@ -1548,8 +1556,8 @@ function App(){
           {title:'Feedback y Plan A 2.0',desc:'La IA revisa tu plan, te da feedback y te ayuda a mejorarlo hasta que sea solido.',icon:'\uD83D\uDD0D',step:'2'},
           {title:'3 primeros pasos inmediatos',desc:'Acciones concretas que puedes hacer ESTA SEMANA para avanzar hacia tu meta.',icon:'\uD83D\uDC5F',step:'3'},
           {title:'Planes B y C',desc:'Porque la vida no siempre sale como uno planea. Construye alternativas viables con la IA.',icon:'\uD83D\uDD00',step:'4'},
-          {title:'CV 1.0 con IA',desc:'Tu primer curriculum, generado con IA, listo para buscar trabajo o practicas. Escalado por uDocz.',icon:'\uD83D\uDCCB',step:'5'},
-          {title:'Carta a mi yo del futuro',desc:'Escribele a tu yo de dentro de 1 anio. Que te dirias? Que esperas haber logrado?',icon:'\u2709\uFE0F',step:'6'},
+          {title:'CV 1.0 con IA',desc:'Tu primer curriculum, generado con IA, listo para buscar trabajo o prácticas. Escalado por uDocz.',icon:'\uD83D\uDCCB',step:'5'},
+          {title:'Carta a mi yo del futuro',desc:'Escribele a tu yo de dentro de 1 año. Que te dirias? Que esperas haber logrado?',icon:'\u2709\uFE0F',step:'6'},
           {title:'NotebookLM: Investiga a fondo',desc:'Conversa con documentos verificados sobre carreras, becas, universidades e institutos. Los documentos ya estan cargados: hazle todas las preguntas que quieras.',icon:'\uD83E\uDD16',step:'7'},
         ].map((item,i)=>(<div key={i} className="bg-white rounded-2xl p-5 border-2 border-cream-200 flex gap-4 items-start animate-slide-up" style={{animationDelay:`${i*.08}s`}}>
           <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center text-brand-500 font-black shrink-0">{item.step}</div>
@@ -1576,11 +1584,11 @@ function App(){
         <div className="flex items-start gap-4">
           <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center shrink-0"><span className="text-2xl">🎓</span></div>
           <div className="flex-1">
-            <h4 className="font-bold text-navy-700 text-sm mb-1">Asesoria Vocacional Gratuita del MTPE</h4>
-            <p className="text-sm text-navy-500 mb-3">El Ministerio de Trabajo ofrece asesorias vocacionales gratuitas con profesionales. Puedes agendar una cita en linea para recibir orientacion personalizada.</p>
+            <h4 className="font-bold text-navy-700 text-sm mb-1">Asesoria Vocaciónal Gratuita del MTPE</h4>
+            <p className="text-sm text-navy-500 mb-3">El Ministerio de Trabajo ofrece asesorias vocaciónales gratuitas con profesionales. Puedes agendar una cita en linea para recibir orientación personalizada.</p>
             <div className="bg-white rounded-xl p-3 mb-3 text-xs text-navy-500 space-y-1">
               <p><strong>1.</strong> Ingresa a la pagina de citas del MTPE</p>
-              <p><strong>2.</strong> Selecciona "Orientacion Vocacional"</p>
+              <p><strong>2.</strong> Seleccióna "Orientación Vocaciónal"</p>
               <p><strong>3.</strong> Elige tu sede mas cercana y un horario disponible</p>
               <p><strong>4.</strong> Lleva tu DNI el dia de la cita</p>
             </div>
