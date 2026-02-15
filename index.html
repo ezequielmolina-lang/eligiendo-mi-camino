@@ -380,6 +380,7 @@ function App(){
   const[answers,setAnswers]=useState({});
   const[qIdx,setQIdx]=useState(0);
   const[results,setResults]=useState(null);
+  const[showPartIntro,setShowPartIntro]=useState(null);
   const[selSector,setSelSector]=useState(null);
   const[selCareer,setSelCareer]=useState(null);
   const[mythIdx,setMythIdx]=useState(0);
@@ -652,6 +653,8 @@ function App(){
   const rushCount=useRef(0);
   const[rushWarn,setRushWarn]=useState(false);
   const Test=()=>{
+    /* Show Part 1 intro on first render */
+    React.useEffect(()=>{if(qIdx===0&&Object.keys(answers).length===0&&showPartIntro===null)setShowPartIntro(0);},[]);
     const q=riasecQuestions[qIdx];
     const part=riasecParts[q.part];
     const answer=(v)=>{
@@ -661,7 +664,11 @@ function App(){
       else rushCount.current=0;
       lastAnswerTime.current=now;
       const na={...answers,[qIdx]:{p:q.p,v}};setAnswers(na);
-      if(qIdx<riasecQuestions.length-1)setTimeout(()=>setQIdx(i=>i+1),250);
+      if(qIdx<riasecQuestions.length-1){
+        const nextQ=riasecQuestions[qIdx+1];
+        if(nextQ.part!==q.part){setShowPartIntro(nextQ.part);setAnswers(na);setTimeout(()=>setQIdx(i=>i+1),250);}
+        else setTimeout(()=>setQIdx(i=>i+1),250);
+      }
       else{const sc={};Object.values(na).forEach(a=>{sc[a.p]=(sc[a.p]||0)+a.v;});const sorted=Object.entries(sc).sort((a,b)=>b[1]-a[1]).slice(0,3);setResults(sorted.map(([k])=>k));setTimeout(()=>nav('test-results'),400);}
     };
     const dismissRush=()=>{setRushWarn(false);rushCount.current=0;};
@@ -669,8 +676,61 @@ function App(){
     const partStartIdx=[0,30,60];const currentPartNum=q.part;
     const qInPart=qIdx-partStartIdx[currentPartNum]+1;
     const partTotal=currentPartNum===2?7:30;
-    /* Detect part transition */
-    const isPartStart=partStartIdx.includes(qIdx)&&qIdx>0;
+    /* Part transition interstitial data */
+    const partIntros=[
+      {title:'Parte 1: Actividades',icon:'❤️',color:'from-rose-500 to-pink-600',
+       heading:'Que te gusta hacer?',
+       desc:'En esta primera parte, vamos a explorar tus INTERESES. Te voy a nombrar distintas actividades y quiero que me digas que tanto te gusta cada una.',
+       tip:'No pienses en si eres bueno o malo — solo en si te GUSTA o no.',
+       labels:['😟 No me gusta nada','🙁 Me gusta poco','😐 Me da igual','🙂 Me gusta','😄 Me gusta mucho']},
+      {title:'Parte 2: Habilidades',icon:'💪',color:'from-blue-500 to-indigo-600',
+       heading:'Que sabes hacer?',
+       desc:'Ahora cambiamos de enfoque. Ya no preguntamos que te GUSTA, sino que tan bien PUEDES hacerlo. Esto mide tus APTITUDES.',
+       tip:'Ojo: que algo te guste no significa que se te de bien, y viceversa. Puede que te encante dibujar pero no se te de tan bien, o que seas muy bueno en matematicas aunque no te emocione. Las dos cosas importan!',
+       labels:['😟 Me cuesta mucho','😕 Me cuesta un poco','😐 Me sale mas o menos','🙂 Me sale bien','😄 Me sale muy bien']},
+      {title:'Parte 3: Autoevaluacion',icon:'🎯',color:'from-amber-500 to-orange-600',
+       heading:'Como evaluas tus habilidades?',
+       desc:'Ultima parte! Aqui vas a autoevaluar tu nivel en 7 areas generales. Se honesto contigo mismo — no hay respuestas correctas.',
+       tip:'Piensa en situaciones reales donde hayas usado estas habilidades, en el colegio, en casa o con amigos.',
+       labels:['1️⃣ Por desarrollar','2️⃣','3️⃣ En desarrollo','4️⃣','5️⃣ Fortaleza']}
+    ];
+    /* Show interstitial screen between parts */
+    if(showPartIntro!==null){
+      const pi=partIntros[showPartIntro];
+      const completedParts=showPartIntro;
+      return(<div className="flex-1 flex flex-col bg-cream-50">
+        <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white">
+          <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Test de Intereses RIASEC</h2><p className="text-xs text-navy-400">Cambio de seccion</p></div></div>
+          <div className="flex gap-2 mt-3">
+            {riasecParts.map((pp,i)=>(<span key={i} className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${i<completedParts?'bg-green-100 text-green-700':i===showPartIntro?'bg-brand-400 text-white':'bg-cream-100 text-navy-400'}`}>{i<completedParts?'✓ ':''}{i+1}. {i===0?'Actividades':i===1?'Habilidades':'Autoevaluacion'}</span>))}
+          </div>
+        </header>
+        <div className="flex-1 flex items-center justify-center px-4 sm:px-8">
+          <div className="animate-scale-in w-full max-w-lg text-center">
+            <div className={`w-20 h-20 rounded-full bg-gradient-to-br ${pi.color} flex items-center justify-center mx-auto mb-5 shadow-lg`}>
+              <span className="text-3xl">{pi.icon}</span>
+            </div>
+            {completedParts>0&&(<div className="bg-green-50 border border-green-200 rounded-xl px-4 py-2.5 mb-5 inline-block">
+              <p className="text-green-700 text-sm font-bold">Parte {completedParts} completada!</p>
+            </div>)}
+            <h3 className="text-2xl font-black text-navy-700 mb-3">{pi.heading}</h3>
+            <p className="text-navy-600 mb-4 leading-relaxed">{pi.desc}</p>
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 text-left">
+              <p className="text-sm text-amber-800 font-medium"><span className="font-bold">💡 Importante:</span> {pi.tip}</p>
+            </div>
+            <div className="bg-white rounded-xl border border-cream-200 p-4 mb-6">
+              <p className="text-xs font-bold text-navy-400 mb-2">Escala de respuesta:</p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {pi.labels.map((l,i)=>(<span key={i} className="text-[10px] bg-cream-50 px-2 py-1 rounded-lg text-navy-600">{l}</span>))}
+              </div>
+            </div>
+            <button onClick={()=>setShowPartIntro(null)} className="px-8 py-3 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105">
+              Comenzar {pi.title}
+            </button>
+          </div>
+        </div>
+      </div>);
+    }
     return(<div className="flex-1 flex flex-col">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white">
         <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Test de Intereses RIASEC</h2><p className="text-xs text-navy-400">{part.title} · Pregunta {qInPart}/{partTotal}</p></div></div>
@@ -680,7 +740,7 @@ function App(){
         </div>
         {/* Part indicator pills */}
         <div className="flex gap-2 mt-2">
-          {riasecParts.map((pp,pi)=>(<span key={pi} className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${pi===currentPartNum?'bg-brand-400 text-white':'bg-cream-100 text-navy-400'}`}>{pi+1}. {pi===0?'Actividades':pi===1?'Habilidades':'Autoevaluacion'}</span>))}
+          {riasecParts.map((pp,pi)=>(<span key={pi} className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${pi<currentPartNum?'bg-green-100 text-green-700':pi===currentPartNum?'bg-brand-400 text-white':'bg-cream-100 text-navy-400'}`}>{pi<currentPartNum?'✓ ':''}{pi+1}. {pi===0?'Actividades':pi===1?'Habilidades':'Autoevaluacion'}</span>))}
         </div>
       </header>
       {/* Rush warning overlay */}
@@ -1196,7 +1256,7 @@ function App(){
               })}
             </tbody></table>
           </div>
-          <p className="text-[11px] text-navy-300 text-center mt-4">Datos del MTPE - Planilla Electronica (Sep 2023 - Ago 2024) · Lima Metropolitana. Mas carreras disponibles en la plataforma completa.</p>
+          <p className="text-[11px] text-navy-300 text-center mt-4">Fuente: Portal Mi Carrera MTPE, 2025 · Lima Metropolitana. Mas carreras disponibles en la plataforma completa.</p>
           <button onClick={()=>{mark(4);nav('home');}} className="w-full mt-4 py-3.5 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold shadow-lg hover:opacity-90 transition">Completar paso</button>
         </div>)}
       </div>
@@ -1243,7 +1303,7 @@ function App(){
           <h3 className="font-bold text-navy-700 text-sm mb-3">Donde puedes trabajar?</h3>
           <div className="flex flex-wrap gap-2">{c.where.map((w,i)=><span key={i} className="px-3 py-1.5 bg-navy-50 text-navy-600 text-sm rounded-lg font-bold">{w}</span>)}</div>
         </div>)}
-        <p className="text-[11px] text-navy-300 text-center mt-4">Datos del MTPE - Planilla Electronica (Sep 2023 - Ago 2024)</p>
+        <p className="text-[11px] text-navy-300 text-center mt-4">Fuente: Portal Mi Carrera MTPE, 2025</p>
       </div>
     </div>);
   };
@@ -1390,6 +1450,25 @@ function App(){
         <div className="flex items-center justify-center gap-3 mb-2"><span className="text-2xl">📋</span><p className="font-bold text-navy-700 text-sm">Generador de CV 1.0 con IA</p></div>
         <p className="text-navy-400 text-xs mb-3">La IA genera un primer curriculum basado en los datos del estudiante. Escalado y disenado por uDocz.</p>
         <div className="bg-blue-50 rounded-xl h-28 flex items-center justify-center"><p className="text-blue-300 text-sm">CV Generator embed (uDocz desarrolla)</p></div>
+      </div>
+      {/* MTPE Free Counseling */}
+      <div className="bg-gradient-to-r from-teal-50 to-cyan-50 border-2 border-teal-200 rounded-2xl p-5 mb-6">
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center shrink-0"><span className="text-2xl">🎓</span></div>
+          <div className="flex-1">
+            <h4 className="font-bold text-navy-700 text-sm mb-1">Asesoria Vocacional Gratuita del MTPE</h4>
+            <p className="text-sm text-navy-500 mb-3">El Ministerio de Trabajo ofrece asesorias vocacionales gratuitas con profesionales. Puedes agendar una cita en linea para recibir orientacion personalizada.</p>
+            <div className="bg-white rounded-xl p-3 mb-3 text-xs text-navy-500 space-y-1">
+              <p><strong>1.</strong> Ingresa a la pagina de citas del MTPE</p>
+              <p><strong>2.</strong> Selecciona "Orientacion Vocacional"</p>
+              <p><strong>3.</strong> Elige tu sede mas cercana y un horario disponible</p>
+              <p><strong>4.</strong> Lleva tu DNI el dia de la cita</p>
+            </div>
+            <a href="https://extranet.trabajo.gob.pe/extranet/web/citas" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500 text-white rounded-lg font-bold text-sm hover:bg-teal-600 transition">
+              Agendar cita gratuita <span>→</span>
+            </a>
+          </div>
+        </div>
       </div>
       <div className="bg-brand-50 border-2 border-brand-200 rounded-2xl p-5 mb-6 flex gap-3">
         <OwlMini size={32}/>
