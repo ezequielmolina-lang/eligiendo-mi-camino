@@ -774,7 +774,7 @@ function App(){
   const testInitRef=useRef(false);
   const answerPending=useRef(false);
   const[selectedBtn,setSelectedBtn]=useState(null);
-  const maxQReached=useRef(0);
+  const[maxQReached,setMaxQReached]=useState(0);
   /* Init test: show Part 1 intro when navigating to test for first time; reset answerPending on re-entry */
   useEffect(()=>{if(view==='test'){answerPending.current=false;rushCount.current=0;if(!testInitRef.current&&qIdx===0&&Object.keys(answers).length===0&&showPartIntro===null){testInitRef.current=true;setShowPartIntro(0);}}},[view]);
   const Test=()=>{
@@ -795,14 +795,14 @@ function App(){
       const na={...answers,[qIdx]:{p:q.p,v}};
       if(qIdx<riasecQuestions.length-1){
         const nextQ=riasecQuestions[qIdx+1];
-        if(nextQ.part!==q.part){setTimeout(()=>{const nxt=qIdx+1;if(nxt>maxQReached.current)maxQReached.current=nxt;setAnswers(na);setQIdx(nxt);setSelectedBtn(null);setShowPartIntro(nextQ.part);answerPending.current=false;window.scrollTo(0,0);},200);}
-        else{setTimeout(()=>{const nxt=qIdx+1;if(nxt>maxQReached.current)maxQReached.current=nxt;setAnswers(na);setQIdx(nxt);setSelectedBtn(null);answerPending.current=false;},200);}
+        if(nextQ.part!==q.part){setTimeout(()=>{const nxt=qIdx+1;setMaxQReached(m=>Math.max(m,nxt));setAnswers(na);setQIdx(nxt);setSelectedBtn(null);setShowPartIntro(nextQ.part);answerPending.current=false;window.scrollTo(0,0);},200);}
+        else{setTimeout(()=>{const nxt=qIdx+1;setMaxQReached(m=>Math.max(m,nxt));setAnswers(na);setQIdx(nxt);setSelectedBtn(null);answerPending.current=false;},200);}
       }
       else{setTimeout(()=>{const sc={};Object.values(na).forEach(a=>{sc[a.p]=(sc[a.p]||0)+a.v;});const sorted=Object.entries(sc).sort((a,b)=>b[1]-a[1]).slice(0,3);setAnswers(na);setResults(sorted.map(([k])=>k));setSelectedBtn(null);nav('test-results');answerPending.current=false;},200);}
     };
-    const goBack=()=>{if(qIdx>0){setSelectedBtn(null);setQIdx(i=>i-1);}};
-    const canGoFwd=qIdx<maxQReached.current;
-    const goFwd=()=>{if(canGoFwd){setSelectedBtn(null);setQIdx(i=>i+1);}};
+    const goBack=()=>{if(qIdx>0){setSelectedBtn(null);const prev=qIdx-1;const prevQ=riasecQuestions[prev];if(prevQ.part!==q.part)setShowPartIntro(null);setQIdx(prev);}};
+    const canGoFwd=qIdx<maxQReached;
+    const goFwd=()=>{if(canGoFwd){setSelectedBtn(null);const nxt=qIdx+1;const nxtQ=riasecQuestions[nxt];if(nxtQ.part!==q.part)setShowPartIntro(null);setQIdx(nxt);}};
     const dismissRush=()=>{setRushWarn(false);rushCount.current=0;};
     const pct=Math.round((qIdx/riasecQuestions.length)*100);
     const partStartIdx=[0,30,60];const currentPartNum=q.part;
@@ -887,8 +887,8 @@ function App(){
           </div>
         </div>
       </div>)}
-      <div className="flex-1 overflow-y-auto px-4 sm:px-8 py-4 sm:py-6 bg-cream-50 flex items-center justify-center">
-        <div key={qIdx} className="w-full max-w-xl">
+      <div className="flex-1 overflow-y-auto px-4 sm:px-8 py-4 sm:py-6 bg-cream-50 flex items-start sm:items-center justify-center">
+        <div key={qIdx} className="w-full max-w-xl py-2 sm:py-0">
           <p className="text-center text-xs sm:text-sm font-bold text-brand-400 mb-2 sm:mb-3">{part.instruction}</p>
           <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-lg border-2 border-cream-200 mb-4 sm:mb-6">
             <p className="text-base sm:text-xl font-bold text-navy-700 text-center leading-relaxed">{q.text}</p>
@@ -899,14 +899,14 @@ function App(){
               <span className="text-base sm:text-xl">{part.emoji[i]}</span><span className="text-[8px] sm:text-xs font-medium leading-tight text-center px-0.5">{l}</span>
             </button>);})}
           </div>
-          {(qIdx>0||canGoFwd)&&<div className="mt-4 flex items-center justify-center gap-6">
-            {qIdx>0?<button onClick={goBack} className="flex items-center gap-1.5 text-sm text-navy-400 hover:text-brand-400 font-medium transition">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          {(qIdx>0||canGoFwd)&&<div className="mt-4 sm:mt-5 flex items-center justify-center gap-4">
+            {qIdx>0?<button onClick={goBack} className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm text-navy-500 hover:text-brand-500 hover:bg-brand-50 font-semibold transition active:scale-95">
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
               Anterior
             </button>:<span/>}
-            {canGoFwd&&<button onClick={goFwd} className="flex items-center gap-1.5 text-sm text-navy-400 hover:text-brand-400 font-medium transition">
+            {canGoFwd&&<button onClick={goFwd} className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm text-navy-500 hover:text-brand-500 hover:bg-brand-50 font-semibold transition active:scale-95">
               Siguiente
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>}
           </div>}
         </div>
