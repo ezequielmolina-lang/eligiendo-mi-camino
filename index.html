@@ -70,109 +70,220 @@ const I={
   x:p=><svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>,
 };
 
-/* ── SECTOR DATA (representative careers per sector) ── */
+/* -- SECTOR DATA (career_explorer_v5 - 12 sectors, 142 ocupaciones) -- */
 const sectors=[
-  {id:'mineria',name:'Mineria y Recursos Naturales',icon:'\u26CF\uFE0F',color:'from-amber-500 to-yellow-600',tag:'Top $',
-   desc:'El sector MEJOR PAGADO de Peru. Tecnicos mineros ganan mas que muchos universitarios.',
-   careers:[
-     {name:'Tecnico en Mineria',level:'tecnica',salary:'S/ 6,235',growth:'S/ 8,480',range:'S/ 1,793 - S/ 11,537',skills:['Operacion maquinaria','Seguridad minera','Control calidad'],where:['Antamina','Southern Copper','Cerro Verde','Las Bambas']},
-     {name:'Ingenieria Minera',level:'universitaria',salary:'S/ 4,270',growth:'S/ 11,309',range:'S/ 1,864 - S/ 7,303',skills:['Gestion de proyectos','Geologia aplicada','Seguridad'],where:['Antamina','Buenaventura','Southern Copper']},
-     {name:'Geologia',level:'universitaria',salary:'S/ 4,043',growth:'S/ 12,049',range:'S/ 2,000 - S/ 6,603',skills:['Analisis geologico','Trabajo de campo','Mapeo'],where:['INGEMMET','Consultoras','Empresas mineras']},
-     {name:'Peon de mina',level:'secundaria',salary:'Variable',growth:'-',range:'Depende de empresa',skills:['Trabajo fisico','Seguridad','Trabajo en equipo'],where:['Contratistas mineros']},
-     {name:'Ayudante de perforacion',level:'secundaria',salary:'Variable',growth:'-',range:'Depende de empresa',skills:['Resistencia fisica','Seguir instrucciones'],where:['Empresas de perforacion']},
-   ]},
-  {id:'tech',name:'Tecnologia y Computacion',icon:'\uD83D\uDCBB',color:'from-blue-500 to-cyan-600',tag:'Top $',
-   desc:'Mayor crecimiento global. Alta demanda de programadores y analistas de datos.',
-   careers:[
-     {name:'Ing. Sistemas y Computo',level:'universitaria',salary:'S/ 4,710',growth:'S/ 8,934',range:'S/ 1,900 - S/ 8,000',skills:['Programacion','Arquitectura de software','Cloud'],where:['Google','Microsoft','BCP','Interbank']},
-     {name:'Ciencias de la Computacion',level:'universitaria',salary:'S/ 4,651',growth:'S/ 8,792',range:'S/ 2,000 - S/ 8,240',skills:['Algoritmos','Machine Learning','Python'],where:['Fintech','Startups','Tech global']},
-     {name:'Estadistica',level:'universitaria',salary:'S/ 4,527',growth:'S/ 8,879',range:'S/ 1,815 - S/ 7,500',skills:['R y Python','Modelamiento','Big Data'],where:['Bancos','INEI','Consultoras']},
-     {name:'Tec. Computacion',level:'tecnica',salary:'S/ 3,968',growth:'S/ 5,062',range:'S/ 1,364 - S/ 7,643',skills:['Programacion','Redes','Soporte tecnico'],where:['BCP','IBM','Startups']},
-     {name:'Tec. Telecomunicaciones',level:'tecnica',salary:'S/ 2,213',growth:'S/ 4,412',range:'S/ 1,700 - S/ 3,000',skills:['Redes','Fibra optica','Electronica'],where:['Claro','Movistar','Entel']},
-     {name:'Ing. Electronica',level:'universitaria',salary:'S/ 3,710',growth:'S/ 9,082',range:'S/ 1,700 - S/ 6,401',skills:['Electronica','IoT','Automatizacion'],where:['Industrias','Automotriz','Mineras'],study:'Circuitos, telecomunicaciones, automatizacion, programacion',dayInLife:'Disenha sistemas electronicos, programa microcontroladores, automatiza procesos'},
-   ]},
-  {id:'salud',name:'Salud',icon:'\uD83C\uDFE5',color:'from-rose-500 to-pink-600',
-   desc:'El sector salud siempre tiene demanda laboral. Multiples especialidades.',
-   careers:[
-     {name:'Medicina',level:'universitaria',salary:'S/ 3,897',growth:'S/ 7,013',range:'S/ 1,481 - S/ 6,624',skills:['Diagnostico','Tratamiento','Investigacion'],where:['Hospitales','Clinicas','Consultorio privado'],study:'Anatomia, fisiologia, farmacologia, clinica, cirugia, salud publica',dayInLife:'Atiende pacientes, diagnostica enfermedades, prescribe tratamientos'},
-     {name:'Psicologia',level:'universitaria',salary:'S/ 2,534',growth:'S/ 5,648',range:'S/ 1,250 - S/ 4,200',skills:['Terapia','Empatia','Evaluacion'],where:['Clinicas','Consulta privada','Empresas'],study:'Psicologia clinica, organizacional, desarrollo humano, neurociencia',dayInLife:'Realiza terapias, evaluaciones psicologicas, asesora organizaciones'},
-     {name:'Farmacia y Bioquimica',level:'universitaria',salary:'S/ 3,021',growth:'S/ 6,334',range:'S/ 1,383 - S/ 5,000',skills:['Farmacologia','Quimica','Investigacion'],where:['Laboratorios','Industria farmaceutica']},
-     {name:'Enfermeria (tecnica)',level:'tecnica',salary:'S/ 1,667',growth:'S/ 2,248',range:'S/ 1,130 - S/ 2,427',skills:['Cuidado de pacientes','Empatia','Primeros auxilios'],where:['EsSalud','MINSA','Clinicas']},
-     {name:'Odontologia',level:'universitaria',salary:'S/ 2,216',growth:'S/ 4,635',range:'S/ 1,130 - S/ 4,169',skills:['Odontologia','Atencion al paciente'],where:['Consultorios','Clinicas dentales']},
-     {name:'Nutricion',level:'universitaria',salary:'S/ 2,234',growth:'S/ 4,567',range:'S/ 1,150 - S/ 3,700',skills:['Nutricion clinica','Dietetica'],where:['Hospitales','Consultorios','Gimnasios']},
-   ]},
-  {id:'admin',name:'Administracion y Negocios',icon:'\uD83D\uDCBC',color:'from-violet-500 to-purple-600',
-   desc:'Todas las empresas necesitan administradores, contadores y abogados.',
-   careers:[
-     {name:'Economia',level:'universitaria',salary:'S/ 4,526',growth:'S/ 11,726',range:'S/ 1,667 - S/ 8,200',skills:['Finanzas','Econometria','Analisis'],where:['BCR','MEF','Bancos','Consultoras'],study:'Matematicas, estadistica, finanzas, teoria economica, econometria',dayInLife:'Analiza indicadores, prepara reportes financieros, asesora empresas o gobierno'},
-     {name:'Derecho',level:'universitaria',salary:'S/ 3,622',growth:'S/ 10,351',range:'S/ 1,500 - S/ 6,435',skills:['Argumentacion','Negociacion','Derecho'],where:['Estudios de abogados','Empresas','Estado'],study:'Derecho civil, penal, constitucional, procesal, argumentacion',dayInLife:'Revisa contratos, asesora clientes, litiga en juzgados, negocia acuerdos'},
-     {name:'Marketing',level:'universitaria',salary:'S/ 3,704',growth:'S/ 9,923',range:'S/ 1,500 - S/ 6,629',skills:['Marketing digital','Creatividad','Analisis'],where:['Consumo masivo','Agencias','Tech'],study:'Marketing digital, investigacion de mercados, publicidad, estrategia',dayInLife:'Planifica campanas, analiza datos de clientes, gestiona redes sociales'},
-     {name:'Contabilidad',level:'universitaria',salary:'S/ 2,827',growth:'S/ 6,529',range:'S/ 1,402 - S/ 4,580',skills:['Contabilidad','SUNAT','NIIF'],where:['Big Four','Estudios contables'],study:'Contabilidad financiera, tributacion, NIIF, auditoria',dayInLife:'Lleva libros contables, prepara declaraciones SUNAT, revisa estados financieros'},
-     {name:'Tec. Administracion',level:'tecnica',salary:'S/ 2,370',growth:'S/ 4,652',range:'S/ 1,200 - S/ 3,940',skills:['Administracion','Excel','Gestion'],where:['Cualquier empresa']},
-     {name:'Tec. Contabilidad',level:'tecnica',salary:'S/ 2,206',growth:'S/ 3,442',range:'S/ 1,200 - S/ 3,419',skills:['Contabilidad basica','Excel','SUNAT'],where:['Estudios contables','Empresas']},
-   ]},
-  {id:'infra',name:'Infraestructura e Ingenieria',icon:'\uD83C\uDFD7\uFE0F',color:'from-slate-500 to-gray-600',
-   desc:'Peru invierte miles de millones en infraestructura cada anio.',
-   careers:[
-     {name:'Ingenieria Civil',level:'universitaria',salary:'S/ 4,152',growth:'S/ 10,621',range:'S/ 1,923 - S/ 7,000',skills:['Estructuras','Gestion de proyectos','BIM'],where:['COSAPI','Grana y Montero','JJC'],study:'Estructuras, hidraulica, mecanica de suelos, gestion de proyectos, BIM',dayInLife:'Disenha y supervisa construcciones, revisa planos, coordina con obreros'},
-     {name:'Ingenieria Industrial',level:'universitaria',salary:'S/ 4,248',growth:'S/ 10,257',range:'S/ 1,800 - S/ 7,400',skills:['Gestion','Logistica','Six Sigma'],where:['Cualquier industria','Consultoras'],study:'Gestion de operaciones, logistica, control de calidad, Six Sigma',dayInLife:'Optimiza procesos, reduce costos, mejora la productividad de empresas'},
-     {name:'Tec. Electricista',level:'tecnica',salary:'S/ 3,128',growth:'S/ 6,278',range:'S/ 1,500 - S/ 5,071',skills:['Instalaciones electricas','Seguridad','Normativa'],where:['ENEL','Luz del Sur','Constructoras']},
-     {name:'Tec. Industrial',level:'tecnica',salary:'S/ 3,383',growth:'S/ 8,566',range:'S/ 1,600 - S/ 6,613',skills:['Procesos','Calidad','Lean Manufacturing'],where:['Fabricas','Manufactura','Agroindustria']},
-     {name:'Arquitectura',level:'universitaria',salary:'S/ 3,213',growth:'S/ 7,185',range:'S/ 1,500 - S/ 5,310',skills:['Diseno','AutoCAD','BIM'],where:['Estudios','Inmobiliarias','Municipalidades'],study:'Diseno arquitectonico, urbanismo, estructuras, AutoCAD, BIM',dayInLife:'Disenha edificios y espacios, elabora planos, supervisa construcciones'},
-   ]},
-  {id:'agro',name:'Agronegocios y Agroindustria',icon:'\uD83C\uDF3E',color:'from-green-500 to-emerald-600',
-   desc:'Peru es lider mundial en exportacion de arandanos, paltas y esparragos.',
-   careers:[
-     {name:'Agronegocios',level:'universitaria',salary:'S/ 4,312',growth:'S/ 10,567',range:'S/ 1,800 - S/ 7,500',skills:['Gestion empresarial','Comercio exterior'],where:['Camposol','Danper','Viru'],study:'Administracion, comercio exterior, produccion agricola, logistica',dayInLife:'Gestiona exportaciones, negocia con compradores internacionales, optimiza cadenas'},
-     {name:'Veterinaria',level:'universitaria',salary:'S/ 2,547',growth:'S/ 6,317',range:'S/ 1,215 - S/ 4,175',skills:['Medicina veterinaria','Sanidad animal'],where:['Clinicas','SENASA','Agroindustrias'],study:'Anatomia animal, cirugia, parasitologia, produccion animal',dayInLife:'Atiende animales, realiza cirugias, controla sanidad en granjas'},
-     {name:'Ing. Industrias Alimentarias',level:'universitaria',salary:'S/ 3,456',growth:'S/ 7,234',range:'S/ 1,500 - S/ 5,800',skills:['HACCP','Procesos','Innovacion'],where:['Alicorp','Gloria','Nestle']},
-     {name:'Operario agricola',level:'secundaria',salary:'Variable',growth:'-',range:'Depende de temporada',skills:['Trabajo fisico','Madrugador'],where:['Camposol','Danper','Agroexportadoras']},
-   ]},
-  {id:'turismo',name:'Turismo, Hoteleria y Gastronomia',icon:'\uD83C\uDF7D\uFE0F',color:'from-orange-500 to-red-600',
-   desc:'Peru es potencia gastronomica y turistica mundial.',
-   careers:[
-     {name:'Admin. Turismo y Hoteleria',level:'universitaria',salary:'S/ 2,721',growth:'S/ 5,087',range:'S/ 1,342 - S/ 4,268',skills:['Gestion hotelera','Marketing turistico','Idiomas'],where:['Cadenas hoteleras','Restaurantes']},
-     {name:'Tec. Turismo y Gastronomia',level:'tecnica',salary:'S/ 2,606',growth:'S/ 4,940',range:'S/ 1,303 - S/ 4,060',skills:['Servicio al cliente','Idiomas','Gestion'],where:['Hoteles','Restaurantes','Cruceros']},
-     {name:'Cocinero',level:'secundaria',salary:'Variable',growth:'-',range:'Depende del local',skills:['Cocina','Organizacion','Trabajo bajo presion'],where:['Restaurantes','Hoteles','Eventos']},
-     {name:'Barista',level:'secundaria',salary:'Variable',growth:'-',range:'Depende del local',skills:['Atencion al cliente','Rapidez'],where:['Starbucks','Cafeterias']},
-   ]},
-  {id:'educacion',name:'Educacion',icon:'\uD83D\uDCDA',color:'from-teal-500 to-cyan-600',
-   desc:'Formacion de las nuevas generaciones del pais.',
-   careers:[
-     {name:'Educacion Secundaria',level:'universitaria',salary:'S/ 2,456',growth:'S/ 4,123',range:'S/ 1,400 - S/ 3,800',skills:['Especializacion','Pedagogia','Comunicacion'],where:['Colegios','MINEDU','Academias'],study:'Pedagogia, didactica, especializacion en materia, psicologia educativa',dayInLife:'Prepara clases, ensenha a adolescentes, evalua aprendizajes, asesora estudiantes'},
-     {name:'Educacion Inicial',level:'universitaria',salary:'S/ 2,265',growth:'S/ 3,623',range:'S/ 1,308 - S/ 3,411',skills:['Pedagogia infantil','Creatividad'],where:['Colegios','MINEDU','Nidos privados']},
-     {name:'Idiomas',level:'universitaria',salary:'S/ 2,567',growth:'S/ 4,345',range:'S/ 1,400 - S/ 4,000',skills:['Idiomas','Didactica','Comunicacion'],where:['Institutos','Colegios','Centros de idiomas']},
-   ]},
-  {id:'comunicacion',name:'Comunicacion y Diseno',icon:'\uD83C\uDFA8',color:'from-pink-500 to-fuchsia-600',
-   desc:'La era digital requiere comunicadores creativos.',
-   careers:[
-     {name:'Ciencias de la Comunicacion',level:'universitaria',salary:'S/ 2,967',growth:'S/ 6,534',range:'S/ 1,365 - S/ 5,000',skills:['Comunicacion estrategica','RRPP','Contenido'],where:['Agencias','Empresas','Medios'],study:'Periodismo, RRPP, produccion audiovisual, comunicacion estrategica',dayInLife:'Crea contenido, maneja imagen corporativa, produce material audiovisual'},
-     {name:'Diseno',level:'universitaria',salary:'S/ 2,949',growth:'S/ 6,138',range:'S/ 1,400 - S/ 5,200',skills:['Adobe Suite','UX/UI','Branding'],where:['Agencias','Tech','Freelance'],study:'Diseno grafico, UX/UI, branding, tipografia, Adobe Suite',dayInLife:'Crea identidades visuales, disenha interfaces, desarrolla material grafico'},
-     {name:'Tec. Diseno',level:'tecnica',salary:'S/ 2,808',growth:'S/ 5,737',range:'S/ 1,350 - S/ 5,000',skills:['Adobe Suite','Diseno grafico','Creatividad'],where:['Agencias','Freelance']},
-     {name:'Periodismo',level:'universitaria',salary:'S/ 2,567',growth:'S/ 5,234',range:'S/ 1,300 - S/ 4,200',skills:['Redaccion','Locucion','Investigacion'],where:['Medios','Agencias','Corporaciones'],study:'Redaccion periodistica, investigacion, produccion audiovisual',dayInLife:'Investiga noticias, entrevista fuentes, redacta articulos, produce reportajes'},
-   ]},
-  {id:'ciencias',name:'Ciencias y Medio Ambiente',icon:'\uD83D\uDD2C',color:'from-emerald-500 to-green-600',
-   desc:'Innovacion y sostenibilidad para el futuro.',
-   careers:[
-     {name:'Quimica',level:'universitaria',salary:'S/ 2,890',growth:'S/ 5,678',range:'S/ 1,350 - S/ 4,800',skills:['Laboratorio','Analisis','Investigacion'],where:['Laboratorios','Industrias','Universidades'],study:'Quimica organica e inorganica, analisis instrumental, bioquimica',dayInLife:'Trabaja en laboratorio, analiza muestras, investiga nuevos compuestos'},
-     {name:'Biologia',level:'universitaria',salary:'S/ 2,567',growth:'S/ 5,234',range:'S/ 1,250 - S/ 4,300',skills:['Investigacion','Laboratorio','Analisis'],where:['Universidades','Laboratorios','SERNANP']},
-     {name:'Ecologia y Medio Ambiente',level:'universitaria',salary:'S/ 2,456',growth:'S/ 5,012',range:'S/ 1,200 - S/ 4,100',skills:['Gestion ambiental','EIA','Sostenibilidad'],where:['MINAM','Consultoras','Mineras']},
-   ]},
-  {id:'servicios',name:'Servicios y Seguridad',icon:'\uD83D\uDEE1\uFE0F',color:'from-gray-500 to-slate-600',
-   desc:'Sector con alta demanda, especialmente en Lima.',
-   careers:[
-     {name:'Vigilante / Seguridad',level:'secundaria',salary:'Variable',growth:'-',range:'S/ 1,100 - S/ 1,800',skills:['Responsabilidad','Alerta','Buena condicion fisica'],where:['Prosegur','Securitas','G4S']},
-     {name:'Personal de limpieza',level:'secundaria',salary:'Variable',growth:'-',range:'S/ 1,025 - S/ 1,500',skills:['Limpieza','Puntualidad','Responsabilidad'],where:['Oficinas','Malls','Hospitales']},
-     {name:'Peluquero / Barbero',level:'secundaria',salary:'Variable',growth:'-',range:'Depende de clientela',skills:['Habilidad manual','Trato al cliente','Creatividad'],where:['Peluquerias','Barberias','Independiente']},
-   ]},
-  {id:'logistica',name:'Logistica y Transporte',icon:'\uD83D\uDE9A',color:'from-indigo-500 to-blue-600',
-   desc:'El boom del e-commerce impulsa la logistica.',
-   careers:[
-     {name:'Auxiliar de almacen',level:'secundaria',salary:'Variable',growth:'-',range:'S/ 1,025 - S/ 1,600',skills:['Organizacion','Trabajo fisico','Computacion basica'],where:['Almacenes','E-commerce','Distribuidoras']},
-     {name:'Repartidor / Delivery',level:'secundaria',salary:'Variable',growth:'-',range:'Depende de pedidos',skills:['Orientacion','Puntualidad','Licencia de moto'],where:['Rappi','PedidosYa','Glovo']},
-     {name:'Chofer / Conductor',level:'secundaria',salary:'Variable',growth:'-',range:'S/ 1,200 - S/ 2,500',skills:['Licencia A2/A3','Conocimiento de rutas'],where:['Transportes','Distribuidoras']},
-   ]},
+  {id:'mineria',name:'Mineria y Recursos Naturales',icon:'⛏️',color:'from-yellow-600 to-amber-700',tag:'Top $',desc:'Es el sector MEJOR PAGADO de Peru. Los tecnicos mineros ganan mas que muchos universitarios.',ocupaciones:{
+    secundaria:[
+      {name:'Peon de mina',salary:'Variable',growth:'-',desc:'Apoyo en operaciones mineras: carga, descarga, limpieza de areas.',skills:['Trabajo fisico','Seguridad','Trabajo en equipo'],where:['Antamina','Southern','Cerro Verde','Las Bambas']},
+      {name:'Ayudante de perforacion',salary:'Variable',growth:'-',desc:'Apoyo en trabajos de perforacion y voladura.',skills:['Resistencia fisica','Seguir instrucciones','Seguridad'],where:['Empresas de perforacion','Contratistas mineros']},
+    ],
+    tecnica:[
+      {name:'Tecnico en Mineria, Metalurgia y Petroleo',salary:'S/ 6,235',growth:'S/ 8,480',range:'S/ 1,793 - S/ 11,537',rangeAdult:'S/ 3,093 - S/ 17,759',desc:'Operas equipos pesados, procesas minerales, controlas calidad y seguridad.',skills:['Operacion de maquinaria','Seguridad minera','Control de calidad'],where:['Antamina','Southern Copper','Cerro Verde','Las Bambas']},
+    ],
+    universitaria:[
+      {name:'Ingenieria Minera, Metalurgia y Petroleo',salary:'S/ 4,270',growth:'S/ 11,309',range:'S/ 1,864 - S/ 7,303',rangeAdult:'S/ 3,500 - S/ 20,203',desc:'Disenhas y diriges operaciones mineras, gestionas proyectos de extraccion.',skills:['Gestion de proyectos','Geologia aplicada','Seguridad'],where:['Antamina','Southern Copper','Buenaventura']},
+      {name:'Geologia',salary:'S/ 4,043',growth:'S/ 12,049',range:'S/ 2,000 - S/ 6,603',rangeAdult:'S/ 4,103 - S/ 22,103',desc:'Identificas yacimientos minerales y evaluas recursos naturales.',skills:['Analisis geologico','Trabajo de campo','Mapeo'],where:['Empresas mineras','INGEMMET','Consultoras']},
+    ],
+  }},
+  {id:'tecnologia',name:'Tecnologia y Computacion',icon:'💻',color:'from-blue-500 to-cyan-600',tag:'Top $',desc:'Sector con mayor crecimiento global. Alta demanda de programadores.',ocupaciones:{
+    tecnica:[
+      {name:'Tecnico en Ciencias de la Computacion',salary:'S/ 3,968',growth:'S/ 5,062',range:'S/ 1,364 - S/ 7,643',rangeAdult:'S/ 1,853 - S/ 9,272',desc:'Desarrollas software, das soporte tecnico, administras redes.',skills:['Programacion','Redes','Soporte tecnico'],where:['BCP','IBM','Startups','Bancos']},
+      {name:'Tecnico de Telecomunicaciones',salary:'S/ 2,213',growth:'S/ 4,412',range:'S/ 1,700 - S/ 3,000',rangeAdult:'S/ 2,200 - S/ 7,678',desc:'Instalas y mantienes redes de comunicacion y fibra optica.',skills:['Redes','Fibra optica','Electronica'],where:['Claro','Movistar','Entel']},
+      {name:'Tecnico Electronica',salary:'S/ 2,671',growth:'S/ 4,709',range:'S/ 1,500 - S/ 4,000',rangeAdult:'S/ 2,000 - S/ 8,728',desc:'Reparas y mantienes equipos electronicos e industriales.',skills:['Electronica','Circuitos','Automatizacion'],where:['Fabricas','Telecomunicaciones','Mineras']},
+    ],
+    universitaria:[
+      {name:'Ingenieria de Sistemas y Computo',salary:'S/ 4,710',growth:'S/ 8,934',range:'S/ 1,900 - S/ 8,000',rangeAdult:'S/ 3,353 - S/ 15,113',desc:'Disenhas arquitectura de software y sistemas empresariales.',skills:['Programacion','Arquitectura de software','Cloud'],where:['Google','Microsoft','BCP','Interbank']},
+      {name:'Ciencias de la Computacion',salary:'S/ 4,651',growth:'S/ 8,792',range:'S/ 2,000 - S/ 8,240',rangeAdult:'S/ 3,250 - S/ 15,537',desc:'Te especializas en inteligencia artificial, datos y algoritmos.',skills:['Algoritmos','Machine Learning','Python'],where:['Fintech','Tech global','Startups']},
+      {name:'Ingenieria de Telecomunicaciones',salary:'S/ 4,326',growth:'S/ 8,157',range:'S/ 1,870 - S/ 7,145',rangeAdult:'S/ 3,020 - S/ 14,347',desc:'Disenhas redes de comunicacion y sistemas 5G.',skills:['Redes avanzadas','5G','IoT'],where:['Telefonica','Claro','America Movil']},
+      {name:'Ingenieria Electronica',salary:'S/ 3,710',growth:'S/ 9,082',range:'S/ 1,700 - S/ 6,401',rangeAdult:'S/ 2,884 - S/ 16,810',desc:'Disenhas circuitos, sistemas de automatizacion e IoT.',skills:['Electronica','IoT','Automatizacion'],where:['Industrias','Automotriz','Mineras']},
+      {name:'Estadistica',salary:'S/ 4,527',growth:'S/ 8,879',range:'S/ 1,815 - S/ 7,500',rangeAdult:'S/ 3,097 - S/ 16,100',desc:'Analizas datos, creas modelos predictivos.',skills:['R y Python','Modelamiento','Big Data'],where:['Bancos','INEI','Consultoras']},
+      {name:'Matematica',salary:'S/ 3,445',growth:'S/ 7,234',range:'S/ 1,500 - S/ 6,000',rangeAdult:'S/ 2,500 - S/ 13,000',desc:'Aplicas modelos matematicos a problemas reales.',skills:['Analisis','Modelamiento','Programacion'],where:['Bancos','Consultoras','Universidades']},
+      {name:'Fisica',salary:'S/ 3,312',growth:'S/ 6,890',range:'S/ 1,400 - S/ 5,800',rangeAdult:'S/ 2,300 - S/ 12,500',desc:'Investigas fenomenos fisicos, aplicas a tecnologia.',skills:['Investigacion','Matematicas','Programacion'],where:['Universidades','Centros de investigacion']},
+    ],
+  }},
+  {id:'infraestructura',name:'Infraestructura e Ingenieria',icon:'🏗️',color:'from-slate-600 to-gray-700',desc:'Peru invierte miles de millones en infraestructura cada anho.',ocupaciones:{
+    secundaria:[
+      {name:'Peon de obra / Ayudante de albanhil',salary:'Variable',growth:'-',desc:'Mezcla de cemento, carga de materiales, limpieza en construccion.',skills:['Trabajo fisico','Seguir instrucciones'],where:['Constructoras','Obras','Contratistas']},
+      {name:'Pintor de obra',salary:'Variable',growth:'-',desc:'Pintura de paredes, techos, fachadas.',skills:['Detalle','Limpieza','Trabajo en altura'],where:['Constructoras','Independiente']},
+      {name:'Gasfitero / Ayudante',salary:'Variable',growth:'-',desc:'Instalacion y reparacion de tuberias de agua y desagüe.',skills:['Trabajo manual','Solucion de problemas'],where:['Constructoras','Independiente','Ferreterias']},
+      {name:'Soldador',salary:'Variable',growth:'-',desc:'Une piezas de metal con soldadura.',skills:['Precision','Seguridad','Trabajo manual'],where:['Talleres','Fabricas','Constructoras']},
+      {name:'Ayudante de electricista',salary:'Variable',growth:'-',desc:'Apoyo en instalaciones electricas residenciales e industriales.',skills:['Cuidado','Seguir instrucciones'],where:['Constructoras','Empresas de mantenimiento']},
+      {name:'Operario de fabrica',salary:'Variable',growth:'-',desc:'Trabajo en lineas de produccion, ensamblaje, empaque.',skills:['Atencion al detalle','Puntualidad'],where:['Fabricas','Plantas industriales']},
+    ],
+    tecnica:[
+      {name:'Tecnico Civil',salary:'S/ 3,135',growth:'S/ 4,924',range:'S/ 1,500 - S/ 4,635',rangeAdult:'S/ 2,333 - S/ 8,169',desc:'Apoyas en obras, lees planos, supervisas construccion.',skills:['Lectura de planos','AutoCAD','Topografia'],where:['COSAPI','Granha y Montero','JJC']},
+      {name:'Tecnico Electricista',salary:'S/ 3,128',growth:'S/ 6,278',range:'S/ 1,500 - S/ 5,071',rangeAdult:'S/ 2,413 - S/ 11,385',desc:'Instalas y mantienes sistemas electricos.',skills:['Instalaciones electricas','Seguridad','Normativa'],where:['ENEL','Luz del Sur','Constructoras']},
+      {name:'Tecnico Mecanica',salary:'S/ 2,783',growth:'S/ 5,471',range:'S/ 1,500 - S/ 4,075',rangeAdult:'S/ 2,340 - S/ 9,663',desc:'Mantienes maquinaria industrial y vehiculos pesados.',skills:['Mecanica','Soldadura','Hidraulica'],where:['Fabricas','Mineras','Transportes']},
+      {name:'Tecnico Industrial',salary:'S/ 3,383',growth:'S/ 8,566',range:'S/ 1,600 - S/ 6,613',rangeAdult:'S/ 3,180 - S/ 13,399',desc:'Optimizas procesos de produccion y calidad.',skills:['Procesos','Calidad','Lean Manufacturing'],where:['Fabricas','Manufactura','Agroindustria']},
+      {name:'Arquitectura y Urbanismo',salary:'S/ 2,456',growth:'S/ 4,123',range:'S/ 1,300 - S/ 4,000',rangeAdult:'S/ 1,800 - S/ 7,500',desc:'Apoyas en disenho y supervision de obras.',skills:['AutoCAD','SketchUp','Disenho tecnico'],where:['Estudios de arquitectura','Constructoras']},
+      {name:'Textil y Confecciones',salary:'S/ 1,890',growth:'S/ 2,876',range:'S/ 1,100 - S/ 3,000',rangeAdult:'S/ 1,400 - S/ 5,000',desc:'Produces y controlas calidad de textiles.',skills:['Textiles','Control de calidad','Produccion'],where:['Fabricas textiles','Gamarra']},
+    ],
+    universitaria:[
+      {name:'Ingenieria Civil',salary:'S/ 4,152',growth:'S/ 10,621',range:'S/ 1,923 - S/ 7,000',rangeAdult:'S/ 3,520 - S/ 19,000',desc:'Disenhas y diriges construccion de edificios y obras.',skills:['Estructuras','Gestion de proyectos','BIM'],where:['COSAPI','Granha y Montero','GyM']},
+      {name:'Ingenieria Electrica',salary:'S/ 4,223',growth:'S/ 9,376',range:'S/ 1,867 - S/ 6,850',rangeAdult:'S/ 3,093 - S/ 17,056',desc:'Disenhas sistemas de potencia y energia.',skills:['Sistemas electricos','Energia renovable','Automatizacion'],where:['ENEL','Electroperu','Osinergmin']},
+      {name:'Ingenieria Mecanica',salary:'S/ 4,177',growth:'S/ 10,364',range:'S/ 1,850 - S/ 6,969',rangeAdult:'S/ 3,192 - S/ 19,440',desc:'Disenhas maquinas y sistemas mecanicos.',skills:['Disenho mecanico','CAD/CAM','Termodinamica'],where:['Industrias','Mineras','Automotriz']},
+      {name:'Ingenieria Industrial',salary:'S/ 4,248',growth:'S/ 10,257',range:'S/ 1,800 - S/ 7,400',rangeAdult:'S/ 2,926 - S/ 20,070',desc:'Optimizas procesos y operaciones empresariales.',skills:['Gestion','Logistica','Six Sigma'],where:['Cualquier industria','Consultoras']},
+      {name:'Arquitectura y Urbanismo',salary:'S/ 3,213',growth:'S/ 7,185',range:'S/ 1,500 - S/ 5,310',rangeAdult:'S/ 2,500 - S/ 13,113',desc:'Disenhas edificios y planificas espacios urbanos.',skills:['Disenho','AutoCAD','BIM'],where:['Estudios','Inmobiliarias','Municipalidades']},
+      {name:'Ingenieria Sanitaria',salary:'S/ 3,567',growth:'S/ 8,234',range:'S/ 1,600 - S/ 5,800',rangeAdult:'S/ 2,800 - S/ 14,500',desc:'Disenhas sistemas de agua y saneamiento.',skills:['Hidraulica','Saneamiento','Gestion ambiental'],where:['SEDAPAL','Municipios','Consultoras']},
+      {name:'Ingenieria Naval y Aeronautica',salary:'S/ 3,890',growth:'S/ 9,456',range:'S/ 1,700 - S/ 6,500',rangeAdult:'S/ 3,200 - S/ 17,000',desc:'Disenhas embarcaciones y aeronaves.',skills:['Disenho naval/aereo','Mecanica de fluidos'],where:['Astilleros','SIMA','Aerolineas']},
+      {name:'Ingenieria Textil y Confecciones',salary:'S/ 2,987',growth:'S/ 5,678',range:'S/ 1,400 - S/ 4,800',rangeAdult:'S/ 2,100 - S/ 10,000',desc:'Optimizas produccion textil y confecciones.',skills:['Textiles','Produccion','Calidad'],where:['Fabricas textiles','Exportadoras']},
+      {name:'Otras Ingenierias',salary:'S/ 3,456',growth:'S/ 7,890',range:'S/ 1,500 - S/ 5,500',rangeAdult:'S/ 2,600 - S/ 14,000',desc:'Otras especialidades de ingenieria.',skills:['Ingenieria aplicada'],where:['Diversas industrias']},
+    ],
+  }},
+  {id:'agronegocios',name:'Agronegocios y Agroindustria',icon:'🌾',color:'from-green-600 to-emerald-700',desc:'Peru es lider mundial en exportacion de arandanos, paltas y esparragos.',ocupaciones:{
+    secundaria:[
+      {name:'Operario agricola',salary:'Variable',growth:'-',desc:'Siembra, cosecha, riego, fumigacion de cultivos.',skills:['Trabajo fisico','Madrugador'],where:['Camposol','Danper','Viru','Agroexportadoras']},
+      {name:'Trabajador de planta de empaque',salary:'Variable',growth:'-',desc:'Seleccion, clasificacion y empaque de frutas y verduras.',skills:['Atencion al detalle','Rapidez','Higiene'],where:['Agroexportadoras','Procesadoras']},
+      {name:'Operario de planta de alimentos',salary:'Variable',growth:'-',desc:'Produccion, control y empaque de alimentos procesados.',skills:['Higiene','Seguir procesos'],where:['Alicorp','Gloria','Laive','Molitalia']},
+    ],
+    tecnica:[
+      {name:'Agropecuaria',salary:'S/ 2,345',growth:'S/ 4,123',range:'S/ 1,200 - S/ 3,800',rangeAdult:'S/ 1,800 - S/ 7,200',desc:'Supervisas cultivos, riego y produccion agricola.',skills:['Cultivos','Riego tecnificado','Fitosanidad'],where:['Camposol','Danper','Viru']},
+      {name:'Tecnico en Industrias Alimentarias',salary:'S/ 2,456',growth:'S/ 4,567',range:'S/ 1,300 - S/ 4,000',rangeAdult:'S/ 2,000 - S/ 8,000',desc:'Procesas alimentos y controlas calidad.',skills:['HACCP','Control de calidad','BPM'],where:['Plantas procesadoras','Agroexportadoras']},
+    ],
+    universitaria:[
+      {name:'Agronegocios',salary:'S/ 4,312',growth:'S/ 10,567',range:'S/ 1,800 - S/ 7,500',rangeAdult:'S/ 3,200 - S/ 19,500',desc:'Gestionas empresas agricolas y exportacion.',skills:['Gestion empresarial','Comercio exterior','Agronomia'],where:['Agroexportadoras','Camposol','Danper']},
+      {name:'Agropecuaria',salary:'S/ 3,234',growth:'S/ 6,789',range:'S/ 1,500 - S/ 5,500',rangeAdult:'S/ 2,400 - S/ 12,000',desc:'Diriges produccion agricola y pecuaria.',skills:['Ciencias agricolas','Produccion','Gestion'],where:['Agroexportadoras','INIA','Minagri']},
+      {name:'Zootecnia',salary:'S/ 2,890',growth:'S/ 5,678',range:'S/ 1,300 - S/ 4,800',rangeAdult:'S/ 2,000 - S/ 10,000',desc:'Produccion animal, genetica y nutricion.',skills:['Produccion animal','Genetica','Nutricion'],where:['Granjas','Empresas pecuarias','SENASA']},
+      {name:'Veterinaria',salary:'S/ 2,547',growth:'S/ 6,317',range:'S/ 1,215 - S/ 4,175',rangeAdult:'S/ 1,635 - S/ 13,657',desc:'Cuidas la salud animal y certificas productos.',skills:['Medicina veterinaria','Sanidad animal'],where:['Clinicas','SENASA','Agroindustrias']},
+      {name:'Ingenieria en Agroindustria',salary:'S/ 3,123',growth:'S/ 6,456',range:'S/ 1,400 - S/ 5,200',rangeAdult:'S/ 2,300 - S/ 11,500',desc:'Procesas productos agricolas y pecuarios.',skills:['Procesos','Calidad','Inocuidad'],where:['Agroexportadoras','Plantas procesadoras']},
+      {name:'Ingenieria en Industrias Alimentarias',salary:'S/ 3,456',growth:'S/ 7,234',range:'S/ 1,500 - S/ 5,800',rangeAdult:'S/ 2,500 - S/ 13,000',desc:'Disenhas procesos de produccion de alimentos.',skills:['HACCP','Procesos','Innovacion'],where:['Alicorp','Gloria','Nestle']},
+      {name:'Ciencias Forestales',salary:'S/ 2,678',growth:'S/ 5,234',range:'S/ 1,200 - S/ 4,500',rangeAdult:'S/ 1,900 - S/ 9,500',desc:'Gestionas bosques y recursos forestales.',skills:['Silvicultura','Gestion ambiental'],where:['SERFOR','Empresas forestales','ONGs']},
+      {name:'Ingenieria Pesquera',salary:'S/ 3,012',growth:'S/ 6,123',range:'S/ 1,400 - S/ 5,000',rangeAdult:'S/ 2,200 - S/ 11,000',desc:'Gestionas recursos marinos y acuicultura.',skills:['Acuicultura','Pesca','Procesamiento'],where:['Empresas pesqueras','IMARPE','Exportadoras']},
+    ],
+  }},
+  {id:'turismo',name:'Turismo, Hoteleria y Gastronomia',icon:'🍽️',color:'from-orange-500 to-red-600',desc:'Peru es potencia gastronomica y turistica mundial.',ocupaciones:{
+    secundaria:[
+      {name:'Mozo / Mesero',salary:'Variable',growth:'-',desc:'Atencion de mesas, toma de pedidos, servicio.',skills:['Atencion al cliente','Rapidez','Buena memoria'],where:['Restaurantes','Hoteles','Eventos']},
+      {name:'Cocinero',salary:'Variable',growth:'-',desc:'Preparacion de platos en restaurantes.',skills:['Cocina','Organizacion','Trabajo bajo presion'],where:['Restaurantes','Pollerias','Chifas','Hoteles']},
+      {name:'Auxiliar de cocina',salary:'Variable',growth:'-',desc:'Preparacion de ingredientes, limpieza, apoyo al chef.',skills:['Higiene','Rapidez','Seguir instrucciones'],where:['Restaurantes','Hoteles','Catering']},
+      {name:'Recepcionista de hotel',salary:'Variable',growth:'-',desc:'Check-in, check-out, atencion al huesped, reservas.',skills:['Atencion al cliente','Computacion basica'],where:['Hoteles','Hostales']},
+      {name:'Housekeeping / Limpieza de cuartos',salary:'Variable',growth:'-',desc:'Limpieza y arreglo de habitaciones de hotel.',skills:['Limpieza','Organizacion','Discrecion'],where:['Hoteles','Hostales','Airbnb']},
+      {name:'Barista',salary:'Variable',growth:'-',desc:'Preparacion de cafe y bebidas.',skills:['Atencion al cliente','Rapidez'],where:['Starbucks','Cafeterias','Restaurantes']},
+    ],
+    tecnica:[
+      {name:'Administracion de Servicios Turisticos, Hoteleria y Gastronomia',salary:'S/ 2,606',growth:'S/ 4,940',range:'S/ 1,303 - S/ 4,060',rangeAdult:'S/ 1,853 - S/ 9,228',desc:'Trabajas en gestion de hoteles o restaurantes.',skills:['Servicio al cliente','Idiomas','Gestion'],where:['Hoteles','Restaurantes','Cruceros']},
+      {name:'Turismo',salary:'S/ 1,944',growth:'S/ 4,268',range:'S/ 1,130 - S/ 3,334',rangeAdult:'S/ 1,602 - S/ 8,200',desc:'Organizas tours y guias turisticos.',skills:['Guiado turistico','Idiomas','Historia'],where:['Agencias de viaje','Operadores turisticos']},
+    ],
+    universitaria:[
+      {name:'Administracion de Servicios Turisticos, Hoteleria y Gastronomia',salary:'S/ 2,721',growth:'S/ 5,087',range:'S/ 1,342 - S/ 4,268',rangeAdult:'S/ 1,940 - S/ 9,562',desc:'Gestionas hoteles, restaurantes o empresas turisticas.',skills:['Gestion hotelera','Marketing turistico','Idiomas'],where:['Cadenas hoteleras','Restaurantes','Operadores']},
+    ],
+  }},
+  {id:'administracion',name:'Administracion y Negocios',icon:'💼',color:'from-violet-500 to-purple-600',desc:'Todas las empresas necesitan administradores y contadores.',ocupaciones:{
+    secundaria:[
+      {name:'Vendedor de tienda',salary:'Variable',growth:'-',desc:'Atencion y venta en tiendas de retail.',skills:['Ventas','Atencion al cliente','Paciencia'],where:['Saga','Ripley','Oechsle','Tiendas de mall']},
+      {name:'Cajero',salary:'Variable',growth:'-',desc:'Cobro en caja, manejo de dinero y tarjetas.',skills:['Manejo de dinero','Matematica basica','Honestidad'],where:['Supermercados','Tiendas','Farmacias','Bancos']},
+      {name:'Promotor / Impulsador',salary:'Variable',growth:'-',desc:'Promocion de productos, degustaciones en tiendas.',skills:['Comunicacion','Persuasion','Buena presencia'],where:['Supermercados','Malls','Eventos']},
+      {name:'Recepcionista',salary:'Variable',growth:'-',desc:'Atencion en oficinas, llamadas, recepcion de visitantes.',skills:['Atencion al cliente','Computacion','Organizacion'],where:['Oficinas','Clinicas','Empresas']},
+      {name:'Call center / Teleoperador',salary:'Variable',growth:'-',desc:'Atencion telefonica, ventas por telefono, soporte.',skills:['Comunicacion','Paciencia','Computacion'],where:['Atento','Konecta','Teleperformance']},
+    ],
+    tecnica:[
+      {name:'Administracion de Empresas',salary:'S/ 2,370',growth:'S/ 4,652',range:'S/ 1,200 - S/ 3,940',rangeAdult:'S/ 1,724 - S/ 8,250',desc:'Apoyas en gestion administrativa y operaciones.',skills:['Administracion','Excel','Gestion'],where:['Cualquier empresa']},
+      {name:'Negocios Internacionales',salary:'S/ 2,309',growth:'S/ 5,815',range:'S/ 1,294 - S/ 3,948',rangeAdult:'S/ 1,895 - S/ 11,757',desc:'Gestionas comercio exterior y aduanas.',skills:['Aduanas','Idiomas','Comercio exterior'],where:['Exportadoras','Importadoras','Agencias de aduanas']},
+      {name:'Secretariado',salary:'S/ 2,048',growth:'S/ 4,018',range:'S/ 1,221 - S/ 3,210',rangeAdult:'S/ 1,555 - S/ 7,263',desc:'Apoyas a ejecutivos en gestion administrativa.',skills:['Organizacion','Ofimatica','Comunicacion'],where:['Corporaciones','Bancos','Estudios']},
+      {name:'Tecnico en Marketing',salary:'S/ 2,525',growth:'S/ 6,221',range:'S/ 1,200 - S/ 4,293',rangeAdult:'S/ 1,950 - S/ 12,790',desc:'Apoyas en campanhas de marketing y redes sociales.',skills:['Redes sociales','Publicidad','Disenho basico'],where:['Agencias','Empresas','Startups']},
+      {name:'Tecnico en Contabilidad y Finanzas',salary:'S/ 2,206',growth:'S/ 3,442',range:'S/ 1,200 - S/ 3,419',rangeAdult:'S/ 1,561 - S/ 5,833',desc:'Apoyas en contabilidad y registros financieros.',skills:['Contabilidad basica','Excel','SUNAT'],where:['Estudios contables','Empresas','Bancos']},
+    ],
+    universitaria:[
+      {name:'Economia',salary:'S/ 4,526',growth:'S/ 11,726',range:'S/ 1,667 - S/ 8,200',rangeAdult:'S/ 2,613 - S/ 23,343',desc:'Analizas mercados, inversiones y politicas economicas.',skills:['Analisis economico','Finanzas','Econometria'],where:['BCR','MEF','Bancos','Consultoras']},
+      {name:'Administracion de Empresas',salary:'S/ 3,794',growth:'S/ 9,387',range:'S/ 1,500 - S/ 7,000',rangeAdult:'S/ 2,303 - S/ 19,000',desc:'Diriges y gestionas empresas.',skills:['Gestion','Liderazgo','Estrategia'],where:['Cualquier empresa','Consultoras']},
+      {name:'Marketing',salary:'S/ 3,704',growth:'S/ 9,923',range:'S/ 1,500 - S/ 6,629',rangeAdult:'S/ 2,456 - S/ 20,010',desc:'Desarrollas estrategias de marketing y ventas.',skills:['Marketing digital','Creatividad','Analisis'],where:['Consumo masivo','Agencias','Tech']},
+      {name:'Contabilidad y Finanzas',salary:'S/ 2,827',growth:'S/ 6,529',range:'S/ 1,402 - S/ 4,580',rangeAdult:'S/ 2,113 - S/ 12,683',desc:'Llevas contabilidad y gestionas finanzas.',skills:['Contabilidad','SUNAT','NIIF'],where:['Estudios contables','Big Four','Empresas']},
+      {name:'Derecho',salary:'S/ 3,622',growth:'S/ 10,351',range:'S/ 1,500 - S/ 6,435',rangeAdult:'S/ 2,332 - S/ 20,830',desc:'Asesoras legalmente y resuelves casos.',skills:['Derecho','Argumentacion','Negociacion'],where:['Estudios de abogados','Empresas','Estado']},
+      {name:'Negocios Internacionales',salary:'S/ 3,456',growth:'S/ 7,890',range:'S/ 1,500 - S/ 5,800',rangeAdult:'S/ 2,500 - S/ 14,000',desc:'Gestionas comercio internacional.',skills:['Comercio exterior','Aduanas','Idiomas'],where:['Exportadoras','Importadoras','Trading']},
+      {name:'Otras Carreras de Administracion',salary:'S/ 3,234',growth:'S/ 7,123',range:'S/ 1,400 - S/ 5,500',rangeAdult:'S/ 2,300 - S/ 13,000',desc:'RRHH, Gestion, Relaciones Industriales.',skills:['Gestion','RRHH','Liderazgo'],where:['Empresas','Consultoras']},
+      {name:'Administracion Publica',salary:'S/ 2,890',growth:'S/ 5,678',range:'S/ 1,300 - S/ 4,800',rangeAdult:'S/ 2,000 - S/ 10,000',desc:'Gestionas entidades del Estado.',skills:['Gestion publica','Normativa','Politicas'],where:['Ministerios','Municipalidades','Gobiernos regionales']},
+      {name:'Investigacion Operativa',salary:'S/ 3,567',growth:'S/ 7,456',range:'S/ 1,500 - S/ 6,000',rangeAdult:'S/ 2,600 - S/ 13,500',desc:'Optimizas procesos con modelos matematicos.',skills:['Optimizacion','Modelos','Programacion'],where:['Consultoras','Industrias','Bancos']},
+      {name:'Ciencias Politicas',salary:'S/ 3,123',growth:'S/ 6,456',range:'S/ 1,400 - S/ 5,200',rangeAdult:'S/ 2,200 - S/ 11,500',desc:'Analizas sistemas politicos y politicas publicas.',skills:['Analisis politico','Comunicacion','Investigacion'],where:['Estado','ONGs','Consultoras']},
+    ],
+  }},
+  {id:'salud',name:'Salud',icon:'🏥',color:'from-rose-500 to-pink-600',desc:'El sector salud siempre tiene demanda laboral.',ocupaciones:{
+    secundaria:[
+      {name:'Auxiliar de farmacia',salary:'Variable',growth:'-',desc:'Atencion en mostrador, inventario, despacho de medicamentos.',skills:['Atencion al cliente','Orden','Responsabilidad'],where:['Inkafarma','Mifarma','Boticas']},
+    ],
+    tecnica:[
+      {name:'Enfermeria',salary:'S/ 1,667',growth:'S/ 2,248',range:'S/ 1,130 - S/ 2,427',rangeAdult:'S/ 1,253 - S/ 3,407',desc:'Brindas cuidados basicos de enfermeria.',skills:['Cuidado de pacientes','Empatia','Primeros auxilios'],where:['EsSalud','MINSA','Clinicas']},
+      {name:'Tecnico en Farmacia y Bioquimica',salary:'S/ 1,826',growth:'S/ 2,410',range:'S/ 1,250 - S/ 2,500',rangeAdult:'S/ 1,413 - S/ 3,816',desc:'Dispensas medicamentos y atiendes en farmacia.',skills:['Farmacia','Atencion al cliente','Inventarios'],where:['Farmacias','Boticas','Clinicas']},
+      {name:'Tecnico en Tecnologia Medica',salary:'S/ 1,880',growth:'S/ 2,609',range:'S/ 1,200 - S/ 3,059',rangeAdult:'S/ 1,365 - S/ 4,251',desc:'Apoyas en analisis clinicos y laboratorio.',skills:['Laboratorio','Equipos medicos','Analisis'],where:['Laboratorios clinicos','Hospitales']},
+    ],
+    universitaria:[
+      {name:'Medicina',salary:'S/ 3,897',growth:'S/ 7,013',range:'S/ 1,481 - S/ 6,624',rangeAdult:'S/ 1,920 - S/ 13,159',desc:'Diagnosticas y tratas enfermedades.',skills:['Diagnostico','Tratamiento','Investigacion'],where:['Hospitales','Clinicas','Consultorio privado']},
+      {name:'Enfermeria',salary:'S/ 2,473',growth:'S/ 3,882',range:'S/ 1,386 - S/ 3,887',rangeAdult:'S/ 1,818 - S/ 6,113',desc:'Brindas cuidados integrales de enfermeria.',skills:['Cuidados','Liderazgo','Gestion'],where:['EsSalud','MINSA','Clinicas privadas']},
+      {name:'Psicologia',salary:'S/ 2,534',growth:'S/ 5,648',range:'S/ 1,250 - S/ 4,200',rangeAdult:'S/ 1,800 - S/ 10,688',desc:'Brindas terapia y orientacion psicologica.',skills:['Terapia','Empatia','Evaluacion'],where:['Clinicas','Consulta privada','Empresas']},
+      {name:'Odontologia',salary:'S/ 2,216',growth:'S/ 4,635',range:'S/ 1,130 - S/ 4,169',rangeAdult:'S/ 1,350 - S/ 8,892',desc:'Cuidas la salud bucal de los pacientes.',skills:['Odontologia','Atencion al paciente'],where:['Consultorios','Clinicas dentales']},
+      {name:'Obstetricia',salary:'S/ 2,345',growth:'S/ 4,123',range:'S/ 1,200 - S/ 3,800',rangeAdult:'S/ 1,700 - S/ 7,500',desc:'Atiendes embarazos y partos.',skills:['Obstetricia','Atencion al paciente'],where:['Hospitales','Centros de salud','Clinicas']},
+      {name:'Farmacia y Bioquimica',salary:'S/ 3,021',growth:'S/ 6,334',range:'S/ 1,383 - S/ 5,000',rangeAdult:'S/ 2,200 - S/ 11,500',desc:'Desarrollas y dispensas medicamentos.',skills:['Farmacologia','Quimica','Investigacion'],where:['Laboratorios','Farmacias','Industria farmaceutica']},
+      {name:'Tecnologia Medica',salary:'S/ 2,687',growth:'S/ 4,168',range:'S/ 1,300 - S/ 4,500',rangeAdult:'S/ 1,800 - S/ 7,500',desc:'Operas equipos de diagnostico medico.',skills:['Equipos medicos','Analisis','Radiologia'],where:['Hospitales','Clinicas','Laboratorios']},
+      {name:'Nutricion',salary:'S/ 2,234',growth:'S/ 4,567',range:'S/ 1,150 - S/ 3,700',rangeAdult:'S/ 1,800 - S/ 8,200',desc:'Disenhas planes alimenticios y nutricionales.',skills:['Nutricion clinica','Dietetica'],where:['Hospitales','Consultorios','Gimnasios']},
+      {name:'Trabajo Social',salary:'S/ 2,123',growth:'S/ 4,234',range:'S/ 1,100 - S/ 3,500',rangeAdult:'S/ 1,700 - S/ 7,800',desc:'Apoyas a personas y comunidades vulnerables.',skills:['Intervencion social','Empatia','Gestion'],where:['ONGs','Estado','Hospitales']},
+      {name:'Servicios Sociales y Asistenciales',salary:'S/ 2,012',growth:'S/ 3,890',range:'S/ 1,050 - S/ 3,300',rangeAdult:'S/ 1,600 - S/ 7,000',desc:'Brindas asistencia social a poblaciones.',skills:['Intervencion','Gestion social'],where:['ONGs','Estado','Municipalidades']},
+    ],
+  }},
+  {id:'educacion',name:'Educacion',icon:'📚',color:'from-teal-500 to-cyan-600',desc:'Formacion de las nuevas generaciones del pais.',ocupaciones:{
+    tecnica:[
+      {name:'Educacion Inicial',salary:'S/ 1,567',growth:'S/ 2,234',range:'S/ 1,050 - S/ 2,400',rangeAdult:'S/ 1,200 - S/ 3,800',desc:'Apoyas en educacion de ninhos de 0-5 anhos.',skills:['Pedagogia infantil','Paciencia','Creatividad'],where:['Nidos','Colegios','Cunas']},
+      {name:'Educacion Primaria',salary:'S/ 1,678',growth:'S/ 2,456',range:'S/ 1,100 - S/ 2,600',rangeAdult:'S/ 1,300 - S/ 4,200',desc:'Apoyas en educacion de ninhos de 6-11 anhos.',skills:['Pedagogia','Paciencia','Didactica'],where:['Colegios']},
+      {name:'Educacion Secundaria',salary:'S/ 1,789',growth:'S/ 2,678',range:'S/ 1,150 - S/ 2,800',rangeAdult:'S/ 1,400 - S/ 4,500',desc:'Apoyas en educacion de adolescentes.',skills:['Pedagogia','Especializacion','Comunicacion'],where:['Colegios']},
+    ],
+    universitaria:[
+      {name:'Educacion Inicial',salary:'S/ 2,265',growth:'S/ 3,623',range:'S/ 1,308 - S/ 3,411',rangeAdult:'S/ 1,767 - S/ 5,753',desc:'Ensenhas a ninhos de 0-5 anhos.',skills:['Pedagogia infantil','Desarrollo infantil','Creatividad'],where:['Colegios','MINEDU','Nidos privados']},
+      {name:'Educacion Primaria',salary:'S/ 2,345',growth:'S/ 3,890',range:'S/ 1,350 - S/ 3,600',rangeAdult:'S/ 1,850 - S/ 6,200',desc:'Ensenhas a ninhos de 6-11 anhos.',skills:['Pedagogia','Didactica','Paciencia'],where:['Colegios','MINEDU']},
+      {name:'Educacion Secundaria',salary:'S/ 2,456',growth:'S/ 4,123',range:'S/ 1,400 - S/ 3,800',rangeAdult:'S/ 1,950 - S/ 6,800',desc:'Ensenhas a adolescentes en tu especialidad.',skills:['Especializacion','Pedagogia','Comunicacion'],where:['Colegios','MINEDU','Academias']},
+      {name:'Educacion Fisica',salary:'S/ 2,234',growth:'S/ 3,678',range:'S/ 1,250 - S/ 3,500',rangeAdult:'S/ 1,700 - S/ 6,000',desc:'Ensenhas deportes y actividad fisica.',skills:['Deportes','Pedagogia','Salud'],where:['Colegios','Clubes','Gimnasios']},
+      {name:'Educacion Especial',salary:'S/ 2,345',growth:'S/ 3,890',range:'S/ 1,300 - S/ 3,700',rangeAdult:'S/ 1,800 - S/ 6,500',desc:'Ensenhas a estudiantes con necesidades especiales.',skills:['Inclusion','Pedagogia especial','Paciencia'],where:['Colegios','Centros especiales','MINEDU']},
+      {name:'Educacion Tecnologica',salary:'S/ 2,456',growth:'S/ 4,012',range:'S/ 1,350 - S/ 3,900',rangeAdult:'S/ 1,900 - S/ 6,800',desc:'Ensenhas tecnologia y computacion.',skills:['Tecnologia','Pedagogia','Innovacion'],where:['Institutos','Colegios','Universidades']},
+      {name:'Idiomas',salary:'S/ 2,567',growth:'S/ 4,345',range:'S/ 1,400 - S/ 4,000',rangeAdult:'S/ 2,000 - S/ 7,200',desc:'Ensenhas idiomas extranjeros.',skills:['Idiomas','Didactica','Comunicacion'],where:['Institutos','Colegios','Centros de idiomas']},
+      {name:'Otras Carreras de Educacion',salary:'S/ 2,234',growth:'S/ 3,678',range:'S/ 1,250 - S/ 3,500',rangeAdult:'S/ 1,700 - S/ 6,000',desc:'Otras especialidades educativas.',skills:['Pedagogia'],where:['Instituciones educativas']},
+    ],
+  }},
+  {id:'comunicacion',name:'Comunicacion y Disenho',icon:'🎨',color:'from-pink-500 to-fuchsia-600',desc:'La era digital requiere comunicadores creativos.',ocupaciones:{
+    tecnica:[
+      {name:'Ciencias de la Comunicacion',salary:'S/ 2,123',growth:'S/ 3,890',range:'S/ 1,150 - S/ 3,500',rangeAdult:'S/ 1,600 - S/ 7,000',desc:'Produces contenido y manejas redes sociales.',skills:['Redes sociales','Edicion','Fotografia'],where:['Agencias','Medios','Empresas']},
+      {name:'Tecnico en Disenho',salary:'S/ 2,808',growth:'S/ 5,737',range:'S/ 1,350 - S/ 5,000',rangeAdult:'S/ 2,000 - S/ 11,000',desc:'Creas disenhos graficos y visuales.',skills:['Adobe Suite','Disenho grafico','Creatividad'],where:['Agencias','Freelance','Empresas']},
+    ],
+    universitaria:[
+      {name:'Ciencias de la Comunicacion',salary:'S/ 2,967',growth:'S/ 6,534',range:'S/ 1,365 - S/ 5,000',rangeAdult:'S/ 2,100 - S/ 12,500',desc:'Gestionas comunicacion corporativa y medios.',skills:['Comunicacion estrategica','Relaciones publicas','Contenido'],where:['Agencias','Empresas','Medios']},
+      {name:'Disenho',salary:'S/ 2,949',growth:'S/ 6,138',range:'S/ 1,400 - S/ 5,200',rangeAdult:'S/ 2,100 - S/ 11,800',desc:'Creas disenhos graficos, UX/UI y branding.',skills:['Adobe Suite','UX/UI','Branding'],where:['Agencias','Tech','Freelance']},
+      {name:'Periodismo y Locucion',salary:'S/ 2,567',growth:'S/ 5,234',range:'S/ 1,300 - S/ 4,200',rangeAdult:'S/ 1,900 - S/ 9,500',desc:'Informas y comunicas noticias.',skills:['Redaccion','Locucion','Investigacion'],where:['Medios','Agencias','Corporaciones']},
+      {name:'Artes',salary:'S/ 2,234',growth:'S/ 4,567',range:'S/ 1,150 - S/ 3,700',rangeAdult:'S/ 1,700 - S/ 8,500',desc:'Creas obras artisticas y visuales.',skills:['Creatividad','Tecnicas artisticas','Expresion'],where:['Galerias','Freelance','Produccion']},
+      {name:'Bibliotecologia y Archivo',salary:'S/ 2,123',growth:'S/ 4,234',range:'S/ 1,100 - S/ 3,500',rangeAdult:'S/ 1,700 - S/ 7,800',desc:'Gestionas informacion y documentos.',skills:['Gestion documental','Catalogacion','Tecnologia'],where:['Bibliotecas','Archivos','Empresas']},
+      {name:'Lingüistica y Literatura',salary:'S/ 2,012',growth:'S/ 3,890',range:'S/ 1,050 - S/ 3,300',rangeAdult:'S/ 1,600 - S/ 7,000',desc:'Estudias lenguaje y literatura.',skills:['Analisis','Redaccion','Investigacion'],where:['Universidades','Editoriales','Medios']},
+      {name:'Historia',salary:'S/ 2,034',growth:'S/ 3,967',range:'S/ 1,080 - S/ 3,400',rangeAdult:'S/ 1,650 - S/ 7,200',desc:'Investigas y ensenhas historia.',skills:['Investigacion','Analisis','Docencia'],where:['Universidades','Museos','Centros culturales']},
+      {name:'Teologia y Filosofia',salary:'S/ 1,890',growth:'S/ 3,567',range:'S/ 1,000 - S/ 3,100',rangeAdult:'S/ 1,500 - S/ 6,500',desc:'Estudias pensamiento y religion.',skills:['Analisis','Reflexion','Etica'],where:['Universidades','Instituciones religiosas']},
+      {name:'Antropologia y Arqueologia',salary:'S/ 2,145',growth:'S/ 4,345',range:'S/ 1,120 - S/ 3,600',rangeAdult:'S/ 1,750 - S/ 8,000',desc:'Estudias culturas y sociedades.',skills:['Investigacion','Trabajo de campo','Analisis'],where:['Universidades','Museos','ONGs']},
+      {name:'Geografia',salary:'S/ 2,234',growth:'S/ 4,567',range:'S/ 1,150 - S/ 3,700',rangeAdult:'S/ 1,800 - S/ 8,200',desc:'Estudias territorios y espacios.',skills:['SIG','Analisis espacial','Cartografia'],where:['IGN','Consultoras','Municipalidades']},
+    ],
+  }},
+  {id:'ciencias',name:'Ciencias y Medio Ambiente',icon:'🔬',color:'from-emerald-500 to-green-600',desc:'Innovacion y sostenibilidad para el futuro.',ocupaciones:{
+    tecnica:[
+      {name:'Quimica',salary:'S/ 2,234',growth:'S/ 3,890',range:'S/ 1,200 - S/ 3,600',rangeAdult:'S/ 1,700 - S/ 6,800',desc:'Realizas analisis quimicos en laboratorio.',skills:['Laboratorio','Analisis quimico','Control de calidad'],where:['Laboratorios','Industrias','Mineras']},
+    ],
+    universitaria:[
+      {name:'Quimica',salary:'S/ 2,890',growth:'S/ 5,678',range:'S/ 1,350 - S/ 4,800',rangeAdult:'S/ 2,100 - S/ 10,500',desc:'Investigas y analizas sustancias quimicas.',skills:['Laboratorio','Analisis','Investigacion'],where:['Laboratorios','Industrias','Universidades']},
+      {name:'Biologia',salary:'S/ 2,567',growth:'S/ 5,234',range:'S/ 1,250 - S/ 4,300',rangeAdult:'S/ 1,950 - S/ 9,500',desc:'Estudias organismos vivos y ecosistemas.',skills:['Investigacion','Laboratorio','Analisis'],where:['Universidades','Laboratorios','SERNANP']},
+      {name:'Ecologia y Medio Ambiente',salary:'S/ 2,456',growth:'S/ 5,012',range:'S/ 1,200 - S/ 4,100',rangeAdult:'S/ 1,900 - S/ 9,000',desc:'Gestionas recursos naturales y ambiente.',skills:['Gestion ambiental','EIA','Sostenibilidad'],where:['MINAM','Consultoras','Mineras']},
+    ],
+  }},
+  {id:'servicios',name:'Servicios y Seguridad',icon:'🛡️',color:'from-gray-500 to-slate-600',desc:'Sector con alta demanda, especialmente en Lima.',ocupaciones:{
+    secundaria:[
+      {name:'Vigilante / Agente de seguridad',salary:'Variable',growth:'-',desc:'Seguridad y control de acceso en edificios y empresas.',skills:['Responsabilidad','Alerta','Buena condicion fisica'],where:['Prosegur','Securitas','G4S','Edificios']},
+      {name:'Personal de limpieza',salary:'Variable',growth:'-',desc:'Limpieza de oficinas, edificios, locales comerciales.',skills:['Limpieza','Puntualidad','Responsabilidad'],where:['Oficinas','Malls','Hospitales','Colegios']},
+      {name:'Cuidador de adultos mayores',salary:'Variable',growth:'-',desc:'Acompanhamiento, aseo y cuidado de personas de la tercera edad.',skills:['Paciencia','Empatia','Responsabilidad'],where:['Casas particulares','Asilos','Clinicas geriatricas']},
+      {name:'Trabajador del hogar',salary:'Variable',growth:'-',desc:'Limpieza, cocina, cuidado del hogar.',skills:['Cocina','Limpieza','Organizacion'],where:['Casas particulares']},
+      {name:'Peluquero / Barbero',salary:'Variable',growth:'-',desc:'Corte de cabello, peinados, afeitado.',skills:['Habilidad manual','Trato al cliente','Creatividad'],where:['Peluquerias','Barberias','Independiente']},
+      {name:'Costurera / Sastre',salary:'Variable',growth:'-',desc:'Confeccion y arreglo de prendas de vestir.',skills:['Costura','Atencion al detalle','Creatividad'],where:['Talleres','Galerias','Independiente']},
+    ],
+  }},
+  {id:'logistica',name:'Logistica y Transporte',icon:'🚚',color:'from-indigo-500 to-blue-600',desc:'El boom del e-commerce impulsa la logistica.',ocupaciones:{
+    secundaria:[
+      {name:'Auxiliar de almacen',salary:'Variable',growth:'-',desc:'Recepcion, despacho, inventario, picking de productos.',skills:['Organizacion','Trabajo fisico','Computacion basica'],where:['Almacenes','E-commerce','Distribuidoras']},
+      {name:'Repartidor / Delivery',salary:'Variable',growth:'-',desc:'Entrega de productos a domicilio en moto o bicicleta.',skills:['Orientacion','Puntualidad','Licencia de moto'],where:['Rappi','PedidosYa','Glovo','Restaurantes']},
+      {name:'Chofer / Conductor',salary:'Variable',growth:'-',desc:'Transporte de carga o pasajeros.',skills:['Licencia A2/A3','Conocimiento de rutas','Responsabilidad'],where:['Transportes','Distribuidoras','Empresas']},
+      {name:'Estibador / Cargador',salary:'Variable',growth:'-',desc:'Carga y descarga de mercaderia en almacenes y mercados.',skills:['Fuerza fisica','Trabajo en equipo','Rapidez'],where:['Mercados','Almacenes','Puertos']},
+      {name:'Operador de montacargas',salary:'Variable',growth:'-',desc:'Manejo de montacargas para mover mercaderia pesada.',skills:['Certificacion montacargas','Precision','Seguridad'],where:['Almacenes','Fabricas','Puertos']},
+    ],
+  }},
 ];
+
 
 /* ── RIASEC TEST DATA (Instrumento FINAL v2.0 - Hausler adaptado) ── */
 const riasecParts=[
@@ -276,7 +387,7 @@ const riasecProfiles={
       {name:"Mineria y recursos naturales",cetpro:["Operador de maquinaria minera"],instituto:["Tecnico minero / Perforista"],universidad:["Ingeniero de minas"]},
       {name:"Agroindustria y procesos productivos",cetpro:["Operario de planta procesadora","Cocinero / Chef"],instituto:["Tecnico agroindustrial","Tecnico en refrigeracion industrial"],universidad:["Ingeniero agroindustrial","Ingenieria industrial"]},
       {name:"Formacion especializada",cetpro:["Fuerzas armadas y policiales","Centros sectoriales (SENCICO)"]},
-    ],sectors:['mineria','infra','agro']},
+    ],sectors:['mineria','infraestructura','agronegocios']},
   I:{name:"Investigador",charF:"Ines la Investigadora",charM:"Ivan el Investigador",avatar:"\uD83D\uDD2C",color:"from-blue-400 to-indigo-500",
     desc:"Te gusta pensar, analizar y entender como funcionan las cosas. Te motivan actividades donde puedes resolver problemas, investigar y encontrar explicaciones.",
     likes:["Analizas datos o informacion","Buscas patrones o explicaciones","Resuelves problemas paso a paso"],
@@ -287,7 +398,7 @@ const riasecProfiles={
       {name:"Ciencias naturales, laboratorio y salud",cetpro:["Tecnico de laboratorio basico"],instituto:["Tecnico de laboratorio clinico"],universidad:["Ciencias (biologia, quimica, fisica)","Nutricion"]},
       {name:"Ciencias aplicadas a recursos naturales",universidad:["Geologia","Ingenieria ambiental","Ingenieria agronoma"]},
       {name:"Investigacion aplicada",instituto:["Institutos de investigacion aplicada"],cetpro:["Certificaciones tecnicas especializadas"]},
-    ],sectors:['tech','ciencias','salud']},
+    ],sectors:['tecnologia','ciencias','salud']},
   A:{name:"Artistico",charF:"Ana la Artista",charM:"Andres el Artista",avatar:"\uD83C\uDFA8",color:"from-pink-400 to-purple-500",
     desc:"Te gusta crear, expresarte y hacer cosas originales. Disfrutas actividades donde puedes imaginar, disenar o expresarte con tu propio estilo.",
     likes:["Disenas, dibujas o creas contenido","Escribes, haces videos o musica","Pruebas formas nuevas de expresarte"],
@@ -320,7 +431,7 @@ const riasecProfiles={
       {name:"Marketing, mercados y expansion comercial",instituto:["Marketing","Marketing digital","Comercio exterior"],universidad:["Negocios internacionales"]},
       {name:"Liderazgo sectorial",instituto:["Supervisor agricola / Jefe de campo"],universidad:["Administrador hotelero","Ejecutivo de banca / Asesor financiero"]},
       {name:"Emprendimiento independiente",cetpro:["Emprendimiento productivo","Programas de emprendimiento","Escuelas de negocios y liderazgo"]},
-    ],sectors:['admin','servicios']},
+    ],sectors:['administracion','servicios']},
   C:{name:"Convencional",charF:"Clara la Organizada",charM:"Omar el Organizado",avatar:"\uD83D\uDCCB",color:"from-cyan-400 to-blue-500",
     desc:"Te gusta organizar, ordenar y que las cosas funcionen bien. Te resulta natural seguir procesos, organizar informacion y revisar detalles.",
     likes:["Organizas informacion, tareas o documentos","Sigues pasos claros para lograr un objetivo","Revisas detalles y verificas que todo este correcto","Mantienes registros u ordenas procesos"],
@@ -399,7 +510,7 @@ function App(){
     {icon:I.target,label:"Test de Intereses",sub:"Que me interesa?",s:"S3",view:'test'},
     {icon:I.myth,label:"Mitos Vocacionales",sub:"Verdad o mito?",s:"S4",view:'myths'},
     {icon:I.route,label:"Rutas Post-Secundarias",sub:"Que caminos hay?",s:"S4-S5",view:'routes'},
-    {icon:I.search,label:"Explorador de Carreras",sub:"Datos reales por sector",s:"S5-S6",view:'explore'},
+    {icon:I.search,label:"Explorador de Ocupaciones",sub:"130 ocupaciones por sector",s:"S5-S6",view:'explore'},
     {icon:I.notebook,label:"Investigacion con IA",sub:"NotebookLM y mas",s:"S6",view:'notebook'},
     {icon:I.family,label:"Decision Familiar",sub:"Como lo comunico?",s:"S7-S8",view:'family'},
     {icon:I.rocket,label:"Plan Accionable",sub:"Mi plan y CV",s:"S9-S12",view:'plan'},
@@ -1206,11 +1317,17 @@ function App(){
   };
 
   /* ── EXPLORE (S5-S6) ── */
+  const sectorOcupCount=(s)=>{const o=s.ocupaciones;return(o.secundaria||[]).length+(o.tecnica||[]).length+(o.universitaria||[]).length;};
   const Explore=()=>{
     if(selCareer)return <CareerDetail/>;
+    const levelSections=[
+      {key:'universitaria',label:'Universidad (5 anios)',icon:'🎓',color:'bg-purple-100 text-purple-700',border:'border-purple-200'},
+      {key:'tecnica',label:'Tecnico / Instituto (2-3 anios)',icon:'⚡',color:'bg-blue-100 text-blue-700',border:'border-blue-200'},
+      {key:'secundaria',label:'Secundaria completa',icon:'🏠',color:'bg-green-100 text-green-700',border:'border-green-200'},
+    ];
     return(<div className="flex-1 overflow-y-auto">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3">
-        <OwlMini size={36}/><div><h2 className="font-black text-navy-700">Explorador de Carreras</h2><p className="text-sm text-navy-400">12 sectores con datos reales del MTPE · Sesiones 5-6</p></div>
+        <OwlMini size={36}/><div><h2 className="font-black text-navy-700">Explorador de Ocupaciones</h2><p className="text-sm text-navy-400">12 sectores · 130 ocupaciones con datos reales del MTPE · Sesiones 5-6</p></div>
       </header>
       <div className="max-w-5xl mx-auto px-4 sm:px-8 py-6 sm:py-8">
         {!selSector?(<div>
@@ -1226,7 +1343,7 @@ function App(){
               </div>
             </div>
             <p className="text-xs text-navy-400 leading-relaxed">{s.desc}</p>
-            <p className="text-[10px] text-navy-300 mt-2">{s.careers.length} carreras/ocupaciones</p>
+            <p className="text-[10px] text-navy-300 mt-2">{sectorOcupCount(s)} ocupaciones</p>
           </button>))}
         </div>
         </div>):(<div>
@@ -1235,28 +1352,33 @@ function App(){
             <span className="text-5xl">{selSector.icon}</span>
             <div><h3 className="text-2xl font-black">{selSector.name}</h3><p className="text-white/70 text-sm mt-1">{selSector.desc}</p></div>
           </div>
-          <div className="bg-white rounded-2xl border-2 border-cream-200 overflow-x-auto">
-            <table className="w-full min-w-[600px]"><thead><tr className="bg-cream-50 border-b border-cream-200 text-left">
-              <th className="px-5 py-3 text-xs font-bold text-navy-400">Carrera / Ocupacion</th>
-              <th className="px-5 py-3 text-xs font-bold text-navy-400">Nivel</th>
-              <th className="px-5 py-3 text-xs font-bold text-navy-400">Salario Joven</th>
-              <th className="px-5 py-3 text-xs font-bold text-navy-400">Con Experiencia</th>
-              <th className="px-5 py-3 text-xs font-bold text-navy-400"></th>
-            </tr></thead><tbody>
-              {selSector.careers.map((c,i)=>{
-                const lc={secundaria:'bg-green-100 text-green-700',tecnica:'bg-blue-100 text-blue-700',universitaria:'bg-purple-100 text-purple-700'};
-                const ll={secundaria:'Secundaria',tecnica:'Tecnica',universitaria:'Universidad'};
-                return(<tr key={i} className="border-b border-cream-100 hover:bg-brand-50/50 cursor-pointer transition" onClick={()=>setSelCareer(c)}>
-                  <td className="px-5 py-4 font-bold text-navy-700 text-sm">{c.name}</td>
-                  <td className="px-5 py-4"><span className={`text-[11px] px-2 py-0.5 rounded-full font-bold ${lc[c.level]}`}>{ll[c.level]}</span></td>
-                  <td className="px-5 py-4 font-bold text-emerald-600 text-sm">{c.salary}</td>
-                  <td className="px-5 py-4 font-bold text-indigo-600 text-sm">{c.growth}</td>
-                  <td className="px-5 py-4 text-navy-300"><I.chevR className="w-4 h-4"/></td>
-                </tr>);
-              })}
-            </tbody></table>
-          </div>
-          <p className="text-[11px] text-navy-300 text-center mt-4">Fuente: Portal Mi Carrera MTPE, 2025 · Lima Metropolitana. Mas carreras disponibles en la plataforma completa.</p>
+          {levelSections.map(ls=>{
+            const ocups=selSector.ocupaciones[ls.key];
+            if(!ocups||ocups.length===0)return null;
+            return(<div key={ls.key} className="mb-6">
+              <div className={`flex items-center gap-2 mb-3 px-1`}>
+                <span className="text-lg">{ls.icon}</span>
+                <span className={`text-sm font-bold px-3 py-1 rounded-full ${ls.color}`}>{ls.label}</span>
+                <span className="text-[10px] text-navy-300">({ocups.length} ocupaciones)</span>
+              </div>
+              <div className="bg-white rounded-2xl border-2 border-cream-200 overflow-x-auto">
+                <table className="w-full min-w-[500px]"><thead><tr className="bg-cream-50 border-b border-cream-200 text-left">
+                  <th className="px-5 py-3 text-xs font-bold text-navy-400">Ocupacion</th>
+                  <th className="px-5 py-3 text-xs font-bold text-navy-400">Salario Joven</th>
+                  <th className="px-5 py-3 text-xs font-bold text-navy-400">Con Experiencia</th>
+                  <th className="px-5 py-3 text-xs font-bold text-navy-400"></th>
+                </tr></thead><tbody>
+                  {ocups.map((c,i)=>(<tr key={i} className="border-b border-cream-100 hover:bg-brand-50/50 cursor-pointer transition" onClick={()=>setSelCareer({...c,level:ls.key})}>
+                    <td className="px-5 py-4"><p className="font-bold text-navy-700 text-sm">{c.name}</p>{c.desc&&<p className="text-[11px] text-navy-400 mt-0.5 leading-snug">{c.desc}</p>}</td>
+                    <td className="px-5 py-4 font-bold text-emerald-600 text-sm whitespace-nowrap">{c.salary}</td>
+                    <td className="px-5 py-4 font-bold text-indigo-600 text-sm whitespace-nowrap">{c.growth}</td>
+                    <td className="px-5 py-4 text-navy-300"><I.chevR className="w-4 h-4"/></td>
+                  </tr>))}
+                </tbody></table>
+              </div>
+            </div>);
+          })}
+          <p className="text-[11px] text-navy-300 text-center mt-4">Fuente: Portal Mi Carrera MTPE, 2025 · Lima Metropolitana</p>
           <button onClick={()=>{mark(4);nav('home');}} className="w-full mt-4 py-3.5 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold shadow-lg hover:opacity-90 transition">Completar paso</button>
         </div>)}
       </div>
@@ -1275,6 +1397,10 @@ function App(){
           <div className={`w-12 h-12 ${lc[c.level]} rounded-xl flex items-center justify-center`}><I.grad className="w-6 h-6 text-white"/></div>
           <div><h2 className="text-2xl font-black text-navy-700">{c.name}</h2><p className="text-sm text-navy-400">{ll[c.level]}</p></div>
         </div>
+        {c.desc&&(<div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-5 mb-5">
+          <h3 className="font-bold text-amber-700 text-sm mb-2">Que hace esta persona?</h3>
+          <p className="text-sm text-navy-600 leading-relaxed">{c.desc}</p>
+        </div>)}
         {c.salary!=='Variable'&&(<div className="grid grid-cols-2 gap-5 mb-6">
           <div className="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-5">
             <p className="text-xs text-emerald-600 font-bold mb-1">Joven (18-29 anios)</p>
@@ -1284,16 +1410,8 @@ function App(){
           <div className="bg-indigo-50 border-2 border-indigo-200 rounded-2xl p-5">
             <p className="text-xs text-indigo-600 font-bold mb-1">Con experiencia (30+)</p>
             <p className="text-3xl font-black text-indigo-700">{c.growth}</p>
-            <p className="text-xs text-indigo-500 mt-1">Trabajo formal en Lima</p>
+            {c.rangeAdult&&<p className="text-xs text-indigo-500 mt-1">Rango: {c.rangeAdult}</p>}
           </div>
-        </div>)}
-        {c.study&&(<div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-5 mb-5">
-          <h3 className="font-bold text-blue-700 text-sm mb-3">Que se estudia?</h3>
-          <p className="text-sm text-navy-600 leading-relaxed">{c.study}</p>
-        </div>)}
-        {c.dayInLife&&(<div className="bg-purple-50 border-2 border-purple-200 rounded-2xl p-5 mb-5">
-          <h3 className="font-bold text-purple-700 text-sm mb-3">Un dia tipico de trabajo</h3>
-          <p className="text-sm text-navy-600 leading-relaxed">{c.dayInLife}</p>
         </div>)}
         {c.skills&&(<div className="bg-white border-2 border-cream-200 rounded-2xl p-5 mb-5">
           <h3 className="font-bold text-navy-700 text-sm mb-3">Habilidades clave</h3>
@@ -1317,7 +1435,7 @@ function App(){
       <div className="text-center mb-8">
         <OwlMascot size={80} expression="surprised" className="mx-auto mascot-shadow mb-4"/>
         <h3 className="text-xl font-black text-navy-700">De explorar a decidir</h3>
-        <p className="text-navy-400 mt-2 text-sm max-w-lg mx-auto">En el Explorador de Carreras viste datos de muchos sectores. Ahora vas a elegir las que mas te interesaron y profundizar para tomar una mejor decision.</p>
+        <p className="text-navy-400 mt-2 text-sm max-w-lg mx-auto">En el Explorador de Ocupaciones viste datos de muchos sectores. Ahora vas a elegir las que mas te interesaron y profundizar para tomar una mejor decision.</p>
       </div>
       <div className="space-y-4 mb-8">
         {[
