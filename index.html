@@ -770,24 +770,27 @@ function App(){
   const rushCount=useRef(0);
   const[rushWarn,setRushWarn]=useState(false);
   const testInitRef=useRef(false);
+  const answerPending=useRef(false);
+  /* Init test: show Part 1 intro when navigating to test for first time */
+  useEffect(()=>{if(view==='test'&&!testInitRef.current&&qIdx===0&&Object.keys(answers).length===0&&showPartIntro===null){testInitRef.current=true;setShowPartIntro(0);}},[view]);
   const Test=()=>{
-    /* Show Part 1 intro on first render only */
-    React.useEffect(()=>{if(!testInitRef.current&&qIdx===0&&Object.keys(answers).length===0&&showPartIntro===null){testInitRef.current=true;setShowPartIntro(0);}},[]);
     const q=riasecQuestions[qIdx];
     const part=riasecParts[q.part];
     const answer=(v)=>{
+      if(answerPending.current)return;
       /* Anti-rushing detection */
       const now=Date.now();
       if(now-lastAnswerTime.current<RUSH_THRESHOLD_MS){rushCount.current++;if(rushCount.current>=3){setRushWarn(true);lastAnswerTime.current=now;return;}}
       else rushCount.current=0;
       lastAnswerTime.current=now;
+      answerPending.current=true;
       const na={...answers,[qIdx]:{p:q.p,v}};setAnswers(na);
       if(qIdx<riasecQuestions.length-1){
         const nextQ=riasecQuestions[qIdx+1];
-        if(nextQ.part!==q.part){setShowPartIntro(nextQ.part);setAnswers(na);setTimeout(()=>setQIdx(i=>i+1),250);}
-        else setTimeout(()=>setQIdx(i=>i+1),250);
+        if(nextQ.part!==q.part){setShowPartIntro(nextQ.part);setTimeout(()=>{setQIdx(i=>i+1);answerPending.current=false;},250);}
+        else setTimeout(()=>{setQIdx(i=>i+1);answerPending.current=false;},250);
       }
-      else{const sc={};Object.values(na).forEach(a=>{sc[a.p]=(sc[a.p]||0)+a.v;});const sorted=Object.entries(sc).sort((a,b)=>b[1]-a[1]).slice(0,3);setResults(sorted.map(([k])=>k));setTimeout(()=>nav('test-results'),400);}
+      else{const sc={};Object.values(na).forEach(a=>{sc[a.p]=(sc[a.p]||0)+a.v;});const sorted=Object.entries(sc).sort((a,b)=>b[1]-a[1]).slice(0,3);setResults(sorted.map(([k])=>k));setTimeout(()=>{nav('test-results');answerPending.current=false;},400);}
     };
     const dismissRush=()=>{setRushWarn(false);rushCount.current=0;};
     const pct=Math.round((qIdx/riasecQuestions.length)*100);
@@ -1631,16 +1634,16 @@ function App(){
       <h2 className="font-bold text-navy-700 text-sm truncate flex-1">Eligiendo Mi Camino</h2>
     </div>
     <main className="flex-1 flex flex-col overflow-hidden bg-cream-50 pt-[52px] md:pt-0">
-      {view==='home'&&Home()}
+      {view==='home'&&<Home/>}
       {view==='chat'&&Chat()}
-      {view==='test'&&Test()}
-      {view==='test-results'&&TestResults()}
-      {view==='myths'&&Myths()}
-      {view==='routes'&&Routes()}
-      {view==='explore'&&Explore()}
-      {view==='notebook'&&Notebook()}
+      {view==='test'&&<Test/>}
+      {view==='test-results'&&<TestResults/>}
+      {view==='myths'&&<Myths/>}
+      {view==='routes'&&<Routes/>}
+      {view==='explore'&&<Explore/>}
+      {view==='notebook'&&<Notebook/>}
       {view==='family'&&Family()}
-      {view==='plan'&&Plan()}
+      {view==='plan'&&<Plan/>}
     </main>
   </div>);
 }
