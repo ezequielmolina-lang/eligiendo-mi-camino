@@ -456,28 +456,18 @@ const riasecCombos=[
 /* \u2500\u2500 MYTHS DATA (Swipe Cards format from TAREA4) \u2500\u2500 */
 const mythsData=[
   {statement:"Solo con título universitario puedes ganar bien",isMyth:true,cat:"Salarios",
-   keyData:"S/ 3,968",keyLabel:"Tec. Computación/mes",
    explanation:"Un técnico industrial gana S/ 3,383/mes y un técnico en computación S/ 3,968/mes, con solo 2-3 años de estudio. En minería, un técnico gana S/ 6,235/mes, más que muchos universitarios.",source:"MTPE 2024"},
   {statement:"La mayoria de personas con solo secundaria trabaja informalmente",isMyth:false,cat:"Empleo",
-   keyData:"88%",keyLabel:"Informalidad sin estudios",
-   explanation:"El 88% de personas con solo secundaria trabaja de manera informal, sin contrato ni seguro. Con educación técnica baja a 55%, y con universidad a 32%.",source:"ENAHO 2024"},
+   explanation:"El 81% de personas con solo secundaria tiene un empleo informal, sin contrato, seguro ni otros beneficios. Con educación técnica baja a 56%, y con universidad a 40%.",source:"INEI. Encuesta Permanente de Empleo Nacional (EPEN) 2023-2024"},
   {statement:"Si empiezas a trabajar después del colegio, ya no puedes estudiar",isMyth:true,cat:"Trayectorias",
-   keyData:"Programas nocturnos, fines de semana, a distancia",keyLabel:"Opciones reales",
    explanation:"Existen programas nocturnos, de fin de semana y a distancia. Muchas personas combinan trabajo y estudio. La trayectoria no es lineal.",source:"MINEDU"},
-  {statement:"Las carreras técnicas son para los que no pueden entrar a la universidad",isMyth:true,cat:"Técnicas",
-   keyData:"S/ 3,128",keyLabel:"Tec. Electricista/mes",
-   explanation:"Las carreras técnicas son una elección estratégica. Son más cortas (2-3 años), más prácticas, con alta demanda en minería, electricidad, computación y manufactura.",source:"MTPE 2024"},
   {statement:"En Perú, la mayor demanda laboral esta en minería, tecnología y agronegocios",isMyth:false,cat:"Mercado",
-   keyData:"12 sectores con demanda",keyLabel:"En Lima Metropolitana",
    explanation:"Perú lidera en arándanos, paltas y espárragos. La minería genera los mejores salarios técnicos. Tecnología crece rápido. Pero también hay demanda en salud, logística y servicios.",source:"MTPE 2024"},
   {statement:"Elegir una carrera a los 16-17 años es definitivo",isMyth:true,cat:"Decisión",
-   keyData:"No es permanente",keyLabel:"Puedes cambiar y crecer",
-   explanation:"Las trayectorias profesionales no son lineales. Puedes cambiar de carrera, combinar estudios, hacer especializaciones diferentes. Lo importante es empezar a explorar.",source:"OIT"},
-  {statement:"Estudiar más años siempre significa ganar más",isMyth:true,cat:"Salarios",
-   keyData:"S/ 2,265 vs S/ 3,383",keyLabel:"Ed. Inicial (5a) vs Tec. Industrial (2a)",
+   explanation:"Las trayectorias profesionales no son lineales. Puedes seguir actualizándote. Además, existen muchas ocupaciones diferentes que realizan profesionales que estudiaron el mismo campo.",source:"OIT"},
+  {statement:"En promedio, más años de estudios significa ganar más",isMyth:true,cat:"Salarios",
    explanation:"Un técnico industrial (2-3 años) gana S/ 3,383/mes, mientras que un profesional de educación inicial (5 años) gana S/ 2,265/mes. La carrera importa tanto como el nivel de estudios.",source:"MTPE 2024"},
-  {statement:"Las mejores carreras son solo medicina, derecho e ingeniería",isMyth:true,cat:"Opciones",
-   keyData:"S/ 4,710",keyLabel:"Ing. Sistemas joven/mes",
+  {statement:"Solo carreras como medicina, derecho e ingeniería pagan bien",isMyth:true,cat:"Opciones",
    explanation:"Economía (S/ 4,526), Ing. Sistemas (S/ 4,710), Agronegocios (S/ 4,312) y Estadística (S/ 4,527) tienen excelentes salarios iniciales. Hay muchas opciones bien pagadas que no son las tradicionales.",source:"MTPE 2024"},
 ];
 
@@ -635,7 +625,7 @@ function App(){
           <h3 className="font-bold text-base sm:text-lg mb-1">¿Cuánto gana la gente al mes en Lima?</h3>
           <p className="text-white/50 text-xs mb-3 sm:mb-4">Promedio incluyendo trabajo formal e informal</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[{label:'Secundaria completa',val:'S/ 1,316',pct:43,color:'bg-green-400',info:'88% informal'},
+            {[{label:'Secundaria completa',val:'S/ 1,316',pct:43,color:'bg-green-400',info:''},
               {label:'Técnica completa',val:'S/ 1,934',pct:63,color:'bg-brand-400',info:'+47% vs secundaria'},
               {label:'Universidad completa',val:'S/ 3,057',pct:100,color:'bg-purple-400',info:'+132% vs secundaria'}
             ].map((d,i)=>(
@@ -647,7 +637,7 @@ function App(){
               </div>
             ))}
           </div>
-          <p className="text-white/30 text-[11px] mt-3">Fuente: ENAHO 2024, Lima Metropolitana</p>
+          <p className="text-white/30 text-[11px] mt-3">Fuente: Encuesta Nacional de Hogares (ENAHO) 2024, Lima Metropolitana y Callao</p>
         </div>
         {/* Youth pathway visual */}
         <div className="bg-white rounded-2xl border-2 border-cream-200 p-5 sm:p-6 mb-6">
@@ -655,10 +645,10 @@ function App(){
           <p className="text-navy-400 text-xs mb-4">¿Qué hacen después del colegio?</p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
             {[
-              {n:48,label:'Solo trabajan',icon:'💼',color:'bg-green-500',bg:'bg-green-50 border-green-200'},
-              {n:19,label:'Solo estudian',icon:'📚',color:'bg-purple-500',bg:'bg-purple-50 border-purple-200'},
-              {n:17,label:'Estudian y trabajan',icon:'⚡',color:'bg-blue-500',bg:'bg-blue-50 border-blue-200'},
-              {n:16,label:'NINIs',icon:'⚠️',color:'bg-red-500',bg:'bg-red-50 border-red-200'},
+              {n:45,label:'Solo trabajan',icon:'💼',color:'bg-green-500',bg:'bg-green-50 border-green-200'},
+              {n:26,label:'Solo estudian',icon:'📚',color:'bg-purple-500',bg:'bg-purple-50 border-purple-200'},
+              {n:12,label:'Estudian y trabajan',icon:'⚡',color:'bg-blue-500',bg:'bg-blue-50 border-blue-200'},
+              {n:17,label:'NINIs',icon:'⚠️',color:'bg-red-500',bg:'bg-red-50 border-red-200'},
             ].map((d,i)=>(<div key={i} className={`${d.bg} border-2 rounded-xl p-3 text-center`}>
               <span className="text-2xl block">{d.icon}</span>
               <p className="text-2xl sm:text-3xl font-black text-navy-700 mt-1">{d.n}</p>
@@ -666,34 +656,34 @@ function App(){
             </div>))}
           </div>
           <div className="w-full h-6 rounded-full overflow-hidden flex">
-            <div className="bg-green-500 h-full" style={{width:'48%'}}/>
-            <div className="bg-purple-500 h-full" style={{width:'19%'}}/>
-            <div className="bg-blue-500 h-full" style={{width:'17%'}}/>
-            <div className="bg-red-400 h-full" style={{width:'16%'}}/>
+            <div className="bg-green-500 h-full" style={{width:'45%'}}/>
+            <div className="bg-purple-500 h-full" style={{width:'26%'}}/>
+            <div className="bg-blue-500 h-full" style={{width:'12%'}}/>
+            <div className="bg-red-400 h-full" style={{width:'17%'}}/>
           </div>
           <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-[10px] text-navy-400">
-            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-green-500 rounded-full"/>Solo trabajan (48%)</span>
-            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-purple-500 rounded-full"/>Solo estudian (19%)</span>
-            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-blue-500 rounded-full"/>Ambos (17%)</span>
-            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-red-400 rounded-full"/>NINIs (16%)</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-green-500 rounded-full"/>Solo trabajan (45%)</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-purple-500 rounded-full"/>Solo estudian (26%)</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-blue-500 rounded-full"/>Ambos (12%)</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 bg-red-400 rounded-full"/>NINIs (17%)</span>
           </div>
-          <p className="text-[10px] text-navy-300 mt-2">Fuente: ENAHO 2023-2024, INEI. NINIs = ni estudian ni trabajan (~1.17 millones de jóvenes)</p>
+          <p className="text-[10px] text-navy-300 mt-2">Fuente: ENAHO 2024, INEI. NINIs = ni estudian ni trabajan (aprox. 1.3 millones de jóvenes)</p>
         </div>
         {/* Education access breakdown */}
         <div className="bg-brand-50 border-2 border-brand-200 rounded-2xl p-5 mb-8">
           <div className="flex gap-3 items-start mb-3">
             <OwlMascot size={48} expression="surprised"/>
             <div>
-              <p className="font-bold text-navy-700">Solo 30.9% logra transitar a educación superior</p>
-              <p className="text-navy-500 text-sm mt-1">De ese 30.9%: el <strong className="text-purple-600">12.5% va a universidad</strong> y el <strong className="text-blue-600">16.4% a instituto/técnico</strong>. El resto entra directo al mercado laboral.</p>
+              <p className="font-bold text-navy-700">Sólo el 33% de jóvenes (17-24 años) asisten a la educación superior</p>
+              <p className="text-navy-500 text-sm mt-1">Ese 33% se divide así: <strong className="text-purple-600">21% estudia una carrera universitaria</strong> y <strong className="text-blue-600">12% una carrera técnica</strong>.</p>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center">
-            <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">Universidad</p><p className="text-lg font-black text-purple-600">12.5%</p></div>
-            <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">Instituto/Técnico</p><p className="text-lg font-black text-blue-600">16.4%</p></div>
-            <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">No accede a superior</p><p className="text-lg font-black text-navy-600">69.1%</p></div>
+            <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">Universidad</p><p className="text-lg font-black text-purple-600">21%</p></div>
+            <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">Instituto/Técnico</p><p className="text-lg font-black text-blue-600">12%</p></div>
+            <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">No accede a superior</p><p className="text-lg font-black text-navy-600">67%</p><p className="text-[9px] text-navy-400 mt-0.5">77% no accede en zonas rurales</p></div>
           </div>
-          <p className="text-[10px] text-navy-300 mt-2">Fuente: SENAJU / ENAHO 2022, INEI. Bajo de 36.6% en 2019. En zonas rurales solo 20.1% accede.</p>
+          <p className="text-[10px] text-navy-300 mt-2">Fuente: ENAHO 2024, INEI</p>
         </div>
         {/* Steps grid */}
         <h2 className="text-lg font-black text-navy-700 mb-2">Tu camino en {steps.length} pasos</h2>
@@ -1147,23 +1137,23 @@ function App(){
   const routeColors=["from-purple-500 to-indigo-600","from-brand-400 to-brand-300","from-green-500 to-emerald-600"];
   const routeIcons=["🎓","⚡","🏠"];
   const rts=[
-    {icon:I.grad,name:"Universidad",time:"5 años",salary:"S/ 3,057",color:"from-purple-500 to-indigo-600",inf:"32%",
+    {icon:I.grad,name:"Universidad",time:"5 años",salary:"S/ 3,057",color:"from-purple-500 to-indigo-600",inf:"40%",
       example:"Un economista joven gana S/ 4,526/mes. Con experiencia, un ingeniero de sistemas llega a S/ 8,934/mes.",
       study:"Puedes retomar estudios si empiezas otra ruta",canWork:"Prácticas desde 3er año",
       pros:["Mayor salario promedio (+132% vs secundaria)","Red profesional amplia","Acceso a maestrias y especializaciones"],
       cons:["Costo alto: S/ 1,000-5,000/mes en privada","5 años sin ingreso fijo","No garantiza empleo automático"],
-      real:"Solo el 30% de jóvenes peruanos accede a educación superior. De los que terminan, el 68% trabaja en algo relacionado."},
-    {icon:I.bolt,name:"Técnico / Instituto",time:"2-3 años",salary:"S/ 1,934",color:"from-brand-400 to-brand-300",inf:"55%",
+      real:"Solo el 33% de jóvenes peruanos accede a educación superior. De los que terminan, el 68% trabaja en algo relacionado."},
+    {icon:I.bolt,name:"Técnico / Instituto",time:"2-3 años",salary:"S/ 1,934",color:"from-brand-400 to-brand-300",inf:"56%",
       example:"Un técnico en computación gana S/ 3,968/mes. Un técnico electricista S/ 3,128/mes. Ambos con alta demanda.",
       study:"Puedes continuar a universidad después (convalidaciones)",canWork:"Desde el 2do año en muchos institutos",
       pros:["Más rápido y práctico (2-3 años)","Menor costo que universidad","Alta demanda en minería, tecnología, electricidad","Algunos ganan MAS que universitarios"],
       cons:["Techo salarial más bajo en promedio","Menos red de contactos que universidad"],
       real:"Los técnicos en minería ganan S/ 6,235/mes promedio, más del doble que el promedio universitario."},
-    {icon:I.home,name:"Trabajo Directo",time:"Inmediato",salary:"S/ 1,316",color:"from-green-500 to-emerald-600",inf:"88%",
+    {icon:I.home,name:"Trabajo Directo",time:"Inmediato",salary:"S/ 1,316",color:"from-green-500 to-emerald-600",inf:"81%",
       example:"Puedes empezar como auxiliar de almacén (S/ 1,025-1,600) y capacitarte para crecer. Muchos combinan trabajo + estudio nocturno.",
       study:"Programas nocturnos, fines de semana, a distancia",canWork:"Desde ya",
       pros:["Ingresos inmediatos","Experiencia real desde el día 1","Puedes estudiar después o en paralelo","Independencia económica temprana"],
-      cons:["Menor salario inicial","Alta informalidad (88%)","Menos opciones de crecimiento sin capacitación"],
+      cons:["Menor salario inicial","Alta informalidad (81%)","Menos opciones de crecimiento sin capacitación"],
       real:"Hay programas nocturnos y de fin de semana. Muchos profesionales exitosos empezaron trabajando y estudiaron después."},
   ];
   const Routes=()=>{
@@ -1192,6 +1182,7 @@ function App(){
               </div>
               <div className="p-4 sm:p-5">
                 <div className="bg-cream-50 rounded-xl p-3 mb-4">
+                  <p className="text-xs text-navy-600 font-bold mb-1">Aquí tienes algunos ejemplos de ocupaciones:</p>
                   <p className="text-xs text-navy-500 leading-relaxed">{r.example}</p>
                 </div>
                 <div className="mb-3"><p className="text-xs font-bold text-green-600 mb-2">Ventajas</p>{r.pros.map((p,j)=><p key={j} className="text-xs text-navy-500 mb-1">{'\u2022'} {p}</p>)}</div>
@@ -1287,10 +1278,10 @@ function App(){
             <p className="text-navy-400 text-[10px] mb-4">¿Qué hacen después del colegio?</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
               {[
-                {n:48,label:'Solo trabajan',icon:'💼',bg:'bg-green-50 border-green-200'},
-                {n:19,label:'Solo estudian',icon:'📚',bg:'bg-purple-50 border-purple-200'},
-                {n:17,label:'Estudian y trabajan',icon:'⚡',bg:'bg-blue-50 border-blue-200'},
-                {n:16,label:'NINIs',icon:'⚠️',bg:'bg-red-50 border-red-200'},
+                {n:45,label:'Solo trabajan',icon:'💼',bg:'bg-green-50 border-green-200'},
+                {n:26,label:'Solo estudian',icon:'📚',bg:'bg-purple-50 border-purple-200'},
+                {n:12,label:'Estudian y trabajan',icon:'⚡',bg:'bg-blue-50 border-blue-200'},
+                {n:17,label:'NINIs',icon:'⚠️',bg:'bg-red-50 border-red-200'},
               ].map((d,i)=>(<div key={i} className={`${d.bg} border-2 rounded-xl p-3 text-center`}>
                 <span className="text-xl block">{d.icon}</span>
                 <p className="text-2xl font-black text-navy-700 mt-1">{d.n}</p>
@@ -1298,33 +1289,32 @@ function App(){
               </div>))}
             </div>
             <div className="w-full h-5 rounded-full overflow-hidden flex">
-              <div className="bg-green-500 h-full" style={{width:'48%'}}/>
-              <div className="bg-purple-500 h-full" style={{width:'19%'}}/>
-              <div className="bg-blue-500 h-full" style={{width:'17%'}}/>
-              <div className="bg-red-400 h-full" style={{width:'16%'}}/>
+              <div className="bg-green-500 h-full" style={{width:'45%'}}/>
+              <div className="bg-purple-500 h-full" style={{width:'26%'}}/>
+              <div className="bg-blue-500 h-full" style={{width:'12%'}}/>
+              <div className="bg-red-400 h-full" style={{width:'17%'}}/>
             </div>
-            <p className="text-[10px] text-navy-300 mt-2">ENAHO 2023-2024, INEI. NINIs (~1.17M jóvenes) = ni estudian ni trabajan</p>
+            <p className="text-[10px] text-navy-300 mt-2">ENAHO 2024, INEI. NINIs (aprox. 1.3M jóvenes) = ni estudian ni trabajan</p>
           </div>
 
           {/* Education access */}
           <div className="bg-purple-50 border-2 border-purple-200 rounded-2xl p-5 mb-6">
-            <p className="font-bold text-navy-700 text-sm mb-3">Acceso a educación superior: solo 30.9%</p>
+            <p className="font-bold text-navy-700 text-sm mb-3">Sólo el 33% de jóvenes (17-24 años) asisten a la educación superior</p>
             <div className="grid grid-cols-3 gap-2 text-center mb-3">
-              <div className="bg-white rounded-lg p-3"><p className="text-2xl font-black text-purple-600">12.5%</p><p className="text-[10px] text-navy-400 font-bold">Universidad</p></div>
-              <div className="bg-white rounded-lg p-3"><p className="text-2xl font-black text-blue-600">16.4%</p><p className="text-[10px] text-navy-400 font-bold">Inst./Técnico</p></div>
-              <div className="bg-white rounded-lg p-3"><p className="text-2xl font-black text-navy-600">69.1%</p><p className="text-[10px] text-navy-400 font-bold">No accede</p></div>
+              <div className="bg-white rounded-lg p-3"><p className="text-2xl font-black text-purple-600">21%</p><p className="text-[10px] text-navy-400 font-bold">Universidad</p></div>
+              <div className="bg-white rounded-lg p-3"><p className="text-2xl font-black text-blue-600">12%</p><p className="text-[10px] text-navy-400 font-bold">Inst./Técnico</p></div>
+              <div className="bg-white rounded-lg p-3"><p className="text-2xl font-black text-navy-600">67%</p><p className="text-[10px] text-navy-400 font-bold">No accede</p><p className="text-[8px] text-navy-400">77% no accede en zonas rurales</p></div>
             </div>
-            <p className="text-xs text-purple-600">En 2019 era 36.6%. Bajo a 30.9% en 2022. En zonas rurales solo 20.1% accede.</p>
-            <p className="text-[10px] text-navy-300 mt-1">SENAJU / ENAHO 2022, INEI</p>
+            <p className="text-[10px] text-navy-300 mt-1">ENAHO 2024, INEI</p>
           </div>
 
           {/* Key facts */}
           <div className="space-y-3 mb-6">
             {[
               {icon:'🎓',title:'80 de cada 100 terminan secundaria',detail:'Pero solo 21 de cada 100 completan educación superior. 46 de 100 que empiezan un instituto lo abandonan.',color:'bg-brand-50 border-brand-200'},
-              {icon:'📉',title:'88% con solo secundaria trabaja informalmente',detail:'Sin contrato, sin seguro, sin vacaciones. Con educación técnica baja a 55%. Con universidad a 32%.',color:'bg-red-50 border-red-200'},
+              {icon:'📉',title:'81% con solo secundaria trabaja informalmente',detail:'Sin contrato, seguro ni otros beneficios. Con educación técnica baja a 56%. Con universidad a 40%.',color:'bg-red-50 border-red-200'},
               {icon:'💰',title:'La carrera importa tanto como el nivel de estudios',detail:'Un técnico en computación gana S/ 3,968/mes, más que un universitario promedio (S/ 3,057/mes). La clave es elegir bien el sector.',color:'bg-brand-50 border-brand-200'},
-              {icon:'⚠️',title:'1.17 millones de jóvenes son NINIs',detail:'Ni estudian ni trabajan. El 44% tiene entre 15-19 años. El 59% son mujeres. Es la situación que este programa busca prevenir.',color:'bg-amber-50 border-amber-200'},
+              {icon:'⚠️',title:'1.3 millones de jóvenes son NINIs',detail:'Ni estudian ni trabajan. El 44% tiene entre 15-19 años. El 59% son mujeres. Es la situación que este programa busca prevenir.',color:'bg-amber-50 border-amber-200'},
               {icon:'🔄',title:'Las rutas no son permanentes',detail:'Programas nocturnos, fines de semana y a distancia permiten combinar trabajo y estudio. Muchos profesionales exitosos cambiaron de ruta.',color:'bg-green-50 border-green-200'},
               {icon:'🏭',title:'Sectores con mayor demanda en Peru',detail:'Minería (mejores salarios técnicos), Agronegocios (Perú líder en arándanos y paltas), Tecnología (crecimiento rápido), Salud (demanda constante).',color:'bg-blue-50 border-blue-200'},
             ].map((d,i)=>(<div key={i} className={`${d.color} border-2 rounded-2xl p-4 flex gap-3 items-start animate-slide-up`} style={{animationDelay:`${i*.06}s`}}>
@@ -1335,7 +1325,7 @@ function App(){
               </div>
             </div>))}
           </div>
-          <p className="text-[10px] text-navy-300 text-center mb-4">Fuentes: ENAHO 2023-2024, INEI, SENAJU, MTPE Planilla Electrónica, CCL</p>
+          <p className="text-[10px] text-navy-300 text-center mb-4">Fuentes: ENAHO 2024, INEI, MTPE Planilla Electrónica, CCL</p>
         </div>)}
 
         <div className="bg-brand-50 border-2 border-brand-200 rounded-2xl p-4 sm:p-5 mb-6 flex gap-3 sm:gap-4">
