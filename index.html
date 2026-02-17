@@ -685,6 +685,36 @@ function App(){
           </div>
           <p className="text-[10px] text-navy-300 mt-2">Fuente: ENAHO 2024, INEI</p>
         </div>
+        {/* Ikigai roadmap */}
+        <div className="bg-white rounded-2xl border-2 border-cream-200 p-4 sm:p-5 mb-6">
+          <div className="flex items-center gap-3 mb-3">
+            <svg viewBox="0 0 48 44" className="w-10 h-10 shrink-0">
+              <circle cx="24" cy="15" r="12" fill="#fda4af" opacity="0.5"/><circle cx="17" cy="28" r="12" fill="#93c5fd" opacity="0.5"/><circle cx="31" cy="28" r="12" fill="#86efac" opacity="0.5"/><circle cx="24" cy="22" r="4" fill="#F7A348" opacity="0.4"/>
+            </svg>
+            <div>
+              <p className="font-black text-navy-700 text-sm">Tu Ikigai — el hilo de tu camino</p>
+              <p className="text-navy-400 text-[11px]">Cada paso te acerca a tu zona ideal</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-2 text-center text-[10px] sm:text-xs">
+            <div className="bg-rose-50 rounded-lg p-2 border border-rose-100">
+              <span className="text-sm block">❤️</span>
+              <p className="font-bold text-rose-700 mt-0.5">Lo que me gusta</p>
+              <p className="text-rose-400 text-[9px]">Pasos 1-2</p>
+            </div>
+            <div className="bg-blue-50 rounded-lg p-2 border border-blue-100">
+              <span className="text-sm block">💪</span>
+              <p className="font-bold text-blue-700 mt-0.5">Lo que hago bien</p>
+              <p className="text-blue-400 text-[9px]">Pasos 1-2</p>
+            </div>
+            <div className="bg-green-50 rounded-lg p-2 border border-green-100">
+              <span className="text-sm block">💰</span>
+              <p className="font-bold text-green-700 mt-0.5">Mercado laboral</p>
+              <p className="text-green-400 text-[9px]">Pasos 3-5</p>
+            </div>
+          </div>
+          <p className="text-[10px] text-navy-400 mt-2.5 text-center">En el paso 6 elegirás <strong className="text-navy-600">3 ocupaciones</strong> donde se cruzan las 3 áreas ✨</p>
+        </div>
         {/* Steps grid */}
         <h2 className="text-lg font-black text-navy-700 mb-2">Tu camino en {steps.length} pasos</h2>
         <p className="text-sm text-navy-400 mb-4">Puedes explorar cualquier paso libremente</p>
@@ -989,10 +1019,12 @@ function App(){
           <p className="text-sm text-navy-600"><strong>Recuerda:</strong> estos perfiles muestran tus tendencias, no tu destino. Puedes combinar perfiles y explorar caminos inesperados. Toca cada perfil para ver las carreras concretas.</p>
         </div>
         <div className="bg-gradient-to-r from-rose-50 via-blue-50 to-green-50 border-2 border-cream-200 rounded-2xl p-4 mb-6 flex gap-3 items-start">
-          <span className="text-2xl shrink-0">🎯</span>
+          <svg viewBox="0 0 48 44" className="w-10 h-10 shrink-0 mt-0.5">
+            <circle cx="24" cy="15" r="12" fill="#fda4af" opacity="0.5"/><circle cx="17" cy="28" r="12" fill="#93c5fd" opacity="0.5"/><circle cx="31" cy="28" r="12" fill="#86efac" opacity="0.5"/><circle cx="24" cy="22" r="4" fill="#F7A348" opacity="0.4"/>
+          </svg>
           <div>
-            <p className="font-bold text-navy-700 text-sm">Tu Ikigai Vocacional</p>
-            <p className="text-navy-500 text-xs mt-1">Ya descubriste <strong className="text-rose-600">qué te gusta</strong> y <strong className="text-blue-600">en qué eres bueno</strong>. En los próximos pasos explorarás <strong className="text-green-600">qué valora el mercado</strong>. Con esas 3 piezas podrás encontrar tu zona ideal — tu Ikigai vocacional.</p>
+            <p className="font-bold text-navy-700 text-sm">Tu Ikigai: 2 de 3 círculos completados</p>
+            <p className="text-navy-500 text-xs mt-1">Ya descubriste <strong className="text-rose-600">qué te gusta</strong> y <strong className="text-blue-600">en qué eres bueno</strong>. En los próximos pasos explorarás <strong className="text-green-600">qué valora el mercado laboral</strong>. Con las 3 piezas podrás elegir ocupaciones en tu zona ideal.</p>
           </div>
         </div>
         <button onClick={()=>{mark(1);nav('home');}} className="w-full py-3.5 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold shadow-lg hover:opacity-90 transition">Completar paso</button>
@@ -1486,12 +1518,12 @@ function App(){
           <div className="absolute -top-6 -right-6 w-28 h-28 bg-white/5 rounded-full"/>
           <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-white/5 rounded-full"/>
           <p className="text-brand-300 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-1">生き甲斐</p>
-          <h3 className="font-black text-white text-lg sm:text-xl mb-1.5">Tu Ikigai Vocacional</h3>
-          <p className="text-white/60 text-xs sm:text-sm max-w-md mx-auto leading-relaxed"><strong className="text-white/90">Ikigai</strong> es un concepto japonés que significa <em>"razón de ser"</em> — lo que te motiva a levantarte cada día.</p>
+          <h3 className="font-black text-white text-lg sm:text-xl mb-1.5">¿Recuerdas tu Ikigai?</h3>
+          <p className="text-white/60 text-xs sm:text-sm max-w-md mx-auto leading-relaxed">Ya completaste los <strong className="text-white/90">3 círculos</strong>. Ahora tienes todo para elegir ocupaciones en tu zona ideal.</p>
         </div>
         {/* Diagram */}
         <div className="bg-white px-4 sm:px-7 pt-5 sm:pt-6 pb-4">
-          <p className="text-center text-navy-400 text-xs mb-4">En este programa exploramos <strong className="text-navy-600">3 áreas clave</strong> para ayudarte a encontrar la tuya:</p>
+          <p className="text-center text-navy-400 text-xs mb-4">Elige ocupaciones donde se cruzan las <strong className="text-navy-600">3 áreas</strong> que exploraste:</p>
           <div className="flex justify-center mb-4">
             <svg viewBox="0 0 320 290" className="w-[260px] sm:w-[300px]" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -1552,7 +1584,7 @@ function App(){
         {/* Bottom CTA */}
         <div className="bg-gradient-to-r from-brand-50 to-cream-50 px-4 sm:px-7 py-3.5 sm:py-4 flex gap-2.5 items-start border-t border-brand-100">
           <OwlMini size={28}/>
-          <p className="text-xs sm:text-sm text-navy-600 leading-relaxed"><strong className="text-navy-700">Tus 3 ocupaciones</strong> deberían estar en el centro — donde se cruzan lo que te gusta, en lo que eres bueno, y lo que el mercado valora.</p>
+          <p className="text-xs sm:text-sm text-navy-600 leading-relaxed"><strong className="text-navy-700">Elige 3 ocupaciones</strong> que estén en el centro — donde se cruza lo que te gusta, en lo que eres bueno, y lo que el mercado valora.</p>
         </div>
       </div>
       <div className="space-y-4 mb-8">
