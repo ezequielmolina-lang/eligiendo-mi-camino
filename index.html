@@ -766,7 +766,7 @@ function App(){
   const[selectedBtn,setSelectedBtn]=useState(null);
   const[maxQReached,setMaxQReached]=useState(0);
   /* Init test: show Part 1 intro when navigating to test for first time; reset answerPending on re-entry */
-  useEffect(()=>{if(view==='test'){answerPending.current=false;rushCount.current=0;if(!testInitRef.current&&qIdx===0&&Object.keys(answers).length===0&&showPartIntro===null){testInitRef.current=true;setShowPartIntro(0);}}},[view]);
+  useEffect(()=>{if(view==='test'){answerPending.current=false;rushCount.current=0;setSelectedBtn(null);if(!testInitRef.current&&qIdx===0&&Object.keys(answers).length===0&&showPartIntro===null){testInitRef.current=true;setShowPartIntro(0);}}},[view]);
   const Test=()=>{
     if(results){nav('test-results');return null;}
     const q=riasecQuestions[qIdx];
@@ -781,6 +781,8 @@ function App(){
       else rushCount.current=0;
       lastAnswerTime.current=now;
       answerPending.current=true;
+      /* Safety: auto-reset answerPending if it gets stuck */
+      setTimeout(()=>{answerPending.current=false;},1500);
       setSelectedBtn(v);
       const na={...answers,[qIdx]:{p:q.p,v}};
       if(qIdx<riasecQuestions.length-1){
@@ -793,7 +795,7 @@ function App(){
     const goBack=()=>{if(qIdx>0){setSelectedBtn(null);const prev=qIdx-1;const prevQ=riasecQuestions[prev];if(prevQ.part!==q.part)setShowPartIntro(null);setQIdx(prev);}};
     const canGoFwd=qIdx<maxQReached;
     const goFwd=()=>{if(canGoFwd){setSelectedBtn(null);const nxt=qIdx+1;const nxtQ=riasecQuestions[nxt];if(nxtQ.part!==q.part)setShowPartIntro(null);setQIdx(nxt);}};
-    const dismissRush=()=>{setRushWarn(false);rushCount.current=0;};
+    const dismissRush=()=>{setRushWarn(false);rushCount.current=0;answerPending.current=false;};
     const pct=Math.round((qIdx/riasecQuestions.length)*100);
     const partStartIdx=[0,30,60];const currentPartNum=q.part;
     const qInPart=qIdx-partStartIdx[currentPartNum]+1;
@@ -846,7 +848,7 @@ function App(){
                 {pi.labels.map((l,i)=>(<span key={i} className="text-[9px] sm:text-[10px] bg-cream-50 px-1.5 sm:px-2 py-1 rounded-lg text-navy-600">{l}</span>))}
               </div>
             </div>
-            <button onClick={()=>{setShowPartIntro(null);window.scrollTo(0,0);}} className="relative z-10 px-6 sm:px-8 py-3 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
+            <button onClick={()=>{setShowPartIntro(null);answerPending.current=false;window.scrollTo(0,0);}} className="relative z-10 px-6 sm:px-8 py-3 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
               Comenzar {pi.title}
             </button>
           </div>
@@ -1034,6 +1036,7 @@ function App(){
     }
     const m=mythsData[mythIdx];const pct=Math.round(((mythIdx+(mythFeedback?1:0))/mythsData.length)*100);
     const handleAnswer=(userSaysMyth)=>{
+      if(mythSwipe||mythFeedback)return;
       const isCorrect=userSaysMyth===m.isMyth;
       setMythSwipe(userSaysMyth?'left':'right');
       setTimeout(()=>{setMythSwipe(null);setMythFeedback({isCorrect,userSaysMyth});},300);
@@ -1226,6 +1229,7 @@ function App(){
                 </div>
                 <div className="space-y-3">
                   {routeQuiz[routeQ].opts.map((opt,i)=>(<button key={i} onClick={()=>{
+                    if(routeAs.length>routeQ)return;
                     const na=[...routeAs,opt.w];setRouteAs(na);
                     if(routeQ<routeQuiz.length-1)setTimeout(()=>setRouteQ(q=>q+1),250);
                   }} className="w-full text-left bg-white rounded-2xl p-5 border-2 border-cream-200 hover:border-brand-300 hover:bg-brand-50 transition-all shadow-sm hover:shadow-md">
