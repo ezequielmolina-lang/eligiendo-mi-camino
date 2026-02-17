@@ -619,36 +619,6 @@ function App(){
             <p className="text-sm text-navy-600">Aqui vas a <strong>conocerte mejor</strong>, <strong>explorar opciones con datos reales</strong> y <strong>construir un plan</strong> que funcione para ti y tu familia. No hay respuestas correctas — hay caminos que se adaptan mejor a cada persona.</p>
           </div>
         </div>
-        {/* Ikigai roadmap */}
-        <div className="bg-white rounded-2xl border-2 border-cream-200 p-4 sm:p-5 mb-6">
-          <div className="flex items-center gap-3 mb-3">
-            <svg viewBox="0 0 48 44" className="w-10 h-10 shrink-0">
-              <circle cx="24" cy="15" r="12" fill="#fda4af" opacity="0.5"/><circle cx="17" cy="28" r="12" fill="#93c5fd" opacity="0.5"/><circle cx="31" cy="28" r="12" fill="#86efac" opacity="0.5"/><circle cx="24" cy="22" r="4" fill="#F7A348" opacity="0.4"/>
-            </svg>
-            <div>
-              <p className="font-black text-navy-700 text-sm">Tu Ikigai — el hilo de tu camino</p>
-              <p className="text-navy-400 text-[11px]">Cada paso te acerca a tu zona ideal</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-3 gap-2 text-center text-[10px] sm:text-xs">
-            <div className="bg-rose-50 rounded-lg p-2 border border-rose-100">
-              <span className="text-sm block">❤️</span>
-              <p className="font-bold text-rose-700 mt-0.5">Lo que me gusta</p>
-              <p className="text-rose-400 text-[9px]">Pasos 1-2</p>
-            </div>
-            <div className="bg-blue-50 rounded-lg p-2 border border-blue-100">
-              <span className="text-sm block">💪</span>
-              <p className="font-bold text-blue-700 mt-0.5">Lo que hago bien</p>
-              <p className="text-blue-400 text-[9px]">Pasos 1-2</p>
-            </div>
-            <div className="bg-green-50 rounded-lg p-2 border border-green-100">
-              <span className="text-sm block">💰</span>
-              <p className="font-bold text-green-700 mt-0.5">Mercado laboral</p>
-              <p className="text-green-400 text-[9px]">Pasos 3-5</p>
-            </div>
-          </div>
-          <p className="text-[10px] text-navy-400 mt-2.5 text-center">En el paso 6 elegirás <strong className="text-navy-600">3 ocupaciones</strong> donde se cruzan las 3 áreas ✨</p>
-        </div>
         {/* Salary context - diverse examples */}
         <div className="bg-gradient-to-r from-navy-700 to-navy-600 rounded-2xl p-4 sm:p-6 text-white mb-6 relative overflow-hidden">
           <div className="absolute right-4 top-4 opacity-10 hidden sm:block"><OwlMascot size={100}/></div>
@@ -714,6 +684,36 @@ function App(){
             <div className="bg-white rounded-lg p-2.5"><p className="text-xs text-navy-400">No accede a superior</p><p className="text-lg font-black text-navy-600">67%</p><p className="text-[9px] text-navy-400 mt-0.5">77% no accede en zonas rurales</p></div>
           </div>
           <p className="text-[10px] text-navy-300 mt-2">Fuente: ENAHO 2024, INEI</p>
+        </div>
+        {/* Ikigai roadmap */}
+        <div className="bg-white rounded-2xl border-2 border-cream-200 p-4 sm:p-5 mb-6">
+          <div className="flex items-center gap-3 mb-3">
+            <svg viewBox="0 0 48 44" className="w-10 h-10 shrink-0">
+              <circle cx="24" cy="15" r="12" fill="#fda4af" opacity="0.5"/><circle cx="17" cy="28" r="12" fill="#93c5fd" opacity="0.5"/><circle cx="31" cy="28" r="12" fill="#86efac" opacity="0.5"/><circle cx="24" cy="22" r="4" fill="#F7A348" opacity="0.4"/>
+            </svg>
+            <div>
+              <p className="font-black text-navy-700 text-sm">Tu Ikigai — el hilo de tu camino</p>
+              <p className="text-navy-400 text-[11px]">Cada paso te acerca a tu zona ideal</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-2 text-center text-[10px] sm:text-xs">
+            <div className="bg-rose-50 rounded-lg p-2 border border-rose-100">
+              <span className="text-sm block">❤️</span>
+              <p className="font-bold text-rose-700 mt-0.5">Lo que me gusta</p>
+              <p className="text-rose-400 text-[9px]">Pasos 1-2</p>
+            </div>
+            <div className="bg-blue-50 rounded-lg p-2 border border-blue-100">
+              <span className="text-sm block">💪</span>
+              <p className="font-bold text-blue-700 mt-0.5">Lo que hago bien</p>
+              <p className="text-blue-400 text-[9px]">Pasos 1-2</p>
+            </div>
+            <div className="bg-green-50 rounded-lg p-2 border border-green-100">
+              <span className="text-sm block">💰</span>
+              <p className="font-bold text-green-700 mt-0.5">Mercado laboral</p>
+              <p className="text-green-400 text-[9px]">Pasos 3-5</p>
+            </div>
+          </div>
+          <p className="text-[10px] text-navy-400 mt-2.5 text-center">En el paso 6 elegirás <strong className="text-navy-600">3 ocupaciones</strong> donde se cruzan las 3 áreas ✨</p>
         </div>
         {/* Steps grid */}
         <h2 className="text-lg font-black text-navy-700 mb-2">Tu camino en {steps.length} pasos</h2>
