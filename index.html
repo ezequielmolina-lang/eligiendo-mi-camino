@@ -988,6 +988,13 @@ function App(){
           <OwlMini size={32}/>
           <p className="text-sm text-navy-600"><strong>Recuerda:</strong> estos perfiles muestran tus tendencias, no tu destino. Puedes combinar perfiles y explorar caminos inesperados. Toca cada perfil para ver las carreras concretas.</p>
         </div>
+        <div className="bg-gradient-to-r from-rose-50 via-blue-50 to-green-50 border-2 border-cream-200 rounded-2xl p-4 mb-6 flex gap-3 items-start">
+          <span className="text-2xl shrink-0">🎯</span>
+          <div>
+            <p className="font-bold text-navy-700 text-sm">Tu Ikigai Vocacional</p>
+            <p className="text-navy-500 text-xs mt-1">Ya descubriste <strong className="text-rose-600">qué te gusta</strong> y <strong className="text-blue-600">en qué eres bueno</strong>. En los próximos pasos explorarás <strong className="text-green-600">qué valora el mercado</strong>. Con esas 3 piezas podrás encontrar tu zona ideal — tu Ikigai vocacional.</p>
+          </div>
+        </div>
         <button onClick={()=>{mark(1);nav('home');}} className="w-full py-3.5 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold shadow-lg hover:opacity-90 transition">Completar paso</button>
       </div>
     </div>);
@@ -1471,6 +1478,53 @@ function App(){
         <OwlMascot size={80} expression="surprised" className="mx-auto mascot-shadow mb-4"/>
         <h3 className="text-xl font-black text-navy-700">De explorar a decidir</h3>
         <p className="text-navy-400 mt-2 text-sm max-w-lg mx-auto">En el Explorador de Ocupaciones viste datos de muchos sectores. Ahora vas a elegir las que más te interesaron y profundizar para tomar una mejor decisión.</p>
+      </div>
+      {/* Ikigai 3-Circle Visualization */}
+      <div className="bg-white rounded-2xl border-2 border-cream-200 p-5 sm:p-6 mb-8 animate-fade-in">
+        <h3 className="text-center font-black text-navy-700 text-lg mb-1">Tu Ikigai Vocacional</h3>
+        <p className="text-center text-navy-400 text-xs mb-5"><strong>Ikigai</strong> es un concepto japonés que significa <em>"razón de ser"</em>. Es lo que te motiva a levantarte cada día. En este programa exploramos 3 áreas clave para ayudarte a encontrar la tuya.</p>
+        <div className="flex justify-center mb-5">
+          <svg viewBox="0 0 300 270" className="w-64 sm:w-72" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <style>{`.iki-circle{mix-blend-mode:multiply}`}</style>
+            </defs>
+            {/* Three circles */}
+            <circle className="iki-circle" cx="150" cy="90" r="80" fill="#fda4af" opacity="0.55"/>
+            <circle className="iki-circle" cx="105" cy="170" r="80" fill="#93c5fd" opacity="0.55"/>
+            <circle className="iki-circle" cx="195" cy="170" r="80" fill="#86efac" opacity="0.55"/>
+            {/* Labels inside each circle */}
+            <text x="150" y="60" textAnchor="middle" fill="#9f1239" fontSize="11" fontWeight="800">Lo que me</text>
+            <text x="150" y="74" textAnchor="middle" fill="#9f1239" fontSize="11" fontWeight="800">GUSTA</text>
+            <text x="150" y="88" textAnchor="middle" fill="#9f1239" fontSize="9">❤️</text>
+            <text x="72" y="185" textAnchor="middle" fill="#1e3a8a" fontSize="11" fontWeight="800">Lo que</text>
+            <text x="72" y="199" textAnchor="middle" fill="#1e3a8a" fontSize="11" fontWeight="800">HAGO BIEN</text>
+            <text x="72" y="213" textAnchor="middle" fill="#1e3a8a" fontSize="9">💪</text>
+            <text x="228" y="185" textAnchor="middle" fill="#166534" fontSize="11" fontWeight="800">Lo que el</text>
+            <text x="228" y="199" textAnchor="middle" fill="#166534" fontSize="11" fontWeight="800">MERCADO valora</text>
+            <text x="228" y="213" textAnchor="middle" fill="#166534" fontSize="9">💰</text>
+            {/* Center intersection */}
+            <text x="150" y="148" textAnchor="middle" fill="#1e293b" fontSize="10" fontWeight="900">TU ZONA</text>
+            <text x="150" y="161" textAnchor="middle" fill="#1e293b" fontSize="10" fontWeight="900">IDEAL ✨</text>
+          </svg>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center text-xs mb-4">
+          <div className="bg-rose-50 rounded-xl p-2.5 border border-rose-200">
+            <p className="font-bold text-rose-700">❤️ Lo que me gusta</p>
+            <p className="text-rose-500 mt-0.5">Pasos 1-2: Chat + Test RIASEC</p>
+          </div>
+          <div className="bg-blue-50 rounded-xl p-2.5 border border-blue-200">
+            <p className="font-bold text-blue-700">💪 Lo que hago bien</p>
+            <p className="text-blue-500 mt-0.5">Paso 2: Habilidades RIASEC</p>
+          </div>
+          <div className="bg-green-50 rounded-xl p-2.5 border border-green-200">
+            <p className="font-bold text-green-700">💰 Lo que el mercado valora</p>
+            <p className="text-green-500 mt-0.5">Pasos 3-5: Datos y salarios</p>
+          </div>
+        </div>
+        <div className="bg-brand-50 rounded-xl p-3 flex gap-2 items-start">
+          <OwlMini size={28}/>
+          <p className="text-sm text-navy-600"><strong>Tus 3 ocupaciones</strong> deberían estar donde se cruzan las 3 áreas — algo que te gusta, en lo que eres bueno, y que además tiene demanda en el mercado laboral.</p>
+        </div>
       </div>
       <div className="space-y-4 mb-8">
         {[
