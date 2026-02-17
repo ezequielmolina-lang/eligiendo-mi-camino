@@ -75,7 +75,7 @@ const I={
 
 /* -- SECTOR DATA (career_explorer_v5 - 12 sectors, 142 ocupaciones) -- */
 const sectors=[
-  {id:'mineria',name:'Minería y Recursos Naturales',icon:'⛏️',color:'from-yellow-600 to-amber-700',tag:'Top $',desc:'Es el sector MEJOR PAGADO de Perú. Los técnicos mineros ganan más que muchos universitarios.',ocupaciones:{
+  {id:'mineria',name:'Minería y Recursos Naturales',icon:'⛏️',color:'from-yellow-600 to-amber-700',desc:'Sector con alta remuneración promedio en el país, dependiendo del rol, la experiencia y la región.',ocupaciones:{
     secundaria:[
       {name:'Peón de mina',salary:'Variable',growth:'-',desc:'Apoyo en operaciones mineras: carga, descarga, limpieza de áreas.',skills:['Trabajo físico','Seguridad','Trabajo en equipo'],where:['Antamina','Southern','Cerro Verde','Las Bambas'],dayInLife:'Llegas temprano al campamento minero. Cargas materiales, limpias áreas de trabajo, apoyas en la descarga de minerales y sigues instrucciones del supervisor en todo momento.'},
       {name:'Ayudante de perforación',salary:'Variable',growth:'-',desc:'Apoyo en trabajos de perforación y voladura.',skills:['Resistencia física','Seguir instrucciones','Seguridad'],where:['Empresas de perforación','Contratistas mineros'],dayInLife:'Preparas las herramientas de perforación, alcanzas materiales al operador, ayudas en la colocación de explosivos bajo supervisión y mantienes el área limpia y segura.'},
@@ -88,7 +88,7 @@ const sectors=[
       {name:'Geología',salary:'S/ 4,043',growth:'S/ 12,049',range:'S/ 2,000 - S/ 6,603',rangeAdult:'S/ 4,103 - S/ 22,103',desc:'Identificas yacimientos minerales y evaluas recursos naturales.',skills:['Análisis geologico','Trabajo de campo','Mapeo'],where:['Empresas mineras','INGEMMET','Consultoras'],study:'Estudias mineralogía, petrología, geoquímica, geofísica, mapeo geológico y evaluación de recursos naturales (5 años en UNI, UNMSM, UNSA).',dayInLife:'Sales a campo a recolectar muestras de roca, analizas resultados en laboratorio, elaboras mapas geológicos y presentas informes sobre potencial de yacimientos.'},
     ],
   }},
-  {id:'tecnologia',name:'Tecnología y Computación',icon:'💻',color:'from-blue-500 to-cyan-600',tag:'Top $',desc:'Sector con mayor crecimiento global. Alta demanda de programadores.',ocupaciones:{
+  {id:'tecnologia',name:'Tecnología y Computación',icon:'💻',color:'from-blue-500 to-cyan-600',desc:'Sector con crecimiento sostenido en los últimos años y demanda de perfiles tecnológicos.',ocupaciones:{
     tecnica:[
       {name:'Técnico en Ciencias de la Computación',salary:'S/ 3,968',growth:'S/ 5,062',range:'S/ 1,364 - S/ 7,643',rangeAdult:'S/ 1,853 - S/ 9,272',desc:'Desarrollas software, das soporte técnico, administras redes.',skills:['Programación','Redes','Soporte técnico'],where:['BCP','IBM','Startups','Bancos'],study:'Estudias programación, bases de datos, redes, soporte técnico y desarrollo web en institutos como IDAT, Cibertec o Senati (2-3 años).',dayInLife:'Desarrollas aplicaciones web, das soporte técnico a usuarios, configuras redes y servidores, y resuelves problemas de software en la empresa.'},
       {name:'Técnico de Telecomunicaciones',salary:'S/ 2,213',growth:'S/ 4,412',range:'S/ 1,700 - S/ 3,000',rangeAdult:'S/ 2,200 - S/ 7,678',desc:'Instalas y mantienes redes de comunicación y fibra óptica.',skills:['Redes','Fibra óptica','Electrónica'],where:['Claro','Movistar','Entel'],study:'Estudias redes de comunicación, fibra óptica, electrónica básica e instalación de equipos en institutos técnicos (2-3 años).',dayInLife:'Instalas y reparas líneas de fibra óptica, configuras equipos de red en casas y empresas, y atiendes reportes de fallas de conexión.'},
@@ -104,7 +104,7 @@ const sectors=[
       {name:'Física',salary:'S/ 3,312',growth:'S/ 6,890',range:'S/ 1,400 - S/ 5,800',rangeAdult:'S/ 2,300 - S/ 12,500',desc:'Investigas fenomenos fisicos, aplicas a tecnología.',skills:['Investigación','Matemáticas','Programación'],where:['Universidades','Centros de investigación'],study:'Estudias mecánica, electromagnetismo, termodinámica, física cuántica y métodos computacionales (5 años en UNMSM, UNI, PUCP).',dayInLife:'Realizas experimentos en laboratorio, analizas datos experimentales, desarrollas simulaciones computacionales y publicas resultados de investigación.'},
     ],
   }},
-  {id:'infraestructura',name:'Infraestructura e Ingeniería',icon:'🏗️',color:'from-slate-600 to-gray-700',desc:'Perú invierte miles de millones en infraestructura cada año.',ocupaciones:{
+  {id:'infraestructura',name:'Infraestructura e Ingeniería',icon:'🏗️',color:'from-slate-600 to-gray-700',desc:'Sector relacionado con construcción, obras públicas y desarrollo de infraestructura en distintas regiones del país.',ocupaciones:{
     secundaria:[
       {name:'Peón de obra / Ayudante de albañil',salary:'Variable',growth:'-',desc:'Mezcla de cemento, carga de materiales, limpieza en construcción.',skills:['Trabajo físico','Seguir instrucciones'],where:['Constructoras','Obras','Contratistas'],dayInLife:'Llegas a la obra temprano, preparas la mezcla de cemento, cargas ladrillos y materiales, ayudas al maestro de obra y limpias el área al final del día.'},
       {name:'Pintor de obra',salary:'Variable',growth:'-',desc:'Pintura de paredes, techos, fachadas.',skills:['Detalle','Limpieza','Trabajo en altura'],where:['Constructoras','Independiente'],dayInLife:'Preparas las superficies lijando y empastando, mezclas pinturas según el color pedido, pintas paredes y techos con rodillo o brocha, y limpias tus herramientas.'},
@@ -319,7 +319,7 @@ const riasecQuestions=[
   {text:"Investigar como funcionan las cosas",p:"I",part:0},
   {text:"Analizar información para sacar conclusiones",p:"I",part:0},
   {text:"Trabajar con niños, jóvenes o adultos",p:"S",part:0},
-  {text:"Trabajar con maquinas o equipos (aunque sea en cosas del día a día)",p:"R",part:0},
+  {text:"Trabajar con máquinas o equipos (aunque sea en cosas del día a día)",p:"R",part:0},
   {text:"Revisar que la información este correcta",p:"I",part:0},
   {text:"Escribir historias, guiones o textos creativos",p:"A",part:0},
   {text:"Organizar actividades o eventos",p:"C",part:0},
@@ -381,7 +381,7 @@ const RUSH_THRESHOLD_MS=1000;
 const riasecProfiles={
   R:{name:"Realista",charF:"Romina la Realista",charM:"Renato el Realista",avatar:"\uD83D\uDD27",color:"from-amber-400 to-orange-500",
     desc:"Te gusta hacer, construir y arreglar cosas. Disfrutas actividades donde puedes ver resultados concretos, usar tus manos y resolver problemas prácticos.",
-    likes:["Armas, reparas o mejoras cosas","Trabajas con equipos, maquinas o tecnología física","Ves que tu trabajo tiene un resultado claro"],
+    likes:["Armas, reparas o mejoras cosas","Trabajas con equipos, máquinas o tecnología física","Ves que tu trabajo tiene un resultado claro"],
     family:"Producción, mantenimiento e ingeniería aplicada",
     subfamilies:[
       {name:"Construcción e infraestructura",cetpro:["Electricidad","Refrigeración"],instituto:["Edificaciones"],universidad:["Ingeniería civil","Ingeniería eléctrica"]},
@@ -455,7 +455,7 @@ const riasecCombos=[
 
 /* \u2500\u2500 MYTHS DATA (Swipe Cards format from TAREA4) \u2500\u2500 */
 const mythsData=[
-  {statement:"Solo con título universitario puedes ganar bien",isMyth:true,cat:"Salarios",
+  {statement:"Solo puedes ganar bien si cuentas con un título universitario",isMyth:true,cat:"Salarios",
    explanation:"Un técnico industrial gana S/ 3,383/mes y un técnico en computación S/ 3,968/mes, con solo 2-3 años de estudio. En minería, un técnico gana S/ 6,235/mes, más que muchos universitarios.",source:"MTPE 2024"},
   {statement:"La mayoria de personas con solo secundaria trabaja informalmente",isMyth:false,cat:"Empleo",
    explanation:"El 81% de personas con solo secundaria tiene un empleo informal, sin contrato, seguro ni otros beneficios. Con educación técnica baja a 56%, y con universidad a 40%.",source:"INEI. Encuesta Permanente de Empleo Nacional (EPEN) 2023-2024"},
@@ -526,12 +526,10 @@ function App(){
         </div>
         <h1 className="text-3xl sm:text-3xl md:text-5xl font-black text-navy-700 tracking-tight leading-tight">Eligiendo Mi Camino</h1>
         
-        <p className="text-navy-500/60 mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-navy-200/30 text-sm italic font-semibold">"El momento de elegir es el momento de mostrarse"</p>
-        <p className="text-navy-400/70 mt-2 text-xs max-w-sm mx-auto leading-relaxed">El Gallito de las Rocas, ave nacional del Perú, vive en nuestros bosques de selva alta. El Gallito realiza una danza especial para mostrarse tal como es. Así como él, este es tu momento de descubrir quién eres y elegir tu camino.</p>
-        <p className="text-navy-500/70 mt-3 sm:mt-4 text-sm max-w-md mx-auto leading-relaxed">
-          Terminar el colegio es un momento importante. Hay muchas opciones y poca información clara.
-          Este programa te ayuda a <strong>conocerte mejor</strong>, <strong>explorar opciones reales con datos</strong>,
-          y <strong>construir un plan</strong> que funcione para ti y tu familia.
+        <p className="text-navy-500/70 mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-navy-200/30 text-sm max-w-md mx-auto leading-relaxed">
+          Decidir qué hacer después de terminar el colegio es un momento importante.
+          Este programa te ayudará a <strong>conocerte mejor</strong>, <strong>explorar opciones reales con datos</strong>,
+          y <strong>construir un plan</strong> para tu futuro que funcione para ti y tu familia.
         </p>
         <div className="mt-4 sm:mt-6 flex flex-wrap justify-center gap-2 sm:gap-3 text-xs">
           <span className="bg-white/30 backdrop-blur px-3 py-1.5 rounded-full font-bold text-navy-700">12 sesiones x 90 min</span>
@@ -697,7 +695,6 @@ function App(){
         </div>
         {/* Steps grid */}
         <h2 className="text-lg font-black text-navy-700 mb-2">Tu camino en {steps.length} pasos</h2>
-        <p className="text-sm text-navy-400 mb-4">Puedes explorar cualquier paso libremente</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {steps.map((s,i)=>{
             const d2=done.has(i);
@@ -719,7 +716,7 @@ function App(){
 
   /* ── CHAT (S1-S2) ── */
   const aiR={
-    0:"¡Hola! Soy Gallito, tu guía de Eligiendo Mi Camino. Estoy aquí para ayudarte a descubrir quién eres y qué opciones tienes después del colegio.\n\n¿Cómo te llamas?",
+    0:"¡Hola! Soy Gallito, tu guía en Eligiendo Mi Camino.\n\nEn este espacio vamos a conversar sobre tu día a día, tus hábitos y las cosas que se te facilitan o te cuestan, para poner en palabras cómo estás hoy y qué te ayuda a avanzar.\n\n¿Cómo te llamas?",
     1:(n)=>`¡Mucho gusto, ${n}!\n\nCuéntame, ¿qué es lo que más te gusta hacer cuando NO estás en el colegio? Puede ser cualquier cosa: un hobby, algo que haces con amigos, algo que ves en internet...`,
     2:"¡Qué interesante! Eso me dice mucho sobre ti.\n\nAhora dime: ¿hay algo en lo que sientas que eres bueno/a, aunque nadie te lo haya enseñado formalmente?",
     3:"Me encanta lo que me cuentas.\n\nUna última pregunta por ahora: cuando piensas en tu futuro después del colegio, ¿qué es lo primero que se te viene a la mente? No hay respuestas correctas.",
@@ -746,6 +743,12 @@ function App(){
       </header>
       <div className="flex-1 overflow-y-auto px-4 sm:px-8 py-4 sm:py-6 bg-cream-50">
         <div className="max-w-2xl mx-auto space-y-4">
+          {msgs.length<=1&&(<div className="bg-brand-50 border-2 border-brand-200 rounded-2xl p-5 mb-4 animate-fade-in">
+            <h3 className="font-black text-navy-700 text-base mb-2">¿Quién eres hoy?</h3>
+            <p className="text-sm text-navy-500 leading-relaxed">En este paso tendrás una entrevista guiada con Gallito para reflexionar sobre tu rutina, tus hábitos de estudio y cómo enfrentas decisiones y retos.</p>
+            <p className="text-sm text-navy-500 mt-2 leading-relaxed">El objetivo es construir una mirada clara y realista sobre cómo estás hoy: qué se te facilita, qué te cuesta y qué te ayuda a avanzar.</p>
+            <div className="bg-white rounded-xl p-3 mt-3 flex gap-2 items-start"><span className="text-lg">💡</span><p className="text-xs text-navy-500"><strong>Importante:</strong> No es una evaluación. No hay respuestas correctas o incorrectas — responde con honestidad.</p></div>
+          </div>)}
           {msgs.map((m,i)=>(<div key={i} className={`flex ${m.r==='user'?'justify-end':'justify-start'} animate-slide-up`}>
             {m.r==='ai'&&<div className="mr-3 mt-1 shrink-0"><OwlMini size={32}/></div>}
             <div className={`max-w-[85%] sm:max-w-[70%] px-4 sm:px-5 py-3 ${m.r==='ai'?'chat-ai bg-white border border-cream-200 text-navy-700':'chat-user bg-brand-400 text-white'} shadow-sm`}>
@@ -882,7 +885,7 @@ function App(){
         <div className="bg-white rounded-2xl p-6 max-w-md text-center shadow-2xl animate-scale-in" onClick={e=>e.stopPropagation()}>
           <OwlMascot size={64} expression="surprised" className="mx-auto mb-3"/>
           <p className="font-bold text-navy-700 mb-2">¡Estás respondiendo muy rápido!</p>
-          <p className="text-sm text-navy-500 mb-4">Para que el resultado realmente te ayude, tomate un momento para pensar cada respuesta. Recuerda que no hay respuestas buenas o malas.</p>
+          <p className="text-sm text-navy-500 mb-4">Para que el resultado realmente te ayude, tómate un momento para pensar cada respuesta. Recuerda que no hay respuestas buenas o malas.</p>
           <div className="flex gap-3 justify-center">
             <button onClick={dismissRush} className="px-5 py-2.5 bg-brand-400 text-white rounded-xl font-bold hover:bg-brand-500 transition">Continuar</button>
             {qIdx>0&&<button onClick={()=>{dismissRush();setQIdx(i=>Math.max(0,i-1));}} className="px-5 py-2.5 bg-cream-100 text-navy-600 rounded-xl font-bold hover:bg-cream-200 transition">Revisar anterior</button>}
@@ -940,8 +943,8 @@ function App(){
             <ul className="space-y-1">{p.likes.map((l,i)=>(<li key={i} className="text-sm text-navy-600 flex gap-2"><span className="text-brand-400">•</span>{l}</li>))}</ul>
           </div>
           <div className="mb-6">
-            <h3 className="font-black text-navy-700 mb-1 text-sm sm:text-base">Familia ocupacional</h3>
-            <p className="text-brand-500 font-bold text-sm mb-4">{p.family}</p>
+            <h3 className="font-black text-navy-700 mb-1 text-sm sm:text-base">Ocupaciones relacionadas</h3>
+            <p className="text-brand-500 font-bold text-sm mb-2">{p.family}</p><p className="text-xs text-navy-400 mb-4">CETPRO = formación técnica corta · Instituto/Técnico = formación profesional (2-3 años) · Universidad = carrera universitaria (5 años)</p>
             <div className="space-y-4">
               {p.subfamilies.map((sf,i)=>(<div key={i} className="bg-white rounded-2xl border-2 border-cream-200 p-4 animate-slide-up" style={{animationDelay:`${i*.05}s`}}>
                 <p className="font-bold text-navy-700 text-sm mb-3">{i+1}) {sf.name}</p>
@@ -971,7 +974,7 @@ function App(){
             {i===0&&<span className="inline-block mt-1 text-[10px] bg-brand-100 text-brand-500 px-2 py-0.5 rounded-full font-bold">DOMINANTE</span>}
             <p className="text-sm text-navy-400 mt-2">{p.desc}</p>
             <p className="text-xs font-bold text-navy-700 mt-3">{p.family}</p>
-            <p className="text-[10px] text-brand-400 font-bold mt-2">Ver carreras &rarr;</p>
+            <p className="text-[10px] text-brand-400 font-bold mt-2">Ver ocupaciones &rarr;</p>
           </div>))}
         </div>
         {/* Profile combos */}
@@ -1025,7 +1028,7 @@ function App(){
             <h2 className="text-2xl sm:text-3xl font-black text-navy-700">Lo que aprendiste</h2>
             <div className="flex justify-center gap-3 mt-4">
               <div className="bg-green-100 rounded-xl px-4 py-2"><span className="text-2xl font-black text-green-600">{correct}</span><p className="text-xs text-green-600 font-bold">Correctas</p></div>
-              <div className="bg-red-100 rounded-xl px-4 py-2"><span className="text-2xl font-black text-red-600">{mythsData.length-correct}</span><p className="text-xs text-red-600 font-bold">A revisar</p></div>
+              <div className="bg-red-100 rounded-xl px-4 py-2"><span className="text-2xl font-black text-red-600">{mythsData.length-correct}</span><p className="text-xs text-red-600 font-bold">Por aprender</p></div>
             </div>
             <p className="text-navy-400 text-sm mt-4">Lo importante no es el puntaje, sino los datos que ahora conoces</p>
           </div>
@@ -1035,7 +1038,7 @@ function App(){
               return(<div key={i} className={`bg-white rounded-2xl overflow-hidden border-2 ${isCorrect?'border-green-200':'border-amber-200'} animate-slide-up`} style={{animationDelay:`${i*.06}s`}}>
                 <div className={`px-5 py-2 flex items-center justify-between ${isCorrect?'bg-green-50':'bg-amber-50'}`}>
                   <span className="text-xs font-bold text-navy-400">{m.cat}</span>
-                  <span className={`text-xs font-bold ${isCorrect?'text-green-600':'text-amber-600'}`}>{isCorrect?'Acertaste':'Aprendizaje nuevo'}</span>
+                  <span className={`text-xs font-bold ${isCorrect?'text-green-600':'text-amber-600'}`}>{isCorrect?'Acertaste':'Por aprender'}</span>
                 </div>
                 <div className="p-5">
                   <p className="font-bold text-navy-700 text-sm">{`\u201C${m.statement}\u201D`}</p>
@@ -1077,6 +1080,11 @@ function App(){
         <div className="w-full max-w-xl">
           {!mythFeedback?(
             <div key={mythIdx} className="animate-fade-in">
+              {mythIdx===0&&(<div className="bg-brand-50 border-2 border-brand-200 rounded-2xl p-4 mb-4 text-center">
+                <p className="font-bold text-navy-700 text-sm">Mitos y Realidades</p>
+                <p className="text-xs text-navy-500 mt-1">Responderás si cada afirmación es un mito o una realidad. Después de cada respuesta, recibirás una explicación con datos reales.</p>
+                <p className="text-xs text-navy-400 mt-1">No es una evaluación — es una oportunidad para cuestionar ideas y ampliar tu perspectiva.</p>
+              </div>)}
               <div className={`bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-xl border-2 border-cream-200 mb-4 sm:mb-6 transition-all duration-300 ${mythSwipe==='left'?'translate-x-[-100px] rotate-[-5deg] opacity-0':mythSwipe==='right'?'translate-x-[100px] rotate-[5deg] opacity-0':''}`}>
                 <div className="flex items-center justify-between mb-3 sm:mb-4">
                   <span className="text-[10px] sm:text-xs bg-navy-100 text-navy-500 px-2 sm:px-3 py-1 rounded-full font-bold">{m.cat}</span>
@@ -1164,13 +1172,13 @@ function App(){
       study:"Puedes retomar estudios si empiezas otra ruta",canWork:"Prácticas desde 3er año",
       pros:["Mayor salario promedio (+132% vs secundaria)","Red profesional amplia","Acceso a maestrias y especializaciones"],
       cons:["Costo alto: S/ 1,000-5,000/mes en privada","5 años sin ingreso fijo","No garantiza empleo automático"],
-      real:"Solo el 33% de jóvenes peruanos accede a educación superior. De los que terminan, el 68% trabaja en algo relacionado."},
+      real:"En el Perú, 3 de cada 10 jóvenes acceden a educación superior y solo el 68% de quienes la terminan trabaja en algo relacionado; por eso, elegir con información y estrategia marca la diferencia."},
     {icon:I.bolt,name:"Técnico / Instituto",time:"2-3 años",salary:"S/ 1,934",color:"from-brand-400 to-brand-300",inf:"56%",
       example:"Un técnico en computación gana S/ 3,968/mes. Un técnico electricista S/ 3,128/mes. Ambos con alta demanda.",
       study:"Puedes continuar a universidad después (convalidaciones)",canWork:"Desde el 2do año en muchos institutos",
       pros:["Más rápido y práctico (2-3 años)","Menor costo que universidad","Alta demanda en minería, tecnología, electricidad","Algunos ganan MAS que universitarios"],
       cons:["Techo salarial más bajo en promedio","Menos red de contactos que universidad"],
-      real:"Los técnicos en minería ganan S/ 6,235/mes promedio, más del doble que el promedio universitario."},
+      real:"Un egresado de carrera técnica o instituto puede ganar más que un egresado universitario. Por ejemplo, un técnico en minería gana más del doble que el promedio universitario."},
     {icon:I.home,name:"Trabajo Directo",time:"Inmediato",salary:"S/ 1,316",color:"from-green-500 to-emerald-600",inf:"81%",
       example:"Puedes empezar como auxiliar de almacén (S/ 1,025-1,600) y capacitarte para crecer. Muchos combinan trabajo + estudio nocturno.",
       study:"Programas nocturnos, fines de semana, a distancia",canWork:"Desde ya",
@@ -1195,7 +1203,7 @@ function App(){
 
         {/* TAB 1: COMPARE ROUTES */}
         {routeTab==='compare'&&(<div>
-          <p className="text-navy-500 text-sm mb-6">Despues del colegio hay 3 caminos principales. Ninguno es mejor que otro — depende de tu situación, tus metas y tus posibilidades.</p>
+          <p className="text-navy-500 text-sm mb-3">Después del colegio existen 3 caminos principales. En esta sección los recorrerás en tres momentos:</p><div className="text-xs text-navy-400 mb-4 space-y-1"><p>1️⃣ <strong>Comparar rutas</strong> — Ver sus diferencias clave</p><p>2️⃣ <strong>Descubrir tu ruta</strong> — Reflexionar cuál encaja más contigo</p><p>3️⃣ <strong>Datos clave</strong> — Revisar información concreta para decidir con mayor claridad</p></div><p className="text-navy-500 text-sm mb-6">No hay una ruta mejor que otra. Todo depende de tu situación, metas y posibilidades.</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 mb-6">
             {rts.map((r,i)=>(<div key={i} className="bg-white rounded-2xl shadow-md border-2 border-cream-200 overflow-hidden animate-slide-up" style={{animationDelay:`${i*.08}s`}}>
               <div className={`bg-gradient-to-r ${r.color} p-5 text-white`}>
@@ -1210,8 +1218,8 @@ function App(){
                 <div className="mb-3"><p className="text-xs font-bold text-green-600 mb-2">Ventajas</p>{r.pros.map((p,j)=><p key={j} className="text-xs text-navy-500 mb-1">{'\u2022'} {p}</p>)}</div>
                 <div className="mb-3"><p className="text-xs font-bold text-amber-600 mb-2">Retos</p>{r.cons.map((c,j)=><p key={j} className="text-xs text-navy-500 mb-1">{'\u2022'} {c}</p>)}</div>
                 <div className="grid grid-cols-2 gap-2 mb-3">
-                  <div className="bg-blue-50 rounded-lg p-2"><p className="text-[10px] text-blue-600 font-bold">Seguir estudiando</p><p className="text-[10px] text-blue-500">{r.study}</p></div>
-                  <div className="bg-green-50 rounded-lg p-2"><p className="text-[10px] text-green-600 font-bold">Trabajar durante</p><p className="text-[10px] text-green-500">{r.canWork}</p></div>
+                  <div className="bg-blue-50 rounded-lg p-2"><p className="text-[10px] text-blue-600 font-bold">Compatibilidad con estudio</p><p className="text-[10px] text-blue-500">{r.study}</p></div>
+                  <div className="bg-green-50 rounded-lg p-2"><p className="text-[10px] text-green-600 font-bold">Compatibilidad con trabajo</p><p className="text-[10px] text-green-500">{r.canWork}</p></div>
                 </div>
                 <div className="bg-cream-50 rounded-lg p-2"><p className="text-[10px] text-navy-400">Informalidad: <span className="font-bold text-navy-600">{r.inf}</span></p></div>
               </div>
@@ -1293,7 +1301,7 @@ function App(){
 
         {/* TAB 3: KEY DATA */}
         {routeTab==='data'&&(<div>
-          <p className="text-navy-500 text-sm mb-6">Datos verificados del INEI, ENAHO y MTPE sobre los jóvenes peruanos y el mercado laboral.</p>
+          <div className="mb-6"><p className="text-navy-500 text-sm">📊 Aquí encontrarás datos reales sobre educación y trabajo en el Perú.</p><p className="text-xs text-navy-400 mt-2">Todos los datos provienen del INEI, ENAHO y MTPE. Lee cada bloque con calma, observa los porcentajes, y pregúntate qué significa esta información para tu propia situación.</p></div>
 
           {/* Salary context */}
           <div className="bg-gradient-to-r from-navy-700 to-navy-600 rounded-2xl p-4 sm:p-6 text-white mb-6 relative overflow-hidden">
@@ -1396,15 +1404,15 @@ function App(){
       </header>
       <div className="max-w-5xl mx-auto px-4 sm:px-8 py-6 sm:py-8">
         {!selSector?(<div>
-          <h3 className="font-bold text-navy-700 mb-4">Explora por sector</h3>
+          <p className="text-sm text-navy-500 mb-3">En los pasos anteriores identificaste tus principales intereses. Ahora explorarás los sectores donde se encuentran ocupaciones relacionadas con tu perfil.</p><h3 className="font-bold text-navy-700 mb-4">Explora por sector</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {sectors.map((s,i)=>(<button key={s.id} onClick={()=>setSelSector(s)}
-            className={`bg-white rounded-2xl p-5 shadow-sm border-2 border-cream-200 text-left hover:shadow-lg hover:-translate-y-0.5 transition-all animate-slide-up ${s.tag?'ring-2 ring-brand-300':''}`} style={{animationDelay:`${i*.04}s`}}>
+            className="bg-white rounded-2xl p-5 shadow-sm border-2 border-cream-200 text-left hover:shadow-lg hover:-translate-y-0.5 transition-all animate-slide-up" style={{animationDelay:`${i*.04}s`}}>
             <div className="flex items-center gap-3 mb-3">
               <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center text-2xl shadow`}>{s.icon}</div>
               <div>
                 <div className="flex items-center gap-2"><span className="font-bold text-navy-700 text-sm">{s.name}</span>
-                {s.tag&&<span className="text-[10px] bg-brand-100 text-brand-500 px-1.5 py-0.5 rounded-full font-bold">{s.tag}</span>}</div>
+</div>
               </div>
             </div>
             <p className="text-xs text-navy-400 leading-relaxed">{s.desc}</p>
@@ -1510,7 +1518,7 @@ function App(){
       <div className="text-center mb-8">
         <OwlMascot size={80} expression="surprised" className="mx-auto mascot-shadow mb-4"/>
         <h3 className="text-xl font-black text-navy-700">De explorar a decidir</h3>
-        <p className="text-navy-400 mt-2 text-sm max-w-lg mx-auto">En el Explorador de Ocupaciones viste datos de muchos sectores. Ahora vas a elegir las que más te interesaron y profundizar para tomar una mejor decisión.</p>
+        <p className="text-navy-400 mt-2 text-sm max-w-lg mx-auto">Ahora vas a elegir las ocupaciones que más te interesaron y profundizar con información verificada para tomar una mejor decisión.</p>
       </div>
       {/* Ikigai 3-Circle Visualization */}
       <div className="rounded-3xl overflow-hidden mb-8 animate-scale-in shadow-xl">
@@ -1590,10 +1598,10 @@ function App(){
       </div>
       <div className="space-y-4 mb-8">
         {[
-          {icon:'\u2B50',title:'Elige tus favoritas del Explorador',desc:'De todas las carreras que viste en el paso anterior, selecciona las que más te llamaron la atención. No hay límite, pero intenta enfocarte en las que realmente te emocionan.',step:'1'},
+          {icon:'\u2B50',title:'Selecciona las ocupaciones que quieres evaluar',desc:'De todas las ocupaciones que viste en el paso anterior, selecciona las que más te llamaron la atención. No hay límite, pero intenta enfocarte en las que realmente te interesan.',step:'1'},
           {icon:'\uD83C\uDFAF',title:'Reduce a 3 opciones para investigar',desc:'De tus favoritas, elige las 3 que quieres investigar a fondo. Estas seran las opciones que vas a comparar para tomar tu decisión.',step:'2'},
-          {icon:'\uD83E\uDD16',title:'Investiga con NotebookLM',desc:'Conversa con documentos verificados ya cargados (MTPE, universidades, institutos, becas y más). Pregúntale: "¿Qué hace esta persona en su día a día?", "¿Dónde puedo estudiar?", "¿Cuánto cuesta?", "¿Hay becas?"',step:'3'},
-          {icon:'\uD83D\uDCCB',title:'Priorización final',desc:'Con toda la información, ordena tus 3 ocupaciones de mayor a menor interés. Justifica tu orden: que te entusiasma, que dudas quedan, como se conecta con tu sueño.',step:'4'},
+          {icon:'\uD83E\uDD16',title:'Investiga con NotebookLM',desc:'Conversa con documentos verificados ya cargados (MTPE, universidades, institutos, becas y más). Pregúntale: "¿Qué hace esta persona en su día a día?", "¿Dónde puedo estudiar?", "¿Cuánto cuesta?", "¿Hay becas?" La IA te ayuda a encontrar información, pero la decisión final es tuya.',step:'3'},
+          {icon:'\uD83D\uDCCB',title:'Priorización final',desc:'Antes de ordenar, pregúntate: ¿Qué tipo de actividades haría? ¿Qué tipo de formación requiere? ¿Qué dudas tengo todavía? Con toda la información, ordena tus 3 ocupaciones de mayor a menor interés.',step:'4'},
         ].map((item,i)=>(<div key={i} className="bg-white rounded-2xl p-4 sm:p-5 border-2 border-cream-200 flex gap-3 sm:gap-4 items-start animate-slide-up" style={{animationDelay:`${i*.08}s`}}>
           <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center text-brand-500 font-black shrink-0">{item.step}</div>
           <div className="flex-1">
@@ -1611,9 +1619,13 @@ function App(){
       <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-4 sm:p-5 mb-6 flex gap-3">
         <OwlMini size={32}/>
         <div>
-          <p className="font-bold text-green-700 text-sm">Opcional: Habla con un profesional</p>
-          <p className="text-green-600 text-sm mt-1">Si tienes la oportunidad de conversar con alguien que trabaje en la carrera que te interesa, aprovéchala. Pregúntale cómo es un día normal, qué le gusta y qué no, y qué consejo le daría a alguien que está empezando.</p>
+          <p className="font-bold text-green-700 text-sm">Recomendado: Conversa con alguien que trabaje en esta ocupación</p>
+          <p className="text-green-600 text-sm mt-1">Si tienes la oportunidad, conversa con alguien que trabaje en la ocupación que te interesa. Pregúntale cómo es un día normal, qué le gusta y qué no, y qué consejo le daría a alguien que está empezando.</p>
         </div>
+      </div>
+      <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-4 mb-6 flex gap-3 items-start">
+        <span className="text-xl shrink-0">👉</span>
+        <p className="text-sm text-navy-600">En el siguiente paso, prepararás cómo conversar tu decisión con tu familia.</p>
       </div>
       <button onClick={()=>{mark(5);nav('home');}} className="w-full py-3.5 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold shadow-lg hover:opacity-90 transition">Completar paso</button>
     </div>
@@ -1621,7 +1633,7 @@ function App(){
 
   /* ── FAMILY (S7-S8) ── */
   const famAiR={
-    0:(n)=>`¡Hola${n?` ${n}`:' '}! Llegamos a un paso muy importante. Voy a hacerte algunas preguntas sobre la carrera que elegiste y tu familia. Con tus respuestas, voy a preparar un resumen que te ayude a comunicar tu decisión.\n\nCuéntame: ¿cuál es la carrera o ruta que más te convenció después de todo lo que exploraste?`,
+    0:(n)=>`¡Hola${n?` ${n}`:' '}! Este es un paso muy importante. Te haré algunas preguntas para ayudarte a organizar tus ideas antes de conversar con tu familia. Con tus respuestas, construiremos un resumen que podrás usar como apoyo para explicar tu decisión.\n\nRecuerda que también puedes mencionar tus alternativas (Plan B y Plan C) si tu familia tiene dudas sobre tu primera opción.\n\nCuéntame: ¿cuál es la ocupación o ruta que más te convenció después de todo lo que exploraste?`,
     1:'¡Buena elección! Ahora dime: ¿por qué elegiste esta opción? ¿Qué fue lo que más te convenció? (pueden ser los datos de salario, lo que se estudia, las oportunidades, o simplemente que te emociona)',
     2:'Excelente. Ahora hablemos de tu familia. Cuando piensas en contarle a tus padres o tutores sobre tu decisión, ¿cómo crees que van a reaccionar? ¿Qué esperan ellos para tu futuro?',
     3:'Entiendo. Última pregunta: ¿hay algo que te preocupe sobre esta decisión? Por ejemplo: el costo, la distancia, el tiempo de estudio, o lo que piense tu familia?',
@@ -1644,7 +1656,7 @@ function App(){
   const famChatDone=famPhase>=4;
   const Family=()=>(<div className="flex-1 flex flex-col">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3 sm:gap-4">
-        <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-xs sm:text-base">Paso 7: Decisión Familiar</h2><p className="text-[10px] sm:text-xs text-navy-400">La IA te prepara para hablar con tu familia · Sesiones 7-8</p></div>
+        <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-xs sm:text-base">Paso 7: Decisión Familiar</h2><p className="text-[10px] sm:text-xs text-navy-400">Organiza tus ideas para conversar con tu familia · Sesiones 7-8</p></div>
       </header>
       <div className="flex-1 overflow-y-auto px-4 sm:px-8 py-4 sm:py-6 bg-cream-50">
         <div className="max-w-2xl mx-auto">
@@ -1693,13 +1705,13 @@ function App(){
       </div>
       <div className="space-y-4 mb-8">
         {[
-          {title:'Plan A con IA',desc:'La IA te guía con preguntas para construir tu plan principal. Incluye: qué estudiar, dónde, cómo financiarlo.',icon:'\uD83C\uDFAF',step:'1'},
-          {title:'Feedback y Plan A 2.0',desc:'La IA revisa tu plan, te da feedback y te ayuda a mejorarlo hasta que sea solido.',icon:'\uD83D\uDD0D',step:'2'},
+          {title:'Construye tu Plan A',desc:'La IA te ayudará con preguntas para estructurar tu plan principal. Incluye: qué estudiar, dónde, cómo financiarlo.',icon:'\uD83C\uDFAF',step:'1'},
+          {title:'Revisa y mejora tu plan',desc:'La IA revisa tu plan, te da feedback y te ayuda a mejorarlo hasta que sea sólido.',icon:'\uD83D\uDD0D',step:'2'},
           {title:'3 primeros pasos inmediatos',desc:'Acciones concretas que puedes hacer ESTA SEMANA para avanzar hacia tu meta.',icon:'\uD83D\uDC5F',step:'3'},
-          {title:'Planes B y C',desc:'Porque la vida no siempre sale como uno planea. Construye alternativas viables con la IA.',icon:'\uD83D\uDD00',step:'4'},
-          {title:'CV 1.0 con IA',desc:'Tu primer curriculum, generado con IA, listo para buscar trabajo o prácticas. Escalado por uDocz.',icon:'\uD83D\uDCCB',step:'5'},
+          {title:'Planes B y C',desc:'Contar con alternativas te permite adaptarte ante cambios imprevistos. Construye opciones viables con la IA.',icon:'\uD83D\uDD00',step:'4'},
+          {title:'Tu primer CV',desc:'Tu primer currículum, generado con IA, listo para buscar trabajo o prácticas.',icon:'\uD83D\uDCCB',step:'5'},
           {title:'Carta a mi yo del futuro',desc:'Escribele a tu yo de dentro de 1 año. Que te dirias? Que esperas haber logrado?',icon:'\u2709\uFE0F',step:'6'},
-          {title:'NotebookLM: Investiga a fondo',desc:'Conversa con documentos verificados sobre carreras, becas, universidades e institutos. Los documentos ya estan cargados: hazle todas las preguntas que quieras.',icon:'\uD83E\uDD16',step:'7'},
+          {title:'Recurso adicional: NotebookLM',desc:'Si necesitas más información sobre requisitos o becas, puedes usar NotebookLM para conversar con documentos verificados sobre carreras, universidades e institutos.',icon:'\uD83E\uDD16',step:'7'},
         ].map((item,i)=>(<div key={i} className="bg-white rounded-2xl p-4 sm:p-5 border-2 border-cream-200 flex gap-3 sm:gap-4 items-start animate-slide-up" style={{animationDelay:`${i*.08}s`}}>
           <div className="w-9 h-9 sm:w-10 sm:h-10 bg-brand-100 rounded-xl flex items-center justify-center text-brand-500 font-black shrink-0 text-sm sm:text-base">{item.step}</div>
           <div className="flex-1">
@@ -1710,14 +1722,14 @@ function App(){
       </div>
       {/* PLACEHOLDER: AI Plan Builder */}
       <div className="bg-white border-2 border-dashed border-emerald-200 rounded-2xl p-5 mb-6 text-center">
-        <div className="flex items-center justify-center gap-3 mb-2"><span className="text-2xl">🤖</span><p className="font-bold text-navy-700 text-sm">IA: Constructor de Plan A, feedback y refinamiento</p></div>
-        <p className="text-navy-400 text-xs mb-3">La IA guía al estudiante con preguntas estructuradas para armar su Plan A, le da feedback, y lo ayuda a mejorarlo a Plan A 2.0</p>
+        <div className="flex items-center justify-center gap-3 mb-2"><span className="text-2xl">🤖</span><p className="font-bold text-navy-700 text-sm">IA: Construye tu Plan A con preguntas guiadas</p></div>
+        <p className="text-navy-400 text-xs mb-3">La IA te guía con preguntas estructuradas para armar tu Plan A, te da feedback, y te ayuda a mejorarlo</p>
         <div className="bg-emerald-50 rounded-xl h-28 flex items-center justify-center"><p className="text-emerald-400 text-sm font-bold">Próximamente</p></div>
       </div>
       {/* PLACEHOLDER: CV Generator */}
       <div className="bg-white border-2 border-dashed border-blue-200 rounded-2xl p-5 mb-6 text-center">
-        <div className="flex items-center justify-center gap-3 mb-2"><span className="text-2xl">📋</span><p className="font-bold text-navy-700 text-sm">Generador de CV 1.0 con IA</p></div>
-        <p className="text-navy-400 text-xs mb-3">La IA genera un primer curriculum basado en los datos del estudiante. Escalado y diseñado por uDocz.</p>
+        <div className="flex items-center justify-center gap-3 mb-2"><span className="text-2xl">📋</span><p className="font-bold text-navy-700 text-sm">Generador de tu primer CV con IA</p></div>
+        <p className="text-navy-400 text-xs mb-3">La IA genera tu primer currículum basado en tu perfil y plan. Diseñado por uDocz.</p>
         <div className="bg-blue-50 rounded-xl h-28 flex items-center justify-center"><p className="text-blue-400 text-sm font-bold">Próximamente</p></div>
       </div>
       {/* MTPE Free Counseling */}
@@ -1726,7 +1738,7 @@ function App(){
           <div className="w-10 h-10 sm:w-12 sm:h-12 bg-teal-100 rounded-xl flex items-center justify-center shrink-0"><span className="text-xl sm:text-2xl">🎓</span></div>
           <div className="flex-1">
             <h4 className="font-bold text-navy-700 text-xs sm:text-sm mb-1">Asesoría Vocacional Gratuita del MTPE</h4>
-            <p className="text-sm text-navy-500 mb-3">El Ministerio de Trabajo ofrece asesorías vocacionales gratuitas con profesionales. Puedes agendar una cita en línea para recibir orientación personalizada.</p>
+            <p className="text-sm text-navy-500 mb-3">Además de tu plan, puedes recibir orientación gratuita con profesionales del Ministerio de Trabajo. Ellos pueden ayudarte a revisar tus opciones, resolver dudas sobre empleabilidad y conocer oportunidades reales en el mercado laboral.</p>
             <div className="bg-white rounded-xl p-3 mb-3 text-xs text-navy-500 space-y-1">
               <p><strong>1.</strong> Ingresa a la pagina de citas del MTPE</p>
               <p><strong>2.</strong> Selecciona "Orientación Vocacional"</p>
@@ -1741,9 +1753,9 @@ function App(){
       </div>
       <div className="bg-brand-50 border-2 border-brand-200 rounded-2xl p-5 mb-6 flex gap-3">
         <OwlMini size={32}/>
-        <p className="text-sm text-navy-600"><strong>Cierre:</strong> La última sesión incluye un ritual de cierre grupal y la opción de seguimiento trimestral para ver cómo van avanzando.</p>
+        <p className="text-sm text-navy-600"><strong>Cierre:</strong> Has completado tu proceso de exploración y decisión. Ahora cuentas con un plan concreto para avanzar. La última sesión incluye un ritual de cierre grupal y la opción de seguimiento trimestral.</p>
       </div>
-      <button onClick={()=>{mark(7);nav('home');}} className="w-full py-3.5 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold shadow-lg hover:opacity-90 transition">Completar paso</button>
+      <button onClick={()=>{mark(7);nav('home');}} className="w-full py-3.5 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold shadow-lg hover:opacity-90 transition">Finalizar y guardar mi plan</button>
     </div>
   </div>);
 
