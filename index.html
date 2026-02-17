@@ -499,14 +499,14 @@ function App(){
   const nav=(v)=>{setView(v);setMenuOpen(false);};
 
   const steps=[
-    {icon:I.brain,label:"Autoconocimiento",sub:"¿Quién soy hoy?",s:"S1-S2",view:'chat'},
-    {icon:I.target,label:"Test de Intereses",sub:"¿Qué me interesa?",s:"S3",view:'test'},
-    {icon:I.myth,label:"Mitos Vocacionales",sub:"¿Verdad o mito?",s:"S4",view:'myths'},
-    {icon:I.route,label:"Rutas Post-Secundarias",sub:"¿Qué caminos hay?",s:"S4-S5",view:'routes'},
-    {icon:I.search,label:"Explorador de Ocupaciones",sub:"130 ocupaciones por sector",s:"S5-S6",view:'explore'},
-    {icon:I.notebook,label:"Investigación con IA",sub:"NotebookLM y mas",s:"S6",view:'notebook'},
-    {icon:I.family,label:"Decisión Familiar",sub:"¿Cómo lo comunico?",s:"S7-S8",view:'family'},
-    {icon:I.rocket,label:"Plan Acciónable",sub:"Mi plan y CV",s:"S9-S12",view:'plan'},
+    {icon:I.brain,label:"Paso 1: Autoconocimiento",sub:"¿Quién soy hoy?",s:"Sesiones 1-2",view:'chat'},
+    {icon:I.target,label:"Paso 2: Test de Intereses",sub:"¿Qué me interesa?",s:"Sesión 3",view:'test'},
+    {icon:I.myth,label:"Paso 3: Mitos Vocacionales",sub:"¿Verdad o mito?",s:"Sesión 4",view:'myths'},
+    {icon:I.route,label:"Paso 4: Rutas Post-Secundarias",sub:"¿Qué caminos hay?",s:"Sesiones 4-5",view:'routes'},
+    {icon:I.search,label:"Paso 5: Explorador de Ocupaciones",sub:"130 ocupaciones por sector",s:"Sesiones 5-6",view:'explore'},
+    {icon:I.notebook,label:"Paso 6: Investigación con IA",sub:"NotebookLM y más",s:"Sesión 6",view:'notebook'},
+    {icon:I.family,label:"Paso 7: Decisión Familiar",sub:"¿Cómo lo comunico?",s:"Sesiones 7-8",view:'family'},
+    {icon:I.rocket,label:"Paso 8: Plan Accionable",sub:"Mi plan y CV",s:"Sesiones 9-12",view:'plan'},
   ];
 
   /* ── WELCOME ── */
@@ -854,7 +854,7 @@ function App(){
       const completedParts=showPartIntro;
       return(<div className="flex-1 flex flex-col bg-cream-50">
         <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white">
-          <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Test de Intereses RIASEC</h2><p className="text-xs text-navy-400">Cambio de sección</p></div></div>
+          <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Paso 2: Test de Intereses</h2><p className="text-xs text-navy-400">Cambio de sección</p></div></div>
           <div className="flex gap-2 mt-3">
             {riasecParts.map((pp,i)=>(<span key={i} className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${i<completedParts?'bg-green-100 text-green-700':i===showPartIntro?'bg-brand-400 text-white':'bg-cream-100 text-navy-400'}`}>{i<completedParts?'✓ ':''}{i+1}. {i===0?'Actividades':i===1?'Habilidades':'Autoevaluación'}</span>))}
           </div>
@@ -887,7 +887,7 @@ function App(){
     }
     return(<div className="flex-1 flex flex-col">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white">
-        <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Test de Intereses RIASEC</h2><p className="text-xs text-navy-400">{part.title} · Pregunta {qInPart}/{partTotal}</p></div></div>
+        <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Paso 2: Test de Intereses</h2><p className="text-xs text-navy-400">{part.title} · Pregunta {qInPart}/{partTotal}</p></div></div>
         <div className="flex items-center gap-4 mt-3">
           <div className="flex-1 h-2.5 bg-cream-200 rounded-full overflow-hidden"><div className="h-full bg-gradient-to-r from-brand-400 to-brand-300 rounded-full transition-all duration-500" style={{width:`${pct}%`}}/></div>
           <span className="text-xs font-bold text-navy-400">{qIdx+1}/{riasecQuestions.length}</span>
@@ -1087,7 +1087,7 @@ function App(){
     };
     return(<div className="flex-1 flex flex-col">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white">
-        <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Mitos y Realidades</h2><p className="text-[10px] sm:text-xs text-navy-400">Descubre la verdad con datos reales · Sesión4</p></div></div>
+        <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Paso 3: Mitos y Realidades</h2><p className="text-[10px] sm:text-xs text-navy-400">Descubre la verdad con datos reales · Sesión 4</p></div></div>
         <div className="flex items-center gap-4 mt-3">
           <div className="flex-1 h-2.5 bg-cream-200 rounded-full overflow-hidden"><div className="h-full bg-gradient-to-r from-brand-400 to-brand-300 rounded-full transition-all duration-500" style={{width:`${pct}%`}}/></div>
           <span className="text-sm font-bold text-navy-400">{mythIdx+1}/{mythsData.length}</span>
@@ -1204,7 +1204,7 @@ function App(){
     const topRoute=scores?scores.indexOf(Math.max(...scores)):0;
     return(<div className="flex-1 overflow-y-auto">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white">
-        <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Rutas Post-Secundarias</h2><p className="text-xs sm:text-sm text-navy-400">Compara las 3 opciones reales · Sesiones 4-5</p></div></div>
+        <div className="flex items-center gap-3"><OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Paso 4: Rutas Post-Secundarias</h2><p className="text-xs sm:text-sm text-navy-400">Compara las 3 opciones reales · Sesiones 4-5</p></div></div>
         <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-3">
           {[{id:'compare',label:'Comparar rutas'},{id:'quiz',label:'Descubre tu ruta'},{id:'data',label:'Datos clave'}].map(tab=>(
             <button key={tab.id} onClick={()=>setRouteTab(tab.id)} className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold transition-all ${routeTab===tab.id?'bg-brand-400 text-white shadow-md':'bg-cream-100 text-navy-500 hover:bg-cream-200'}`}>{tab.label}</button>
@@ -1391,7 +1391,7 @@ function App(){
     ];
     return(<div className="flex-1 overflow-y-auto">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3">
-        <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Explorador de Ocupaciones</h2><p className="text-xs sm:text-sm text-navy-400">12 sectores · 130 ocupaciones · Sesiones 5-6</p></div>
+        <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Paso 5: Explorador de Ocupaciones</h2><p className="text-xs sm:text-sm text-navy-400">12 sectores · 130 ocupaciones · Sesiones 5-6</p></div>
       </header>
       <div className="max-w-5xl mx-auto px-4 sm:px-8 py-6 sm:py-8">
         {!selSector?(<div>
@@ -1503,7 +1503,7 @@ function App(){
   /* ── NOTEBOOK LM (S6) ── */
   const Notebook=()=>(<div className="flex-1 overflow-y-auto">
     <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3">
-      <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Investigación con IA</h2><p className="text-xs sm:text-sm text-navy-400">Profundiza en carreras que te interesan · Sesión6</p></div>
+      <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Paso 6: Investigación con IA</h2><p className="text-xs sm:text-sm text-navy-400">Profundiza en carreras que te interesan · Sesión 6</p></div>
     </header>
     <div className="max-w-3xl mx-auto px-4 sm:px-8 py-6 sm:py-8">
       <div className="text-center mb-8">
@@ -1643,7 +1643,7 @@ function App(){
   const famChatDone=famPhase>=4;
   const Family=()=>(<div className="flex-1 flex flex-col">
       <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3 sm:gap-4">
-        <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-xs sm:text-base">Decisión y Conversación Familiar</h2><p className="text-[10px] sm:text-xs text-navy-400">La IA te prepara para hablar con tu familia · Sesiones 7-8</p></div>
+        <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-xs sm:text-base">Paso 7: Decisión Familiar</h2><p className="text-[10px] sm:text-xs text-navy-400">La IA te prepara para hablar con tu familia · Sesiones 7-8</p></div>
       </header>
       <div className="flex-1 overflow-y-auto px-4 sm:px-8 py-4 sm:py-6 bg-cream-50">
         <div className="max-w-2xl mx-auto">
@@ -1682,7 +1682,7 @@ function App(){
   /* ── PLAN (S9-S12) ── */
   const Plan=()=>(<div className="flex-1 overflow-y-auto">
     <header className="px-4 sm:px-8 py-4 border-b border-cream-200 bg-white flex items-center gap-3">
-      <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Plan Acciónable + Cierre</h2><p className="text-xs sm:text-sm text-navy-400">Construye tu plan concreto · Sesiones 9-12</p></div>
+      <OwlMini size={36}/><div><h2 className="font-black text-navy-700 text-sm sm:text-base">Paso 8: Plan Accionable</h2><p className="text-xs sm:text-sm text-navy-400">Construye tu plan concreto · Sesiones 9-12</p></div>
     </header>
     <div className="max-w-3xl mx-auto px-4 sm:px-8 py-6 sm:py-8">
       <div className="text-center mb-8">
