@@ -1480,50 +1480,79 @@ function App(){
         <p className="text-navy-400 mt-2 text-sm max-w-lg mx-auto">En el Explorador de Ocupaciones viste datos de muchos sectores. Ahora vas a elegir las que más te interesaron y profundizar para tomar una mejor decisión.</p>
       </div>
       {/* Ikigai 3-Circle Visualization */}
-      <div className="bg-white rounded-2xl border-2 border-cream-200 p-5 sm:p-6 mb-8 animate-fade-in">
-        <h3 className="text-center font-black text-navy-700 text-lg mb-1">Tu Ikigai Vocacional</h3>
-        <p className="text-center text-navy-400 text-xs mb-5"><strong>Ikigai</strong> es un concepto japonés que significa <em>"razón de ser"</em>. Es lo que te motiva a levantarte cada día. En este programa exploramos 3 áreas clave para ayudarte a encontrar la tuya.</p>
-        <div className="flex justify-center mb-5">
-          <svg viewBox="0 0 300 270" className="w-64 sm:w-72" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <style>{`.iki-circle{mix-blend-mode:multiply}`}</style>
-            </defs>
-            {/* Three circles */}
-            <circle className="iki-circle" cx="150" cy="90" r="80" fill="#fda4af" opacity="0.55"/>
-            <circle className="iki-circle" cx="105" cy="170" r="80" fill="#93c5fd" opacity="0.55"/>
-            <circle className="iki-circle" cx="195" cy="170" r="80" fill="#86efac" opacity="0.55"/>
-            {/* Labels inside each circle */}
-            <text x="150" y="60" textAnchor="middle" fill="#9f1239" fontSize="11" fontWeight="800">Lo que me</text>
-            <text x="150" y="74" textAnchor="middle" fill="#9f1239" fontSize="11" fontWeight="800">GUSTA</text>
-            <text x="150" y="88" textAnchor="middle" fill="#9f1239" fontSize="9">❤️</text>
-            <text x="72" y="185" textAnchor="middle" fill="#1e3a8a" fontSize="11" fontWeight="800">Lo que</text>
-            <text x="72" y="199" textAnchor="middle" fill="#1e3a8a" fontSize="11" fontWeight="800">HAGO BIEN</text>
-            <text x="72" y="213" textAnchor="middle" fill="#1e3a8a" fontSize="9">💪</text>
-            <text x="228" y="185" textAnchor="middle" fill="#166534" fontSize="11" fontWeight="800">Lo que el</text>
-            <text x="228" y="199" textAnchor="middle" fill="#166534" fontSize="11" fontWeight="800">MERCADO valora</text>
-            <text x="228" y="213" textAnchor="middle" fill="#166534" fontSize="9">💰</text>
-            {/* Center intersection */}
-            <text x="150" y="148" textAnchor="middle" fill="#1e293b" fontSize="10" fontWeight="900">TU ZONA</text>
-            <text x="150" y="161" textAnchor="middle" fill="#1e293b" fontSize="10" fontWeight="900">IDEAL ✨</text>
-          </svg>
+      <div className="rounded-3xl overflow-hidden mb-8 animate-scale-in shadow-xl">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-navy-700 to-navy-600 px-5 sm:px-7 pt-5 sm:pt-6 pb-4 text-center relative overflow-hidden">
+          <div className="absolute -top-6 -right-6 w-28 h-28 bg-white/5 rounded-full"/>
+          <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-white/5 rounded-full"/>
+          <p className="text-brand-300 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-1">生き甲斐</p>
+          <h3 className="font-black text-white text-lg sm:text-xl mb-1.5">Tu Ikigai Vocacional</h3>
+          <p className="text-white/60 text-xs sm:text-sm max-w-md mx-auto leading-relaxed"><strong className="text-white/90">Ikigai</strong> es un concepto japonés que significa <em>"razón de ser"</em> — lo que te motiva a levantarte cada día.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center text-xs mb-4">
-          <div className="bg-rose-50 rounded-xl p-2.5 border border-rose-200">
-            <p className="font-bold text-rose-700">❤️ Lo que me gusta</p>
-            <p className="text-rose-500 mt-0.5">Pasos 1-2: Chat + Test RIASEC</p>
+        {/* Diagram */}
+        <div className="bg-white px-4 sm:px-7 pt-5 sm:pt-6 pb-4">
+          <p className="text-center text-navy-400 text-xs mb-4">En este programa exploramos <strong className="text-navy-600">3 áreas clave</strong> para ayudarte a encontrar la tuya:</p>
+          <div className="flex justify-center mb-4">
+            <svg viewBox="0 0 320 290" className="w-[260px] sm:w-[300px]" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="ikiRose" cx="50%" cy="40%"><stop offset="0%" stopColor="#fecdd3"/><stop offset="100%" stopColor="#fda4af"/></radialGradient>
+                <radialGradient id="ikiBlue" cx="40%" cy="50%"><stop offset="0%" stopColor="#bfdbfe"/><stop offset="100%" stopColor="#93c5fd"/></radialGradient>
+                <radialGradient id="ikiGreen" cx="60%" cy="50%"><stop offset="0%" stopColor="#bbf7d0"/><stop offset="100%" stopColor="#86efac"/></radialGradient>
+                <radialGradient id="ikiCenter" cx="50%" cy="50%"><stop offset="0%" stopColor="#F7A348" stopOpacity="0.45"/><stop offset="100%" stopColor="#F57B21" stopOpacity="0.2"/></radialGradient>
+                <filter id="ikiGlow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <style>{`.iki-c{mix-blend-mode:multiply}`}</style>
+              </defs>
+              {/* Soft shadow behind */}
+              <circle cx="160" cy="100" r="78" fill="#fda4af" opacity="0.12" filter="url(#ikiGlow)"/>
+              <circle cx="112" cy="182" r="78" fill="#93c5fd" opacity="0.12" filter="url(#ikiGlow)"/>
+              <circle cx="208" cy="182" r="78" fill="#86efac" opacity="0.12" filter="url(#ikiGlow)"/>
+              {/* Main circles */}
+              <circle className="iki-c" cx="160" cy="100" r="78" fill="url(#ikiRose)" opacity="0.6" stroke="#fda4af" strokeWidth="1.5"/>
+              <circle className="iki-c" cx="112" cy="182" r="78" fill="url(#ikiBlue)" opacity="0.6" stroke="#93c5fd" strokeWidth="1.5"/>
+              <circle className="iki-c" cx="208" cy="182" r="78" fill="url(#ikiGreen)" opacity="0.6" stroke="#86efac" strokeWidth="1.5"/>
+              {/* Center glow */}
+              <circle cx="160" cy="155" r="28" fill="url(#ikiCenter)" filter="url(#ikiGlow)"/>
+              {/* Labels - top circle */}
+              <text x="160" y="62" textAnchor="middle" fill="#9f1239" fontSize="10.5" fontWeight="800" fontFamily="Poppins,sans-serif">Lo que me</text>
+              <text x="160" y="76" textAnchor="middle" fill="#9f1239" fontSize="12" fontWeight="900" fontFamily="Poppins,sans-serif">GUSTA</text>
+              <text x="160" y="92" textAnchor="middle" fontSize="13">❤️</text>
+              {/* Labels - bottom left */}
+              <text x="78" y="192" textAnchor="middle" fill="#1e40af" fontSize="10.5" fontWeight="800" fontFamily="Poppins,sans-serif">Lo que</text>
+              <text x="78" y="206" textAnchor="middle" fill="#1e40af" fontSize="12" fontWeight="900" fontFamily="Poppins,sans-serif">HAGO BIEN</text>
+              <text x="78" y="222" textAnchor="middle" fontSize="13">💪</text>
+              {/* Labels - bottom right */}
+              <text x="242" y="192" textAnchor="middle" fill="#166534" fontSize="10.5" fontWeight="800" fontFamily="Poppins,sans-serif">Lo que el</text>
+              <text x="242" y="206" textAnchor="middle" fill="#166534" fontSize="11" fontWeight="900" fontFamily="Poppins,sans-serif">MERCADO valora</text>
+              <text x="242" y="222" textAnchor="middle" fontSize="13">💰</text>
+              {/* Center label */}
+              <text x="160" y="150" textAnchor="middle" fill="#1e293b" fontSize="9.5" fontWeight="900" fontFamily="Poppins,sans-serif">TU ZONA</text>
+              <text x="160" y="163" textAnchor="middle" fill="#1e293b" fontSize="9.5" fontWeight="900" fontFamily="Poppins,sans-serif">IDEAL</text>
+              <text x="160" y="177" textAnchor="middle" fontSize="12">✨</text>
+            </svg>
           </div>
-          <div className="bg-blue-50 rounded-xl p-2.5 border border-blue-200">
-            <p className="font-bold text-blue-700">💪 Lo que hago bien</p>
-            <p className="text-blue-500 mt-0.5">Paso 2: Habilidades RIASEC</p>
-          </div>
-          <div className="bg-green-50 rounded-xl p-2.5 border border-green-200">
-            <p className="font-bold text-green-700">💰 Lo que el mercado valora</p>
-            <p className="text-green-500 mt-0.5">Pasos 3-5: Datos y salarios</p>
+          {/* Legend cards */}
+          <div className="grid grid-cols-3 gap-1.5 sm:gap-2 mb-4">
+            <div className="rounded-xl p-2 sm:p-2.5 text-center bg-gradient-to-b from-rose-50 to-white border border-rose-100">
+              <span className="text-base sm:text-lg block">❤️</span>
+              <p className="font-bold text-rose-700 text-[10px] sm:text-xs mt-0.5">Lo que me gusta</p>
+              <p className="text-rose-400 text-[8px] sm:text-[10px] mt-0.5 leading-tight">Pasos 1-2</p>
+            </div>
+            <div className="rounded-xl p-2 sm:p-2.5 text-center bg-gradient-to-b from-blue-50 to-white border border-blue-100">
+              <span className="text-base sm:text-lg block">💪</span>
+              <p className="font-bold text-blue-700 text-[10px] sm:text-xs mt-0.5">Lo que hago bien</p>
+              <p className="text-blue-400 text-[8px] sm:text-[10px] mt-0.5 leading-tight">Paso 2</p>
+            </div>
+            <div className="rounded-xl p-2 sm:p-2.5 text-center bg-gradient-to-b from-green-50 to-white border border-green-100">
+              <span className="text-base sm:text-lg block">💰</span>
+              <p className="font-bold text-green-700 text-[10px] sm:text-xs mt-0.5">Mercado laboral</p>
+              <p className="text-green-400 text-[8px] sm:text-[10px] mt-0.5 leading-tight">Pasos 3-5</p>
+            </div>
           </div>
         </div>
-        <div className="bg-brand-50 rounded-xl p-3 flex gap-2 items-start">
+        {/* Bottom CTA */}
+        <div className="bg-gradient-to-r from-brand-50 to-cream-50 px-4 sm:px-7 py-3.5 sm:py-4 flex gap-2.5 items-start border-t border-brand-100">
           <OwlMini size={28}/>
-          <p className="text-sm text-navy-600"><strong>Tus 3 ocupaciones</strong> deberían estar donde se cruzan las 3 áreas — algo que te gusta, en lo que eres bueno, y que además tiene demanda en el mercado laboral.</p>
+          <p className="text-xs sm:text-sm text-navy-600 leading-relaxed"><strong className="text-navy-700">Tus 3 ocupaciones</strong> deberían estar en el centro — donde se cruzan lo que te gusta, en lo que eres bueno, y lo que el mercado valora.</p>
         </div>
       </div>
       <div className="space-y-4 mb-8">
