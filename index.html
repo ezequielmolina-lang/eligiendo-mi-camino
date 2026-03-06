@@ -842,29 +842,31 @@ function App(){
             {riasecParts.map((pp,i)=>(<span key={i} className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${i<completedParts?'bg-green-100 text-green-700':i===showPartIntro?'bg-brand-400 text-white':'bg-cream-100 text-navy-400'}`}>{i<completedParts?'✓ ':''}{i+1}. {i===0?'Actividades':i===1?'Habilidades':'Autoevaluación'}</span>))}
           </div>
         </header>
-        <div className="flex-1 overflow-y-auto px-4 sm:px-8 py-6 sm:py-8 flex items-start sm:items-center justify-center">
-          <div className="animate-scale-in w-full max-w-lg text-center pb-6">
-            <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br ${pi.color} flex items-center justify-center mx-auto mb-4 sm:mb-5 shadow-lg`}>
-              <span className="text-2xl sm:text-3xl">{pi.icon}</span>
+        <div className="flex-1 overflow-y-auto px-4 sm:px-8 py-4 sm:py-6 flex items-start sm:items-center justify-center">
+          <div className="animate-scale-in w-full max-w-lg text-center">
+            <div className={`w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br ${pi.color} flex items-center justify-center mx-auto mb-3 sm:mb-5 shadow-lg`}>
+              <span className="text-xl sm:text-3xl">{pi.icon}</span>
             </div>
-            {completedParts>0&&(<div className="bg-green-50 border border-green-200 rounded-xl px-4 py-2.5 mb-4 sm:mb-5 inline-block">
+            {completedParts>0&&(<div className="bg-green-50 border border-green-200 rounded-xl px-4 py-2 mb-3 sm:mb-5 inline-block">
               <p className="text-green-700 text-sm font-bold">Parte {completedParts} completada!</p>
             </div>)}
-            <h3 className="text-xl sm:text-2xl font-black text-navy-700 mb-2 sm:mb-3">{pi.heading}</h3>
-            <p className="text-sm sm:text-base text-navy-600 mb-3 sm:mb-4 leading-relaxed">{pi.desc}</p>
-            <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 sm:p-4 mb-4 sm:mb-6 text-left">
+            <h3 className="text-lg sm:text-2xl font-black text-navy-700 mb-2 sm:mb-3">{pi.heading}</h3>
+            <p className="text-sm sm:text-base text-navy-600 mb-2 sm:mb-4 leading-relaxed">{pi.desc}</p>
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-2.5 sm:p-4 mb-3 sm:mb-6 text-left">
               <p className="text-xs sm:text-sm text-amber-800 font-medium"><span className="font-bold">💡 Importante:</span> {pi.tip}</p>
             </div>
-            <div className="bg-white rounded-xl border border-cream-200 p-3 sm:p-4 mb-4 sm:mb-6">
+            <div className="bg-white rounded-xl border border-cream-200 p-2.5 sm:p-4 mb-3 sm:mb-6">
               <p className="text-xs font-bold text-navy-400 mb-2">Escala de respuesta:</p>
               <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2">
                 {pi.labels.map((l,i)=>(<span key={i} className="text-[9px] sm:text-[10px] bg-cream-50 px-1.5 sm:px-2 py-1 rounded-lg text-navy-600">{l}</span>))}
               </div>
             </div>
-            <button onClick={()=>{setShowPartIntro(null);answerPending.current=false;window.scrollTo(0,0);}} className="relative z-10 px-6 sm:px-8 py-3 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 cursor-pointer">
-              Comenzar {pi.title}
-            </button>
           </div>
+        </div>
+        <div className="sticky bottom-0 px-4 sm:px-8 py-4 bg-cream-50 border-t border-cream-200 text-center">
+          <button onClick={()=>{setShowPartIntro(null);answerPending.current=false;window.scrollTo(0,0);}} className="relative z-10 px-6 sm:px-8 py-3 bg-gradient-to-r from-brand-400 to-brand-300 text-white rounded-xl font-bold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 cursor-pointer w-full max-w-lg">
+            Comenzar {pi.title}
+          </button>
         </div>
       </div>);
     }
@@ -1779,7 +1781,7 @@ function App(){
     <main className="flex-1 flex flex-col overflow-hidden bg-cream-50 pt-[52px] md:pt-0">
       {view==='home'&&<Home/>}
       {view==='chat'&&Chat()}
-      {view==='test'&&<Test/>}
+      {view==='test'&&Test()}
       {view==='test-results'&&<TestResults/>}
       {view==='myths'&&<Myths/>}
       {view==='routes'&&<Routes/>}
